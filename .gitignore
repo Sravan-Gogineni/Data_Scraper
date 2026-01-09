@@ -1,0 +1,6 @@
+# Ignore all the environment files
+*.env
+# Ignore Inst_outputs directory
+Inst_outputs
+# Ignore venv directory
+/.venv

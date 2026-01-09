@@ -1,0 +1,667 @@
+[
+    {
+        "Program name": "Accounting",
+        "Level": "Master's",
+        "Program Page url": "https://cba.k-state.edu/academics/accounting/macc/"
+    },
+    {
+        "Program name": "Adult Learning and Leadership",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://coe.k-state.edu/academics/graduate/adult-learning-and-leadership/"
+    },
+    {
+        "Program name": "Agribusiness",
+        "Level": "Master's",
+        "Program Page url": "https://mab.k-state.edu/"
+    },
+    {
+        "Program name": "Agricultural and Extension Education and Communication",
+        "Level": "Certificate",
+        "Program Page url": "https://www.cals.k-state.edu/academics/ageduc/graduate/certificates/agricultural-education.html"
+    },
+    {
+        "Program name": "Agricultural Economics",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.ageconomics.k-state.edu/academics/graduate/"
+    },
+    {
+        "Program name": "Agricultural Education and Communication",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/degree-programs/ag-ed-comm/"
+    },
+    {
+        "Program name": "Agronomy",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.agronomy.k-state.edu/academics/graduate/"
+    },
+    {
+        "Program name": "Anatomy and Physiology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.vet.k-state.edu/academics/ap/graduate/"
+    },
+    {
+        "Program name": "Animal Sciences and Industry",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.asi.k-state.edu/academics/graduate-program/index.html"
+    },
+    {
+        "Program name": "Anthropology",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/sasw/anth/ma/"
+    },
+    {
+        "Program name": "Apparel and Textiles",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.heid.k-state.edu/academics/grad/"
+    },
+    {
+        "Program name": "Applied Family Science",
+        "Level": "Master's",
+        "Program Page url": "https://global.k-state.edu/courses/masters/applied-family-science/"
+    },
+    {
+        "Program name": "Architectural Engineering",
+        "Level": "Master's",
+        "Program Page url": "https://engg.k-state.edu/are-cns/academics/graduate/"
+    },
+    {
+        "Program name": "Architecture",
+        "Level": "Master's",
+        "Program Page url": "https://apdesign.k-state.edu/arch/programs/master-of-architecture/"
+    },
+    {
+        "Program name": "Art",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/art/"
+    },
+    {
+        "Program name": "Art History",
+        "Level": "Master's and certificate",
+        "Program Page url": "https://art.k-state.edu/academics/graduate/art-history/"
+    },
+    {
+        "Program name": "Biochemistry",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/biochemistry/"
+    },
+    {
+        "Program name": "Biochemistry and Molecular Biophysics",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.bmb.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Bioinformatics",
+        "Level": "Certificate",
+        "Program Page url": "https://www.k-state.edu/bioinfo/academics/graduate-certificate/"
+    },
+    {
+        "Program name": "Biological and Agricultural Engineering",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.bae.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Biology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/biology/grad/"
+    },
+    {
+        "Program name": "Biomedical Science",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.vet.k-state.edu/education/graduate/biomed/"
+    },
+    {
+        "Program name": "Biosecurity",
+        "Level": "Certificate",
+        "Program Page url": "https://global.k-state.edu/ag/biosecurity/"
+    },
+    {
+        "Program name": "Business Administration",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://cba.k-state.edu/academics/graduate/index.html"
+    },
+    {
+        "Program name": "Chemical Engineering",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.che.ksu.edu/academics/grad/"
+    },
+    {
+        "Program name": "Chemistry",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/chem/academics/graduate/"
+    },
+    {
+        "Program name": "Civil Engineering",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://ce.k-state.edu/academics/graduate/"
+    },
+    {
+        "Program name": "College Student Development",
+        "Level": "Master's",
+        "Program Page url": "https://coe.k-state.edu/academics/graduate/college-student-development/"
+    },
+    {
+        "Program name": "Communication Studies",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/commstudies/graduate/"
+    },
+    {
+        "Program name": "Community Development",
+        "Level": "Master's",
+        "Program Page url": "https://online.k-state.edu/programs/community-development-masters/"
+    },
+    {
+        "Program name": "Comparative Pathobiology",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.vet.k-state.edu/education/dmp/graduate/phd-program.html"
+    },
+    {
+        "Program name": "Computer Science",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://cs.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Conflict Analysis and Trauma Studies",
+        "Level": "Certificate",
+        "Program Page url": "https://www.k-state.edu/security-studies/academics/graduate/CATS/"
+    },
+    {
+        "Program name": "Conflict Resolution",
+        "Level": "Master's and certificate",
+        "Program Page url": "https://www.k-state.edu/conflict-resolution/"
+    },
+    {
+        "Program name": "Counseling and Student Development",
+        "Level": "Doctoral",
+        "Program Page url": "https://coe.k-state.edu/academics/departments/special-education-counseling-student-affairs/counseling-student-development/phd-counseling-student-development.html"
+    },
+    {
+        "Program name": "Couple and Family Therapy",
+        "Level": "Master's, doctoral and certificate",
+        "Program Page url": "https://www.hhs.k-state.edu/cft/"
+    },
+    {
+        "Program name": "Creative Writing",
+        "Level": "Master's",
+        "Program Page url": "https://english.k-state.edu/academics/graduate/ma-creative-writing.html"
+    },
+    {
+        "Program name": "Curriculum and Instruction",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://coe.k-state.edu/academics/departments/curriculum-instruction/"
+    },
+    {
+        "Program name": "Cybersecurity",
+        "Level": "Certificate",
+        "Program Page url": "https://global.k-state.edu/academics/cybersecurity-certificate/"
+    },
+    {
+        "Program name": "Data Analytics",
+        "Level": "Master's and certificate",
+        "Program Page url": "https://www.k-state.edu/data-analytics/"
+    },
+    {
+        "Program name": "Diagnostic Medicine/Pathobiology",
+        "Level": "Master's",
+        "Program Page url": "https://www.vet.k-state.edu/academics/dmp/graduate/ms-pathobio.html"
+    },
+    {
+        "Program name": "Dietetics",
+        "Level": "Master's",
+        "Program Page url": "https://global.k-state.edu/ag/dietetics/"
+    },
+    {
+        "Program name": "Drama Therapy",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/mtd/academics/grad/drama-therapy/"
+    },
+    {
+        "Program name": "Early Childhood Education",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/education/academics/graduate-programs/masters-programs/early-childhood-education/"
+    },
+    {
+        "Program name": "Economics",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.k-state.edu/economics/academics/phd/"
+    },
+    {
+        "Program name": "Education",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://coe.k-state.edu/academics/graduate/"
+    },
+    {
+        "Program name": "Educational Leadership",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://coe.k-state.edu/academics/departments/educational-leadership/graduate-programs/"
+    },
+    {
+        "Program name": "Electrical and Computer Engineering",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.ece.k-state.edu/academics/grad/"
+    },
+    {
+        "Program name": "Electrical Engineering",
+        "Level": "Master's",
+        "Program Page url": "https://www.ece.k-state.edu/graduate/ms/"
+    },
+    {
+        "Program name": "Elementary Education",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/masters/elem-ed/"
+    },
+    {
+        "Program name": "Engineering",
+        "Level": "Doctoral",
+        "Program Page url": "https://engg.k-state.edu/academics/phd/"
+    },
+    {
+        "Program name": "Engineering Management",
+        "Level": "Master's and certificate",
+        "Program Page url": "https://engm.k-state.edu/"
+    },
+    {
+        "Program name": "English",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/english/academics/graduate/ma-english/"
+    },
+    {
+        "Program name": "Entomology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://entomology.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Environmental Design and Planning",
+        "Level": "Doctoral",
+        "Program Page url": "https://apdesign.k-state.edu/phd/"
+    },
+    {
+        "Program name": "Environmental Engineering",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/environmental-eng/"
+    },
+    {
+        "Program name": "Evolutionary Biology",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.k-state.edu/evol/"
+    },
+    {
+        "Program name": "Family and Community Services",
+        "Level": "Master's",
+        "Program Page url": "https://www.hhs.k-state.edu/ahs/academics/fcs/ms/"
+    },
+    {
+        "Program name": "Financial Planning",
+        "Level": "Certificate",
+        "Program Page url": "https://www.hhs.k-state.edu/pfp/academics/graduate/financial-planning-cert/"
+    },
+    {
+        "Program name": "Financial Therapy",
+        "Level": "Certificate",
+        "Program Page url": "https://online.k-state.edu/programs/financial-therapy-graduate-certificate/"
+    },
+    {
+        "Program name": "Food Safety and Defense",
+        "Level": "Certificate",
+        "Program Page url": "https://global.k-state.edu/ag/food-safety/"
+    },
+    {
+        "Program name": "Food Science",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://foodsci.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Gender, Women, and Sexuality Studies",
+        "Level": "Master's and certificate",
+        "Program Page url": "https://www.k-state.edu/gwss/academics/graduate/"
+    },
+    {
+        "Program name": "Genetics",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/genetics/"
+    },
+    {
+        "Program name": "Geography",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/geography/academics/graduate/"
+    },
+    {
+        "Program name": "Geology",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/geology/"
+    },
+    {
+        "Program name": "Gerontology",
+        "Level": "Master's",
+        "Program Page url": "https://www.hhs.k-state.edu/aging/academics/masters/"
+    },
+    {
+        "Program name": "Grain Science",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.grains.k-state.edu/academics/graduate/"
+    },
+    {
+        "Program name": "Grassland Management",
+        "Level": "Certificate",
+        "Program Page url": "https://online.k-state.edu/programs/grassland-management-certificate/"
+    },
+    {
+        "Program name": "History",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/history/graduate/"
+    },
+    {
+        "Program name": "Horticulture",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/program-details/horti.html"
+    },
+    {
+        "Program name": "Horticulture with an emphasis in Urban Food Systems",
+        "Level": "Master's and certificate",
+        "Program Page url": "https://online.k-state.edu/programs/urban-food-systems-masters/"
+    },
+    {
+        "Program name": "Hospitality Administration",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.hhs.k-state.edu/hospitality/academics/graduate/"
+    },
+    {
+        "Program name": "Human-Computer Interaction",
+        "Level": "Certificate",
+        "Program Page url": "https://global.k-state.edu/courses/graduate-certificate/human-computer-interaction/"
+    },
+    {
+        "Program name": "Industrial and Manufacturing Systems Engineering",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.imse.k-state.edu/academics/graduate/"
+    },
+    {
+        "Program name": "Infectious Diseases of Animals",
+        "Level": "Certificate",
+        "Program Page url": "https://global.k-state.edu/ag/animal-health/infectious-disease/"
+    },
+    {
+        "Program name": "Information Security and Assurance",
+        "Level": "Certificate",
+        "Program Page url": "https://www.cs.k-state.edu/academics/graduate/certificates/infosec.html"
+    },
+    {
+        "Program name": "Instructional Design and Technology",
+        "Level": "Master's",
+        "Program Page url": "https://coe.k-state.edu/academics/graduate/instructional-design-technology/"
+    },
+    {
+        "Program name": "Interior Architecture",
+        "Level": "Master's",
+        "Program Page url": "https://apdesign.k-state.edu/interior-architecture/academics/miarc/"
+    },
+    {
+        "Program name": "Interior Architecture and Product Design",
+        "Level": "Master's",
+        "Program Page url": "https://apdesign.k-state.edu/iapd/graduate/"
+    },
+    {
+        "Program name": "Journalism and Mass Communications",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/program-details/mass-communications/"
+    },
+    {
+        "Program name": "K-12 School Leadership",
+        "Level": "Master's",
+        "Program Page url": "https://coe.k-state.edu/academics/departments/educational-leadership/masters/"
+    },
+    {
+        "Program name": "Kinesiology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.hhs.k-state.edu/kines/academics/grad/"
+    },
+    {
+        "Program name": "Landscape Architecture",
+        "Level": "Master's",
+        "Program Page url": "https://apdesign.k-state.edu/larcp/academics/mla/"
+    },
+    {
+        "Program name": "Leadership",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.k-state.edu/leadership/academics/phd/"
+    },
+    {
+        "Program name": "Leadership Communication",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.k-state.edu/leadership/academics/phd-communication/"
+    },
+    {
+        "Program name": "Life Sciences",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/interdisciplinary/life-sciences/"
+    },
+    {
+        "Program name": "Literacy Education",
+        "Level": "Certificate",
+        "Program Page url": "https://online.k-state.edu/programs/literacy-education-certificate/"
+    },
+    {
+        "Program name": "Mass Communications",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.k-state.edu/jmc/graduate/phd/"
+    },
+    {
+        "Program name": "Mathematics",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.math.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Mechanical Engineering",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.mne.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Microbiology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/biology/grad/micro/"
+    },
+    {
+        "Program name": "Modern Languages",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/mlangs/academics/graduate/ma/"
+    },
+    {
+        "Program name": "Music",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/mtd/music/areas/grad/"
+    },
+    {
+        "Program name": "Nuclear Engineering",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://mne.k-state.edu/academics/grad/nuclear-option/"
+    },
+    {
+        "Program name": "Nutrition, Dietetics and Sensory Sciences",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.hhs.k-state.edu/fndh/graduate/ndss/"
+    },
+    {
+        "Program name": "One Health",
+        "Level": "Certificate",
+        "Program Page url": "https://global.k-state.edu/ag/one-health/"
+    },
+    {
+        "Program name": "Operations Research",
+        "Level": "Master's",
+        "Program Page url": "https://www.imse.k-state.edu/graduate/msor/"
+    },
+    {
+        "Program name": "Pathobiology",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.vet.k-state.edu/academics/dmp/graduate/phd/"
+    },
+    {
+        "Program name": "Personal Financial Planning",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.hhs.k-state.edu/pfp/"
+    },
+    {
+        "Program name": "Pet Food Processing",
+        "Level": "Certificate",
+        "Program Page url": "https://online.k-state.edu/programs/pet-food-processing-certificate/"
+    },
+    {
+        "Program name": "Philosophy",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/philosophy/academics/graduate/"
+    },
+    {
+        "Program name": "Physical Science",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/physical-science/"
+    },
+    {
+        "Program name": "Physics",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/physics/graduate/"
+    },
+    {
+        "Program name": "Physiology",
+        "Level": "Doctoral",
+        "Program Page url": "https://www.vet.k-state.edu/academics/anatomy-physiology/graduate/"
+    },
+    {
+        "Program name": "Plant Pathology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.plantpath.k-state.edu/graduate/"
+    },
+    {
+        "Program name": "Political Science",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/program-details/polscima/"
+    },
+    {
+        "Program name": "Professional Science Master's",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/professional-masters/"
+    },
+    {
+        "Program name": "Psychology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/psych/graduate/"
+    },
+    {
+        "Program name": "Public Administration",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/polsci/academics/mpa/"
+    },
+    {
+        "Program name": "Public Health",
+        "Level": "Master's and certificate",
+        "Program Page url": "https://global.k-state.edu/ag/public-health/"
+    },
+    {
+        "Program name": "Public Health Core Concepts",
+        "Level": "Certificate",
+        "Program Page url": "https://online.k-state.edu/programs/public-health-core-concepts-certificate/"
+    },
+    {
+        "Program name": "Public Horticulture",
+        "Level": "Master's",
+        "Program Page url": "https://hnr.k-state.edu/graduate/ms/public_horticulture/"
+    },
+    {
+        "Program name": "Regional and Community Planning",
+        "Level": "Master's",
+        "Program Page url": "https://apdesign.k-state.edu/larcp/programs/mrcp/"
+    },
+    {
+        "Program name": "School Counseling",
+        "Level": "Master's",
+        "Program Page url": "https://coe.k-state.edu/academics/graduate/school-counseling/"
+    },
+    {
+        "Program name": "Secondary Education",
+        "Level": "Master's",
+        "Program Page url": "https://coe.k-state.edu/academics/mat/"
+    },
+    {
+        "Program name": "Security Studies",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/securitystudies/"
+    },
+    {
+        "Program name": "Social Justice Education",
+        "Level": "Certificate",
+        "Program Page url": "https://online.k-state.edu/programs/social-justice-education-graduate-certificate/"
+    },
+    {
+        "Program name": "Social Work",
+        "Level": "Master's",
+        "Program Page url": "https://hhs.k-state.edu/socialwork/academics/msw/"
+    },
+    {
+        "Program name": "Sociology",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/sasw/sociology/grad/"
+    },
+    {
+        "Program name": "Software Engineering",
+        "Level": "Master's",
+        "Program Page url": "https://www.cs.k-state.edu/academics/graduate/msse/"
+    },
+    {
+        "Program name": "Special Education",
+        "Level": "Master's",
+        "Program Page url": "https://coe.k-state.edu/academics/special-education/ms/"
+    },
+    {
+        "Program name": "Statistics",
+        "Level": "Master's and doctoral",
+        "Program Page url": "https://www.k-state.edu/stats/graduate/"
+    },
+    {
+        "Program name": "Student Affairs in Higher Education",
+        "Level": "Doctoral",
+        "Program Page url": "https://coe.k-state.edu/academics/departments/educational-leadership/student-affairs/phd-student-affairs.html"
+    },
+    {
+        "Program name": "Teaching",
+        "Level": "Master's",
+        "Program Page url": "https://coe.k-state.edu/academics/graduate/master-of-arts-in-teaching/"
+    },
+    {
+        "Program name": "Teaching and Learning",
+        "Level": "Doctoral",
+        "Program Page url": "https://coe.k-state.edu/academics/graduate/doctor-philosophy-curriculum-instruction/teaching-learning.html"
+    },
+    {
+        "Program name": "Teaching English as a Second Language",
+        "Level": "Certificate",
+        "Program Page url": "https://global.k-state.edu/english/tesl/"
+    },
+    {
+        "Program name": "Theatre",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/mtd/academics/theatre/grad/"
+    },
+    {
+        "Program name": "Veterinary Biomedical Science",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/grad/academics/programs/ag-and-vetmed/vet-biomedical-sci/"
+    },
+    {
+        "Program name": "Veterinary Forensics",
+        "Level": "Certificate",
+        "Program Page url": "https://globalcampus.k-state.edu/courses/veterinary-forensics/"
+    },
+    {
+        "Program name": "Veterinary Public Health",
+        "Level": "Master's",
+        "Program Page url": "https://www.k-state.edu/mpm/academics/mph/"
+    },
+    {
+        "Program name": "Youth Development",
+        "Level": "Master's",
+        "Program Page url": "https://online.k-state.edu/programs/youth-development-masters/"
+    },
+    {
+        "Program name": "Youth Program Development and Evaluation",
+        "Level": "Certificate",
+        "Program Page url": "https://www.hhs.k-state.edu/ythdev/graduate/certificates/youth-program-development-evaluation/"
+    }
+]

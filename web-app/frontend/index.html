@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Data Extractor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <h1>UniScraper</h1>
+            </div>
+            <p class="subtitle">Intelligent Institution Data Extraction</p>
+        </header>
+
+        <main>
+            <div class="glass-card">
+                <div class="section-title">
+                    <h2>Configuration</h2>
+                    <p>Enter university details to begin extraction.</p>
+                </div>
+
+                <div class="form-group main-input">
+                    <label for="universityName">University Name <span class="required">*</span></label>
+                    <input type="text" id="universityName" placeholder="e.g. Stanford University" required autocomplete="off">
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="url-config-section">
+                    <h3>URL Configuration (Optional)</h3>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="commonTuitionUrl">Common Tuition Fee URL</label>
+                            <input type="url" id="commonTuitionUrl" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label for="commonAidUrl">Common Financial Aid URL</label>
+                            <input type="url" id="commonAidUrl" placeholder="https://...">
+                        </div>
+                    </div>
+
+                    <div class="sub-section-title">Undergraduate</div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="ugTuitionUrl">Tuition Fee URL</label>
+                            <input type="url" id="ugTuitionUrl" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label for="ugAidUrl">Financial Aid URL</label>
+                            <input type="url" id="ugAidUrl" placeholder="https://...">
+                        </div>
+                    </div>
+
+                    <div class="sub-section-title">Graduate</div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="gradTuitionUrl">Tuition Fee URL</label>
+                            <input type="url" id="gradTuitionUrl" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label for="gradAidUrl">Financial Aid URL</label>
+                            <input type="url" id="gradAidUrl" placeholder="https://...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="extractBtn" class="primary-btn">
+                        <span class="btn-text">Extract Data</span>
+                        <div class="btn-loader hidden"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="statusArea" class="status-area hidden">
+                <div class="glass-card status-card">
+                    <div class="status-header">
+                        <div class="status-title">
+                            <div class="status-dot"></div>
+                            <h3>Extraction Status</h3>
+                        </div>
+                        <span id="statusBadge" class="badge">Initializing</span>
+                    </div>
+                    
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div id="logs" class="logs-content">
+                            <div class="log-line system">> System ready.</div>
+                        </div>
+                    </div>
+
+                    <div id="results" class="results-container hidden">
+                        <h4>Generated Artifacts</h4>
+                        <div id="fileList" class="file-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
