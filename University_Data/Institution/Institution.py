@@ -482,6 +482,7 @@ def get_application_fees(website_url, university_name):
     prompt = (
         f"Find the application fee for both undergraduate and graduate programs for the university {university_name}, {website_url}? "
         "Return a line of text with the application fee for both undergraduate and graduate programs, no other text. " 
+        "Do not return the text like 'The application fee for graduate programs is not explicitly stated for domestic applicants on the university's website'. In this case just return what you find so far in the website. If you don't find something then don't explicitly mention in the return response."
         "No fabrication or guessing, just the application fee for both undergraduate and graduate programs."
         "Only if the application fees are explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the application fees are explicitly stated."
