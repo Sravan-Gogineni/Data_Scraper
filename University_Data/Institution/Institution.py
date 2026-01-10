@@ -480,11 +480,15 @@ def get_financial_aid_url(website_url, university_name):
 
 def get_application_fees(website_url, university_name):
     prompt = (
-        f"Find the application fee for both undergraduate and graduate programs for the university {university_name}, {website_url}? "
-        "Return a line of text with the application fee for both undergraduate and graduate programs, no other text. " 
+        f"Find the application fee for both domestic and international applicants for the university {university_name}, {website_url}? "
+        "Return a line of text with the application fee for both domestic and international applicants, no other text. " 
         "Do not return the text like 'The application fee for graduate programs is not explicitly stated for domestic applicants on the university's website'. In this case just return what you find so far in the website. If you don't find something then don't explicitly mention in the return response."
-        "No fabrication or guessing, just the application fee for both undergraduate and graduate programs."
+        "No fabrication or guessing, just the application fee for both domestic and international applicants."
+        "Example of the return response: 'The application fee for both domestic and international applicants is $amount. (or) The application fee for domestic applicants is $amount and for international applicants is $amount. '"
         "Only if the application fees are explicitly stated in the website, otherwise return null. "
+        "Do not return [Cite] in the return response."
+        "Only refer the {website_url} or the {university_name}.edu or it's sub domains or it's pages to find the application fees."
+        "Do not refer any other third party websites to find the application fees."
         "Also provide the evidence for your answer with correct URL or page where the application fees are explicitly stated."
     )
     return generate_text_safe(prompt)
@@ -521,8 +525,8 @@ def get_recommendations(website_url, university_name):
 
 def get_personal_essay(website_url, university_name):
     prompt = (
-        f"What are the personal essay requirements for the university {university_name}, {website_url}? "
-        "Return only the personal essay requirements, no other text. "
+        f"Does applying to the university {university_name}, {website_url} require a personal essay? "
+        "If yes, return Required. if not, return Not Required. no extra text "
         "No fabrication or guessing, just the personal essay requirements. "
         "Only if the personal essay requirements are explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the personal essay requirements are explicitly stated."
@@ -531,8 +535,8 @@ def get_personal_essay(website_url, university_name):
 
 def get_writing_sample(website_url, university_name):
     prompt = (
-        f"What are the writing sample requirements for the university {university_name}, {website_url}? "
-        "Return only the writing sample requirements, no other text. "
+        f"Does applying to the university {university_name}, {website_url} require a writing sample? "
+        "If yes, return Required. if not, return Not Required. no extra text "
         "No fabrication or guessing, just the writing sample requirements. "
         "Only if the writing sample requirements are explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the writing sample requirements are explicitly stated."
@@ -541,18 +545,19 @@ def get_writing_sample(website_url, university_name):
 
 def get_additional_information(website_url, university_name):
     prompt = (
-        f"Just give some descripttion about the {university_name}, {website_url}? "
-        "Return only a short description, no other text. "
-        "No fabrication or guessing, just a short description. "
-        "Only the Descriptipn, no other text. . If not explicitly stated in the website, return null."
-        "Also provide the evidence for your answer with correct URL or page where the additional information is explicitly stated."
+        f"Is there any additional information required to apply to the university {university_name}, {website_url}? "
+        "If yes, return a short line of text about the additional information requirements. if not, return null. no extra text "
+        "No fabrication or guessing, just the additional information requirements. "
+        "Only if the additional information requirements are explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the additional information requirements are explicitly stated."
     )
     return generate_text_safe(prompt)
 
 def get_additional_deadlines(website_url, university_name):
     prompt = (
-        f"What are the additional deadlines of {university_name}, {website_url} apart from ? "
-        "Return only the additional deadlines, no other text. "
+        f"What are the additional deadlines of {university_name}, {website_url} apart from application deadlines? "
+        "The deadlines can be scholarships, financial aid, or other deadlines. "
+        "Return only the additional deadlines like scholarships, financial aid, or other deadlines, no other text. "
         "No fabrication or guessing, just the additional deadlines. "
         "Only if the additional deadlines are explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the additional deadlines are explicitly stated."
@@ -562,6 +567,7 @@ def get_additional_deadlines(website_url, university_name):
 def get_is_multiple_applications_allowed(website_url, university_name):
     prompt = (
         f"Can a student apply to multiple programs at the university {university_name}, {website_url}? "
+        "Check through the website or its pages to find the answer. "
         "Return only 'True' or 'False', no other text. "
         "No fabrication or guessing, just True or False. "
         "Only if this information is explicitly stated in the website, otherwise return null. "
@@ -571,7 +577,7 @@ def get_is_multiple_applications_allowed(website_url, university_name):
 
 def get_is_act_required(website_url, university_name):
     prompt = (
-        f"Is ACT required for the university {university_name}, {website_url}? "
+        f"Is ACT scorerequired for the university {university_name}, {website_url}? "
         "Return only 'True' or 'False', no other text. "
         "No fabrication or guessing, just True or False. "
         "Only if this information is explicitly stated in the website, otherwise return null. "
@@ -592,6 +598,7 @@ def get_is_analytical_not_required(website_url, university_name):
 def get_is_analytical_optional(website_url, university_name):
     prompt = (
         f"Is analytical writing optional for the university {university_name}, {website_url}? "
+        "Check through the website or its pages to find the answer. "
         "Return only 'True' or 'False', no other text. "
         "No fabrication or guessing, just True or False. "
         "Only if this information is explicitly stated in the website, otherwise return null. "
@@ -602,6 +609,9 @@ def get_is_analytical_optional(website_url, university_name):
 def get_is_duolingo_required(website_url, university_name):
     prompt = (
         f"Is Duolingo required for the university {university_name}, {website_url}? "
+        "Check through the website or its pages to find the answer. "
+        "Does international students need to take Duolingo?"
+        "If the website explicitly states that the university does not require Duolingo, return 'False'. "
         "Return only 'True' or 'False', no other text. "
         "No fabrication or guessing, just True or False. "
         "Only if this information is explicitly stated in the website, otherwise return null. "
@@ -631,7 +641,8 @@ def get_is_english_not_required(website_url, university_name):
 
 def get_is_english_optional(website_url, university_name):
     prompt = (
-        f"Is English proficiency optional for the university {university_name}, {website_url}? "
+        f"Is English proficiency test optional for the university {university_name}, {website_url}? "
+        "if the website explicitly states the international student does not need to take English proficiency test, return 'True'. "
         "Return only 'True' or 'False', no other text. "
         "No fabrication or guessing, just True or False. "
         "Only if this information is explicitly stated in the website, otherwise return null. "
@@ -744,8 +755,10 @@ def get_tuition_fees(website_url, university_name, common_tuition_fee_urls=None)
     url_to_use = common_tuition_fee_urls if common_tuition_fee_urls else website_url
     prompt = (
         f"What are the tuition fees for the university {university_name} at {url_to_use}? "
-        "Return only the tuition fees, no other text. "
-        "No fabrication or guessing, just the tuition fees. "
+        "Please find the average tution fee for the international students for both the undergraduate and graduate programs. "
+        "The answer should be like this: 'Undergraduate (Full-Time): ~$7,438 per year (Resident), ~$19,318 (Non-Resident/Supplemental Tuition).Graduate (Full-Time): ~$8,872 per year (Resident), ~$18,952 (Non-Resident/Supplemental Tuition).' "
+        "Return exactly how the above format is. "
+        "No fabrication or guessing, just the answer you find in the website. or it's pages. "
         "Only if the tuition fees are explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the tuition fees are explicitly stated."
     )
@@ -816,6 +829,7 @@ def get_grad_avg_tuition(website_url, university_name, graduate_tuition_fee_urls
     url_to_use = graduate_tuition_fee_urls if graduate_tuition_fee_urls else (common_tuition_fee_urls if common_tuition_fee_urls else website_url)
     prompt = (
         f"What is the average graduate tuition for the university {university_name} at {url_to_use}? "
+        "Please look at the tution fees page for the university and it's pages and look for the average graduate tuition per year"
         "Return only the average graduate tuition, no other text. "
         "No fabrication or guessing, just the average graduate tuition. "
         "Only if the average graduate tuition is explicitly stated in the website, otherwise return null. "
