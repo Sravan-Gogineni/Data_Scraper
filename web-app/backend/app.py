@@ -10,14 +10,23 @@ import json
 # projects/Scraper_UI/University_Data/Institution/Institution.py
 MAIN_PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 INSTITUTION_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Institution")
-OUTPUT_DIR = os.path.join(INSTITUTION_DIR, "Inst_outputs")
+DEPARTMENT_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Departments")
+
+INST_OUTPUT_DIR = os.path.join(INSTITUTION_DIR, "Inst_outputs")
+DEPT_OUTPUT_DIR = os.path.join(DEPARTMENT_DIR, "Dept_outputs")
+
 sys.path.append(INSTITUTION_DIR)
+sys.path.append(DEPARTMENT_DIR)
 
 try:
     from Institution import process_institution_extraction
 except ImportError as e:
     print(f"Error importing Institution script: {e}")
-    # We will handle this error gracefully in the route if needed
+
+try:
+    from Department import process_department_extraction
+except ImportError as e:
+    print(f"Error importing Department script: {e}")
 
 FRONTEND_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../frontend")
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path="")
@@ -26,9 +35,24 @@ app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path="")
 def index():
     return send_from_directory(app.static_folder, "index.html")
 
+@app.route("/department.html")
+def department():
+    return send_from_directory(app.static_folder, "department.html")
+
 @app.route("/api/download/<path:filename>")
 def download_file(filename):
-    return send_from_directory(OUTPUT_DIR, filename, as_attachment=True)
+    # Check if file is in Institution output or Department output
+    # This is a simple check, in production might need more robust path handling
+    
+    # Try Institution first
+    if os.path.exists(os.path.join(INST_OUTPUT_DIR, filename)):
+         return send_from_directory(INST_OUTPUT_DIR, filename, as_attachment=True)
+    
+    # Try Department
+    if os.path.exists(os.path.join(DEPT_OUTPUT_DIR, filename)):
+         return send_from_directory(DEPT_OUTPUT_DIR, filename, as_attachment=True)
+         
+    return jsonify({"error": "File not found"}), 404
 
 @app.route("/api/extract", methods=["POST"])
 def extract_data():
@@ -76,6 +100,43 @@ def extract_data():
                          yield f"data: {update}\n\n"
                 except json.JSONDecodeError:
                     # Fallback if raw string
+                     yield f"data: {json.dumps({'status': 'progress', 'message': update})}\n\n"
+                     
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
+@app.route("/api/extract/department", methods=["POST"])
+def extract_department_data():
+    data = request.json
+    university_name = data.get("university_name")
+    
+    if not university_name:
+        return jsonify({"error": "University name is required"}), 400
+
+    def generate():
+        try:
+            # Run extraction
+            generator = process_department_extraction(university_name)
+            
+            for update in generator:
+                try:
+                    update_obj = json.loads(update)
+                    if update_obj.get("status") == "complete":
+                        # Modify result_files to return relative filenames for download
+                        download_links = {}
+                        for key, path in update_obj["files"].items():
+                            filename = os.path.basename(path)
+                            # We can just use the download route we set up, which checks both dirs
+                            download_links[key] = f"/api/download/{filename}"
+                        update_obj["files"] = download_links
+                        yield f"data: {json.dumps(update_obj)}\n\n"
+                    else:
+                         yield f"data: {update}\n\n"
+                except json.JSONDecodeError:
                      yield f"data: {json.dumps({'status': 'progress', 'message': update})}\n\n"
                      
         except Exception as e:

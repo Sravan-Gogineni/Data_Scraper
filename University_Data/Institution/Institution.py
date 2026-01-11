@@ -91,8 +91,28 @@ def extract_clean_value(response_text):
     
     # Return the cleaned text
     return text if text else None
+def get_graduate_tution_fee_url(website_url, university_name):
+    prompt = (
+        f"What is the graduate tuition fee URL for the university {university_name}, {website_url}? "
+        "give me the url of the page where i can find the graduate tution fee"
+        "Return only the graduate tuition fee URL, no other text. "
+        "No fabrication or guessing, just the graduate tuition URL. "
+        "Only if the graduate tuition fee URL is explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the graduate tuition fee URL is explicitly stated."
+    )
+    return generate_text_safe(prompt)
 
-# New fields at the top
+def get_undergraduate_tution_fee_url(website_url, university_name):
+    prompt = (
+        f"What is the undergraduate tuition fee URL for the university {university_name}, {website_url}? "
+        "give me the url of the page where i can find the undergraduate tution fee"
+        "Return only the undergraduate tuition fee URL, no other text. "
+        "No fabrication or guessing, just the undergraduate tuition URL. "
+        "Only if the undergraduate tuition fee URL is explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the undergraduate tuition fee URL is explicitly stated."
+    )
+    return generate_text_safe(prompt)
+
 def get_womens_college(website_url, university_name):
     prompt = (
         f"Is the university {university_name}, {website_url} a women's college? "
@@ -750,12 +770,13 @@ def get_is_toefl_ib_required(website_url, university_name):
     )
     return generate_text_safe(prompt)
 
-def get_tuition_fees(website_url, university_name, common_tuition_fee_urls=None):
+def get_tuition_fees(website_url, university_name):
     # Use common URL if provided, else use website_url
-    url_to_use = common_tuition_fee_urls if common_tuition_fee_urls else website_url
+    grad_tuition_url = get_graduate_tution_fee_url(university_name, website_url)
+    undergrad_tuition_url = get_undergraduate_tution_fee_url(university_name, website_url)
     prompt = (
-        f"What are the tuition fees for the university {university_name} at {url_to_use}? "
-        "Please find the average tution fee for the international students for both the undergraduate and graduate programs. "
+        f"Look for the tuition fees for the university {university_name} at {grad_tuition_url} and {undergraduate_tuition_url}. "
+        "Please find the tuition fee for semester or year according to the website for the for both the undergraduate and graduate programs. "
         "The answer should be like this: 'Undergraduate (Full-Time): ~$7,438 per year (Resident), ~$19,318 (Non-Resident/Supplemental Tuition).Graduate (Full-Time): ~$8,872 per year (Resident), ~$18,952 (Non-Resident/Supplemental Tuition).' "
         "Return exactly how the above format is. "
         "No fabrication or guessing, just the answer you find in the website. or it's pages. "
@@ -936,6 +957,10 @@ def process_institution_extraction(
     prompt = f"What is the official university website for {university_name}?"
     website_url = generate_text_safe(prompt)
     print(f"Found Website URL: {website_url}")
+    # 2. Get Tuition Fee URL
+    yield f'{{"status": "progress", "message": "Finding tuition fee URL for {university_name}..."}}'
+    tuition_fee_url = get_tuition_fee_url(university_name, website_url)
+    print(f"Found Tuition Fee URL: {tuition_fee_url}")
 
     # New fields at the top
     yield '{"status": "progress", "message": "Extracting general information..."}'
