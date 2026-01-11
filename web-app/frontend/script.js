@@ -3,11 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const universityNameInput = document.getElementById('universityName');
     
     // URL Inputs
-    const commonTuitionUrl = document.getElementById('commonTuitionUrl');
     const commonAidUrl = document.getElementById('commonAidUrl');
-    const ugTuitionUrl = document.getElementById('ugTuitionUrl');
     const ugAidUrl = document.getElementById('ugAidUrl');
-    const gradTuitionUrl = document.getElementById('gradTuitionUrl');
     const gradAidUrl = document.getElementById('gradAidUrl');
 
     extractBtn.addEventListener('click', async () => {
@@ -23,11 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Prepare Payload
         const payload = {
             university_name: universityName,
-            common_tuition_fee_urls: commonTuitionUrl.value.trim() || null,
             common_financial_aid_urls: commonAidUrl.value.trim() || null,
-            undergraduate_tuition_fee_urls: ugTuitionUrl.value.trim() || null,
             undergraduate_financial_aid_urls: ugAidUrl.value.trim() || null,
-            graduate_tuition_fee_urls: gradTuitionUrl.value.trim() || null,
             graduate_financial_aid_urls: gradAidUrl.value.trim() || null
         };
 

@@ -91,27 +91,18 @@ def extract_clean_value(response_text):
     
     # Return the cleaned text
     return text if text else None
-def get_graduate_tution_fee_url(website_url, university_name):
+def get_tuition_fee_url(website_url, university_name):
     prompt = (
-        f"What is the graduate tuition fee URL for the university {university_name}, {website_url}? "
-        "give me the url of the page where i can find the graduate tution fee"
-        "Return only the graduate tuition fee URL, no other text. "
-        "No fabrication or guessing, just the graduate tuition URL. "
-        "Only if the graduate tuition fee URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the graduate tuition fee URL is explicitly stated."
+        f"Find the tuition fee URL for the university {university_name} on the website {website_url}. "
+        f"Search query: site:{website_url} tuition fees cost of attendance "
+        "Return only the tuition fee URL, no other text. "
+        "No fabrication or guessing, just the tuition fee URL. "
+        "Only if the tuition fee URL is explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the tuition fee URL is explicitly stated."
     )
     return generate_text_safe(prompt)
 
-def get_undergraduate_tution_fee_url(website_url, university_name):
-    prompt = (
-        f"What is the undergraduate tuition fee URL for the university {university_name}, {website_url}? "
-        "give me the url of the page where i can find the undergraduate tution fee"
-        "Return only the undergraduate tuition fee URL, no other text. "
-        "No fabrication or guessing, just the undergraduate tuition URL. "
-        "Only if the undergraduate tuition fee URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the undergraduate tuition fee URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
+
 
 def get_womens_college(website_url, university_name):
     prompt = (
@@ -772,10 +763,10 @@ def get_is_toefl_ib_required(website_url, university_name):
 
 def get_tuition_fees(website_url, university_name):
     # Use common URL if provided, else use website_url
-    grad_tuition_url = get_graduate_tution_fee_url(university_name, website_url)
-    undergrad_tuition_url = get_undergraduate_tution_fee_url(university_name, website_url)
+
+    tuition_fee_url = get_tuition_fee_url(website_url, university_name)
     prompt = (
-        f"Look for the tuition fees for the university {university_name} at {grad_tuition_url} and {undergraduate_tuition_url}. "
+        f"Look for the tuition fees for the university {university_name} at {tuition_fee_url}. "
         "Please find the tuition fee for semester or year according to the website for the for both the undergraduate and graduate programs. "
         "The answer should be like this: 'Undergraduate (Full-Time): ~$7,438 per year (Resident), ~$19,318 (Non-Resident/Supplemental Tuition).Graduate (Full-Time): ~$8,872 per year (Resident), ~$18,952 (Non-Resident/Supplemental Tuition).' "
         "Return exactly how the above format is. "
@@ -959,8 +950,10 @@ def process_institution_extraction(
     print(f"Found Website URL: {website_url}")
     # 2. Get Tuition Fee URL
     yield f'{{"status": "progress", "message": "Finding tuition fee URL for {university_name}..."}}'
-    tuition_fee_url = get_tuition_fee_url(university_name, website_url)
-    print(f"Found Tuition Fee URL: {tuition_fee_url}")
+    # Use AI to find the tuition fee URLs
+    ai_found_tuition_url = get_tuition_fee_url(website_url, university_name)
+    
+    print(f"Found Tuition Fee URL: {ai_found_tuition_url}")
 
     # New fields at the top
     yield '{"status": "progress", "message": "Extracting general information..."}'
@@ -971,6 +964,22 @@ def process_institution_extraction(
         "orientation_available": get_orientation_available(website_url, university_name),
         "college_tour_after_admissions": get_college_tour_after_admissions(website_url, university_name),
     }
+
+    yield '{"status": "progress", "message": "Extracting application requirements..."}'
+    application_data = {
+        "application_requirements": get_application_requirements(website_url, university_name),
+        "application_fees": get_application_fees(website_url, university_name),
+        "test_policy": get_test_policy(website_url, university_name),
+        "courses_and_grades": get_courses_and_grades(website_url, university_name),
+        "recommendations": get_recommendations(website_url, university_name),
+        "personal_essay": get_personal_essay(website_url, university_name),
+        "writing_sample": get_writing_sample(website_url, university_name),
+        "additional_information": get_additional_information(website_url, university_name),
+        "additional_deadlines": get_additional_deadlines(website_url, university_name),
+        "tuition_fees": get_tuition_fees(website_url, university_name),
+    }
+    yield '{{ "status": "progress", "tuition_fees": "{tuition_fees}" }}'.format(tuition_fees=application_data["tuition_fees"])
+
 
     yield '{"status": "progress", "message": "Extracting university metrics..."}'
     university_data = {
@@ -1000,20 +1009,7 @@ def process_institution_extraction(
         "zip_code": get_zip_code(website_url, university_name),
     }
 
-    yield '{"status": "progress", "message": "Extracting application requirements..."}'
-    application_data = {
-        "application_requirements": get_application_requirements(website_url, university_name),
-        "application_fees": get_application_fees(website_url, university_name),
-        "test_policy": get_test_policy(website_url, university_name),
-        "courses_and_grades": get_courses_and_grades(website_url, university_name),
-        "recommendations": get_recommendations(website_url, university_name),
-        "personal_essay": get_personal_essay(website_url, university_name),
-        "writing_sample": get_writing_sample(website_url, university_name),
-        "additional_information": get_additional_information(website_url, university_name),
-        "additional_deadlines": get_additional_deadlines(website_url, university_name),
-        "tuition_fees": get_tuition_fees(website_url, university_name, common_tuition_fee_urls),
-    }
-
+    
     yield '{"status": "progress", "message": "Extracting contact information..."}'
     contact_data = {
         "contact_information": get_contact_information(website_url, university_name),
@@ -1039,12 +1035,12 @@ def process_institution_extraction(
 
     yield '{"status": "progress", "message": "Extracting student statistics..."}'
     student_statistics_data = {
-        "grad_avg_tuition": get_grad_avg_tuition(website_url, university_name, graduate_tuition_fee_urls, common_tuition_fee_urls),
+        "grad_avg_tuition": get_grad_avg_tuition(website_url, university_name, ai_found_tuition_url, common_tuition_fee_urls),
         "grad_international_students": get_grad_international_students(website_url, university_name),
         "grad_scholarship_high": get_grad_scholarship_high(website_url, university_name, graduate_financial_aid_urls, common_financial_aid_urls),
         "grad_scholarship_low": get_grad_scholarship_low(website_url, university_name, graduate_financial_aid_urls, common_financial_aid_urls),
         "grad_total_students": get_grad_total_students(website_url, university_name),
-        "ug_avg_tuition": get_ug_avg_tuition(website_url, university_name, undergraduate_tuition_fee_urls, common_tuition_fee_urls),
+        "ug_avg_tuition": get_ug_avg_tuition(website_url, university_name, ai_found_tuition_url, common_tuition_fee_urls),
         "ug_international_students": get_ug_international_students(website_url, university_name),
         "ug_scholarship_high": get_ug_scholarship_high(website_url, university_name, undergraduate_financial_aid_urls, common_financial_aid_urls),
         "ug_scholarship_low": get_ug_scholarship_low(website_url, university_name, undergraduate_financial_aid_urls, common_financial_aid_urls),

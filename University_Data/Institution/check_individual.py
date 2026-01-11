@@ -1,101 +1,114 @@
-import pandas as pd 
 import os
-from dotenv import load_dotenv
-import json
-import csv
 import logging
+import requests
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-
+# Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-# Configure the client (using google-genai SDK 1.57.0)
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-
-# Wrapper for compatibility with existing code structure
 class GeminiModelWrapper:
     def __init__(self, client, model_name):
         self.client = client
         self.model_name = model_name
 
-    def generate_content(self, prompt):
-        # Configure the search tool for every call to ensure live data
-        google_search_tool = types.Tool(
-            google_search=types.GoogleSearch()
-        )
-        
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                tools=[google_search_tool]
-            )
-        )
-        return response
-
-    def generate_text_safe(self, prompt):
+    def resolve_redirect(self, url):
+        """Follows the Google redirect to find the original university URL."""
         try:
-            response = self.generate_content(prompt)
-            if response and response.text:
-                return response.text.replace("**", "").replace("```", "").strip()
+            # allow_redirects=True follows the chain to the final destination
+            response = requests.head(url, allow_redirects=True, timeout=10)
+            return response.url
         except Exception as e:
-            logger.error(f"Error generating content: {e}")
-        return ""
+            logger.warning(f"Could not resolve URL {url}: {e}")
+            return url  # Fallback to the original redirect link if resolution fails
 
-# Initialize the model wrapper
-model = GeminiModelWrapper(client, "gemini-2.5-pro")    
+    def generate_content_with_sources(self, prompt):
+        """Calls Gemini and extracts clean, original source URLs."""
+        try:
+            google_search_tool = types.Tool(
+                google_search=types.GoogleSearch()
+            )
+            
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    tools=[google_search_tool],
+                    temperature=0.0
+                )
+            )
 
-# Define global helper function that uses the model instance
-def generate_text_safe(prompt):
-    return model.generate_text_safe(prompt)
+            if not response or not response.candidates:
+                return "No data found.", []
 
-def get_grad_tuition(website_url, university_name, graduate_tuition_fee_urls=None, common_tuition_fee_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = graduate_tuition_fee_urls if graduate_tuition_fee_urls else (common_tuition_fee_urls if common_tuition_fee_urls else website_url)
-    prompt = (
-        f"What is the graduate tuition for the university {university_name} at {url_to_use}? "
-        "Return only the graduate tuition, no other text. "
-        "No fabrication or guessing, just the graduate tuition. "
-        "Only if the graduate tuition is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the graduate tuition is explicitly stated."
-    )
-    return generate_text_safe(prompt)
+            generated_text = response.text.strip()
+            sources = []
+            
+            # Access the grounding metadata for real links
+            metadata = response.candidates[0].grounding_metadata
+            if metadata and metadata.grounding_chunks:
+                for chunk in metadata.grounding_chunks:
+                    if chunk.web and chunk.web.uri:
+                        # RESOLVE the redirect here
+                        original_url = self.resolve_redirect(chunk.web.uri)
+                        sources.append(original_url)
+            
+            # Remove duplicates
+            unique_sources = list(dict.fromkeys(sources))
+            return generated_text, unique_sources
 
-def get_tuition_fee_url(university_name, website_url):
-    prompt = (
-        f"What is the tuition fee URL for the university {university_name} at {website_url}? "
+        except Exception as e:
+            logger.error(f"Error during API call: {e}")
+            return f"Error: {str(e)}", []
+
+# Initialize API Client
+client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+model_wrapper = GeminiModelWrapper(client, "gemini-2.5-pro")
+
+def run_scraper(university_name):
+    print(f"\n[Searching for {university_name}...]")
+    
+    # 1. Find Website URL first
+    website_prompt = f"What is the official website URL for {university_name}? Return only the URL."
+    website_response, _  = model_wrapper.generate_content_with_sources(website_prompt)
+    website_url = website_response.strip()
+    print(f"Official Website: {website_url}")
+
+    # 2. Find Tuition Fee URL (restricted to official website)
+    tuition_url_prompt = (
+        f"Find the tuition fee URL for the university {university_name}. "
+        f"Search query: site:{website_url} tuition fees cost of attendance "
         "Return only the tuition fee URL, no other text. "
-        "No fabrication or guessing, just the tuition fee URL. "
-        "Only if the tuition fee URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the tuition fee URL is explicitly stated."
     )
-    return generate_text_safe(prompt)
+    tuition_url_response, _ = model_wrapper.generate_content_with_sources(tuition_url_prompt)
+    tuition_url = tuition_url_response.strip()
+    print(f"Tuition Webpage: {tuition_url}")
 
-university_name = "University of California, Berkeley"
-
-# Now we can safely call functions or use them in __main__
-if __name__ == "__main__":
-    # Get website URL first
-    print(f"Finding website for {university_name}...")
+    # 3. Prompting for tuition extraction with site restriction (using the found tuition URL or main site)
+    # We prioritize searching within the specific tuition URL found, but allow falling back to the main site domain
     prompt = (
-        f"What is the website URL for the university {university_name}? "
-        "Return only the website URL, no other text. "
-        "No fabrication or guessing, just the website URL. "
-        "Only if the website URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the website URL is explicitly stated."
+        f"Look for the tuition fees for the university {university_name} on the website {tuition_url} or {website_url}. "
+        f"Search query: site:{website_url} tuition fees {university_name} "
+        "Please find the tuition fee for semester or year according to the website for the for both the undergraduate and graduate programs. "
+        "The answer should be like this: 'Undergraduate (Full-Time): ~$7,438 per year (Resident), ~$19,318 (Non-Resident/Supplemental Tuition).Graduate (Full-Time): ~$8,872 per year (Resident), ~$18,952 (Non-Resident/Supplemental Tuition).' "
+        "Look correctly and do not cross map the undergraduate and graduate tuition fees and resident and non-resident tuition fees. answer based on what you find in the website."
+        "Return exactly how the above format is. "
+        "No fabrication or guessing, just the answer you find in the website. or it's pages. "
+        "Only if the tuition fees are explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the tuition fees are explicitly stated."
     )
-    website_url = generate_text_safe(prompt)
-    print(f"Website URL: {website_url}")
+    
+    data, links = model_wrapper.generate_content_with_sources(prompt)
 
-    if website_url:
-        print(f"Finding tuition fee URL...")
-        tuition_url = get_tuition_fee_url(university_name, website_url)
-        print(f"Tuition Fee URL: {tuition_url}")
-        
-        print(f"Finding graduate tuition...")
-        grad_tuition = get_grad_tuition(website_url, university_name)
-        print(f"Graduate Tuition: {grad_tuition}")
+    print("-" * 30)
+    print(f"RESULTS:\n{data}")
+    print("\nORIGINAL SOURCE LINKS:")
+    for i, link in enumerate(links, 1):
+        print(f"[{i}] {link}")
+
+if __name__ == "__main__":
+    run_scraper("University of Kansas")

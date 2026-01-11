@@ -17,6 +17,9 @@ DEPT_OUTPUT_DIR = os.path.join(DEPARTMENT_DIR, "Dept_outputs")
 
 sys.path.append(INSTITUTION_DIR)
 sys.path.append(DEPARTMENT_DIR)
+PROGRAMS_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Programs")
+PROG_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "Prog_outputs")
+sys.path.append(PROGRAMS_DIR)
 
 try:
     from Institution import process_institution_extraction
@@ -28,6 +31,11 @@ try:
 except ImportError as e:
     print(f"Error importing Department script: {e}")
 
+try:
+    from Programs import process_programs_extraction
+except ImportError as e:
+    print(f"Error importing Programs script: {e}")
+
 FRONTEND_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../frontend")
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path="")
 
@@ -38,6 +46,10 @@ def index():
 @app.route("/department.html")
 def department():
     return send_from_directory(app.static_folder, "department.html")
+
+@app.route("/programs.html")
+def programs():
+    return send_from_directory(app.static_folder, "programs.html")
 
 @app.route("/api/download/<path:filename>")
 def download_file(filename):
@@ -51,6 +63,10 @@ def download_file(filename):
     # Try Department
     if os.path.exists(os.path.join(DEPT_OUTPUT_DIR, filename)):
          return send_from_directory(DEPT_OUTPUT_DIR, filename, as_attachment=True)
+         
+    # Try Programs
+    if os.path.exists(os.path.join(PROG_OUTPUT_DIR, filename)):
+         return send_from_directory(PROG_OUTPUT_DIR, filename, as_attachment=True)
          
     return jsonify({"error": "File not found"}), 404
 
@@ -146,5 +162,41 @@ def extract_department_data():
 
     return Response(stream_with_context(generate()), mimetype='text/event-stream')
 
+@app.route("/api/extract/programs", methods=["POST"])
+def extract_programs_data():
+    data = request.json
+    university_name = data.get("university_name")
+    
+    if not university_name:
+        return jsonify({"error": "University name is required"}), 400
+
+    def generate():
+        try:
+            # Run extraction
+            generator = process_programs_extraction(university_name)
+            
+            for update in generator:
+                try:
+                    update_obj = json.loads(update)
+                    if update_obj.get("status") == "complete":
+                        # Modify result_files to return relative filenames for download
+                        download_links = {}
+                        for key, path in update_obj["files"].items():
+                            filename = os.path.basename(path)
+                            download_links[key] = f"/api/download/{filename}"
+                        update_obj["files"] = download_links
+                        yield f"data: {json.dumps(update_obj)}\n\n"
+                    else:
+                         yield f"data: {update}\n\n"
+                except json.JSONDecodeError:
+                     yield f"data: {json.dumps({'status': 'progress', 'message': update})}\n\n"
+                     
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5002)
