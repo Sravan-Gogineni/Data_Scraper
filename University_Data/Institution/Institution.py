@@ -169,8 +169,9 @@ def get_university_name(website_url, university_name):
 def get_college_setting(website_url, university_name):
     prompt = (
         f"What is the college setting for the university {university_name}, {website_url}? "
+        "Search query: site:{website_url} college setting "
+        "Example: urban, suburban, rural, etc. "
         "Return only the college setting, no other text. "
-        "example: urban, suburban, rural, etc. "
         "No fabrication or guessing, just the college setting. "
         "Only if the college setting is explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the college setting is explicitly stated."
@@ -309,6 +310,7 @@ def get_county(website_url, university_name):
         "Also provide the evidence for your answer with correct URL or page where the county is explicitly stated."
     )
     return generate_text_safe(prompt)
+    
 
 def get_city(website_url, university_name):
     prompt = (

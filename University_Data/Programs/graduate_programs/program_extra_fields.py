@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 import json
 import re
+import time
 
 load_dotenv()
 
@@ -13,50 +14,12 @@ tools = [genai.protos.Tool(google_search=genai.protos.Tool.GoogleSearch())]
 model = genai.GenerativeModel("gemini-3-pro-preview", tools=tools)
 
 # Get the directory where this script is located
-# Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
-csv_path = os.path.join(script_dir, 'graduate_programs.csv')
-# output_dir = "/home/my-laptop/scraper/Quinnipiac_university/Programs/graduate_programs/Grad_prog_outputs"
 output_dir = os.path.join(script_dir, "Grad_prog_outputs")
 os.makedirs(output_dir, exist_ok=True)
+csv_path = os.path.join(output_dir, 'graduate_programs.csv')
 json_path = os.path.join(output_dir, 'extra_fields_data.json')
-university_name = "Kansas State University"
 
-# Check if CSV file exists
-if not os.path.exists(csv_path):
-    print(f"ERROR: CSV file not found: {csv_path}")
-    print("Please create a CSV file with columns: 'Program name', 'Program Page url'")
-    exit(1)
-
-program_data = pd.read_csv(csv_path)
-
-# Check if CSV has data
-if program_data.empty:
-    print(f"WARNING: CSV file is empty: {csv_path}")
-    exit(1)
-
-# Check if required columns exist
-required_columns = ['Program name', 'Program Page url']
-missing_columns = [col for col in required_columns if col not in program_data.columns]
-if missing_columns:
-    print(f"ERROR: CSV file is missing required columns: {', '.join(missing_columns)}")
-    exit(1)
-
-# Load existing data if the JSON file exists (for resuming)
-extra_fields_data = []
-processed_programs = set()
-if os.path.exists(json_path):
-    try:
-        with open(json_path, 'r', encoding='utf-8') as f:
-            extra_fields_data = json.load(f)
-            # Track which programs have already been processed
-            for record in extra_fields_data:
-                program_name = record.get('Program name')
-                if program_name:
-                    processed_programs.add(program_name)
-        print(f"Loaded {len(extra_fields_data)} existing records from {json_path}")
-    except Exception as e:
-        print(f"Warning: Could not load existing JSON file: {e}")
 
 def save_to_json(data, filepath):
     """Save data to JSON file."""
@@ -69,7 +32,6 @@ def parse_json_from_response(text):
     text = text.replace("**", "").replace("```json", "").replace("```", "").strip()
     
     # Try to extract JSON from the text
-    # Look for JSON object or array
     json_match = re.search(r'\{.*\}', text, re.DOTALL)
     if json_match:
         try:
@@ -83,14 +45,10 @@ def parse_json_from_response(text):
     except json.JSONDecodeError:
         return None
 
-for index, row in program_data.iterrows():
+def process_single_program(row, university_name):
+    """Process a single program to extract extra fields."""
     program_name = row['Program name']
     program_page_url = row['Program Page url']
-    
-    # Skip if already processed
-    if program_name in processed_programs:
-        print(f"Skipping {program_name} (already processed)")
-        continue
     
     prompt = (
         f"You are extracting information about the program '{program_name}' from the official {university_name} website.\n\n"
@@ -106,6 +64,8 @@ for index, row in program_data.iterrows():
         f"   This should be a direct link to the program information page. Must be from official domain only.\n"
         f"4. Accreditation status: Any accreditation information mentioned for this specific program. "
         f"   Include the accrediting body name and status if available. If not mentioned, return null.\n\n"
+        f"5. Level: The level of the program. The level can be either any of these and these are just examples : Masters, Doctoral, Associate,Certificate,MA,Minor,PhD,MBA,MFA."
+        f"   This should be determined from the {program_page_url} when you are extracting there itself distingnuish the program level. If not mentioned, return null.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {program_page_url} or other official {university_name} pages\n"
         f"- Do NOT infer, assume, or make up any information\n"
@@ -122,60 +82,103 @@ for index, row in program_data.iterrows():
         parsed_data = parse_json_from_response(response_text)
         
         if parsed_data:
-            # Ensure it's a dict, not a list
             if isinstance(parsed_data, list) and len(parsed_data) > 0:
                 parsed_data = parsed_data[0]
             
-            # Add program name and URL to the data
             parsed_data['Program name'] = program_name
             parsed_data['Program Page url'] = program_page_url
-            extra_fields_data.append(parsed_data)
-            processed_programs.add(program_name)
-            # Save immediately to preserve progress
-            save_to_json(extra_fields_data, json_path)
-            print(f"✓ Processed and saved: {program_name}")
+            return parsed_data
         else:
-            # If parsing failed, store error info
-            error_record = {
-                'Program name': program_name,
-                'Program Page url': program_page_url,
-                'Concentration name': None,
-                'description': None,
-                'program website url': None,
-                'Accreditation status': None,
-                'error': 'Failed to parse JSON response'
+            return {
+                'Program name': program_name, 'Program Page url': program_page_url,
+                'Concentration name': None, 'description': None, 'program website url': None,
+                'Accreditation status': None, 'error': 'Failed to parse JSON response'
             }
-            extra_fields_data.append(error_record)
-            processed_programs.add(program_name)
-            # Save immediately to preserve progress
-            save_to_json(extra_fields_data, json_path)
-            print(f"⚠ Warning: Failed to parse JSON for program {program_name} (saved with error)")
     
     except Exception as e:
-        print(f"Error processing program {program_name}: {str(e)}")
-        error_record = {
-            'Program name': program_name,
-            'Program Page url': program_page_url,
-            'Concentration name': None,
-            'description': None,
-            'program website url': None,
-            'Accreditation status': None,
-            'error': str(e)
+        return {
+            'Program name': program_name, 'Program Page url': program_page_url,
+            'Concentration name': None, 'description': None, 'program website url': None,
+            'Accreditation status': None, 'error': str(e)
         }
-        extra_fields_data.append(error_record)
-        processed_programs.add(program_name)
-        # Save immediately to preserve progress even on errors
-        save_to_json(extra_fields_data, json_path)
-        print(f"✗ Error saved for program {program_name}")
 
-# Final save (redundant but ensures consistency)
-save_to_json(extra_fields_data, json_path)
+def run(university_name_input):
+    global university_name
+    university_name = university_name_input
+    
+    # Check if CSV file exists
+    if not os.path.exists(csv_path):
+        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        return
 
-csv_output_path = os.path.join(output_dir, 'extra_fields_data.csv')
-if extra_fields_data:
-    df = pd.DataFrame(extra_fields_data)
-    df.to_csv(csv_output_path, index=False, encoding='utf-8')
-    print(f"\nSuccessfully processed {len(extra_fields_data)} programs")
-    print(f"Data saved to {json_path} and {csv_output_path}")
-else:
-    print("No data to save")
+    program_data = pd.read_csv(csv_path)
+
+    if program_data.empty:
+        yield f'{{"status": "error", "message": "CSV file is empty. Please check Step 1 results."}}'
+        return
+
+    # Check if required columns exist
+    required_columns = ['Program name', 'Program Page url']
+    missing_columns = [col for col in required_columns if col not in program_data.columns]
+    if missing_columns:
+        yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
+        return
+        
+    # Load existing data
+    extra_fields_data = []
+    processed_programs = set()
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                extra_fields_data = json.load(f)
+                for record in extra_fields_data:
+                    program_name = record.get('Program name')
+                    if program_name:
+                        processed_programs.add(program_name)
+            yield f'{{"status": "progress", "message": "Resuming: Loaded {len(extra_fields_data)} existing records"}}'
+        except Exception as e:
+            pass
+
+    # Filter out already processed programs
+    programs_to_process = []
+    for index, row in program_data.iterrows():
+        if row['Program name'] not in processed_programs:
+            programs_to_process.append(row)
+
+    total_programs = len(program_data)
+    processed_count = len(processed_programs)
+    
+    yield f'{{"status": "progress", "message": "Starting extraction for {total_programs} programs ({len(programs_to_process)} remaining)..."}}'
+
+    for index, row in program_data.iterrows():
+        program_name = row['Program name']
+        program_page_url = row['Program Page url']
+        
+        if program_name in processed_programs:
+            continue
+        
+        processed_count += 1
+        yield f'{{"status": "progress", "message": "Processing [{processed_count}/{total_programs}]: {program_name}"}}'
+        
+        try:
+            result = process_single_program(row, university_name)
+            
+            # Update shared data structures
+            extra_fields_data.append(result)
+            processed_programs.add(program_name)
+            
+            # Save progress (thread-safe due to lock in save_to_json)
+            save_to_json(extra_fields_data, json_path)
+            time.sleep(1) # Rate limit handling
+            
+        except Exception as e:
+            yield f'{{"status": "warning", "message": "Error processing {program_name}: {str(e)}"}}'
+
+    # Final save
+    csv_output_path = os.path.join(output_dir, 'extra_fields_data.csv')
+    if extra_fields_data:
+        df = pd.DataFrame(extra_fields_data)
+        df.to_csv(csv_output_path, index=False, encoding='utf-8')
+        yield f'{{"status": "complete", "message": "Completed extraction for {len(extra_fields_data)} programs", "files": {{"grad_extra_csv": "{csv_output_path}"}}}}'
+    else:
+        yield f'{{"status": "complete", "message": "No data extracted", "files": {{}}}}'

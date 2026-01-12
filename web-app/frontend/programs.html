@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs Data Extractor</title>
+    <title>Program Data Extractor</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .step-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .step-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        .step-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .step-number {
+            font-size: 2rem;
+            font-weight: 700;
+            opacity: 0.3;
+            margin-bottom: 0.5rem;
+        }
+        .step-label {
+            font-weight: 500;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="background-blobs">
@@ -31,22 +71,42 @@
             <div class="glass-card">
                 <div class="section-title">
                     <h2>Configuration</h2>
-                    <p>Enter university details to begin programs extraction.</p>
+                    <p>Enter university details and run extraction steps sequentially.</p>
                 </div>
 
                 <div class="form-group main-input">
                     <label for="universityName">University Name <span class="required">*</span></label>
-                    <input type="text" id="universityName" placeholder="e.g. Kansas State University" required autocomplete="off">
+                    <input type="text" id="universityName" placeholder="e.g. Stanford University" required autocomplete="off">
                 </div>
 
-                <div class="info-box">
-                    <p>Program extraction will automatically find the official website and extract Undergraduate and Graduate programs with details.</p>
-                </div>
-
-                <div class="actions">
-                    <button id="extractBtn" class="primary-btn">
-                        <span class="btn-text">Extract Programs</span>
-                        <div class="btn-loader hidden"></div>
+                <div class="step-grid">
+                    <button class="step-btn" data-step="1">
+                        <div class="step-number">01</div>
+                        <div class="step-label">Extract Program List</div>
+                    </button>
+                    <button class="step-btn" data-step="2">
+                        <div class="step-number">02</div>
+                        <div class="step-label">Extra Fields</div>
+                    </button>
+                    <button class="step-btn" data-step="3">
+                        <div class="step-number">03</div>
+                        <div class="step-label">Test Scores</div>
+                    </button>
+                    <button class="step-btn" data-step="4">
+                        <div class="step-number">04</div>
+                        <div class="step-label">App Requirements</div>
+                    </button>
+                    <button class="step-btn" data-step="5">
+                        <div class="step-number">05</div>
+                        <div class="step-label">Financial Details</div>
+                    </button>
+                    <button class="step-btn" data-step="8" style="border-color: rgba(100, 255, 100, 0.3); background: rgba(50, 150, 80, 0.1);">
+                        <div class="step-number">⚡</div>
+                        <div class="step-label">Parallel (2-5)</div>
+                    </button>
+                    <button class="step-btn" data-step="6">
+                        <div class="step-number">06</div>
+                        <div class="step-label">Merge & Finalize</div>
                     </button>
                 </div>
             </div>
@@ -68,7 +128,7 @@
                             <span class="dot green"></span>
                         </div>
                         <div id="logs" class="logs-content">
-                            <div class="log-line system">> System ready.</div>
+                            <div class="log-line system">> System ready. Select a step to begin.</div>
                         </div>
                     </div>
 

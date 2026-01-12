@@ -1,127 +1,202 @@
 import pandas as pd
-import google.generativeai as genai
 import os
+import sys
 from dotenv import load_dotenv
 import json
 import re
+import requests
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Add parent directories to sys.path to allow importing from Institution
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Go up 2 levels: University_Data/Programs/undergraduate_programs -> University_Data
+# 1. .../Programs
+# 2. .../University_Data
+programs_dir = os.path.dirname(current_dir)
+university_data_dir = os.path.dirname(programs_dir)
+institution_dir = os.path.join(university_data_dir, 'Institution')
+sys.path.append(institution_dir)
 
-tools = [
-    genai.protos.Tool(
-        google_search=genai.protos.Tool.GoogleSearch()
-    )
-]
-model = genai.GenerativeModel("gemini-2.5-pro", tools=tools)
+from Institution import GeminiModelWrapper, client
+
+# Initialize the model using the wrapper (consistent with check.py)
+model = GeminiModelWrapper(client, "gemini-2.5-pro")
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(script_dir, "undergrad_prog_outputs")
 # Create directory if it doesn't exist
+# Create directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
 
-university_name = "Kansas State University"
-prompt = f"What is the official university website for {university_name}?"
-website_url = model.generate_content(prompt).text.replace("**", "").replace("```", "").strip()
-print(website_url)
-institute_url = website_url
-# Use a more generic search or let the model find the grad page if needed, 
-# but for now, we'll try to find the grad programs page dynamically or start from the main page if specific URL is unknown
-undergraduate_program_url = "https://www.hhs.k-state.edu/academics/undergraduate.html"
-
-def get_program_names(website_url):
-    prompt = (
-        f"Extract information about undergraduate programs offered by {university_name} from {website_url}. "
-        f"Step 1: LIST ONLY THE undergraduate PROGRAM NAMES AND LEVELS. Do NOT try to find URLs yet. "
-        f"CRITICAL: EXCLUDE any combined bachelor/master programs (e.g., '3+1', '4+1', 'BS/MS', 'Dual Degree' with graduate). "
-        f"Extract ONLY purely undergraduate level programs (Bachelor's, Associate, Certificate). "
-        f"Return the data in a JSON array of objects with keys: 'Program name', 'Level'. "
-        f"Example: [{{\"Program name\": \"Bachelor of Science in Biology\", \"Level\": \"Bachelor's\"}}]"
-    )
-    
+def resolve_redirect(url):
     try:
-        response = model.generate_content(prompt).text
-        response = response.replace("**", "").replace("```json", "").replace("```", "").strip()
-        json_match = re.search(r'\[.*\]', response, re.DOTALL)
-        if json_match:
-            response = json_match.group(0)
-        return json.loads(response)
-    except Exception as e:
-        print(f"Error getting program names: {e}")
-        return []
+        # Use HEAD request to follow redirects without downloading content
+        response = requests.head(url, allow_redirects=True, timeout=5)
+        return response.url
+    except Exception:
+        return url
 
-def get_program_url(program_name, level):
+def find_program_url(program_name, university_name):
     prompt = (
-        f"Find the OFFICIAL, WORKING URL for the '{program_name}' ({level}) undergraduate program at {university_name}. "
-        f"The URL must be a valid page on {institute_url} or its subdomains. "
-        f"Return ONLY the URL string. Do not return JSON. Do not return markdown. Just the URL."
+        f"Use Google Search to find the OFFICIAL '{program_name}' program page on the {university_name} website. "
+        "1. Look at the search results. "
+        "2. Identify the official '.edu' URL for this specific program. "
+        "3. Do NOT return the 'vertexaisearch' or 'google.com' redirect links. "
+        "4. Return ONLY the clean, direct official URL."
     )
     try:
-        response = model.generate_content(prompt).text.strip()
-        # Clean up any potential extra text if the model is chatty
-        url_match = re.search(r'https?://[^\s<>"]+|www\.[^\s<>"]+', response)
-        if url_match:
-            return url_match.group(0)
-        return response
-    except Exception as e:
-        print(f"Error getting URL for {program_name}: {e}")
+        response = model.generate_content(prompt)
+        
+        # Check grounding metadata first for real URLs
+        real_urls = []
+        if response.candidates and response.candidates[0].grounding_metadata:
+            for chunk in response.candidates[0].grounding_metadata.grounding_chunks:
+                if chunk.web:
+                    real_urls.append(resolve_redirect(chunk.web.uri))
+        
+        # Filter for .edu links
+        edu_urls = [u for u in real_urls if ".edu" in u]
+        
+        if edu_urls:
+            return edu_urls[0]
+        elif real_urls:
+            return real_urls[0]
+        
+        # Fallback to text
+        text_url = response.text.replace("```", "").strip()
+        # Basic clean
+        match = re.search(r'https?://[^\s<>"]+|www\.[^\s<>"]+', text_url)
+        if match:
+             return match.group(0)
+        return None
+    except Exception:
         return None
 
-def get_undergraduate_programs(website_url):
-    print("Step 1: Extracting program names...")
-    programs = get_program_names(website_url)
+def get_undergraduate_programs(url, university_name):
+    # Step 1: Extract just the names
+    prompt_names = (
+        f"Access the following URL: {url}\n"
+        "Extract ALL undergraduate (Bachelor's, Associate's, Minors) program NAMES listed on this page.\n"
+        "Return a JSON list of STRINGS (just the names).\n"
+        "Example: [\"Bachelor of Science in Biology\", \"Associate of Arts\", ...]\n"
+        "Exclude headers, categories, or navigation items."
+    )
     
-    if not programs:
-        print("No programs found in Step 1.")
-        return []
+    program_names = []
+    try:
+        response = model.generate_content(prompt_names)
+        text = response.text.replace("```json", "").replace("```", "").strip()
+        start = text.find('[')
+        end = text.rfind(']') + 1
+        if start != -1 and end != -1:
+             program_names = json.loads(text[start:end])
+    except Exception as e:
+        print(f"Error extracting names: {e}")
+        yield f"Error extracting program names: {e}"
+        yield [] # Return empty list on error
+        return
 
-    print(f"Found {len(programs)} programs. Step 2: Finding URLs for each...")
+    # Step 2: Iterate and find URLs
+    results = []
+    total_programs = len(program_names)
+    yield f"Found {total_programs} programs. Starting detailed URL search..."
     
-    complete_programs = []
-    for prog in programs:
-        program_name = prog.get('Program name')
-        level = prog.get('Level')
+    for i, name in enumerate(program_names):
+        # Yield progress update
+        yield f"Finding URL for ({i+1}/{total_programs}): {name}"
         
-        # Double check filtering on client side
-        if program_name and not any(x in program_name.lower() for x in ['3+1', '4+1', 'bs/', 'ba/', 'dual degree']):
-            print(f"Finding URL for: {program_name}")
-            url = get_program_url(program_name, level)
+        found_url = find_program_url(name, university_name)
+        if found_url:
+            results.append({
+                "Program name": name,
+                "Program Page url": found_url
+            })
+        else:
+             results.append({
+                "Program name": name,
+                "Program Page url": url # Fallback to listing page
+            })
             
-            prog['Program Page url'] = url
-            complete_programs.append(prog)
+    yield results
+
+def run(university_name_input):
+    global university_name, institute_url
+    university_name = university_name_input
+    
+    yield f'{{"status": "progress", "message": "Finding official website for {university_name}..."}}'
+    
+    prompt = f"What is the official university website for {university_name}?"
+    try:
+        website_url = model.generate_content(prompt).text.replace("**", "").replace("```", "").strip()
+        institute_url = website_url
+        yield f'{{"status": "progress", "message": "Website found: {website_url}"}}'
+    except Exception as e:
+        yield f'{{"status": "error", "message": "Failed to find website: {str(e)}"}}'
+        return
+
+    # Dynamic search for undergrad url
+    yield f'{{"status": "progress", "message": "Finding undergraduate programs page..."}}'
+    undergrad_url_prompt = (
+        f"Use Google Search to find the OFFICIAL page listing all Undergraduate Degrees/Programs (Majors) at {university_name}. "
+        "The page should list specific bachelors/associate degrees. "
+        "Return the URL. Do not generate a hypothetical URL."
+    )
+    try:
+        response = model.generate_content(undergrad_url_prompt)
+        
+        # Check grounding metadata first for real URLs
+        real_urls = []
+        if response.candidates and response.candidates[0].grounding_metadata:
+            for chunk in response.candidates[0].grounding_metadata.grounding_chunks:
+                if chunk.web:
+                    real_urls.append(resolve_redirect(chunk.web.uri))
+        
+        # Filter for .edu links
+        edu_urls = [u for u in real_urls if ".edu" in u]
+        
+        if edu_urls:
+            undergraduate_program_url = edu_urls[0]
+        elif real_urls:
+            undergraduate_program_url = real_urls[0]
+        else:
+             # Fallback to text
+            undergraduate_program_url = response.text.strip()
+            # clean url
+            url_match = re.search(r'https?://[^\s<>"]+|www\.[^\s<>"]+', undergraduate_program_url)
+            if url_match:
+                undergraduate_program_url = url_match.group(0)
             
-    return complete_programs
+        yield f'{{"status": "progress", "message": "Undergraduate Page found: {undergraduate_program_url}"}}'
+    except:
+        undergraduate_program_url = website_url # Fallback
 
-undergraduate_programs = get_undergraduate_programs(undergraduate_program_url)
+    yield f'{{"status": "progress", "message": "Extracting undergraduate programs list (this may take a while)..."}}'
+    
+    # Process the generator
+    undergraduate_programs = []
+    for item in get_undergraduate_programs(undergraduate_program_url, university_name):
+        if isinstance(item, str):
+            # This is a progress message
+            safe_msg = item.replace('"', "'")
+            yield f'{{"status": "progress", "message": "{safe_msg}"}}'
+        elif isinstance(item, list):
+            # This is the final result
+            undergraduate_programs = item
 
-if undergraduate_programs:
-    # Save the undergraduate programs to JSON file
-    json_path = os.path.join(output_dir, 'undergraduate_programs.json')
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(undergraduate_programs, f, indent=4, ensure_ascii=False)
-    print(f"Data saved to JSON: {json_path}")
-    
-    # Save the undergraduate programs to CSV file
-    csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
-    df = pd.DataFrame(undergraduate_programs)
-    df.to_csv(csv_path, index=False, encoding='utf-8')
-    print(f"Data saved to CSV: {csv_path}")
-    print(f"Total programs found: {len(undergraduate_programs)}")
-    
-    # Also save to the script directory for easy access
-    script_json_path = os.path.join(script_dir, 'undergraduate_programs.json')
-    script_csv_path = os.path.join(script_dir, 'undergraduate_programs.csv')
-    
-    with open(script_json_path, 'w', encoding='utf-8') as f:
-        json.dump(undergraduate_programs, f, indent=4, ensure_ascii=False)
-    
-    df.to_csv(script_csv_path, index=False, encoding='utf-8')
-    print(f"Also saved to script directory: {script_csv_path}")
-    
-    print("\nFirst few programs:")
-    print(undergraduate_programs[:3] if len(undergraduate_programs) > 3 else undergraduate_programs)
-else:
-    print("No undergraduate programs found or error occurred.")
+    if undergraduate_programs:
+        # Save the undergraduate programs to JSON file
+        json_path = os.path.join(output_dir, 'undergraduate_programs.json')
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(undergraduate_programs, f, indent=4, ensure_ascii=False)
+        
+        # Save the undergraduate programs to CSV file
+        csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
+        df = pd.DataFrame(undergraduate_programs)
+        df.to_csv(csv_path, index=False, encoding='utf-8')
+        
+        yield f'{{"status": "complete", "message": "Found {len(undergraduate_programs)} undergraduate programs", "files": {{"undergrad_csv": "{csv_path}"}}}}'
+    else:
+        yield f'{{"status": "complete", "message": "No undergraduate programs found", "files": {{}}}}'
 

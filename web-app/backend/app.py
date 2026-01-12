@@ -12,24 +12,16 @@ MAIN_PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.
 INSTITUTION_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Institution")
 DEPARTMENT_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Departments")
 
+
+PROGRAMS_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Programs")
+PROGRAMS_GRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "graduate_programs", "Grad_prog_outputs")
+PROGRAMS_UNDERGRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "undergraduate_programs", "undergrad_prog_outputs")
+
+# Also need to define Inst and Dept output dirs here for the download route
 INST_OUTPUT_DIR = os.path.join(INSTITUTION_DIR, "Inst_outputs")
 DEPT_OUTPUT_DIR = os.path.join(DEPARTMENT_DIR, "Dept_outputs")
 
-sys.path.append(INSTITUTION_DIR)
-sys.path.append(DEPARTMENT_DIR)
-PROGRAMS_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Programs")
-PROG_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "Prog_outputs")
 sys.path.append(PROGRAMS_DIR)
-
-try:
-    from Institution import process_institution_extraction
-except ImportError as e:
-    print(f"Error importing Institution script: {e}")
-
-try:
-    from Department import process_department_extraction
-except ImportError as e:
-    print(f"Error importing Department script: {e}")
 
 try:
     from Programs import process_programs_extraction
@@ -53,20 +45,27 @@ def programs():
 
 @app.route("/api/download/<path:filename>")
 def download_file(filename):
-    # Check if file is in Institution output or Department output
-    # This is a simple check, in production might need more robust path handling
+    # Check if file is in Institution output or Department output or Programs output
     
-    # Try Institution first
+    # Try Institution
     if os.path.exists(os.path.join(INST_OUTPUT_DIR, filename)):
          return send_from_directory(INST_OUTPUT_DIR, filename, as_attachment=True)
     
     # Try Department
     if os.path.exists(os.path.join(DEPT_OUTPUT_DIR, filename)):
          return send_from_directory(DEPT_OUTPUT_DIR, filename, as_attachment=True)
-         
-    # Try Programs
-    if os.path.exists(os.path.join(PROG_OUTPUT_DIR, filename)):
-         return send_from_directory(PROG_OUTPUT_DIR, filename, as_attachment=True)
+
+    # Try Programs (Root) - Deprecated but keeping for legacy
+    if os.path.exists(os.path.join(PROGRAMS_DIR, filename)):
+         return send_from_directory(PROGRAMS_DIR, filename, as_attachment=True)
+
+    # Try Programs (Grad)
+    if os.path.exists(os.path.join(PROGRAMS_GRAD_OUTPUT_DIR, filename)):
+         return send_from_directory(PROGRAMS_GRAD_OUTPUT_DIR, filename, as_attachment=True)
+
+    # Try Programs (Undergrad)
+    if os.path.exists(os.path.join(PROGRAMS_UNDERGRAD_OUTPUT_DIR, filename)):
+         return send_from_directory(PROGRAMS_UNDERGRAD_OUTPUT_DIR, filename, as_attachment=True)
          
     return jsonify({"error": "File not found"}), 404
 
@@ -166,14 +165,17 @@ def extract_department_data():
 def extract_programs_data():
     data = request.json
     university_name = data.get("university_name")
+    step = data.get("step")
     
     if not university_name:
         return jsonify({"error": "University name is required"}), 400
+    if not step:
+         return jsonify({"error": "Step number is required"}), 400
 
     def generate():
         try:
             # Run extraction
-            generator = process_programs_extraction(university_name)
+            generator = process_programs_extraction(university_name, step)
             
             for update in generator:
                 try:
@@ -181,10 +183,11 @@ def extract_programs_data():
                     if update_obj.get("status") == "complete":
                         # Modify result_files to return relative filenames for download
                         download_links = {}
-                        for key, path in update_obj["files"].items():
-                            filename = os.path.basename(path)
-                            download_links[key] = f"/api/download/{filename}"
-                        update_obj["files"] = download_links
+                        if "files" in update_obj:
+                             for key, path in update_obj["files"].items():
+                                filename = os.path.basename(path)
+                                download_links[key] = f"/api/download/{filename}"
+                             update_obj["files"] = download_links
                         yield f"data: {json.dumps(update_obj)}\n\n"
                     else:
                          yield f"data: {update}\n\n"

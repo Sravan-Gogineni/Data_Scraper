@@ -1,7 +1,9 @@
 import pandas as pd
 import os
 
-def main():
+def run():
+    yield f'{{"status": "progress", "message": "Starting final merge of Graduate and Undergraduate programs..."}}'
+    
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Paths to the final CSVs
@@ -15,30 +17,27 @@ def main():
     # Load Graduate Programs
     if os.path.exists(grad_csv_path):
         df_grad = pd.read_csv(grad_csv_path)
-        print(f"Loaded {len(df_grad)} graduate programs.")
+        yield f'{{"status": "progress", "message": "Loaded {len(df_grad)} graduate programs"}}'
         dfs.append(df_grad)
     else:
-        print(f"Warning: Graduate programs file not found at {grad_csv_path}")
+        yield f'{{"status": "progress", "message": "Graduate programs file not found at {grad_csv_path}"}}'
         
     # Load Undergraduate Programs
     if os.path.exists(undergrad_csv_path):
         df_undergrad = pd.read_csv(undergrad_csv_path)
-        print(f"Loaded {len(df_undergrad)} undergraduate programs.")
+        yield f'{{"status": "progress", "message": "Loaded {len(df_undergrad)} undergraduate programs"}}'
         dfs.append(df_undergrad)
     else:
-        print(f"Warning: Undergraduate programs file not found at {undergrad_csv_path}")
+        yield f'{{"status": "progress", "message": "Undergraduate programs file not found at {undergrad_csv_path}"}}'
         
     if not dfs:
-        print("No data found to merge.")
+        yield f'{{"status": "error", "message": "No data found to merge."}}'
         return
 
     # Merge
+    yield f'{{"status": "progress", "message": "Merging datasets..."}}'
     final_df = pd.concat(dfs, ignore_index=True)
     
     # Save
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')
-    print(f"Successfully saved merged dataset to {output_csv_path}")
-    print(f"Total programs: {len(final_df)}")
-
-if __name__ == "__main__":
-    main()
+    yield f'{{"status": "complete", "message": "Successfully merged {len(final_df)} programs", "files": {{"final_csv": "{output_csv_path}"}}}}'

@@ -19,48 +19,24 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(script_dir, "Grad_prog_outputs")
 # Create directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
-csv_path = os.path.join(script_dir, 'graduate_programs.csv')
+csv_path = os.path.join(output_dir, 'graduate_programs.csv')
 json_path = os.path.join(output_dir, 'test_scores_requirements.json')
 
 # Check if CSV file exists
-if not os.path.exists(csv_path):
-    print(f"ERROR: CSV file not found: {csv_path}")
-    print("Please create a CSV file with columns: 'Program name', 'Program Page url'")
-    exit(1)
-
-program_data = pd.read_csv(csv_path)
+# Logic moved to run()
 
 # Check if CSV has data
-if program_data.empty:
-    print(f"WARNING: CSV file is empty: {csv_path}")
-    exit(1)
+# Logic moved to run()
 
 # Check if required columns exist
-required_columns = ['Program name', 'Program Page url']
-missing_columns = [col for col in required_columns if col not in program_data.columns]
-if missing_columns:
-    print(f"ERROR: CSV file is missing required columns: {', '.join(missing_columns)}")
-    exit(1)
+# Logic moved to run()
 
 # Institute level URL for fallback
-institute_url = "https://www.k-state.edu/"
-university_name = "Kansas State University"
+institute_url = None # Will be set in run()
+university_name = None # Will be set in run()
 
 # Load existing data if the JSON file exists (for resuming)
-test_scores_data = []
-processed_programs = set()
-if os.path.exists(json_path):
-    try:
-        with open(json_path, 'r', encoding='utf-8') as f:
-            test_scores_data = json.load(f)
-            # Track which programs have already been processed
-            for record in test_scores_data:
-                program_name = record.get('Program name')
-                if program_name:
-                    processed_programs.add(program_name)
-        print(f"Loaded {len(test_scores_data)} existing records from {json_path}")
-    except Exception as e:
-        print(f"Warning: Could not load existing JSON file: {e}")
+# This part will be moved inside the run function
 
 def save_to_json(data, filepath):
     """Save data to JSON file."""
@@ -88,6 +64,7 @@ def parse_json_from_response(text):
 
 def extract_test_scores(program_name, program_url, institute_url):
     """Extract test scores and English requirements, first from program level, then institute level."""
+    global university_name # Ensure university_name is accessible
     
     # First, try program level
     prompt_program = (
@@ -99,20 +76,20 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"Extract the following fields ONLY if they are present on the official {university_name} website for THIS SPECIFIC PROGRAM:\n\n"
         f"1. GreOrGmat: Whether GRE or GMAT is required, optional, or not required. Return 'GRE', 'GMAT', 'Either', 'Optional', 'Not Required', or null.\n"
         f"2. EnglishScore: General English language requirement description if mentioned. Return null if not specified.\n"
-        f"3. IsDuoLingoRequired: Boolean (true/false) - Is Duolingo English test required? Return true, false, or null.\n"
-        f"4. IsELSRequired: Boolean (true/false) - Is ELS (English Language Services) required? Return true, false, or null.\n"
-        f"5. IsGMATOrGreRequired: Boolean (true/false) - Is either GMAT or GRE required? Return true, false, or null.\n"
-        f"6. IsGMATRequired: Boolean (true/false) - Is GMAT specifically required? Return true, false, or null.\n"
-        f"7. IsGreRequired: Boolean (true/false) - Is GRE specifically required? Return true, false, or null.\n"
-        f"8. IsIELTSRequired: Boolean (true/false) - Is IELTS required? Return true, false, or null.\n"
-        f"9. IsLSATRequired: Boolean (true/false) - Is LSAT required? Return true, false, or null.\n"
-        f"10. IsMATRequired: Boolean (true/false) - Is MAT required? Return true, false, or null.\n"
-        f"11. IsMCATRequired: Boolean (true/false) - Is MCAT required? Return true, false, or null.\n"
-        f"12. IsPTERequired: Boolean (true/false) - Is PTE (Pearson Test of English) required? Return true, false, or null.\n"
-        f"13. IsTOEFLIBRequired: Boolean (true/false) - Is TOEFL iBT (Internet-based Test) required? Return true, false, or null.\n"
-        f"14. IsTOEFLPBTRequired: Boolean (true/false) - Is TOEFL PBT (Paper-based Test) required? Return true, false, or null.\n"
-        f"15. IsEnglishNotRequired: Boolean (true/false) - Is English test not required? Return true, false, or null.\n"
-        f"16. IsEnglishOptional: Boolean (true/false) - Is English test optional? Return true, false, or null.\n"
+        f"3. IsDuoLingoRequired: MANDATORY BOOLEAN. Is Duolingo English test explicitly required? Return true or false.\n"
+        f"4. IsELSRequired: MANDATORY BOOLEAN. Is ELS (English Language Services) required? Return true or false.\n"
+        f"5. IsGMATOrGreRequired: MANDATORY BOOLEAN. Is either GMAT or GRE required? Return true if yes, false if no/optional.\n"
+        f"6. IsGMATRequired: MANDATORY BOOLEAN. Is GMAT specifically required? Return true or false.\n"
+        f"7. IsGreRequired: MANDATORY BOOLEAN. Is GRE specifically required? Return true or false.\n"
+        f"8. IsIELTSRequired: MANDATORY BOOLEAN. Is IELTS required? Return true or false.\n"
+        f"9. IsLSATRequired: MANDATORY BOOLEAN. Is LSAT required? Return true or false.\n"
+        f"10. IsMATRequired: MANDATORY BOOLEAN. Is MAT required? Return true or false.\n"
+        f"11. IsMCATRequired: MANDATORY BOOLEAN. Is MCAT required? Return true or false.\n"
+        f"12. IsPTERequired: MANDATORY BOOLEAN. Is PTE (Pearson Test of English) required? Return true or false.\n"
+        f"13. IsTOEFLIBRequired: MANDATORY BOOLEAN. Is TOEFL iBT (Internet-based Test) required? Return true or false.\n"
+        f"14. IsTOEFLPBTRequired: MANDATORY BOOLEAN. Is TOEFL PBT (Paper-based Test) required? Return true or false.\n"
+        f"15. IsEnglishNotRequired: MANDATORY BOOLEAN. Is English test explicitly NOT required? Return true or false.\n"
+        f"16. IsEnglishOptional: MANDATORY BOOLEAN. Is English test optional? Return true or false.\n"
         f"17. MinimumDuoLingoScore: Minimum required Duolingo score as a number. Return null if not specified.\n"
         f"18. MinimumELSScore: Minimum required ELS score as a number. Return null if not specified.\n"
         f"19. MinimumGMATScore: Minimum required GMAT score as a number. Return null if not specified.\n"
@@ -129,7 +106,8 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"- Do NOT infer, assume, or make up any information\n"
         f"- If a field is not found on the program page, return null for that field\n"
         f"- All URLs must be from the {university_name} domain or its subdomains\n"
-        f"- Ensure all extracted text is accurate and verbatim from the source\n\n"
+        f"- Ensure all extracted text is accurate and verbatim from the source\n"
+        f"- FOR MANDATORY BOOLEAN FIELDS: You MUST return true or false. Do not return null unless absolutely no information is available. If not mentioned as required, default to false.\n\n"
         f"Return the data in a JSON format with the following exact keys: "
         f"'GreOrGmat', 'EnglishScore', 'IsDuoLingoRequired', 'IsELSRequired', 'IsGMATOrGreRequired', "
         f"'IsGMATRequired', 'IsGreRequired', 'IsIELTSRequired', 'IsLSATRequired', 'IsMATRequired', "
@@ -137,7 +115,7 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"'IsEnglishNotRequired', 'IsEnglishOptional', 'MinimumDuoLingoScore', 'MinimumELSScore', "
         f"'MinimumGMATScore', 'MinimumGreScore', 'MinimumIELTSScore', 'MinimumMATScore', "
         f"'MinimumMCATScore', 'MinimumPTEScore', 'MinimumTOEFLScore', 'MinimumLSATScore'. "
-        f"Return a single JSON object, not an array. Use null for any field where information is not available on the official website."
+        f"Return a single JSON object, not an array. Use null for non-boolean fields where information is not available."
     )
     
     try:
@@ -228,61 +206,102 @@ def extract_test_scores(program_name, program_url, institute_url):
         'MinimumTOEFLScore': None, 'MinimumLSATScore': None, 'extraction_level': 'none'
     }
 
-for index, row in program_data.iterrows():
-    program_name = row['Program name']
-    program_page_url = row['Program Page url']
+def run(university_name_input):
+    global university_name, institute_url
+    university_name = university_name_input
     
-    # Skip if already processed
-    if program_name in processed_programs:
-        print(f"Skipping {program_name} (already processed)")
-        continue
+    # We need to find the institute URL first if not hardcoded, but for now we can rely on the previous steps or simple search if needed.
+    # For now, let's just find it if we can, or pass it in. 
+    # But to keep it simple and consistent with previous modification:
+    yield f'{{"status": "progress", "message": "Initializing test score extraction for {university_name}..."}}'
     
-    print(f"Processing: {program_name}")
-    
+    # Quick fetch of website url for context
     try:
-        extracted_data = extract_test_scores(program_name, program_page_url, institute_url)
-        
-        # Add program name and URL to the data
-        extracted_data['Program name'] = program_name
-        extracted_data['Program Page url'] = program_page_url
-        test_scores_data.append(extracted_data)
-        processed_programs.add(program_name)
-        
-        # Save immediately to preserve progress
-        save_to_json(test_scores_data, json_path)
-        print(f"✓ Processed and saved: {program_name} (level: {extracted_data.get('extraction_level', 'unknown')})")
-        
-        # Small delay to avoid rate limiting
-        time.sleep(1)
+        website_url_prompt = f"What is the official university website for {university_name}?"
+        institute_url = model.generate_content(website_url_prompt).text.replace("**", "").replace("```", "").strip()
+    except:
+        institute_url = f"https://www.google.com/search?q={university_name}"
+
+    # Check if CSV file exists
+    if not os.path.exists(csv_path):
+        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        return
+
+    program_data = pd.read_csv(csv_path)
+
+    if program_data.empty:
+        yield f'{{"status": "error", "message": "CSV file is empty. Please check Step 1 results."}}'
+        return
+
+    # Check if required columns exist
+    required_columns = ['Program name', 'Program Page url']
+    missing_columns = [col for col in required_columns if col not in program_data.columns]
+    if missing_columns:
+        yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
+        return
+
+    # Load existing data
+    test_scores_data = []
+    processed_programs = set()
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                test_scores_data = json.load(f)
+                for record in test_scores_data:
+                    program_name = record.get('Program name')
+                    if program_name:
+                        processed_programs.add(program_name)
+            yield f'{{"status": "progress", "message": "Resuming: Loaded {len(test_scores_data)} existing records"}}'
+        except Exception as e:
+            pass
+
+    total_programs = len(program_data)
+    processed_count = len(processed_programs)
     
-    except Exception as e:
-        print(f"Error processing program {program_name}: {str(e)}")
-        error_record = {
-            'Program name': program_name,
-            'Program Page url': program_page_url,
-            'GreOrGmat': None, 'EnglishScore': None, 'IsDuoLingoRequired': None, 'IsELSRequired': None,
-            'IsGMATOrGreRequired': None, 'IsGMATRequired': None, 'IsGreRequired': None, 'IsIELTSRequired': None,
-            'IsLSATRequired': None, 'IsMATRequired': None, 'IsMCATRequired': None, 'IsPTERequired': None,
-            'IsTOEFLIBRequired': None, 'IsTOEFLPBTRequired': None, 'IsEnglishNotRequired': None, 'IsEnglishOptional': None,
-            'MinimumDuoLingoScore': None, 'MinimumELSScore': None, 'MinimumGMATScore': None, 'MinimumGreScore': None,
-            'MinimumIELTSScore': None, 'MinimumMATScore': None, 'MinimumMCATScore': None, 'MinimumPTEScore': None,
-            'MinimumTOEFLScore': None, 'MinimumLSATScore': None, 'extraction_level': 'error', 'error': str(e)
-        }
-        test_scores_data.append(error_record)
-        processed_programs.add(program_name)
-        save_to_json(test_scores_data, json_path)
-        print(f"✗ Error saved for program {program_name}")
+    yield f'{{"status": "progress", "message": "Starting extraction for {total_programs} programs..."}}'
 
-# Final save
-save_to_json(test_scores_data, json_path)
+    for index, row in program_data.iterrows():
+        program_name = row['Program name']
+        program_page_url = row['Program Page url']
+        
+        if program_name in processed_programs:
+            continue
+        
+        processed_count += 1
+        yield f'{{"status": "progress", "message": "Processing [{processed_count}/{total_programs}]: {program_name}"}}'
+        
+        try:
+            extracted_data = extract_test_scores(program_name, program_page_url, institute_url)
+            
+            extracted_data['Program name'] = program_name
+            extracted_data['Program Page url'] = program_page_url
+            test_scores_data.append(extracted_data)
+            processed_programs.add(program_name)
+            
+            save_to_json(test_scores_data, json_path)
+            time.sleep(1) # Rate limit handling
+        
+        except Exception as e:
+            error_record = {
+                'Program name': program_name, 'Program Page url': program_page_url,
+                'GreOrGmat': None, 'EnglishScore': None, 'IsDuoLingoRequired': None, 'IsELSRequired': None,
+                'IsGMATOrGreRequired': None, 'IsGMATRequired': None, 'IsGreRequired': None, 'IsIELTSRequired': None,
+                'IsLSATRequired': None, 'IsMATRequired': None, 'IsMCATRequired': None, 'IsPTERequired': None,
+                'IsTOEFLIBRequired': None, 'IsTOEFLPBTRequired': None, 'IsEnglishNotRequired': None, 'IsEnglishOptional': None,
+                'MinimumDuoLingoScore': None, 'MinimumELSScore': None, 'MinimumGMATScore': None, 'MinimumGreScore': None,
+                'MinimumIELTSScore': None, 'MinimumMATScore': None, 'MinimumMCATScore': None, 'MinimumPTEScore': None,
+                'MinimumTOEFLScore': None, 'MinimumLSATScore': None, 'extraction_level': 'error', 'error': str(e)
+            }
+            test_scores_data.append(error_record)
+            processed_programs.add(program_name)
+            save_to_json(test_scores_data, json_path)
 
-# Also save as CSV
-csv_output_path = os.path.join(output_dir, 'test_scores_requirements.csv')
-if test_scores_data:
-    df = pd.DataFrame(test_scores_data)
-    df.to_csv(csv_output_path, index=False, encoding='utf-8')
-    print(f"\nSuccessfully processed {len(test_scores_data)} programs")
-    print(f"Data saved to {json_path} and {csv_output_path}")
-else:
-    print("No data to save")
+    # Final save
+    csv_output_path = os.path.join(output_dir, 'test_scores_requirements.csv')
+    if test_scores_data:
+        df = pd.DataFrame(test_scores_data)
+        df.to_csv(csv_output_path, index=False, encoding='utf-8')
+        yield f'{{"status": "complete", "message": "Completed extraction for {len(test_scores_data)} programs", "files": {{"grad_test_csv": "{csv_output_path}"}}}}'
+    else:
+        yield f'{{"status": "complete", "message": "No data extracted", "files": {{}}}}'
 

@@ -19,48 +19,11 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(script_dir, "Grad_prog_outputs")
 # Create directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
-csv_path = os.path.join(script_dir, 'graduate_programs.csv')
+csv_path = os.path.join(output_dir, 'graduate_programs.csv')
 json_path = os.path.join(output_dir, 'application_requirements.json')
 
-# Check if CSV file exists
-if not os.path.exists(csv_path):
-    print(f"ERROR: CSV file not found: {csv_path}")
-    print("Please create a CSV file with columns: 'Program name', 'Program Page url'")
-    exit(1)
-
-program_data = pd.read_csv(csv_path)
-
-# Check if CSV has data
-if program_data.empty:
-    print(f"WARNING: CSV file is empty: {csv_path}")
-    exit(1)
-
-# Check if required columns exist
-required_columns = ['Program name', 'Program Page url']
-missing_columns = [col for col in required_columns if col not in program_data.columns]
-if missing_columns:
-    print(f"ERROR: CSV file is missing required columns: {', '.join(missing_columns)}")
-    exit(1)
-
-# Institute level URL for fallback
-institute_url = "https://www.k-state.edu/"
-university_name = "Kansas State University"
-
-# Load existing data if the JSON file exists (for resuming)
-application_data = []
-processed_programs = set()
-if os.path.exists(json_path):
-    try:
-        with open(json_path, 'r', encoding='utf-8') as f:
-            application_data = json.load(f)
-            # Track which programs have already been processed
-            for record in application_data:
-                program_name = record.get('Program name')
-                if program_name:
-                    processed_programs.add(program_name)
-        print(f"Loaded {len(application_data)} existing records from {json_path}")
-    except Exception as e:
-        print(f"Warning: Could not load existing JSON file: {e}")
+university_name = None
+institute_url = None
 
 def save_to_json(data, filepath):
     """Save data to JSON file."""
@@ -101,26 +64,26 @@ def extract_application_requirements(program_name, program_url, institute_url):
         f"2. StatementOfPurpose: Is a statement of purpose required? Return 'Required', 'Optional', 'Not Required', or null.\n"
         f"3. Requirements: General application requirements text/description. Return null if not specified.\n"
         f"4. WritingSample: Is a writing sample required? Return 'Required', 'Optional', 'Not Required', or null.\n"
-        f"5. IsAnalyticalNotRequired: Boolean (true/false) - Is analytical writing section not required? Return true, false, or null.\n"
-        f"6. IsAnalyticalOptional: Boolean (true/false) - Is analytical writing section optional? Return true, false, or null.\n"
-        f"7. IsRecommendationSystemOpted: Boolean (true/false) - Is a recommendation system/letters of recommendation used? Return true, false, or null.\n"
-        f"8. IsStemProgram: Boolean (true/false) - Is this a STEM program? Return true, false, or null.\n"
-        f"9. IsACTRequired: Boolean (true/false) - Is ACT required? Return true, false, or null.\n"
-        f"10. IsSATRequired: Boolean (true/false) - Is SAT required? Return true, false, or null.\n"
-        f"11. MinimumACTScore: Minimum required ACT score as a number. Return null if not specified.\n"
-        f"12. MinimumSATScore: Minimum required SAT score as a number. Return null if not specified.\n\n"
+        f"5. IsAnalyticalNotRequired: MANDATORY BOOLEAN. Is analytical writing section not required? Return true or false.\n"
+        f"6. IsAnalyticalOptional: MANDATORY BOOLEAN. Is analytical writing section optional? Return true or false.\n"
+        f"7. IsStemProgram: MANDATORY BOOLEAN. Is this a STEM program? Return true or false.\n"
+        f"8. IsACTRequired: MANDATORY BOOLEAN. Is ACT required? Return true or false.\n"
+        f"9. IsSATRequired: MANDATORY BOOLEAN. Is SAT required? Return true or false.\n"
+        f"10. MinimumACTScore: Minimum required ACT score as a number. Return null if not specified.\n"
+        f"11. MinimumSATScore: Minimum required SAT score as a number. Return null if not specified.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {program_url} or other official {university_name} pages\n"
         f"- Extract information SPECIFIC to this program '{program_name}'\n"
         f"- Do NOT infer, assume, or make up any information\n"
         f"- If a field is not found on the program page, return null for that field\n"
         f"- All URLs must be from the {university_name} domain or its subdomains\n"
-        f"- Ensure all extracted text is accurate and verbatim from the source\n\n"
+        f"- Ensure all extracted text is accurate and verbatim from the source\n"
+        f"- FOR MANDATORY BOOLEAN FIELDS: You MUST return true or false. Do not return null unless absolutely no information is available. If not mentioned as required, default to false.\n\n"
         f"Return the data in a JSON format with the following exact keys: "
         f"'Resume', 'StatementOfPurpose', 'Requirements', 'WritingSample', 'IsAnalyticalNotRequired', "
         f"'IsAnalyticalOptional', 'IsRecommendationSystemOpted', 'IsStemProgram', 'IsACTRequired', "
         f"'IsSATRequired', 'MinimumACTScore', 'MinimumSATScore'. "
-        f"Return a single JSON object, not an array. Use null for any field where information is not available on the official website."
+        f"Return a single JSON object, not an array. Use null for non-boolean fields if info not available."
     )
     
     try:
@@ -153,12 +116,11 @@ def extract_application_requirements(program_name, program_url, institute_url):
         f"4. WritingSample: Is a writing sample generally required? Return 'Required', 'Optional', 'Not Required', or null.\n"
         f"5. IsAnalyticalNotRequired: Boolean (true/false) - Is analytical writing section not required? Return true, false, or null.\n"
         f"6. IsAnalyticalOptional: Boolean (true/false) - Is analytical writing section optional? Return true, false, or null.\n"
-        f"7. IsRecommendationSystemOpted: Boolean (true/false) - Is a recommendation system/letters of recommendation used? Return true, false, or null.\n"
-        f"8. IsStemProgram: Boolean (true/false) - This field should be null at institute level (program-specific). Return null.\n"
-        f"9. IsACTRequired: Boolean (true/false) - Is ACT required? Return true, false, or null.\n"
-        f"10. IsSATRequired: Boolean (true/false) - Is SAT required? Return true, false, or null.\n"
-        f"11. MinimumACTScore: Minimum required ACT score as a number. Return null if not specified.\n"
-        f"12. MinimumSATScore: Minimum required SAT score as a number. Return null if not specified.\n\n"
+        f"7. IsStemProgram: Boolean (true/false) - This field should be null at institute level (program-specific). Return null.\n"
+        f"8. IsACTRequired: Boolean (true/false) - Is ACT required? Return true, false, or null.\n"
+        f"9. IsSATRequired: Boolean (true/false) - Is SAT required? Return true, false, or null.\n"
+        f"10. MinimumACTScore: Minimum required ACT score as a number. Return null if not specified.\n"
+        f"11. MinimumSATScore: Minimum required SAT score as a number. Return null if not specified.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {institute_url} or other official {university_name} pages\n"
         f"- Extract GENERAL/INSTITUTE-LEVEL requirements (not program-specific)\n"
@@ -186,63 +148,101 @@ def extract_application_requirements(program_name, program_url, institute_url):
     # Return empty dict with null values if nothing found
     return {
         'Resume': None, 'StatementOfPurpose': None, 'Requirements': None, 'WritingSample': None,
-        'IsAnalyticalNotRequired': None, 'IsAnalyticalOptional': None, 'IsRecommendationSystemOpted': None,
-        'IsStemProgram': None, 'IsACTRequired': None, 'IsSATRequired': None,
+        'IsAnalyticalNotRequired': False, 'IsAnalyticalOptional': False, 'IsRecommendationSystemOpted': False,
+        'IsStemProgram': False, 'IsACTRequired': False, 'IsSATRequired': False,
         'MinimumACTScore': None, 'MinimumSATScore': None, 'extraction_level': 'none'
     }
 
-for index, row in program_data.iterrows():
-    program_name = row['Program name']
-    program_page_url = row['Program Page url']
+# Institute level URL for fallback
+def run(university_name_input):
+    global university_name, institute_url
+    university_name = university_name_input
     
-    # Skip if already processed
-    if program_name in processed_programs:
-        print(f"Skipping {program_name} (already processed)")
-        continue
+    yield f'{{"status": "progress", "message": "Initializing application requirements extraction for {university_name}..."}}'
     
-    print(f"Processing: {program_name}")
-    
+    # Quick fetch of website url for context
     try:
-        extracted_data = extract_application_requirements(program_name, program_page_url, institute_url)
-        
-        # Add program name and URL to the data
-        extracted_data['Program name'] = program_name
-        extracted_data['Program Page url'] = program_page_url
-        application_data.append(extracted_data)
-        processed_programs.add(program_name)
-        
-        # Save immediately to preserve progress
-        save_to_json(application_data, json_path)
-        print(f"✓ Processed and saved: {program_name} (level: {extracted_data.get('extraction_level', 'unknown')})")
-        
-        # Small delay to avoid rate limiting
-        time.sleep(1)
+        website_url_prompt = f"What is the official university website for {university_name}?"
+        institute_url = model.generate_content(website_url_prompt).text.replace("**", "").replace("```", "").strip()
+    except:
+        institute_url = f"https://www.google.com/search?q={university_name}"
+
+    # Check if CSV file exists
+    if not os.path.exists(csv_path):
+        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        return
+
+    program_data = pd.read_csv(csv_path)
+
+    if program_data.empty:
+        yield f'{{"status": "error", "message": "CSV file is empty. Please check Step 1 results."}}'
+        return
+
+    # Check if required columns exist
+    required_columns = ['Program name', 'Program Page url']
+    missing_columns = [col for col in required_columns if col not in program_data.columns]
+    if missing_columns:
+        yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
+        return
+
+    # Load existing data
+    application_data = []
+    processed_programs = set()
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                application_data = json.load(f)
+                for record in application_data:
+                    program_name = record.get('Program name')
+                    if program_name:
+                        processed_programs.add(program_name)
+            yield f'{{"status": "progress", "message": "Resuming: Loaded {len(application_data)} existing records"}}'
+        except Exception as e:
+            pass
+
+    total_programs = len(program_data)
+    processed_count = len(processed_programs)
     
-    except Exception as e:
-        print(f"Error processing program {program_name}: {str(e)}")
-        error_record = {
-            'Program name': program_name,
-            'Program Page url': program_page_url,
-            'Resume': None, 'StatementOfPurpose': None, 'Requirements': None, 'WritingSample': None,
-            'IsAnalyticalNotRequired': None, 'IsAnalyticalOptional': None, 'IsRecommendationSystemOpted': None,
-            'IsStemProgram': None, 'IsACTRequired': None, 'IsSATRequired': None,
-            'MinimumACTScore': None, 'MinimumSATScore': None, 'extraction_level': 'error', 'error': str(e)
-        }
-        application_data.append(error_record)
-        processed_programs.add(program_name)
-        save_to_json(application_data, json_path)
-        print(f"✗ Error saved for program {program_name}")
+    yield f'{{"status": "progress", "message": "Starting extraction for {total_programs} programs..."}}'
 
-# Final save
-save_to_json(application_data, json_path)
+    for index, row in program_data.iterrows():
+        program_name = row['Program name']
+        program_page_url = row['Program Page url']
+        
+        if program_name in processed_programs:
+            continue
+        
+        processed_count += 1
+        yield f'{{"status": "progress", "message": "Processing [{processed_count}/{total_programs}]: {program_name}"}}'
+        
+        try:
+            extracted_data = extract_application_requirements(program_name, program_page_url, institute_url)
+            
+            extracted_data['Program name'] = program_name
+            extracted_data['Program Page url'] = program_page_url
+            application_data.append(extracted_data)
+            processed_programs.add(program_name)
+            
+            save_to_json(application_data, json_path)
+            time.sleep(1) # Rate limit handling
+        
+        except Exception as e:
+            error_record = {
+                'Program name': program_name, 'Program Page url': program_page_url,
+                'Resume': None, 'StatementOfPurpose': None, 'Requirements': None, 'WritingSample': None,
+                'IsAnalyticalNotRequired': None, 'IsAnalyticalOptional': None, 'IsRecommendationSystemOpted': None,
+                'IsStemProgram': None, 'IsACTRequired': None, 'IsSATRequired': None,
+                'MinimumACTScore': None, 'MinimumSATScore': None, 'extraction_level': 'error', 'error': str(e)
+            }
+            application_data.append(error_record)
+            processed_programs.add(program_name)
+            save_to_json(application_data, json_path)
 
-# Also save as CSV
-csv_output_path = os.path.join(output_dir, 'application_requirements.csv')
-if application_data:
-    df = pd.DataFrame(application_data)
-    df.to_csv(csv_output_path, index=False, encoding='utf-8')
-    print(f"\nSuccessfully processed {len(application_data)} programs")
-    print(f"Data saved to {json_path} and {csv_output_path}")
-else:
-    print("No data to save")
-
+    # Final save
+    csv_output_path = os.path.join(output_dir, 'application_requirements.csv')
+    if application_data:
+        df = pd.DataFrame(application_data)
+        df.to_csv(csv_output_path, index=False, encoding='utf-8')
+        yield f'{{"status": "complete", "message": "Completed extraction for {len(application_data)} programs", "files": {{"grad_app_req_csv": "{csv_output_path}"}}}}'
+    else:
+        yield f'{{"status": "complete", "message": "No data extracted", "files": {{}}}}'

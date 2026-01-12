@@ -1,0 +1,28 @@
+[
+    {
+        "Program name": "Accountancy MSA",
+        "Program Page url": NaN,
+        "Concentration name": null,
+        "description": null,
+        "program website url": null,
+        "Accreditation status": null,
+        "error": "Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 1."
+    },
+    {
+        "Concentration name": null,
+        "description": null,
+        "program website url": null,
+        "Accreditation status": null,
+        "Level": null,
+        "Program name": "Adult-Gerontology Acute Care Nurse Practitioner Cert",
+        "Program Page url": NaN
+    },
+    {
+        "Concentration name": null,
+        "description": null,
+        "program website url": null,
+        "Accreditation status": null,
+        "Program name": "Adult-Gerontology Acute Care Nurse Practitioner MSN",
+        "Program Page url": "https://www.k-state.edu/careercenter/students/connect/gradstudents/programs.html"
+    }
+]

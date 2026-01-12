@@ -11,55 +11,57 @@ sys.path.append(current_dir)
 
 from Institution import GeminiModelWrapper, client
 
+import requests
+from dotenv import load_dotenv
+
 load_dotenv()
 
-# 1. Update the initialization with a valid model name
-# 'gemini-2.0-flash' is generally fastest and most cost-effective for search
+# Initialize the model using the wrapper from Institution.py
+# ensuring we use a search-capable model
 model = GeminiModelWrapper(client, "gemini-2.5-flash") 
 
-# 2. Refined generate_content to print the actual Search Entry Point (the UI snippet)
-def generate_content(self, prompt):
-    google_search_tool = types.Tool(
-        google_search=types.GoogleSearch()
-    
-    )
-    
-    response = self.client.models.generate_content(
-        model=self.model_name,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            tools=[google_search_tool]
-        )
-    )
-
-    # This is how you verify it worked:
-    # Grounding metadata contains the search chunks and the HTML snippet for the search box
-    if response.candidates and response.candidates[0].grounding_metadata:
-        print("\n--- GROUNDING CHECK ---")
-        print("Search was performed successfully.")
-        # This shows the text that would appear in a 'Google Search' button
-        if response.candidates[0].grounding_metadata.search_entry_point:
-            print(f"Search Query used: {response.candidates[0].grounding_metadata.search_entry_point.rendered_content}")
-        print("-----------------------\n")
-        
-    return response
-
-# Re-assign the fixed method to your wrapper
-GeminiModelWrapper.generate_content = generate_content
+def resolve_redirect(url):
+    try:
+        # Use HEAD request to follow redirects without downloading content
+        response = requests.head(url, allow_redirects=True, timeout=5)
+        return response.url
+    except Exception:
+        return url
 
 def generate_text_safe(prompt):
     try:
         response = model.generate_content(prompt)
+        
+        real_urls = []
+        if response.candidates and response.candidates[0].grounding_metadata:
+            print("\n--- RESOLVING SEARCH RESULTS ---")
+            for chunk in response.candidates[0].grounding_metadata.grounding_chunks:
+                if chunk.web:
+                    vertex_url = chunk.web.uri
+                    original_url = resolve_redirect(vertex_url)
+                    print(f"Original URL: {original_url}")
+                    real_urls.append(original_url)
+            print("--------------------------------\n")
+        
+        # Filter for .edu links
+        edu_urls = [u for u in real_urls if ".edu" in u]
+        if edu_urls:
+            return edu_urls[0] # Return the first .edu link
+        elif real_urls:
+             return real_urls[0] # Fallback to first link
+             
+        # Fallback to text generation if no links found
         if response and response.text:
             return response.text.replace("**", "").replace("```", "").strip()
+            
     except Exception as e:
         print(f"Error generating content: {e}")
     return ""
 
 # 3. The Test Execution
 print("Starting live search test...")
-test_prompt
+test_prompt = "University of Findlay Master of Arts in Education official program page"
 result = generate_text_safe(test_prompt)
 
-print("RESULT FROM MODEL:")
+print("RESULT (Best URL):")
 print(result)

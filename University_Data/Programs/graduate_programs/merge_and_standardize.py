@@ -113,7 +113,9 @@ def load_json_data(filepath):
         print(f"Error loading {filepath}: {e}")
         return []
 
-def main():
+def run():
+    yield f'{{"status": "progress", "message": "Starting data merge and standardization..."}}'
+    
     script_dir = os.path.dirname(os.path.abspath(__file__))
     output_dir = os.path.join(script_dir, "Grad_prog_outputs")
     os.makedirs(output_dir, exist_ok=True)
@@ -127,11 +129,11 @@ def main():
     
     # 1. Load Base Data
     if not os.path.exists(base_csv_path):
-        print("Error: Base CSV not found!")
+        yield f'{{"status": "error", "message": "Base CSV not found at {base_csv_path}"}}'
         return
         
     df_base = pd.read_csv(base_csv_path)
-    print(f"Loaded {len(df_base)} programs from base CSV.")
+    yield f'{{"status": "progress", "message": "Loaded {len(df_base)} programs from base CSV"}}'
     
     # 2. Load and Prepare Merge Data
     financial_data = load_json_data(financial_json_path)
@@ -161,9 +163,9 @@ def main():
                 df = df.drop(columns=['Program Page url'])
             
             final_df = pd.merge(final_df, df, on=merge_key, how='left')
-            print(f"Merged dataset {i+1}, columns now: {len(final_df.columns)}")
+            yield f'{{"status": "progress", "message": "Merged dataset {i+1}..."}}'
         else:
-            print(f"Skipping dataset {i+1} (empty or missing key)")
+            yield f'{{"status": "progress", "message": "Skipping dataset {i+1} (empty or missing key)"}}'
 
     # 3. Rename Columns
     # Rename columns that exist in the mapping
@@ -181,8 +183,5 @@ def main():
     # 6. Save Final CSV
     output_csv_path = os.path.join(output_dir, 'graduate_programs_final.csv')
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')
-    print(f"Successfully saved final CSV to {output_csv_path}")
-    print(f"Final columns: {list(final_df.columns)}")
-
-if __name__ == "__main__":
-    main()
+    
+    yield f'{{"status": "complete", "message": "Successfully merged and standardized data", "files": {{"grad_final_csv": "{output_csv_path}"}}}}'
