@@ -117,7 +117,7 @@ def run():
     yield f'{{"status": "progress", "message": "Starting data merge and standardization..."}}'
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(script_dir, "undergrad_prog_outputs")
+    output_dir = os.path.join(script_dir, "Undergrad_prog_outputs")
     os.makedirs(output_dir, exist_ok=True)
     
     # File paths
@@ -185,3 +185,8 @@ def run():
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')
     
     yield f'{{"status": "complete", "message": "Successfully merged and standardized data", "files": {{"undergrad_final_csv": "{output_csv_path}"}}}}'
+
+
+if __name__ == "__main__":
+    for update in run():
+        print(update)

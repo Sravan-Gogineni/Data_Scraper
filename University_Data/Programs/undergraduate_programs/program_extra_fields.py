@@ -11,13 +11,13 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 tools = [genai.protos.Tool(google_search=genai.protos.Tool.GoogleSearch())]
-model = genai.GenerativeModel("gemini-2.5-pro", tools=tools)
+model = genai.GenerativeModel("gemini-2.5-flash", tools=tools)
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
-output_dir = os.path.join(script_dir, "Grad_prog_outputs")
+output_dir = os.path.join(script_dir, "Undergrad_prog_outputs")
 os.makedirs(output_dir, exist_ok=True)
-csv_path = os.path.join(output_dir, 'graduate_programs.csv')
+csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
 json_path = os.path.join(output_dir, 'extra_fields_data.json')
 
 
@@ -64,7 +64,7 @@ def process_single_program(row, university_name):
         f"   This should be a direct link to the program information page. Must be from official domain only.\n"
         f"4. Accreditation status: Any accreditation information mentioned for this specific program. "
         f"   Include the accrediting body name and status if available. If not mentioned, return null.\n\n"
-        f"5. Level: The level of the program. The level can be either any of these and these are just examples : Masters, Doctoral, Associate,Certificate,MA,Minor,PhD,MBA,MFA."
+        f"5. Level: The level of the program. The level can be either any of these and these are just examples : BA,Bachelor's,BS,BSc,BFA,Minor."
         f"   This should be determined from the {program_page_url} when you are extracting there itself distingnuish the program level. If not mentioned, return null.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {program_page_url} or other official {university_name} pages\n"
@@ -179,6 +179,6 @@ def run(university_name_input):
     if extra_fields_data:
         df = pd.DataFrame(extra_fields_data)
         df.to_csv(csv_output_path, index=False, encoding='utf-8')
-        yield f'{{"status": "complete", "message": "Completed extraction for {len(extra_fields_data)} programs", "files": {{"grad_extra_csv": "{csv_output_path}"}}}}'
+        yield f'{{"status": "complete", "message": "Completed extraction for {len(extra_fields_data)} programs", "files": {{"undergrad_extra_csv": "{csv_output_path}"}}}}'
     else:
         yield f'{{"status": "complete", "message": "No data extracted", "files": {{}}}}'

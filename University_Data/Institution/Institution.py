@@ -310,7 +310,7 @@ def get_county(website_url, university_name):
         "Also provide the evidence for your answer with correct URL or page where the county is explicitly stated."
     )
     return generate_text_safe(prompt)
-    
+
 
 def get_city(website_url, university_name):
     prompt = (
@@ -374,18 +374,19 @@ def get_contact_information(website_url, university_name):
     return generate_text_safe(prompt)
 
 
-
+"""
 def get_grad_tuition(website_url, university_name, graduate_tuition_fee_urls=None, common_tuition_fee_urls=None):
     # Use specific URL if provided, else use common URL, else use website_url
     url_to_use = graduate_tuition_fee_urls if graduate_tuition_fee_urls else (common_tuition_fee_urls if common_tuition_fee_urls else website_url)
     prompt = (
-        f"What is the graduate tuition for the university {university_name} at {url_to_use}? "
+        f"What is the average graduate tuition for the university {university_name} at {url_to_use}? "
         "Return only the graduate tuition, no other text. "
         "No fabrication or guessing, just the graduate tuition. "
         "Only if the graduate tuition is explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the graduate tuition is explicitly stated."
     )
     return generate_text_safe(prompt)
+"""
 
 def get_grad_international_students(website_url, university_name):
     prompt = (

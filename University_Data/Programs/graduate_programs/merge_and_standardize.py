@@ -121,7 +121,7 @@ def run():
     os.makedirs(output_dir, exist_ok=True)
     
     # File paths
-    base_csv_path = os.path.join(script_dir, 'graduate_programs.csv')
+    base_csv_path = os.path.join(output_dir, 'graduate_programs.csv')
     financial_json_path = os.path.join(output_dir, 'program_details_financial.json')
     test_scores_json_path = os.path.join(output_dir, 'test_scores_requirements.json')
     app_req_json_path = os.path.join(output_dir, 'application_requirements.json')
@@ -185,3 +185,8 @@ def run():
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')
     
     yield f'{{"status": "complete", "message": "Successfully merged and standardized data", "files": {{"grad_final_csv": "{output_csv_path}"}}}}'
+
+
+if __name__ == "__main__":
+    for update in run():
+        print(update)

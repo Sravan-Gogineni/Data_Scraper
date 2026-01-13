@@ -1,20 +1,10 @@
 [
     {
+        "Concentration name": "Financial Accounting/Auditing, Taxation, Accounting Information Systems",
+        "description": "The Master of Accountancy (MAcc) program is a 30-credit hour graduate program designed for students with an undergraduate degree in accounting. The program prepares students for a variety of career opportunities in public accounting, industry, government and not-for-profit organizations. It provides students with deeper and broader skills in the fields of accounting and business than is possible in the undergraduate program. The MAcc program is designed to fulfill the educational requirements to be a licensed Certified Public Accountant (CPA) in Kansas and most other jurisdictions.",
+        "program website url": "https://cba.k-state.edu/academics/masters/macc/",
+        "Accreditation status": "The college is accredited by the Association to Advance Collegiate Schools of Business (AACSB). The Department of Accounting also holds separate AACSB accreditation, a distinction held by less than 2 percent of business schools worldwide.",
         "Program name": "Accountancy MSA",
-        "Program Page url": NaN,
-        "Concentration name": null,
-        "description": null,
-        "program website url": null,
-        "Accreditation status": null,
-        "error": "Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 1."
-    },
-    {
-        "Concentration name": null,
-        "description": null,
-        "program website url": null,
-        "Accreditation status": null,
-        "Level": null,
-        "Program name": "Adult-Gerontology Acute Care Nurse Practitioner Cert",
         "Program Page url": NaN
     },
     {
@@ -22,6 +12,14 @@
         "description": null,
         "program website url": null,
         "Accreditation status": null,
+        "Program name": "Adult-Gerontology Acute Care Nurse Practitioner Cert",
+        "Program Page url": NaN
+    },
+    {
+        "Concentration name": "Adult-Gerontology Acute Care Nurse Practitioner",
+        "description": "The adult-gerontology acute care nurse practitioner master's program at Kansas State University prepares registered nurses for advanced practice nursing roles providing care to adults of all ages with complex, acute and chronic health conditions. Graduates of this program will be eligible to sit for the Adult-Gerontology Acute Care Nurse Practitioner (AGACNP) national certification exam. The curriculum is developed in accordance with the American Association of Colleges of Nursing (AACN) Essentials of Master's Education in Nursing and the National Organization of Nurse Practitioner Faculties (NONPF) Nurse Practitioner Core Competencies. Our program offers small class sizes, allowing students a greater opportunity for discussion, sharing and support. Students progress through the curriculum with the same group of peers, which creates a collaborative learning community.",
+        "program website url": "https://online.k-state.edu/programs/nursing-msn-acute-care/",
+        "Accreditation status": "The master's degree program in nursing at Kansas State University is accredited by the Commission on Collegiate Nursing Education, 655 K Street NW, Suite 750, Washington, DC 20001, 202-887-6791.",
         "Program name": "Adult-Gerontology Acute Care Nurse Practitioner MSN",
         "Program Page url": "https://www.k-state.edu/careercenter/students/connect/gradstudents/programs.html"
     }

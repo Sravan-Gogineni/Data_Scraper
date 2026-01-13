@@ -21,11 +21,11 @@ sys.path.append(institution_dir)
 from Institution import GeminiModelWrapper, client
 
 # Initialize the model using the wrapper (consistent with check.py)
-model = GeminiModelWrapper(client, "gemini-2.5-pro")
+model = GeminiModelWrapper(client, "gemini-2.5-flash")
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
-output_dir = os.path.join(script_dir, "undergrad_prog_outputs")
+output_dir = os.path.join(script_dir, "Undergrad_prog_outputs")
 # Create directory if it doesn't exist
 # Create directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
@@ -79,6 +79,7 @@ def get_undergraduate_programs(url, university_name):
     prompt_names = (
         f"Access the following URL: {url}\n"
         "Extract ALL undergraduate (Bachelor's, Associate's, Minors) program NAMES listed on this page.\n"
+        "Only Look at the active and latest Programs. Do not include any expired or cancelled programs. or programs from older catalogs."
         "Return a JSON list of STRINGS (just the names).\n"
         "Example: [\"Bachelor of Science in Biology\", \"Associate of Arts\", ...]\n"
         "Exclude headers, categories, or navigation items."
@@ -86,20 +87,28 @@ def get_undergraduate_programs(url, university_name):
     
     program_names = []
     try:
+        # yield f'{{"status": "progress", "message": "DEBUG: Prompting for names with URL: {url}"}}'
         response = model.generate_content(prompt_names)
         text = response.text.replace("```json", "").replace("```", "").strip()
+        
+        # Escape quotes for JSON safety in the message
+        safe_text = text.replace('"', "'").replace('\n', ' ')
+        yield f'{{"status": "progress", "message": "DEBUG: Raw response text: {safe_text}"}}'
+        
         start = text.find('[')
         end = text.rfind(']') + 1
         if start != -1 and end != -1:
              program_names = json.loads(text[start:end])
+        else:
+            yield f'{{"status": "warning", "message": "DEBUG: Could not find JSON list brackets [] in response."}}'
+            
     except Exception as e:
-        print(f"Error extracting names: {e}")
-        yield f"Error extracting program names: {e}"
+        yield f'{{"status": "error", "message": "Error extracting names: {str(e)}"}}'
         yield [] # Return empty list on error
         return
 
     # Step 2: Iterate and find URLs
-    results = []
+    results = [] # Keep for final complete yield
     total_programs = len(program_names)
     yield f"Found {total_programs} programs. Starting detailed URL search..."
     
@@ -108,24 +117,43 @@ def get_undergraduate_programs(url, university_name):
         yield f"Finding URL for ({i+1}/{total_programs}): {name}"
         
         found_url = find_program_url(name, university_name)
-        if found_url:
-            results.append({
-                "Program name": name,
-                "Program Page url": found_url
-            })
-        else:
-             results.append({
-                "Program name": name,
-                "Program Page url": url # Fallback to listing page
-            })
+        program_entry = {
+            "Program name": name,
+            "Program Page url": found_url if found_url else url
+        }
+        
+        # Yield the individual result
+        yield program_entry
             
-    yield results
-
 def run(university_name_input):
     global university_name, institute_url
     university_name = university_name_input
     
     yield f'{{"status": "progress", "message": "Finding official website for {university_name}..."}}'
+    
+    # Define output files
+    json_path = os.path.join(output_dir, 'undergraduate_programs.json')
+    csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
+
+    # Load existing data to handle resuming/appending
+    existing_programs = []
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                existing_programs = json.load(f)
+        except:
+            pass
+            
+    # Check if we already have a significant number of programs and if the user wants to skip
+    # (Optional logic, but for now we just append/overwrite if duplicates)
+    
+    # Helper to save progress
+    def save_progress(programs_list):
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(programs_list, f, indent=4, ensure_ascii=False)
+        df = pd.DataFrame(programs_list)
+        df.to_csv(csv_path, index=False, encoding='utf-8')
+
     
     prompt = f"What is the official university website for {university_name}?"
     try:
@@ -140,6 +168,7 @@ def run(university_name_input):
     yield f'{{"status": "progress", "message": "Finding undergraduate programs page..."}}'
     undergrad_url_prompt = (
         f"Use Google Search to find the OFFICIAL page listing all Undergraduate Degrees/Programs (Majors) at {university_name}. "
+        "Only Look at the active and latest Programs page urls. Do not include any expired or cancelled programs pages urls. or programs page urls from older catalogs."
         "The page should list specific bachelors/associate degrees. "
         "Return the URL. Do not generate a hypothetical URL."
     )
@@ -174,28 +203,44 @@ def run(university_name_input):
 
     yield f'{{"status": "progress", "message": "Extracting undergraduate programs list (this may take a while)..."}}'
     
+    # Define output files
+    json_path = os.path.join(output_dir, 'undergraduate_programs.json')
+    csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
+
+    # Load existing data to handle resuming/appending
+    existing_programs = []
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                existing_programs = json.load(f)
+        except:
+            pass
+            
     # Process the generator
-    undergraduate_programs = []
+    current_programs = existing_programs.copy()
+    existing_names = set(p['Program name'] for p in current_programs)
+    
+    count = 0 
     for item in get_undergraduate_programs(undergraduate_program_url, university_name):
         if isinstance(item, str):
             # This is a progress message
             safe_msg = item.replace('"', "'")
             yield f'{{"status": "progress", "message": "{safe_msg}"}}'
-        elif isinstance(item, list):
-            # This is the final result
-            undergraduate_programs = item
+        elif isinstance(item, dict):
+            # This is a single program entry
+            p_name = item.get('Program name')
+            if p_name not in existing_names:
+                current_programs.append(item)
+                existing_names.add(p_name)
+                save_progress(current_programs)
+                count += 1
+                # Optional: Yield a granular progress update for the save
+                # yield f'{{"status": "progress", "message": "Saved: {p_name}"}}'
+    
+    undergraduate_programs = current_programs
 
     if undergraduate_programs:
-        # Save the undergraduate programs to JSON file
-        json_path = os.path.join(output_dir, 'undergraduate_programs.json')
-        with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(undergraduate_programs, f, indent=4, ensure_ascii=False)
-        
-        # Save the undergraduate programs to CSV file
-        csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
-        df = pd.DataFrame(undergraduate_programs)
-        df.to_csv(csv_path, index=False, encoding='utf-8')
-        
+        # Final save is handled by loop, but we ensure output message is correct
         yield f'{{"status": "complete", "message": "Found {len(undergraduate_programs)} undergraduate programs", "files": {{"undergrad_csv": "{csv_path}"}}}}'
     else:
         yield f'{{"status": "complete", "message": "No undergraduate programs found", "files": {{}}}}'
