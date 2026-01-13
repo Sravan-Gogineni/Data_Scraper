@@ -255,10 +255,19 @@ def run(university_name_input):
         except Exception as e:
             pass
 
+    # Filter out already processed programs
+    programs_to_process = []
+    for index, row in program_data.iterrows():
+        if row['Program name'] not in processed_programs:
+            programs_to_process.append(row)
+
     total_programs = len(program_data)
     processed_count = len(processed_programs)
     
-    yield f'{{"status": "progress", "message": "Starting extraction for {total_programs} programs..."}}'
+    if not programs_to_process:
+         yield f'{{"status": "progress", "message": "All {total_programs} programs already processed. Skipping extraction."}}'
+    else:
+         yield f'{{"status": "progress", "message": "Starting extraction for {total_programs} programs ({len(programs_to_process)} remaining)..."}}'
 
     for index, row in program_data.iterrows():
         program_name = row['Program name']

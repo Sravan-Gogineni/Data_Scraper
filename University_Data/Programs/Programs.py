@@ -80,10 +80,14 @@ def process_programs_extraction(university_name, step):
         yield f'{{"status": "progress", "message": "Starting Concurrent Extraction for Steps 2, 3, 4, 5..."}}'
         
         modules_to_run = [
-            (grad_step2, "Step 2"),
-            (grad_step3, "Step 3"),
-            (grad_step4, "Step 4"),
-            (grad_step5, "Step 5")
+            (grad_step2, "[Grad] Step 2"),
+            (grad_step3, "[Grad] Step 3"),
+            (grad_step4, "[Grad] Step 4"),
+            (grad_step5, "[Grad] Step 5"),
+            (undergrad_step2, "[Undergrad] Step 2"),
+            (undergrad_step3, "[Undergrad] Step 3"),
+            (undergrad_step4, "[Undergrad] Step 4"),
+            (undergrad_step5, "[Undergrad] Step 5")
         ]
         
         msg_queue = queue.Queue()
@@ -95,19 +99,37 @@ def process_programs_extraction(university_name, step):
                     for update in module.run(university_name):
                         try:
                             # Parse JSON to inject prefix in message
-                            data = json.loads(update)
-                            if 'message' in data:
-                                data['message'] = f"[{name}] {data['message']}"
+                            try:
+                                data = json.loads(update)
+                            except:
+                                data = None
                             
-                            # Collect files if complete
-                            if data.get('status') == 'complete' and 'files' in data:
-                                # We can't easily return files to main thread via simple yield
-                                # So we pass key-values of files in the queue
-                                data['files_update'] = data['files']
+                            if isinstance(data, dict):
+                                if 'message' in data:
+                                    data['message'] = f"[{name}] {data['message']}"
                                 
-                            q.put(json.dumps(data))
+                                # Collect files if complete
+                                if data.get('status') == 'complete' and 'files' in data:
+                                    data['files_update'] = data['files']
+                                    
+                                q.put(json.dumps(data))
+                            else:
+                                # Not a dict (e.g. string or list), treat clearly
+                                safe_msg = str(update)
+                                msg_obj = {
+                                    "status": "progress",
+                                    "message": f"[{name}] {safe_msg}"
+                                }
+                                q.put(json.dumps(msg_obj))
+
                         except Exception as parse_error:
-                            q.put(f'{{"status": "progress", "message": "[{name}] Raw update: {str(update)}"}}')
+                             # Fallback for any other errors
+                             safe_msg = str(update)
+                             msg_obj = {
+                                "status": "error",
+                                "message": f"[{name}] Error processing update: {safe_msg}"
+                             }
+                             q.put(json.dumps(msg_obj))
                 else:
                     q.put(f'{{"status": "warning", "message": "{name} module not available"}}')
             except Exception as e:
