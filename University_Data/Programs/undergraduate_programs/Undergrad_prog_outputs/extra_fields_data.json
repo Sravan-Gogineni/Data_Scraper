@@ -1,373 +1,451 @@
 [
     {
-        "Concentration name": "Accounting",
-        "description": "The Associate of Applied Business is an online program developed to meet the needs of working adults looking to enter or advance in a business-related field. Students completing the degree will be equipped with marketable skills necessary for a wide range of business careers and prepared for further education in a bachelor's degree program. The Associate of Applied Business provides a fundamental understanding of business practices through a flexible online format, allowing you to tailor your education to your career goals. This program focuses on developing the essential skills and knowledge needed to succeed in various business roles, from entrepreneurship to management. The online Associate of Applied Business program prepares you for an in-demand career, whether you're looking to start a new job or advance in your current one. You'll gain a foundational understanding of business principles, communication, and decision-making, along with specialized knowledge in your chosen concentration. This program is designed to be highly practical, ensuring you develop skills directly applicable to the workplace. The accounting concentration develops skills for entry-level accounting positions. It includes a strong focus on financial accounting, managerial accounting, and taxation, preparing you for roles in bookkeeping, payroll, and other financial support functions. This concentration provides a solid foundation for those wishing to pursue further studies in accounting or finance.",
-        "program website url": "https://online.k-state.edu/programs/applied-business-associate/",
-        "Accreditation status": null,
-        "Level": "Associate",
-        "Program name": "Associate of Accounting",
-        "Program Page url": "https://online.k-state.edu/programs/applied-business-associate/"
-    },
-    {
         "Concentration name": null,
-        "description": "The entrepreneurship major at Kansas State University prepares students to launch their own business, bring an entrepreneurial mindset to an existing company or organization, or pursue graduate studies. This interdisciplinary major gives students a solid foundation in the entrepreneurial process, from recognizing opportunities and developing innovative solutions to building and managing a successful venture. Students learn critical business skills such as financial management, marketing, and strategy, alongside specialized entrepreneurial knowledge in areas like new venture creation, social entrepreneurship, and corporate innovation. Through hands-on projects, case studies, and interactions with real-world entrepreneurs, students gain practical experience and develop the problem-solving, leadership, and adaptability skills essential for success in today's dynamic business environment.",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/entrepreneurship/",
-        "Accreditation status": null,
-        "Program name": "Bachelor of Entrepreneurship",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "Hospitality and Tourism Management is one of the fastest growing industries in the world, making it a great career choice. The hospitality and tourism industry provides career paths in lodging, restaurants, tourism, event planning, and club management. The Hospitality and Tourism Management program at K-State is designed to provide students with the knowledge and skills necessary to be successful in this exciting and dynamic industry. Our program is housed within the Department of Kinesiology, which allows us to approach hospitality and tourism from a unique wellness-focused perspective. Students will gain theoretical knowledge and practical experience through coursework, internships, and service-learning opportunities. They will learn about various aspects of the industry, including operations, marketing, finance, human resources, and sustainable practices. The program emphasizes leadership development, critical thinking, and problem-solving skills, preparing graduates for a wide range of management and leadership positions. With a degree in Hospitality and Tourism Management from K-State, you will be well-prepared to make a significant impact in the global hospitality and tourism industry.",
-        "program website url": "https://www.hhs.k-state.edu/kinesiology/academics/hospitality-tourism-management-major/",
-        "Accreditation status": null,
-        "Program name": "Bachelor of Hospitality and Tourism Management",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": "Community and Commercial Recreation and Sport, Natural Resources and Environmental Interpretation, Therapeutic Recreation",
-        "description": "In the park, recreation and leisure studies program, you'll gain the knowledge and skills needed to plan, develop, manage and evaluate parks, recreation, sport and leisure programs for people of all ages, abilities and backgrounds.\nYou’ll learn how to develop programs and manage facilities in public, nonprofit, commercial and private settings. The curriculum has a common core of courses and allows you to choose from three specializations based on your interests and career goals. Each specialization includes a capstone internship providing an excellent hands-on learning experience that directly translates to employment after graduation.",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/parks-recreation-leisure-studies/",
-        "Accreditation status": "The therapeutic recreation specialization is accredited by the Committee on Accreditation of Recreational Therapy Education (CARTE).",
-        "Program name": "Bachelor of Parks, Recreation and Leisure Studies",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "A Bachelor of Science in Real Estate degree will prepare you for a professional career in the real estate industry, one of the largest industries in the world. The real estate curriculum will provide you with a comprehensive understanding of real estate principles, practices and processes, as well as a solid foundation in finance, economics, appraisal, law, valuation, management, marketing, accounting and statistics. The program provides the necessary background for careers in investment, finance, valuation, property management, brokerage, development and more. The degree requires 120 credit hours of coursework and generally takes four years to complete.",
-        "program website url": "https://apdesign.k-state.edu/academics/degrees-and-programs/real-estate/bachelor-of-science-in-real-estate/",
-        "Accreditation status": null,
-        "Program name": "Bachelor of Real Estate",
-        "Program Page url": "https://apdesign.k-state.edu/academics/degrees-and-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "Athletic trainers are health care professionals who collaborate with physicians to provide preventative services, emergency care, clinical diagnosis, therapeutic intervention, and rehabilitation of injuries and medical conditions. The profession of athletic training is recognized by the American Medical Association (AMA), Health Resources Services Administration (HRSA) and the Department of Health and Human Services (HHS) as an allied health care profession. Kansas State University's Athletic Training Program prepares students for a career in this field. Upon graduation, students are eligible to take the Board of Certification (BOC) examination for athletic trainers. The K-State Athletic Training Program is accredited by the Commission on Accreditation of Athletic Training Education (CAATE).",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/athletic-training.html",
-        "Accreditation status": "Accredited by the Commission on Accreditation of Athletic Training Education (CAATE).",
-        "Program name": "Bachelor of Athletic Training",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "The undergraduate major in communication sciences and disorders (CSD) at Kansas State University prepares students to become speech-language pathologists and audiologists, or to pursue graduate studies in the field. Speech-language pathologists and audiologists provide services to individuals of all ages who have communication and swallowing disorders. These services include prevention, screening, assessment, diagnosis, treatment, intervention, management, counseling, and follow-up care for communication and swallowing disorders.",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/communication-sciences-disorders/",
-        "Accreditation status": null,
-        "Program name": "Bachelor of Communication Disorders",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "The dietetics and clinical nutrition major is a challenging but rewarding course of study for those interested in food, nutrition and human health. This program combines scientific training in basic sciences and nutrition with a strong emphasis on medical nutrition therapy. Graduates of the program are prepared to seek supervised practice (internships) and/or apply to graduate school to complete required steps to become a Registered Dietitian Nutritionist (RDN) and enter a variety of related careers. The Bachelor of Science (BS) in dietetics and clinical nutrition is a program approved by the Accreditation Council for Education in Nutrition and Dietetics (ACEND). This is one of the required steps to become a registered dietitian nutritionist. The curriculum at Kansas State University provides the academic preparation required to apply to supervised practice/internship programs accredited by ACEND. Once supervised practice is completed, graduates are eligible to take the Commission on Dietetic Registration (CDR) credentialing exam to become a registered dietitian nutritionist.",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/undergraduate/dietetics-clinical-nutrition/",
-        "Accreditation status": "Approved by the Accreditation Council for Education in Nutrition and Dietetics (ACEND).",
-        "Program name": "Bachelor of Dietetics and Clinical Nutrition",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "The bachelor of science in exercise physiology degree program prepares students to work in a variety of health-related fields and pursue graduate study. Students are prepared for careers in clinical, corporate, and university settings, as well as for graduate study in exercise physiology and professional schools such as physical therapy, occupational therapy, and physician assistant.\nThe curriculum provides a strong scientific background that includes course work in biological sciences, chemistry, physics, and mathematics. Students also complete courses in exercise physiology, human anatomy, human physiology, nutrition, and psychology.\nThe program emphasizes hands-on learning experiences in the Exercise Physiology Lab, internships, and research opportunities with faculty.",
-        "program website url": "https://catalog.k-state.edu/preview_program.php?catoid=30&poid=8575&returnto=4654",
-        "Accreditation status": null,
-        "Program name": "Bachelor of Exercise Physiology",
-        "Program Page url": "https://catalog.k-state.edu/preview_program.php?catoid=30&poid=8575&returnto=4654"
-    },
-    {
-        "Concentration name": null,
-        "description": "Food science is the discipline in which engineering, biological, and physical sciences are used to study the nature of foods, the causes of deterioration, the principles underlying food processing, and the improvement of foods for the consuming public. Food scientists apply knowledge from many fields of science and engineering to solve practical problems associated with the food system. A food science education can lead to a variety of positions in research and development, quality assurance, regulatory affairs, processing, marketing, and sales within the food industry, government, and academia. The food science program at Kansas State University is designed to prepare students for such careers through its multidisciplinary curriculum and experiential learning opportunities. All students complete an internship experience and can participate in research projects, study abroad, and student organizations. The curriculum meets the requirements for approval by the Institute of Food Technologists (IFT), the scientific society for food science and technology. Students completing the curriculum are considered to have a comprehensive foundation in food science.",
-        "program website url": "https://catalog.k-state.edu/content.php?catoid=42&navoid=7408&print=&display_location=&expand=1",
-        "Accreditation status": "The curriculum meets the requirements for approval by the Institute of Food Technologists (IFT), the scientific society for food science and technology.",
-        "Program name": "Bachelor of Food Science",
-        "Program Page url": "https://catalog.k-state.edu/content.php?catoid=42&navoid=7408&print=&display_location=&expand=1"
+        "description": "Accountants are business professionals who prepare and analyze financial information for organizations of all types. An accounting degree prepares individuals to enter a career field that is very much in demand in all areas of the country and world. Accountants compile, categorize, interpret, and summarize financial data for use in analyzing and reporting on the financial position and operating performance of organizations. In addition to being responsible for maintaining accounting records and preparing financial statements, accountants perform a variety of related tasks, including: preparing tax forms, analyzing costs and revenues, auditing financial statements, and providing financial advice to individuals and organizations. Students earning a Bachelor of Science (BS) in Accounting will be prepared to work in public accounting, industry, government, or not-for-profit organizations. The accounting curriculum is designed to provide students with a broad business base and a strong accounting background including courses in financial accounting, managerial accounting, auditing, taxation, and accounting information systems. The coursework will provide a foundation for those students who wish to pursue professional certification such as the Certified Public Accountant (CPA) or Certified Management Accountant (CMA).",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/accounting-bs/",
+        "Accreditation status": "The College of Business is accredited by AACSB International – The Association to Advance Collegiate Schools of Business.",
+        "Program name": "Accounting",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
         "description": null,
         "program website url": null,
         "Accreditation status": null,
-        "Program name": "Bachelor of Foods, Nutrition, and Wellness Studies",
-        "Program Page url": "https://www.youtube.com/watch?v=til7BEGZEq0"
+        "Program name": "Accounting Minor",
+        "Program Page url": "https://catalog.purdue.edu/preview_program.php?catoid=15&poid=24130"
+    },
+    {
+        "Concentration name": null,
+        "description": "The minor in Actuarial Science is designed to prepare students for the demands of the actuarial profession. Students completing this minor will gain a strong foundation in mathematics, statistics, and finance, essential for passing professional actuarial examinations and pursuing a career in various fields such as insurance, risk management, and pensions. The curriculum emphasizes analytical skills, problem-solving techniques, and an understanding of financial instruments and markets. This minor complements a wide range of majors, including Mathematics, Statistics, Finance, and Economics, providing a valuable interdisciplinary perspective for students interested in a career as an actuary.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/current/minors-and-certificates/actuarial-science-minor/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Actuarial Science Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Advocating for Social Justice Minor provides students with knowledge, skills, and values to critically analyze structures of power and privilege, and to advocate for social justice in diverse contexts. The minor is interdisciplinary, drawing from fields such as sociology, psychology, political science, ethnic studies, gender and women's studies, and communication studies. Students will explore theoretical frameworks of social justice, engage in critical self-reflection, and develop practical skills for promoting equity and inclusion through activism, community organizing, and policy advocacy. The minor prepares students to address complex social issues such as inequality, discrimination, and human rights violations, and to contribute to positive social change.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/advocating-for-social-justice-minor/",
+        "Accreditation status": null,
+        "Program name": "Advocating for Social Justice Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Aeronautics Minor is open to all students and will provide knowledge of the various facets of aviation and aerospace. This includes topics in aviation history, fundamentals of flight, air traffic control, aviation safety, navigation, and human factors. The minor can be taken by students who are interested in aviation and provides a broad base of knowledge in Aeronautics.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/aeronautics-minor/",
+        "Accreditation status": null,
+        "Program name": "Aeronautics Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/undergraduate/aeronautics-minor/"
+    },
+    {
+        "Concentration name": null,
+        "description": "This minor is designed for nursing students to enhance knowledge and skills in aging and prepare for careers working with older adults. The minor consists of courses from multiple disciplines on campus to provide a breadth of knowledge and understanding on various aspects of aging. These courses provide nursing students with a deeper understanding of the aging process, common health challenges in older adults, and strategies for providing high-quality, person-centered care. The minor enhances the nursing curriculum by offering specialized knowledge in gerontology, preparing graduates to excel in diverse healthcare settings, including hospitals, long-term care facilities, home healthcare, and community-based programs. Overall, the minor in Aging Studies for Nursing Students aims to equip future nurses with the expertise and sensitivity required to meet the unique needs of the growing older adult population, fostering compassionate and effective care.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/aging-studies-nursing-students-minor/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Aging Studies for Nursing Students Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Aging Studies minor provides students from a variety of disciplines with a multidisciplinary perspective on the aging process and older adults, focusing on the social, psychological, and biological aspects of aging. The minor is designed to complement most major fields of study and helps students prepare for career opportunities in the growing field of aging, as well as for further graduate study.",
+        "program website url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2021-2022/undergraduate/aging-studies/",
+        "Accreditation status": null,
+        "Program name": "Aging Studies Minor",
+        "Program Page url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2021-2022/undergraduate/aging-studies/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Agribusiness and Food Innovation program at Minnesota State University, Mankato provides students with the business and technical skills necessary to meet the increasing demand for professionals in the food, agribusiness, and agricultural sectors. As the global population grows and consumer preferences evolve, the need for well-trained individuals who understand both the business aspects and the innovative practices within the food supply chain becomes critical. This program offers a unique blend of business administration principles, food science, and agricultural innovation, preparing students for dynamic careers in an essential global industry. Graduates will be equipped to tackle challenges related to food production, processing, distribution, marketing, and policy, while also driving innovation to create sustainable and efficient food systems. The curriculum emphasizes experiential learning through internships, case studies, and industry projects, ensuring students gain practical experience alongside theoretical knowledge. Our faculty, with diverse expertise in agribusiness, food science, and economics, are committed to fostering a learning environment that encourages critical thinking, problem-solving, and leadership development.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs-courses/agribusiness-food-innovation-bs/",
+        "Accreditation status": null,
+        "Program name": "Agribusiness and Food Innovation",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Agribusiness and Food Innovation minor provides students with knowledge and skills to understand the growing global food system and the essential role of agribusiness in providing food, fiber, and fuel. The curriculum provides a foundation in business management, economics, and marketing principles as they apply to the agricultural and food industries. It also emphasizes innovation, sustainability, and entrepreneurship within the food supply chain. This minor is open to all students, particularly those interested in careers in food production, distribution, marketing, and policy.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/agribusiness-and-food-innovation-minor/",
+        "Accreditation status": null,
+        "Program name": "Agribusiness and Food Innovation Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/undergraduate/agribusiness-and-food-innovation-minor/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Bachelor of Science in Agricultural Sciences provides a broad-based curriculum leading to a variety of careers in agriculture. Students gain knowledge and skills in agribusiness, agricultural education, and agronomy, as well as a strong foundation in the sciences. The program emphasizes hands-on learning, research opportunities, and practical application of agricultural principles. Graduates are prepared for roles in agricultural business, production, education, research, and government.",
+        "program website url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2024-2025-academic-catalog/undergraduate/agricultural-sciences-bs/",
+        "Accreditation status": null,
+        "Program name": "Agricultural Sciences",
+        "Program Page url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2024-2025-academic-catalog/undergraduate/agricultural-sciences-bs/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Agriculture minor is designed for students who want to learn more about food production, sustainable agriculture, and the business of agriculture, but are pursuing a major in a different field. This minor allows students to explore various aspects of agriculture, including plant science, animal science, agricultural economics, and environmental sustainability. It provides a foundational understanding of agricultural principles and practices, preparing students for careers or further study in agriculture-related fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/agriculture-minor/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Agriculture Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/undergraduate/agriculture-minor/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Bachelor of Science degree in Agronomy provides students with knowledge and skills to sustainably manage plants and soils for crop production. Through courses and experiential learning opportunities, students will learn to assess and improve soil health, identify and manage plant diseases and pests, implement nutrient management plans, and utilize precision agriculture technologies. Graduates are prepared for careers in various sectors, including crop consulting, seed production, agricultural research, soil conservation, and farm management. This program is offered on campus at Minnesota State University, Mankato. The program is part of the Department of Agriscience & Food Innovations, located in the College of Science, Engineering and Technology.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs-of-study/agriscience-food-innovations/agronomy-bs/",
+        "Accreditation status": null,
+        "Program name": "Agronomy",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Bachelor of Science (B.S.) degree in Alcohol and Drug Studies prepares students to become licensed alcohol and drug counselors. The program curriculum is designed to meet Minnesota licensure requirements for alcohol and drug counselors and includes coursework in pharmacology, physiology, assessment and diagnosis, ethics, counseling theories, and group counseling. Students gain valuable practical experience through a supervised internship placement in a chemical dependency treatment facility. Graduates are prepared for employment in a variety of settings, including inpatient and outpatient treatment centers, correctional facilities, and community-based agencies. The Alcohol and Drug Studies program is accredited by the Minnesota Board of Behavioral Health and Therapy (BBHT).",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/alcohol-and-drug-studies-b-s",
+        "Accreditation status": "Accredited by the Minnesota Board of Behavioral Health and Therapy (BBHT)",
+        "Program name": "Alcohol and Drug Studies",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The minor in Alcohol and Drug Studies is an interdisciplinary program designed to prepare students for professional positions in the treatment and prevention of alcohol and drug abuse, and to enhance career options for individuals majoring in other areas such as social work, criminal justice, nursing, psychology, corrections, and health. The minor also provides an excellent foundation for graduate education related to chemical dependency work or other related fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/minors/alcohol-drug-studies-minor/",
+        "Accreditation status": null,
+        "Program name": "Alcohol & Drug Studies Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "American Indigenous Studies (AIS) is an interdisciplinary program designed for students who wish to learn about the histories, cultures, politics, and contemporary experiences of Indigenous peoples in North America and globally. AIS prepares students to work with tribal nations, Indigenous communities, and organizations, as well as in fields such as education, law, social work, public policy, environmental studies, and museum studies. The program offers a minor and also provides a valuable complement to a wide range of majors including but not limited to Ethnic Studies, History, Political Science, Sociology, Anthropology, English, and Social Work.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/interdisciplinary-programs/american-indigenous-studies/",
+        "Accreditation status": null,
+        "Program name": "American Indigenous Studies",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "Anthropology is the study of people, past and present. It is a broad discipline that seeks to understand the human condition, from the origins of humankind to the diversity of cultures around the world. The Anthropology program at Minnesota State University, Mankato is designed to provide students with a comprehensive understanding of the major subfields of anthropology: cultural anthropology, archaeology, biological anthropology, and linguistic anthropology. Students will develop critical thinking skills, research abilities, and a global perspective, preparing them for a variety of careers or for further graduate studies.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/departments-programs/anthropology-geography-earth-science-department/anthropology-ba/",
+        "Accreditation status": null,
+        "Program name": "Anthropology",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "Anthropology is the systematic study of humanity throughout time and the world. Anthropology is a broad, holistic, and global discipline. Students will learn the interrelationship between social life, human biology, culture, and the environment. Anthropology is considered a social science, but it also has strong links to the humanities and natural sciences. A minor in Anthropology provides a rich foundation for understanding human diversity for students interested in a variety of careers and fields. Students will learn how to approach the human experience by using four different but related areas, including: cultural anthropology, physical anthropology, archaeology, and linguistic anthropology. The Anthropology minor is useful for students interested in careers related to cultural resource management, museums, forensic science, international relations, social justice, law, public health, medicine, education, public policy, marketing, and social research.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/minors/anthropology-minor/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Anthropology Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": "Health Science, Pre-Physician Assistant, and Pre-Physical Therapy",
+        "description": "The Bachelor of Science (BS) in Applied Health Science provides a flexible program of study for individuals interested in health-related careers. This degree is designed to articulate with the Minnesota State A.S. in Exercise Science, Health Sciences Broad Field, or Human Services degrees. Students with other A.S. degrees or significant transfer credits may be admitted to the program on a case-by-case basis. This program offers three concentrations related to allied health: Health Science, Pre-Physician Assistant, and Pre-Physical Therapy. Graduates from the Applied Health Science program are prepared to enter graduate programs in fields such as physical therapy, physician assistant, occupational therapy, chiropractic, public health, health administration, athletic training, clinical exercise physiology, and other allied health professions. Some graduates will also pursue careers in fields such as fitness, personal training, community health, and health education. This program is offered in both on-campus and online formats.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/programs-a-z/applied-health-science-bs/",
+        "Accreditation status": null,
+        "Program name": "Applied Health Science",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Applied Health Science Minor provides an interdisciplinary and applied perspective for students interested in a variety of health related areas including health promotion, disease prevention, physical activity, and sport. Students who complete this minor will be able to analyze and apply health behavior theories, communicate effectively using diverse health topics, promote and assess physically active lifestyles, and identify and utilize evidence-based health resources. The minor will offer students a foundation in health sciences that can be applied to many professions or as a foundation for graduate study in a variety of health-related fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/applied-health-science-minor/",
+        "Accreditation status": null,
+        "Program name": "Applied Health Science Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Minor in Applied Leadership is designed for students from all majors who want to learn leadership theories and apply them to their personal and professional lives. The Minor provides students with critical thinking, problem solving, decision making, team development, organizational change, and communication skills necessary for effectively leading and managing others in diverse environments. Students also learn how to identify their own leadership strengths and areas for growth to become impactful and ethical leaders. The Minor will provide an excellent complement to any major and will enhance students’ marketability for employment and further education.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/courses-programs/academic-programs/applied-leadership-minor/",
+        "Accreditation status": null,
+        "Program name": "Applied Leadership",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Bachelor of Science in Studio Art degree provides students with a broad and rigorous exposure to various art media and theoretical issues. Students will learn how to analyze and critically evaluate works of art from multiple cultural perspectives. The program will enhance their understanding of art and its context and prepare them for careers in art-related fields or for graduate study.",
+        "program website url": "https://www.mnsu.edu/academics/academic-catalog/2023-2024-academic-catalog/college-of-arts-humanities/department-of-art/art-studio-art-bs/",
+        "Accreditation status": null,
+        "Program name": "Art & Design",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Art & Design minor introduces students to the visual arts and prepares them for future work or graduate study in a variety of art related fields. Upon completion of the Art & Design Minor, students will be able to: Utilize creative design thinking skills in the process of art production. Critique and analyze artworks using appropriate art and design terminology. Describe the history and theory of art and design within diverse cultural contexts. Articulate aesthetic and philosophical concepts in visual art through written and oral presentations.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/minors/art-design-minor/",
+        "Accreditation status": null,
+        "Program name": "Art & Design Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Bachelor of Arts in Art History program provides students with the critical thinking, communication, and research skills necessary to analyze art and its historical and cultural contexts. The curriculum offers students a wide range of courses and topics from the ancient world to contemporary art. Through a combination of required and elective courses, students gain a comprehensive understanding of various art movements, styles, and theories. Students will also learn to interpret visual culture, articulate ideas through written and oral presentations, and conduct independent research. The program prepares students for careers in museums, galleries, archives, higher education, arts administration, or for graduate study in art history or related fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/art-history-ba",
+        "Accreditation status": null,
+        "Program name": "Art History",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "Welcome to the Art History Program at Minnesota State University, Mankato. We offer a challenging curriculum in the history of art and architecture, from antiquity to the contemporary period, taught by faculty who are active in research and scholarship. In the classroom, you will learn to hone your skills in visual analysis, critical thinking, research, and writing. Outside of the classroom, you will have opportunities to visit museums and galleries, participate in campus events and art organizations, complete internships, and travel abroad. If you wish to declare a major or minor in Art History or simply have questions about the program, please contact a faculty member or the Department Chair.",
+        "program website url": "https://hss.mnsu.edu/academic-programs/art/art-degree-programs/art-history-program/",
+        "Accreditation status": null,
+        "Program name": "Art History Minor",
+        "Program Page url": "https://hss.mnsu.edu/academic-programs/art/art-degree-programs/art-history-program/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Bachelor of Fine Arts degree with an emphasis in Art Teaching K-12 is designed to prepare students for a Minnesota teaching license in Visual Arts (K-12). The program prepares students to teach visual art effectively to a wide range of students in diverse settings. Students develop knowledge and skills in art media, art history, art criticism, and aesthetics, and apply these within effective teaching methodologies. Students cultivate an understanding of learners, content knowledge, instructional practices, and professional dispositions required of successful teachers. The curriculum provides a strong studio art foundation and a comprehensive understanding of current practices in art education. Graduates will be prepared to teach art to children and adolescents in public and private schools.",
+        "program website url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2022-2023-academic-catalog/undergraduate/art-teaching-k-12/",
+        "Accreditation status": null,
+        "Program name": "Art Teaching (K-12)",
+        "Program Page url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2022-2023-academic-catalog/undergraduate/art-teaching-k-12/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Astronomy Minor provides students with an in-depth understanding of the physical processes governing the universe. This minor is an excellent complement to majors in Physics, Chemistry, Geology, and Computer Science, providing a broader scientific perspective and analytical skills applicable to a wide range of careers in science, technology, and education. Students will explore topics such as celestial mechanics, stellar evolution, galaxies, cosmology, and observational astronomy through a combination of theoretical study and hands-on experience using telescopes and astronomical data analysis tools.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/minors/astronomy-minor/",
+        "Accreditation status": null,
+        "Program name": "Astronomy Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Athletic Coaching Minor is designed to prepare students for coaching positions at the youth, interscholastic, and intercollegiate levels. The 18-credit minor provides students with the foundational knowledge and skills necessary to effectively lead and develop athletes, encompassing areas such as sport psychology, exercise physiology, motor learning, and coaching methodology. It is suitable for students pursuing various majors who wish to combine their primary field of study with a credential in athletic coaching.",
+        "program website url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2022-2023-academic-catalog/undergraduate/athletic-coaching/athletic-coaching-minor/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Athletic Coaching Minor",
+        "Program Page url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2022-2023-academic-catalog/undergraduate/athletic-coaching/athletic-coaching-minor/"
+    },
+    {
+        "Concentration name": null,
+        "description": null,
+        "program website url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2021-2022/undergraduate/automotive-engineering-technology/",
+        "Accreditation status": null,
+        "Program name": "Automotive Engineering Technology",
+        "Program Page url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2021-2022/undergraduate/automotive-engineering-technology/"
+    },
+    {
+        "Concentration name": null,
+        "description": "A minor in Automotive Engineering Technology will provide students with the foundational understanding of automotive systems, vehicle design, development, and manufacturing. This minor will broaden the student’s understanding of automotive systems for careers in the transportation field.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/automotive-engineering-technology-minor/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Automotive Engineering Technology Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/undergraduate/automotive-engineering-technology-minor/"
+    },
+    {
+        "Concentration name": "Aviation Management, Flight, Maintenance Management",
+        "description": "The Bachelor of Science in Aviation prepares students for diverse careers within the aviation industry. Three options allow students to choose areas of specialization including Aviation Management, Flight, or Maintenance Management. The Aviation Management option prepares students for professional positions in airport management, air transportation, government agencies, and other aviation-related businesses. The Flight option prepares students for careers as professional pilots within the commercial, corporate, and airline industries. The Maintenance Management option prepares students for careers in aircraft maintenance management, including commercial airline maintenance, corporate aviation maintenance, repair stations, and fixed base operations. Graduates of this program will possess the knowledge and skills necessary to contribute to and lead in various sectors of the aviation industry, ensuring safety, efficiency, and innovation. The program emphasizes a strong foundation in aviation principles, regulations, and operations, complemented by practical experience and specialized knowledge relevant to their chosen option.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/undergraduate/aviation-department/aviation-bs/",
+        "Accreditation status": "Accredited by Aviation Accreditation Board International (AABI).",
+        "Program name": "Aviation",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Aviation Minor is intended to provide students from any major with introductory knowledge of the aviation industry and the technical skills associated with private pilot certification. The minor provides a foundation for students interested in careers in aviation, either as a professional pilot, or in other aviation related fields, while also allowing students to receive academic credit for flight training. All flight training and ground instruction is provided by the MSU, Mankato Department of Aviation. All students completing the minor will earn their Private Pilot Certificate through the courses included in the minor curriculum.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/2023-2024/academic-programs/aviation-minor/",
+        "Accreditation status": "FAA Part 141 approved flight school",
+        "Level": "Minor",
+        "Program name": "Aviation Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "Biochemistry is an interdisciplinary major with the goal of preparing students for careers in fields related to chemistry and biology (biotechnology, forensics, medicine, pharmacy, veterinary medicine, environmental chemistry, and related sciences). A degree in biochemistry also prepares students for graduate studies in biochemistry, molecular biology, and other related health sciences. The biochemistry curriculum combines a strong foundation in chemistry and biology with laboratory experience. Our faculty are experts in a wide variety of chemical and biological disciplines, including forensic chemistry, analytical chemistry, computational chemistry, microbiology, organic synthesis, biochemistry, and plant biology.",
+        "program website url": "https://www.mnsu.edu/contentassets/36d4dc099f7f4227bb5251c31d34be28/2024-biochemistry.pdf",
+        "Accreditation status": null,
+        "Program name": "Biochemistry",
+        "Program Page url": "https://www.mnsu.edu/contentassets/36d4dc099f7f4227bb5251c31d34be28/2024-biochemistry.pdf"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Bachelor of Arts in Biology is designed for students desiring a flexible program in Biology. It is appropriate for pre-professional students interested in such areas as medicine, dentistry, physical therapy, optometry, and veterinary medicine. Students may also combine this degree with a minor in Chemistry or other related field. Since this degree provides a broad background in Biology, it is also suitable for students planning to continue their education in graduate school or those who plan to teach at the secondary level after obtaining the appropriate education licensure.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/college-of-science-engineering-and-technology/biological-sciences/biology-ba/",
+        "Accreditation status": null,
+        "Program name": "Biology",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
         "description": null,
         "program website url": null,
         "Accreditation status": null,
-        "Program name": "Bachelor of Health Service Preparatory Studies",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "Medical laboratory scientists are vital members of the health care team. They perform and evaluate medical laboratory tests to provide information for diagnosing, preventing and treating diseases. Their analyses are critical to the detection of cancer, heart attack, diabetes and infectious diseases. Because medical laboratory scientists work with state-of-the-art instrumentation and technology, they must have strong scientific, critical thinking and problem-solving skills. The medical laboratory science program offers classroom, student laboratory and clinical education in all major areas of the clinical laboratory, including clinical chemistry, hematology, immunology, immunohematology, microbiology and molecular diagnostics. You’ll also learn about laboratory operations and management, which include quality control, quality assurance, regulatory compliance and professional standards.",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/medical-laboratory-science/",
-        "Accreditation status": "The Medical Laboratory Science program is accredited by the National Accrediting Agency for Clinical Laboratory Sciences (NAACLS).",
-        "Program name": "Bachelor of Medical Laboratory Technician",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "Prepare to promote the health and well-being of people and communities with a bachelor's degree in public health from Kansas State University. Public health professionals work to prevent disease, prolong life, and promote physical and mental health. Through our program, you'll learn to develop and implement solutions to complex public health challenges across diverse communities. You'll gain skills in epidemiology, biostatistics, environmental health, health promotion, policy, and global health. You'll also learn to analyze health data, conduct research, and communicate effectively to diverse audiences. With a public health degree, you’ll be prepared for various careers in health education, community outreach, epidemiology, health policy, and environmental health. You'll also be prepared for graduate school in public health, medicine, or other health professions. Our public health program is designed to provide you with a comprehensive understanding of public health principles and practices, preparing you to make a positive impact on the health of individuals and populations worldwide. Our curriculum focuses on health disparities, cultural competence, and ethical decision-making, ensuring that you graduate with the knowledge and skills needed to address the most pressing public health challenges of our time. We emphasize hands-on learning, research opportunities, and community engagement, providing you with practical experience and networking opportunities. Join us in shaping a healthier future for all.",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/public-health/",
-        "Accreditation status": null,
-        "Program name": "Bachelor of Public Health",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "The minor in adult development, gerontology, and aging is designed for students interested in learning about adult development and aging processes. The minor explores the multidisciplinary field of gerontology by providing coursework in biology, psychology, sociology, family studies, and health. Students will gain an understanding of the aging process from multiple perspectives. What you'll learn: Understanding of how human development impacts the aging process. Knowledge of the factors influencing health, well-being and quality of life across the adult lifespan. Skills to apply relevant theories and research to solve problems in gerontology. Ability to critically analyze the individual, familial and societal factors that shape the aging experience.",
-        "program website url": "https://www.k-state.edu/hhs/admissions/adult-development-gerontology-aging-minor/",
-        "Accreditation status": null,
-        "Program name": "Minor in Adult Development, Gerontology, and Aging",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "Explore the history, cultures, and contemporary issues of Africa through the African Studies minor at Kansas State University. This interdisciplinary minor allows you to combine your passion for African studies with your major field of study. You’ll develop a broad understanding of the continent, its diverse societies, and its global connections. The minor requires 15 credit hours across at least three different departments, providing a versatile and enriching addition to any degree.",
-        "program website url": "https://www.k-state.edu/academics/programs/african-studies-minor.html",
-        "Accreditation status": null,
-        "Program name": "Minor in African Studies",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "Anthropology is the study of human diversity across time and space. Anthropologists investigate human biology and evolution, linguistic diversity, patterns of culture, and archaeology. An anthropology minor provides students with a broad exposure to the field of anthropology, deepening their understanding of human diversity and providing an interdisciplinary perspective crucial for success in a wide range of careers. The minor is a valuable complement to almost any major, especially those with an international focus, a concern for human diversity, or a focus on health or the environment.",
-        "program website url": "https://www.k-state.edu/academics/majors-programs/a/anthropology/minor/",
-        "Accreditation status": null,
-        "Program name": "Minor in Anthropology",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "The Minor in Child Development is designed for students who want to deepen their understanding of children's development without majoring in the subject. This minor offers a comprehensive overview of the theoretical frameworks, research methodologies, and practical applications in the field of child development. Students will explore various aspects of child development, including cognitive, social, emotional, and physical growth from conception through adolescence. The curriculum emphasizes an interdisciplinary approach, drawing from psychology, sociology, education, and family studies. Through coursework and experiential learning opportunities, students will gain valuable insights into the factors influencing children's well-being and development, preparing them for careers working with children and families in diverse settings.",
-        "program website url": "https://catalog.k-state.edu/preview_program.php?catoid=57&poid=20319",
-        "Accreditation status": null,
-        "Program name": "Minor in Child Development",
-        "Program Page url": "https://catalog.k-state.edu/preview_program.php?catoid=57&poid=20319"
-    },
-    {
-        "Concentration name": null,
-        "description": "The Department of Communication Studies offers a Minor in Communications. This minor is open to all students, regardless of major. The minor requires a minimum of 18 credit hours beyond those taken to fulfill the general education requirements for the student’s degree program.",
-        "program website url": "https://catalog.k-state.edu/preview_program.php?catoid=44&poid=14460",
-        "Accreditation status": null,
-        "Program name": "Minor in Communications",
-        "Program Page url": "https://catalog.k-state.edu/preview_program.php?catoid=44&poid=14460"
-    },
-    {
-        "Concentration name": null,
-        "description": null,
-        "program website url": "https://www.k-state.edu/media-communication/academics/minor-in-mass-communications.html",
-        "Accreditation status": null,
-        "Program name": "Minor in Digital Communication and Media/Multimedia",
-        "Program Page url": "https://www.k-state.edu/media-communication/academics/minor-in-mass-communications.html"
-    },
-    {
-        "Concentration name": null,
-        "description": "A minor in economics offers students an opportunity to learn the basic principles of economic theory and apply them to a wide variety of policy issues. Students who are successful in the minor will be able to demonstrate competence in economic reasoning, apply economic principles to analyze real-world problems and evaluate various policy alternatives.",
-        "program website url": "https://catalog.k-state.edu/undergraduate/colleges-curricula/arts-sciences/economics/economics-minor/",
-        "Accreditation status": null,
-        "Program name": "Minor in Economics",
-        "Program Page url": "https://www.k-state.edu/academics/majors-programs/"
-    },
-    {
-        "Concentration name": null,
-        "description": "American Ethnic Studies is an interdisciplinary field that examines the histories, cultures, social structures, and political experiences of racial and ethnic groups in the United States and globally. The program emphasizes critical analysis of race, ethnicity, indigeneity, and their intersections with other categories of difference such as gender, class, and sexuality. It focuses on the experiences of African Americans, Asian Americans, Indigenous peoples, and Latinas/Latinos, while also engaging with other ethnic groups.\nStudents develop a deep understanding of the diverse experiences and contributions of ethnic groups, the dynamics of power and inequality, and the struggles for justice and liberation. The curriculum prepares students to critically engage with complex social issues, to analyze various forms of oppression, and to advocate for social change.\nGraduates with a B.A. in American Ethnic Studies are equipped with strong analytical, research, and communication skills, which are valuable in a wide range of careers including education, law, public policy, social work, journalism, community organizing, and graduate studies in fields such as ethnic studies, sociology, history, and political science.",
-        "program website url": "https://catalog.k-state.edu/undergraduate/arts-sciences/american-ethnic-studies/american-ethnic-studies-ba/",
-        "Accreditation status": null,
-        "Program name": "American Ethnic Studies, B.A.",
-        "Program Page url": "https://www.k-state.edu/academics/courses/catalogs/"
-    },
-    {
-        "Concentration name": null,
-        "description": null,
-        "program website url": "https://catalog.k-state.edu/content.php?catoid=42&navoid=7376&print=&contract",
-        "Accreditation status": null,
-        "Program name": "American Ethnic Studies, B.S.",
-        "Program Page url": "https://catalog.k-state.edu/content.php?catoid=42&navoid=7376&print=&contract"
-    },
-    {
-        "Concentration name": null,
-        "description": "Anthropology is the scientific study of humans, past and present, throughout the world. By drawing on four subfields — cultural anthropology, biological anthropology, archaeology and linguistic anthropology — anthropologists explore human diversity in its various forms. K-State's bachelor's degree in anthropology helps students develop skills in critical thinking, research, problem-solving and communication.",
-        "program website url": "https://www.k-state.edu/undergrad-academics/programs-of-study/anthropology/",
-        "Accreditation status": null,
-        "Program name": "Anthropology, B.A.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "Program name": "Biology Minor",
+        "Program Page url": "https://academics.charlotte.edu/program/biology-minor-on-campus-online/"
     },
     {
         "Concentration name": null,
         "description": null,
         "program website url": null,
         "Accreditation status": null,
-        "Level": null,
-        "Program name": "Anthropology, B.S.",
-        "Program Page url": "https://catalog.louisville.edu/undergraduate/archive/2023-2024_Undergraduate_Catalog_final_.pdf"
+        "Program name": "Biology Teaching (5-12)",
+        "Program Page url": "https://www.google.com/search?q=time+in+Nicollet+County,+US"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Arts in art is a liberal arts-based degree for students who wish to combine the study of art with other academic areas in the university. It is designed to allow students flexibility in pursuing other majors or minors, or to broaden their intellectual and professional outlooks by taking a variety of courses outside of art. The BA degree in art allows students to select from several areas of concentration as listed below. Each concentration features specific requirements. In addition to studio art coursework, students complete 18 credit hours of art history. The BA in art requires a minimum of 120 credit hours for graduation.",
-        "program website url": "https://www.k-state.edu/art/undergraduate/ba-degree/",
-        "Accreditation status": "The Department of Art is an accredited member of the National Association of Schools of Art and Design (NASAD).",
-        "Program name": "Art, B.A.",
-        "Program Page url": "https://www.k-state.edu/academics/"
-    },
-    {
-        "Concentration name": "Ceramics, Drawing, Graphic Design, Metalsmithing & Jewelry, Painting, Photography, Printmaking, Sculpture",
-        "description": "The Bachelor of Fine Arts degree in art is a professional degree in studio art for students who wish to pursue careers as exhibiting artists, for those who wish to pursue graduate work in art, or for those who wish to work in related fields such as gallery and museum preparation or conservation. The BFA program focuses on developing high levels of expertise in studio practice, in-depth understanding of theory and criticism, and professional practice knowledge and skills. Students in the BFA program select one or more of the areas of study as their studio concentration, with the option to pursue a secondary area of study. The curriculum for the BFA in art provides for broad exposure to various forms of art making, development of skills in critical thinking, art historical inquiry, and professional preparation. The degree requires a minimum of 120 credit hours.",
-        "program website url": "https://www.k-state.edu/academics/undergraduate/art-bfa/",
+        "description": "Biotechnology is a rapidly expanding field of study that encompasses the application of living organisms and their components for the benefit of humankind. This interdisciplinary major will provide students with a strong foundation in the basic sciences of biology and chemistry and their applications in areas such as agriculture, medicine, bioremediation, and industrial applications. This degree prepares students for careers in the biotechnology industry, as well as for graduate study in biotechnology and related fields. Students completing the degree will have the opportunity to engage in cutting-edge research through laboratory courses and/or independent research projects.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs-of-study/b/biotechnology-bs/",
         "Accreditation status": null,
-        "Program name": "Art, B.F.A.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "Program name": "Biotechnology",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Arts in Biochemistry is designed for students who want a broad education in the liberal arts with a strong foundation in biochemistry. This degree allows flexibility for students to combine a biochemistry major with other majors, minors or programs, such as pre-medicine. Students are prepared for a wide variety of career options immediately after graduation or for continued education in graduate or professional schools. Graduates with a B.A. in Biochemistry often pursue careers in biomedical research, biotechnology, pharmaceutical sciences, forensics, scientific writing, and science policy.",
-        "program website url": "https://catalog.ku.edu/liberal-arts-sciences/molecular-biosciences/ba-biochemistry/",
-        "Accreditation status": null,
-        "Program name": "Biochemistry, B.A.",
-        "Program Page url": "https://catalog.ku.edu/liberal-arts-sciences/molecular-biosciences/ba-biochemistry/"
+        "description": "The Bachelor of Science (BS) in Business Administration program offers a broad-based business education focused on developing the knowledge and skills necessary to contribute to the success of an organization. This program provides a solid foundation in the functional areas of business, including accounting, finance, marketing, management, and information systems. Students develop critical thinking, problem-solving, communication, and leadership skills essential for a dynamic business environment. The curriculum is designed to prepare graduates for a wide range of entry-level professional positions in various industries or for further graduate studies.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/undergraduate/business-administration-bs/",
+        "Accreditation status": "The College of Business is accredited by AACSB International – The Association to Advance Collegiate Schools of Business.",
+        "Program name": "Business Administration",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The biochemistry curriculum provides a rigorous scientific foundation in chemistry, biology, math and physics. Students learn the structure and function of biological molecules, how they interact with each other and how they carry out the processes of life.\nStudents are prepared for a variety of careers in biotechnology, health, medicine and agriculture, or for graduate or professional school. The curriculum can be tailored to meet requirements for professional schools, including pre-med, pre-vet, pre-dental and pre-pharmacy programs.",
-        "program website url": "https://www.k-state.edu/academics/undergraduate-programs/majors/biochemistry/",
+        "description": "This interdisciplinary minor provides students from any major with a basic understanding of business, its language, and the functional areas within business. The minor provides fundamental knowledge about business and is especially useful for students in fields such as health care, arts, science, and education who anticipate working in or with organizations that are profit-oriented or that apply business principles. Students completing this minor will be better prepared to enter graduate programs in business or related fields. Completion of this minor provides fundamental knowledge about business and is especially useful for students in fields such as health care, arts, science, and education who anticipate working in or with organizations that are profit-oriented or that apply business principles.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/minors/business-administration-minor/",
         "Accreditation status": null,
-        "Program name": "Biochemistry, B.S.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "Program name": "Business Administration Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The Biology B.A. program provides a broad foundation in the biological sciences with a particular emphasis on molecular, cellular, and organismal biology, ecology, and evolution. This program is designed for students who want a strong biology background but also desire the flexibility to pursue additional academic interests or pre-professional programs like pre-law or pre-MBA. The curriculum allows students to explore various facets of biology while leaving ample room for electives, minors, or second majors in other disciplines. Graduates are well-prepared for entry-level positions in diverse fields such as environmental consulting, public health, science communication, and laboratory research, or for further graduate studies in biology, education, or other professional fields.",
-        "program website url": "https://catalog.k-state.edu/preview_program.php?catoid=62&poid=23634",
+        "description": "The Business Law Minor enhances any major with a strong foundation in business law. Students will gain an understanding of the legal environment of business, the structure of contracts, the principles of business organization, and various contemporary topics relating to the law. Students from any major are encouraged to consider a Business Law Minor.",
+        "program website url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2024-2025-academic-catalog/undergraduate/business-law-minor/",
         "Accreditation status": null,
-        "Program name": "Biology, B.A.",
-        "Program Page url": "https://catalog.k-state.edu/preview_program.php?catoid=62&poid=23634"
-    },
-    {
-        "Concentration name": null,
-        "description": "The Bachelor of Science (BS) in Biology program offers an integrated understanding of the biological sciences, with a strong foundation in chemistry, physics, and mathematics. The curriculum is designed to provide students with the knowledge and skills necessary for careers in various biological fields, including biomedical research, environmental science, biotechnology, and health professions. Students will explore topics ranging from molecular and cellular biology to ecology and evolution, developing critical thinking, problem-solving, and laboratory skills essential for scientific inquiry.",
-        "program website url": "https://www.k-state.edu/biology/academics/undergraduate-programs/biology.html",
-        "Accreditation status": null,
-        "Program name": "Biology, B.S.",
-        "Program Page url": "https://www.k-state.edu/biology/academics/undergraduate-programs/biology.html"
-    },
-    {
-        "Concentration name": null,
-        "description": "Our chemistry degree programs provide an excellent preparation for careers in industry, academia and government, as well as for further study in graduate school or professional schools such as medical, dental or pharmacy school. The Department of Chemistry offers both a Bachelor of Arts (B.A.) and a Bachelor of Science (B.S.) degree program in chemistry.\n\nThe B.A. in chemistry provides a solid foundation in the principles of chemistry while allowing students to customize their coursework to include other interests, such as a minor or second major. This degree is popular with students who want to prepare for a career in health care, such as medicine, dentistry or pharmacy.",
-        "program website url": "https://www.k-state.edu/academics/majors-minors-certificates/chemistry-ba.html",
-        "Accreditation status": null,
-        "Program name": "Chemistry, B.A.",
-        "Program Page url": "https://www.k-state.edu/academics/"
-    },
-    {
-        "Concentration name": null,
-        "description": "A bachelor's degree in chemistry provides a strong foundation for a variety of careers in chemistry and related fields, or for further education in graduate school. Our students are prepared to be successful professionals who can address important challenges facing Kansas, the nation and the world. K-State’s chemistry program provides high-quality classroom and laboratory education while emphasizing analytical, quantitative and problem-solving skills, and the ability to communicate scientific results. Students have opportunities to participate in undergraduate research with faculty, complete internships and engage in outreach.",
-        "program website url": "https://www.k-state.edu/academics/degrees-programs/bachelors/chemistry-bs/",
-        "Accreditation status": null,
-        "Program name": "Chemistry, B.S.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "Program name": "Business Law Minor",
+        "Program Page url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2024-2025-academic-catalog/undergraduate/business-law-minor/"
     },
     {
         "Concentration name": null,
         "description": null,
         "program website url": null,
         "Accreditation status": null,
-        "Program name": "Medical Laboratory Science, B.A.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "Program name": "Business Teaching (5-12)",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": "ACS Certified, Biochemistry, Chemical Education, Forensic Chemistry",
+        "description": "The Bachelor of Science (BS) in Chemistry provides students with a strong background in analytical, biochemistry, inorganic, organic and physical chemistry. The BS degree is appropriate for students planning to pursue graduate studies in chemistry or biochemistry, or those seeking employment in chemical, pharmaceutical, biotechnological or other science-related industries. Students are prepared for a variety of careers including industrial chemist, research chemist, pharmaceutical chemist, forensic chemist, and materials scientist. Graduates are also prepared for pre-professional programs in medicine, dentistry, veterinary medicine, pharmacy, or other allied health fields. The BS degree in chemistry offers four concentrations: ACS Certified, Biochemistry, Chemical Education, Forensic Chemistry.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/chemistry-bs/",
+        "Accreditation status": null,
+        "Program name": "Chemistry",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Science in medical laboratory science is offered by Kansas State University and the University of Nebraska Medical Center College of Allied Health Professions. This 2+2 professional program provides students with an integrated curriculum that builds on a strong foundation in science. The degree combines two years of coursework at K-State and two years of professional coursework at the University of Nebraska Medical Center in Omaha. This program trains students to perform and interpret laboratory tests that detect and monitor disease. Medical laboratory scientists perform tests in all major laboratory disciplines including hematology, microbiology, immunohematology (blood banking), clinical chemistry and molecular biology. Upon graduation, students are eligible to take certification examinations to become nationally certified medical laboratory scientists.",
-        "program website url": "https://www.k-state.edu/academics/programs/medical-laboratory-science-bs.html",
-        "Accreditation status": "Accredited by the National Accrediting Agency for Clinical Laboratory Sciences (NAACLS).",
-        "Program name": "Medical Laboratory Science, B.S.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "description": "The minor in Chemistry offers students the opportunity to learn fundamental concepts in chemistry beyond the general education courses. This minor provides a solid foundation for students interested in careers where chemical principles are used and can be paired with any major. Students completing this minor will take courses in general and organic chemistry, along with additional chemistry electives. The minor provides a strong science background for students going into health care professions, forensic science, engineering, and other science-related fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs-courses/minor-chemistry/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Chemistry Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": "Teaching",
+        "description": "This track is designed to provide students with a solid background in all areas of chemistry while also meeting the requirements for licensure to teach chemistry in Minnesota high schools. Students pursuing this track will gain a deep understanding of chemical principles and develop the pedagogical skills necessary to effectively teach chemistry concepts to secondary school students.",
+        "program website url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2022-2023-academic-catalog/undergraduate/chemistry/",
+        "Accreditation status": null,
+        "Program name": "Chemistry Teaching",
+        "Program Page url": "https://mankato.mnsu.edu/academics/academic-catalog/all-active-catalogs/2022-2023-academic-catalog/undergraduate/chemistry/"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Arts in communication studies program will help you learn how to effectively share information with others, influence decision making and build relationships. It is a flexible, highly applicable degree that helps students excel in any career path. The ability to communicate effectively in diverse situations is one of the most highly sought-after skills in today's workforce. K-State's communication studies program focuses on teaching you the foundational knowledge and practical skills that will help you excel as a communicator in any field. The program emphasizes both theoretical and applied aspects of communication and offers courses that cover a wide range of topics, including public speaking, rhetorical theory, interpersonal communication, intercultural communication, organizational communication, political communication, small group communication, and argumentation. You will also develop critical thinking and research skills, preparing you for a variety of careers in fields such as business, education, government, and non-profit organizations. In addition, our program helps prepare students for graduate studies in communication and related fields.",
-        "program website url": "https://www.k-state.edu/academics/programs/communication-studies-ba.html",
-        "Accreditation status": null,
-        "Program name": "Communication Studies, B.A.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "description": "The Civil Engineering program prepares students to become professional engineers. Civil engineers design and build infrastructure that supports society and impacts the quality of life. Infrastructure systems include buildings, bridges, dams, airports, highways, water treatment, wastewater treatment, and solid waste management. The program is developed to provide a strong background in engineering fundamentals, civil engineering design, project management, and related engineering applications. The curriculum includes courses in a broad range of civil engineering areas, including structural engineering, environmental engineering, geotechnical engineering, transportation engineering, and water resources engineering. Students complete design projects in several courses. The program emphasizes ethical, social, and environmental responsibility, professional development, and the importance of lifelong learning. Graduates are prepared for a diverse range of civil engineering careers in consulting, government, and industry.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/undergraduate/civil-engineering-bs/",
+        "Accreditation status": "The BS Civil Engineering Program is accredited by the Engineering Accreditation Commission of ABET, https://www.abet.org.",
+        "Program name": "Civil Engineering",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": null,
-        "program website url": null,
+        "description": "The Cognitive Science Minor focuses on the interdisciplinary study of the mind, drawing from fields such as psychology, computer science, philosophy, linguistics, and neuroscience. It explores the nature of intelligence, perception, memory, language, reasoning, and consciousness from multiple perspectives. This minor prepares students for graduate study or careers in fields like artificial intelligence, human-computer interaction, data science, and cognitive neuroscience.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/minor-in-cognitive-science/",
         "Accreditation status": null,
-        "Program name": "Communication Studies, B.S.",
-        "Program Page url": "https://catalog.jmu.edu/preview_program.php?catoid=62&poid=27089#main"
+        "Program name": "Cognitive Science",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "Economics is the study of how people, firms, and governments make decisions when resources are scarce. Economists apply a distinct mode of thinking, grounded in theory and informed by empirical data, to analyze and interpret real-world phenomena ranging from interest rates and unemployment to international trade and financial crises. An undergraduate degree in economics is an excellent preparation for careers in business, law, and public policy, as well as for graduate study in economics and other fields. The Department of Economics offers two undergraduate degrees: a Bachelor of Arts (B.A.) and a Bachelor of Science (B.S.). The B.A. in economics provides a solid foundation in economic theory, policy, and data analysis and has fewer quantitative requirements than the B.S. degree. This allows students to complete a second major or minor in another field (or pursue a general interest) along with their economics degree. The B.A. degree provides excellent preparation for employment in a variety of industries and careers, including banking, finance, consulting, market research, and public policy. It is also suitable for students planning to attend law school or graduate school in fields outside of economics.",
-        "program website url": "https://www.k-state.edu/economics/academics/undergrad/ba-economics.html",
+        "description": "The Master of Arts in Communication and Media provides advanced study in the theoretical, historical, critical, and applied dimensions of communication, media, and rhetoric. The program is designed to develop students’ analytical, research, and communication skills to prepare them for advanced graduate study, teaching, or professional positions in public and private organizations. Graduates are prepared for a variety of professions in fields such as communication, media, education, government, public relations, non-profit management, and consulting.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/communication-media-ma/",
         "Accreditation status": null,
-        "Program name": "Economics, B.A.",
-        "Program Page url": "https://catalog.k-state.edu/preview_program.php?catoid=62&poid=23518"
+        "Level": "Master of Arts",
+        "Program name": "Communication and Media",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The economics major at Kansas State University provides students with a strong theoretical background in the discipline. The economics major is designed for students seeking a rigorous course of study in economics that prepares them for a wide range of career options, including business, law, government, and graduate study in economics. Our graduates are highly analytical and able to identify, analyze, and solve complex problems. This analytical ability, combined with strong quantitative and communication skills, makes our graduates highly marketable in a wide variety of occupations.",
-        "program website url": "https://catalog.k-state.edu/preview_program.php?catoid=62&poid=23519&returnto=12627",
+        "description": "The Communication and Media Minor is a 21-credit program designed to give students a comprehensive understanding of how communication and media shape our world. Students will learn about various communication theories, media forms, and their societal impacts. This minor is suitable for students in any major who wish to enhance their communication skills and media literacy. It provides a strong foundation for careers in media, public relations, marketing, and other communication-intensive fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate-certificates-minors/communication-media-minor/",
         "Accreditation status": null,
-        "Program name": "Economics, B.S.",
-        "Program Page url": "https://catalog.k-state.edu/preview_program.php?catoid=62&poid=23519&returnto=12627"
+        "Program name": "Communication and Media Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "As an English major at Kansas State University, you will develop a broad set of skills in critical thinking, research, and communication that are essential for success in any field. Our courses will give you opportunities to read, analyze, and produce texts in a variety of genres and media. You will also develop your understanding of the history of literature, rhetoric, and language, and you will learn how to approach texts from different cultural perspectives.\nThe English major requires 36 hours of English courses. Because the department offers a wide range of courses, you can customize your program to meet your interests and career goals. While all English majors take a core of required courses (ENGL 287, 290, 399, 501, 502, 580), you have considerable flexibility in selecting other courses to complete the major. Our courses provide an excellent foundation for graduate study in English, as well as for careers in law, business, education, government, journalism, public relations, technical writing, editing, and publishing.",
-        "program website url": "https://www.k-state.edu/english/academics/ugrad/major/",
+        "description": "Students pursuing the Bachelor of Science in Earth Science will develop a strong foundation in geological processes and Earth history, as well as an understanding of the relationship between Earth science and other scientific disciplines. The program emphasizes hands-on experience through laboratory work and field trips. Students will gain skills in scientific inquiry, data analysis, and communication, preparing them for careers in environmental consulting, natural resource management, geological surveying, and education, or for graduate studies in Earth science or related fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/earth-science-bs/",
         "Accreditation status": null,
-        "Program name": "English, B.A.",
-        "Program Page url": "https://www.k-state.edu/english/academics/ugrad/major/"
+        "Program name": "Earth Science",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Arts in Fisheries, Wildlife, and Conservation Biology is a degree offered by the College of Arts and Sciences. Students develop strong foundations in biology, ecology and conservation of plants and animals through a rigorous scientific curriculum and hands-on experiences. The B.A. program provides flexibility to students interested in professional careers in fisheries and wildlife conservation that would also benefit from a second major or minor in another field such as political science, journalism, business or a foreign language. Students who are interested in pursuing a graduate degree in fisheries, wildlife or conservation biology, or a science-related career path, should consider the Bachelor of Science degree option.",
-        "program website url": "https://www.k-state.edu/academics/program-detail.html?prog=Fisheries%2C%20Wildlife%2C%20and%20Conservation%20Biology%2C%20BA",
+        "description": "The Earth Science minor focuses on the study of the solid Earth (geology), its oceans (oceanography), and its atmosphere (meteorology). Courses for the minor examine Earth processes and materials (e.g., minerals, rocks, water, and air), Earth's history, and the evolution of life. Through completing the minor, students will learn to apply fundamental physical and chemical principles to Earth systems, evaluate Earth processes and hazards (e.g., volcanoes, earthquakes, landslides, and floods), understand sustainable use of Earth resources, and analyze the human impact on Earth systems (climate change, pollution). The minor provides a strong scientific background in Earth processes and systems. It complements a variety of majors including Biology, Chemistry, Civil Engineering, Environmental Science, Geography, Global Studies, Urban and Regional Studies, and Water Resources, and helps prepare students for careers or graduate school in earth sciences, environmental studies, and education.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/earth-science-minor/",
         "Accreditation status": null,
-        "Program name": "Fisheries, Wildlife, and Conservation Biology, B.A.",
-        "Program Page url": "https://www.k-state.edu/academics/"
-    },
-    {
-        "Concentration name": "Fisheries Science and Management, Wildlife Science and Management, Conservation Biology",
-        "description": "Students in the Fisheries, Wildlife, and Conservation Biology program prepare for careers in natural resource management, conservation, environmental protection, and scientific research. Our graduates find professional careers with state and federal agencies and private conservation organizations, and many pursue graduate degrees in related disciplines. Our curriculum provides students with a strong background in the foundational sciences and hands-on experience in a variety of laboratory and field settings. The FWCB program is housed in the Division of Biology within the College of Arts and Sciences. Our faculty and staff are experts in the conservation and management of fish, wildlife, and their habitats across Kansas, the Great Plains, and around the world.",
-        "program website url": "https://www.k-state.edu/academics/undergrad-programs/fisheries-wildlife-conservation-biology/",
-        "Accreditation status": null,
-        "Program name": "Fisheries, Wildlife, and Conservation Biology, B.S.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "Program name": "Earth Science Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/undergraduate/earth-science-minor/"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Arts in Geography is designed for students with an interest in the social science and humanities aspects of geography. The curriculum focuses on human geography, cultural geography, urban geography, political geography, population geography, economic geography, historical geography, resource management, regional analysis, and geographic information science (GIS). This degree emphasizes understanding the spatial distribution of human activities and their interaction with the environment. Students develop critical thinking skills, analytical techniques, and communication abilities relevant to careers in government, non-profit organizations, international development, education, and private industry. The B.A. program also provides a strong foundation for graduate studies in geography and related fields.",
-        "program website url": "https://catalog.k-state.edu/preview_entity.php?catoid=44&ent_oid=4664",
+        "description": "Gender and Women’s Studies (GWS) is an interdisciplinary program offering a Bachelor of Arts (B.A.), a minor, and a certificate. GWS courses explore the social construction of gender and its intersection with other categories of analysis such as race, class, ethnicity, sexuality, nation, and ability. The program helps students understand how gender is woven into cultural practices and institutions, and how individuals are shaped by gendered social worlds. Students learn to critically analyze social relations of power and to envision, promote, and create social change through feminist and other justice-oriented frameworks. GWS is an ideal complement to any major. Students in the program develop skills in critical thinking, research, and communication that are valuable in a wide range of careers and graduate programs including education, law, social work, public policy, non-profit administration, international relations, health care, and business.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/gender-womens-studies/",
         "Accreditation status": null,
-        "Program name": "Geography, B.A.",
-        "Program Page url": "https://catalog.k-state.edu/preview_entity.php?catoid=44&ent_oid=4664"
+        "Program name": "Gender and Women's Studies",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Science degree in geography emphasizes the scientific study of the earth’s natural and human systems. Students learn how to analyze and interpret spatial data, understand environmental processes, and contribute to sustainable solutions. This degree prepares students for careers in fields such as environmental consulting, urban planning, geographic information systems (GIS), and research. The curriculum provides a strong foundation in physical geography, human geography, and geographic techniques, enabling graduates to address complex local and global challenges.",
-        "program website url": "https://www.k-state.edu/academics/programs/geography-bs.html",
+        "description": "The Latin American Studies Minor is an interdisciplinary program designed to give students a comprehensive knowledge of the region and its people. Students will examine the historical, political, economic, social, and cultural aspects of Latin America. The minor is flexible, allowing students to tailor their studies to their specific interests.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs-courses/majors-minors-certificates/latin-american-studies-minor/",
         "Accreditation status": null,
-        "Level": "BS",
-        "Program name": "Geography, B.S.",
-        "Program Page url": "https://www.k-state.edu/academics/"
+        "Program name": "Latin American Studies Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     },
     {
         "Concentration name": null,
-        "description": "The Bachelor of Arts (B.A.) in Geology provides students with the fundamental knowledge and skills of a geologist through a flexible curriculum. This degree is ideal for students interested in a broad education in geology and may wish to pursue a second major or an additional specialization. Students develop strong written and oral communication skills, as well as critical thinking and problem-solving abilities.",
-        "program website url": "https://www.k-state.edu/geology/academics/undergrad-programs/ba-geology.html",
+        "description": "This minor introduces students to the core concepts of networking and information security. Students will learn about network infrastructure, protocols, operating systems, and security principles. Topics include network design, configuration, troubleshooting, risk management, and ethical hacking. The minor prepares students for entry-level positions in network administration and cybersecurity, or for further study in related fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/undergraduate/networking-information-security-minor/",
         "Accreditation status": null,
-        "Program name": "Geology, B.A.",
-        "Program Page url": "https://www.k-state.edu/careercenter/students/explore/explore_majors/majorin/geology.html"
+        "Program name": "Networking & Information Security Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/undergraduate/networking-information-security-minor/"
     },
     {
         "Concentration name": null,
-        "description": "Geology is the study of the Earth. Geologists investigate processes that form and change the Earth's surface and interior. It is a diverse field covering everything from earthquakes and volcanoes, to mapping, to mining, to understanding Earth's past climate and future. Geologists help us find and manage natural resources such as groundwater, petroleum, and minerals; they characterize and mitigate natural hazards such as floods, landslides, and earthquakes; they investigate environmental problems such as pollution and waste disposal; and they teach us about Earth's history including the evolution of life.",
-        "program website url": "https://catalog.k-state.edu/undergraduate/arts-sciences/geology/",
+        "description": "Philosophy majors develop analytical, critical, and communicative skills relevant to a wide variety of careers and graduate programs. Philosophers learn how to formulate, develop, and defend arguments concerning fundamental issues, such as the nature of reality, knowledge, and value. The Philosophy program offers courses in such areas as metaphysics, epistemology, ethics, logic, social and political philosophy, aesthetics, and the history of philosophy. Our graduates have pursued careers in law, public policy, medicine, journalism, education, ministry, social work, business, information technology, government, and other fields requiring rigorous critical thinking. Many of our majors also pursue graduate study in philosophy and other fields.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/college-humanities-social-sciences/philosophy/",
         "Accreditation status": null,
-        "Program name": "Geology, B.S.",
-        "Program Page url": "https://www.k-state.edu/careercenter/students/explore/explore_majors/majorin/geology.html"
+        "Program name": "Philosophy",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Scandinavian Studies minor offers students the opportunity to learn about the languages, literatures, histories, and cultures of the Scandinavian countries (Denmark, Iceland, Norway, and Sweden) and Finland. Students are introduced to the field by taking an interdisciplinary course covering central aspects of Scandinavian culture and society. In addition, they gain knowledge of a specific aspect of the region that aligns with their interests, whether it be literature, history, politics, or art. Students are strongly encouraged to combine the minor with a study abroad experience in a Scandinavian country. The Scandinavian Studies minor is beneficial to students pursuing a wide range of majors, including Anthropology, Art, English, History, International Business, International Relations, Mass Media, Political Science, Psychology, and Sociology.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/programs/scandinavian-studies",
+        "Accreditation status": null,
+        "Program name": "Scandinavian Studies",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Scandinavian Studies Minor introduces students to the languages, cultures, histories, and societies of Denmark, Iceland, Norway, and Sweden. It is an interdisciplinary minor designed to complement a wide range of majors in the humanities, social sciences, and the arts. Courses taken for the minor will address topics such as Viking history, Scandinavian immigration to America, Nordic folklore, and contemporary Scandinavian literature, film, and politics. The Scandinavian Studies Minor also encourages students to undertake study abroad in Scandinavia (with scholarship support available through the Andrew J. and Mary C. Lindgren Scholarship for Scandinavian Studies). The minor consists of 18 credits.",
+        "program website url": "https://www.mnsu.edu/academic-catalog/academic-programs/minors/scandinavian-studies-minor/",
+        "Accreditation status": null,
+        "Program name": "Scandinavian Studies Minor",
+        "Program Page url": "https://www.mnsu.edu/academic-catalog/"
     }
 ]

@@ -79,9 +79,10 @@ def get_undergraduate_programs(url, university_name):
     prompt_names = (
         f"Access the following URL: {url}\n"
         "Extract ALL undergraduate (Bachelor's, Associate's, Minors) program NAMES listed on this page.\n"
+        "IMPORTANT: If the university uses a non-traditional curriculum (e.g., 'Areas of Emphasis', 'Fields of Study', 'Concentrations', 'Pathways' instead of Majors), extract those as the program names.\n"
         "Only Look at the active and latest Programs. Do not include any expired or cancelled programs. or programs from older catalogs."
         "Return a JSON list of STRINGS (just the names).\n"
-        "Example: [\"Bachelor of Science in Biology\", \"Associate of Arts\", ...]\n"
+        "Example: [\"Bachelor of Science in Biology\", \"Associate of Arts\", \"Emphasis in Political Economy\", ...]\n"
         "Exclude headers, categories, or navigation items."
     )
     

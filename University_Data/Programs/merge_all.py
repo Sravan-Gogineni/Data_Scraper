@@ -9,8 +9,23 @@ def run():
     # Paths to the final CSVs
     grad_csv_path = os.path.join(script_dir, 'graduate_programs', 'Grad_prog_outputs', 'graduate_programs_final.csv')
     undergrad_csv_path = os.path.join(script_dir, 'undergraduate_programs', 'undergrad_prog_outputs', 'undergraduate_programs_final.csv')
+    # Get University Name from Institution CSV
+    inst_outputs_dir = os.path.join(script_dir, '..', 'Institution', 'Inst_outputs')
+    university_name = "University_Final" # Default fallback
     
-    output_csv_path = os.path.join(script_dir, 'Quinnipiac_University_Final.csv')
+    if os.path.exists(inst_outputs_dir):
+        inst_files = [f for f in os.listdir(inst_outputs_dir) if f.endswith('_Institution.csv')]
+        if inst_files:
+            # Taking the first one found, assuming one university being processed at a time
+            inst_filename = inst_files[0]
+            university_name = inst_filename.replace('_Institution.csv', '')
+            yield f'{{"status": "progress", "message": "Identified university: {university_name}"}}'
+        else:
+             yield f'{{"status": "warning", "message": "No Institution CSV found to extract name in {inst_outputs_dir}. Using default."}}'
+    else:
+         yield f'{{"status": "warning", "message": "Institution outputs directory not found at {inst_outputs_dir}. Using default name."}}'
+
+    output_csv_path = os.path.join(script_dir, f'{university_name}_Final.csv')
     
     dfs = []
     

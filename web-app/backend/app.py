@@ -1,8 +1,8 @@
-from flask import Flask, request, jsonify, send_from_directory, Response, stream_with_context
 import sys
 import os
 import threading
 import json
+from flask import Flask, request, jsonify, send_from_directory, Response, stream_with_context
 
 # Add the directory containing the scraping script to sys.path
 # Assuming the structure:
@@ -11,8 +11,6 @@ import json
 MAIN_PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 INSTITUTION_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Institution")
 DEPARTMENT_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Departments")
-
-
 PROGRAMS_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Programs")
 PROGRAMS_GRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "graduate_programs", "Grad_prog_outputs")
 PROGRAMS_UNDERGRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "undergraduate_programs", "undergrad_prog_outputs")
@@ -21,7 +19,12 @@ PROGRAMS_UNDERGRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "undergraduate_progra
 INST_OUTPUT_DIR = os.path.join(INSTITUTION_DIR, "Inst_outputs")
 DEPT_OUTPUT_DIR = os.path.join(DEPARTMENT_DIR, "Dept_outputs")
 
+sys.path.append(INSTITUTION_DIR)
+sys.path.append(DEPARTMENT_DIR)
 sys.path.append(PROGRAMS_DIR)
+
+from Institution import process_institution_extraction
+from Department import process_department_extraction
 
 try:
     from Programs import process_programs_extraction

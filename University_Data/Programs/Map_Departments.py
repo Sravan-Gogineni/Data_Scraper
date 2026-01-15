@@ -5,8 +5,8 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Paths
-    all_programs_path = os.path.join(script_dir, 'UniversityofFindlay(in).csv')
-    departments_path = "/Users/sravan19/projects/Scraper_UI/UOF/DEPT/University_of_findlay_departments.csv"
+    all_programs_path = os.path.join(script_dir, 'Middle_Tennessee_State_University_Final(in).csv')
+    departments_path = "/Users/sravan19/projects/Scraper_UI/University_Data/Departments/Dept_outputs/Middle_Tennessee_State_University_departments.csv"
     
     if not os.path.exists(all_programs_path):
         print(f"Error: Programs file not found at {all_programs_path}")

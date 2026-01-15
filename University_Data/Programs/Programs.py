@@ -108,9 +108,15 @@ def process_programs_extraction(university_name, step):
                                 if 'message' in data:
                                     data['message'] = f"[{name}] {data['message']}"
                                 
-                                # Collect files if complete
-                                if data.get('status') == 'complete' and 'files' in data:
-                                    data['files_update'] = data['files']
+                                # Intercept complete status from sub-modules
+                                if data.get('status') == 'complete':
+                                    # Collect files
+                                    if 'files' in data:
+                                        data['files_update'] = data['files']
+                                    
+                                    # Change status to progress so frontend doesn't disconnect
+                                    data['status'] = 'progress'
+                                    data['message'] = f"[{name}] Sub-task completed."
                                     
                                 q.put(json.dumps(data))
                             else:

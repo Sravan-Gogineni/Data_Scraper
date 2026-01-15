@@ -80,8 +80,10 @@ def get_graduate_programs(url, university_name):
     prompt_names = (
         f"Access the following URL: {url}\n"
         "Extract ALL graduate (Master's, PhD, Doctorate, Certificate) program NAMES listed on this page.\n"
+        "If the university uses 'Areas of Emphasis' or 'Concentrations' for graduate studies, include them.\n"
+        "Only Look at the active and latest Programs. Do not include any expired or cancelled programs. or programs from older catalogs."
         "Return a JSON list of STRINGS (just the names).\n"
-        "Example: [\"Master of Arts in Education\", \"PhD in Pharmacy\", ...]\n"
+        "Example: [\"Master of Arts in Education\", \"PhD in Pharmacy\", \"Concentration in Public Administration\", ...]\n"
         "Exclude headers, categories, or navigation items."
     )
     
