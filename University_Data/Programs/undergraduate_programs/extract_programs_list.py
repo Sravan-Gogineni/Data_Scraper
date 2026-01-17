@@ -101,7 +101,22 @@ def get_undergraduate_programs(url, university_name):
         if start != -1 and end != -1:
              program_names = json.loads(text[start:end])
         else:
-            yield f'{{"status": "warning", "message": "DEBUG: Could not find JSON list brackets [] in response."}}'
+            # Fallback: Try to parse bulleted list
+            print("DEBUG: JSON not found, attempting fallback parsing for bulleted list.")
+            lines = text.split('\n')
+            for line in lines:
+                line = line.strip()
+                # Match lines starting with *, -, or numbers 1.
+                if line.startswith(('*', '-', '•')) or (len(line) > 0 and line[0].isdigit() and line[1] == '.'):
+                    # Clean up the line
+                    clean_name = re.sub(r'^[\*\-•\d\.]+\s*', '', line).strip()
+                    if clean_name:
+                        program_names.append(clean_name)
+            
+            if not program_names:
+                yield f'{{"status": "warning", "message": "DEBUG: Could not find JSON list brackets [] or bulleted items in response."}}'
+            else:
+                 yield f'{{"status": "progress", "message": "DEBUG: Successfully extracted {len(program_names)} programs using fallback parser."}}'
             
     except Exception as e:
         yield f'{{"status": "error", "message": "Error extracting names: {str(e)}"}}'
