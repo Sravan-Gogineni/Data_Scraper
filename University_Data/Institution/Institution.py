@@ -26,6 +26,7 @@ class GeminiModelWrapper:
         google_search_tool = types.Tool(
             google_search=types.GoogleSearch()
         )
+
         
         response = self.client.models.generate_content(
             model=self.model_name,
@@ -91,6 +92,35 @@ def extract_clean_value(response_text):
     
     # Return the cleaned text
     return text if text else None
+
+################################ Helper Functions to get the URLs ####################################################################################
+    #get the academic calender url 
+def get_academic_calender_url(website_url, university_name):
+    prompt = (
+        f"What is the academic calender URL for the university {university_name} on the website {website_url}. "
+        f"Search query: site:{website_url} academic calender "
+        "Return only the academic calender URL, no other text. "
+        "No fabrication or guessing, just the academic calender URL. "
+        "Only if the academic calender URL is explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the academic calender URL is explicitly stated."
+    )
+    academic_calender_url = generate_text_safe(prompt)
+    academic_calender_url = extract_clean_value(academic_calender_url)
+    return academic_calender_url
+
+def get_cost_of_attendance_url(website_url, university_name):
+    prompt = (
+        f"What is the cost of attendance URL for the university {university_name} on the website {website_url}. "
+        f"Search query: site:{website_url} cost of attendance "
+        "Return only the cost of attendance URL, no other text. "
+        "No fabrication or guessing, just the cost of attendance URL. "
+        "Only if the cost of attendance URL is explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the cost of attendance URL is explicitly stated."
+    )
+    cost_of_attendance_url = generate_text_safe(prompt)
+    cost_of_attendance_url = extract_clean_value(cost_of_attendance_url)
+    return cost_of_attendance_url
+
 def get_tuition_fee_url(website_url, university_name):
     prompt = (
         f"Find the tuition fee URL for the university {university_name} on the website {website_url}. "
@@ -102,8 +132,12 @@ def get_tuition_fee_url(website_url, university_name):
     )
     return generate_text_safe(prompt)
 
+############################################################################################################################################################
 
 
+############################################################################################################################################################
+                                                 # Functions to extract the data from the website #
+############################################################################################################################################################
 def get_womens_college(website_url, university_name):
     prompt = (
         f"Is the university {university_name}, {website_url} a women's college? "
@@ -840,16 +874,22 @@ def get_linkedin(website_url, university_name):
     return generate_text_safe(prompt)
 
 def get_grad_avg_tuition(website_url, university_name, graduate_tuition_fee_urls=None, common_tuition_fee_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = graduate_tuition_fee_urls if graduate_tuition_fee_urls else (common_tuition_fee_urls if common_tuition_fee_urls else website_url)
+    # Establish a hierarchy of URLs to check
+    coa_url = get_cost_of_attendance_url(website_url, university_name)
+    url_to_use = coa_url or graduate_tuition_fee_urls or common_tuition_fee_urls or website_url
+    
     prompt = (
-        f"What is the average graduate tuition for the university {university_name} at {url_to_use}? "
-        "Please look at the tution fees page for the university and it's pages and look for the average graduate tuition per year"
-        "Return only the average graduate tuition, no other text. "
-        "No fabrication or guessing, just the average graduate tuition. "
-        "Only if the average graduate tuition is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the average graduate tuition is explicitly stated."
-    )
+        f"Identify the average annual graduate tuition for {university_name} using this source: {url_to_use}. "
+        "\n\nInstructions:"
+        "\n1. Look for 'Base Graduate Tuition', 'Standard Graduate Rate', or 'Master's/PhD Tuition'."
+        "\n2. If different rates exist, prioritize the 'Out-of-State' or 'Non-Resident' annual rate for a full-time student."
+        "\n3. If only a 'per credit hour' rate is found, multiply it by 18 (the standard annual full-time load) and provide that total."
+        "\n4. Do NOT include 'Cost of Attendance' (which includes housing/food). Return ONLY the tuition portion."
+        "\n\nStrict Output Format:"
+        "\nLine 1: Return ONLY the numerical value with currency symbol (e.g., $15,400). If not found, return 'null'."
+        "\nLine 2: Evidence: <URL to the specific tuition table> or the text snippet where the value is found"
+        "\n\nConstraint: No guessing. If the page lists 10 different rates for 10 different programs and no 'base' rate, then  find the average of all the rates and provide that total."
+        "\n\n Follow the same instructions as above and provide the answer in the same format.")
     return generate_text_safe(prompt)
 
 def get_grad_scholarship_low(website_url, university_name, graduate_financial_aid_urls=None, common_financial_aid_urls=None):
@@ -875,14 +915,21 @@ def get_grad_total_students(website_url, university_name):
     return generate_text_safe(prompt)
 
 def get_ug_avg_tuition(website_url, university_name, undergraduate_tuition_fee_urls=None, common_tuition_fee_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = undergraduate_tuition_fee_urls if undergraduate_tuition_fee_urls else (common_tuition_fee_urls if common_tuition_fee_urls else website_url)
-    prompt = (
-        f"What is the average undergraduate tuition for the university {university_name} at {url_to_use}? "
-        "Return only the average undergraduate tuition, no other text. "
-        "No fabrication or guessing, just the average undergraduate tuition. "
-        "Only if the average undergraduate tuition is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the average undergraduate tuition is explicitly stated."
+    # Establish a hierarchy of URLs to check
+    coa_url = get_cost_of_attendance_url(website_url, university_name)
+    url_to_use = coa_url or undergraduate_tuition_fee_urls or common_tuition_fee_urls or website_url
+    prompt = (  
+        f"Identify the average annual undergraduate tuition for {university_name} using this source: {url_to_use}. "
+        "\n\nInstructions:"
+        "\n1. Look for 'Base Undergraduate Tuition', 'Standard Undergraduate Rate', or 'Bachelor's Tuition'."
+        "\n2. If different rates exist, prioritize the 'Out-of-State' or 'Non-Resident' annual rate for a full-time student."
+        "\n3. If only a 'per credit hour' rate is found, multiply it by 30 (the standard annual full-time load) and provide that total."
+        "\n4. Do NOT include 'Cost of Attendance' (which includes housing/food). Return ONLY the tuition portion."
+        "\n\nStrict Output Format:"
+        "\nLine 1: Return ONLY the numerical value with currency symbol (e.g., $15,400). If not found, return 'null'."
+        "\nLine 2: Evidence: <URL to the specific tuition table> or the text snippet where the value is found"
+        "\n\nConstraint: No guessing. If the page lists 10 different rates for 10 different programs and no 'base' rate, then  find the average of all the rates and provide that total."
+        "\n\n Follow the same instructions as above and provide the answer in the same format."
     )
 
     return generate_text_safe(prompt)
@@ -933,6 +980,22 @@ def get_ug_total_students(website_url, university_name):
     )
     return generate_text_safe(prompt)
 
+def get_term_format(website_url, university_name):
+    academic_calender_url = get_academic_calender_url(website_url, university_name)
+    print(f"Academic Calendar URL: {academic_calender_url}")
+    # Use the specific calendar URL if found, otherwise fall back to the main site
+    search_context = academic_calender_url if academic_calender_url else website_url
+
+    prompt = (
+        f"Identify the academic calendar system (term format) for {university_name} using this source: {search_context}. "
+        "Look for whether the school operates on a Semester, Quarter, or Trimester system. "
+        "\n\nStrict Output Instructions:"
+        "\n1. Return ONLY the single word: 'Semester', 'Quarter', 'Trimester', or 'null'."
+        "\n2. Do not include sentences, introductory text, or explanations."
+        "\n3. After the single word, on a new line, provide the URL used as 'Evidence: <URL>'."
+        "\n\nSearch guidance: Focus on terms like 'Academic Calendar', 'Credit Hours', or 'Term System'."
+    )
+    return generate_text_safe(prompt)
 
 def process_institution_extraction(
     university_name, 
@@ -966,6 +1029,7 @@ def process_institution_extraction(
         "cost_of_living_max": get_cost_of_living_max(website_url, university_name),
         "orientation_available": get_orientation_available(website_url, university_name),
         "college_tour_after_admissions": get_college_tour_after_admissions(website_url, university_name),
+        "term_format": get_term_format(website_url, university_name),
     }
 
     yield '{"status": "progress", "message": "Extracting application requirements..."}'
@@ -1073,7 +1137,7 @@ def process_institution_extraction(
         "is_toefl_ib_required": get_is_toefl_ib_required(website_url, university_name),
         "is_import_verified": False,
         "is_imported": False,
-        "is_enrolled": 0,
+        "is_enrolled": False,
     }
 
     #combine the data into one dict
@@ -1088,7 +1152,6 @@ def process_institution_extraction(
         "boolean_fields_data": boolean_fields_data,
     }
 
-    # i want the final excel,csv with all the column names that we have in each dict and only the corresponding value for the each column, I don't want any other details like the evidence,urls,etc.
     # Merge all dictionaries into one flat dictionary (without nesting) for CSV/Excel
     merged_data = {}
     merged_data.update(new_fields_data)
@@ -1146,7 +1209,7 @@ def process_institution_extraction(
         column_mapping = {
             'university_name': 'CollegeName',
             'college_setting': 'CollegeSetting',
-            'type_of_institution': 'TypeofInstitution',
+            'type_of_institution': 'InstitutionType',
             'student_faculty': 'Student_Faculty',
             'number_of_campuses': 'NumberOfCampuses',
             'total_faculty_available': 'TotalFacultyAvailable',
@@ -1219,6 +1282,7 @@ def process_institution_extraction(
             'is_import_verified': 'IsImportVerified',
             'is_imported': 'IsImported',
             'is_enrolled': 'IsEnrolled',
+            'term_format': 'TermFormat',
         }
         
         # All required final column names
@@ -1243,7 +1307,7 @@ def process_institution_extraction(
             'GradScholarshipLow', 'GradTotalStudents', 'Student_Faculty', 'TotalGraduatePrograms',
             'TotalInternationalStudents', 'TotalStudents', 'TotalUndergradMajors', 'UGAvgTuition',
             'UGInternationalStudents', 'UGScholarshipHigh', 'UGScholarshipLow', 'UGTotalStudents',
-            'InstitutionType', 'IsEnrolled', 'OGAEnrolledProgramLevels'
+            'InstitutionType', 'IsEnrolled','TermFormat', 'OGAEnrolledProgramLevels'
         ]
         
         # Rename existing columns

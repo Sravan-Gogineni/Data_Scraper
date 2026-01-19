@@ -75,12 +75,12 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"Program URL: {program_url}\n\n"
         f"Extract the following fields ONLY if they are present on the official {university_name} website for THIS SPECIFIC PROGRAM:\n\n"
         f"1. GreOrGmat: Whether GRE or GMAT is required, optional, or not required. Return 'GRE', 'GMAT', 'Either', 'Optional', 'Not Required', or null.\n"
-        f"2. EnglishScore: General English language requirement description if mentioned. Return null if not specified.\n"
+        f"2. EnglishScore: Is English test such as TOEFL, IELTS, Duolingo, ELS, PTE required? Return true or false or Optional.\n"
         f"3. IsDuoLingoRequired: MANDATORY BOOLEAN. Is Duolingo English test explicitly required? Return true or false.\n"
         f"4. IsELSRequired: MANDATORY BOOLEAN. Is ELS (English Language Services) required? Return true or false.\n"
         f"5. IsGMATOrGreRequired: MANDATORY BOOLEAN. Is either GMAT or GRE required? Return true if yes, false if no/optional.\n"
         f"6. IsGMATRequired: MANDATORY BOOLEAN. Is GMAT specifically required? Return true or false.\n"
-        f"7. IsGreRequired: MANDATORY BOOLEAN. Is GRE specifically required? Return true or false.\n"
+        f"7. IsGRERequired: MANDATORY BOOLEAN. Is GRE specifically required? Return true or false.\n"
         f"8. IsIELTSRequired: MANDATORY BOOLEAN. Is IELTS required? Return true or false.\n"
         f"9. IsLSATRequired: MANDATORY BOOLEAN. Is LSAT required? Return true or false.\n"
         f"10. IsMATRequired: MANDATORY BOOLEAN. Is MAT required? Return true or false.\n"
@@ -110,7 +110,7 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"- FOR MANDATORY BOOLEAN FIELDS: You MUST return true or false. Do not return null unless absolutely no information is available. If not mentioned as required, default to false.\n\n"
         f"Return the data in a JSON format with the following exact keys: "
         f"'GreOrGmat', 'EnglishScore', 'IsDuoLingoRequired', 'IsELSRequired', 'IsGMATOrGreRequired', "
-        f"'IsGMATRequired', 'IsGreRequired', 'IsIELTSRequired', 'IsLSATRequired', 'IsMATRequired', "
+        f"'IsGMATRequired', 'IsGRERequired', 'IsIELTSRequired', 'IsLSATRequired', 'IsMATRequired', "
         f"'IsMCATRequired', 'IsPTERequired', 'IsTOEFLIBRequired', 'IsTOEFLPBTRequired', "
         f"'IsEnglishNotRequired', 'IsEnglishOptional', 'MinimumDuoLingoScore', 'MinimumELSScore', "
         f"'MinimumGMATScore', 'MinimumGreScore', 'MinimumIELTSScore', 'MinimumMATScore', "
@@ -148,7 +148,7 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"4. IsELSRequired: Boolean (true/false) - Is ELS (English Language Services) required? Return true, false, or null.\n"
         f"5. IsGMATOrGreRequired: Boolean (true/false) - Is either GMAT or GRE required? Return true, false, or null.\n"
         f"6. IsGMATRequired: Boolean (true/false) - Is GMAT specifically required? Return true, false, or null.\n"
-        f"7. IsGreRequired: Boolean (true/false) - Is GRE specifically required? Return true, false, or null.\n"
+        f"7. IsGRERequired: Boolean (true/false) - Is GRE specifically required? Return true, false, or null.\n"
         f"8. IsIELTSRequired: Boolean (true/false) - Is IELTS required? Return true, false, or null.\n"
         f"9. IsLSATRequired: Boolean (true/false) - Is LSAT required? Return true, false, or null.\n"
         f"10. IsMATRequired: Boolean (true/false) - Is MAT required? Return true, false, or null.\n"
@@ -176,7 +176,7 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"- All URLs must be from the {university_name} domain or its subdomains\n\n"
         f"Return the data in a JSON format with the following exact keys: "
         f"'GreOrGmat', 'EnglishScore', 'IsDuoLingoRequired', 'IsELSRequired', 'IsGMATOrGreRequired', "
-        f"'IsGMATRequired', 'IsGreRequired', 'IsIELTSRequired', 'IsLSATRequired', 'IsMATRequired', "
+        f"'IsGMATRequired', 'IsGRERequired', 'IsIELTSRequired', 'IsLSATRequired', 'IsMATRequired', "
         f"'IsMCATRequired', 'IsPTERequired', 'IsTOEFLIBRequired', 'IsTOEFLPBTRequired', "
         f"'IsEnglishNotRequired', 'IsEnglishOptional', 'MinimumDuoLingoScore', 'MinimumELSScore', "
         f"'MinimumGMATScore', 'MinimumGreScore', 'MinimumIELTSScore', 'MinimumMATScore', "
@@ -198,7 +198,7 @@ def extract_test_scores(program_name, program_url, institute_url):
     # Return empty dict with null values if nothing found
     return {
         'GreOrGmat': None, 'EnglishScore': None, 'IsDuoLingoRequired': None, 'IsELSRequired': None,
-        'IsGMATOrGreRequired': None, 'IsGMATRequired': None, 'IsGreRequired': None, 'IsIELTSRequired': None,
+        'IsGMATOrGreRequired': None, 'IsGMATRequired': None, 'IsGRERequired': None, 'IsIELTSRequired': None,
         'IsLSATRequired': None, 'IsMATRequired': None, 'IsMCATRequired': None, 'IsPTERequired': None,
         'IsTOEFLIBRequired': None, 'IsTOEFLPBTRequired': None, 'IsEnglishNotRequired': None, 'IsEnglishOptional': None,
         'MinimumDuoLingoScore': None, 'MinimumELSScore': None, 'MinimumGMATScore': None, 'MinimumGreScore': None,
@@ -215,16 +215,11 @@ def run(university_name_input):
     # But to keep it simple and consistent with previous modification:
     yield f'{{"status": "progress", "message": "Initializing test score extraction for {university_name}..."}}'
     
-    # Quick fetch of website url for context
-    try:
-        website_url_prompt = f"What is the official university website for {university_name}?"
-        institute_url = model.generate_content(website_url_prompt).text.replace("**", "").replace("```", "").strip()
-    except:
-        institute_url = f"https://www.google.com/search?q={university_name}"
+
 
     # Check if CSV file exists
     if not os.path.exists(csv_path):
-        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step.", "files": {{}}}}'
         return
 
     program_data = pd.read_csv(csv_path)
@@ -239,6 +234,15 @@ def run(university_name_input):
     if missing_columns:
         yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
         return
+
+    # Quick fetch of website url for context - LOCAL ONLY
+    try:
+        from urllib.parse import urlparse
+        first_url = program_data.iloc[0]['Program Page url']
+        domain = urlparse(first_url).netloc
+        institute_url = f"https://{domain}"
+    except:
+        institute_url = f"https://www.google.com/search?q={university_name}"
 
     # Load existing data
     test_scores_data = []
@@ -294,7 +298,7 @@ def run(university_name_input):
             error_record = {
                 'Program name': program_name, 'Program Page url': program_page_url,
                 'GreOrGmat': None, 'EnglishScore': None, 'IsDuoLingoRequired': None, 'IsELSRequired': None,
-                'IsGMATOrGreRequired': None, 'IsGMATRequired': None, 'IsGreRequired': None, 'IsIELTSRequired': None,
+                'IsGMATOrGreRequired': None, 'IsGMATRequired': None, 'IsGRERequired': None, 'IsIELTSRequired': None,
                 'IsLSATRequired': None, 'IsMATRequired': None, 'IsMCATRequired': None, 'IsPTERequired': None,
                 'IsTOEFLIBRequired': None, 'IsTOEFLPBTRequired': None, 'IsEnglishNotRequired': None, 'IsEnglishOptional': None,
                 'MinimumDuoLingoScore': None, 'MinimumELSScore': None, 'MinimumGMATScore': None, 'MinimumGreScore': None,

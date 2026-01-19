@@ -131,8 +131,16 @@ def process_department_extraction(university_name):
     try:
         response_text = generate_text_safe(prompt)
         
-        # Remove markdown code blocks if present
-        response_text = response_text.replace("```json", "").replace("```", "").strip()
+        if not response_text:
+            print("Error: Empty response from LLM")
+            yield '{"status": "error", "message": "Empty response received from AI model"}'
+            return
+
+        print(f"Raw Response: {response_text[:200]}...") # Log start of response for debug
+
+        # Remove markdown code blocks if present (handling residues)
+        response_text = response_text.replace("json", "", 1) if response_text.startswith("json") else response_text
+        response_text = response_text.replace("```", "").strip()
         
         # Parse the JSON response
         try:

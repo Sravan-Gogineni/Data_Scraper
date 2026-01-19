@@ -13,7 +13,7 @@ INSTITUTION_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Institution
 DEPARTMENT_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Departments")
 PROGRAMS_DIR = os.path.join(MAIN_PROJECT_DIR, "University_Data", "Programs")
 PROGRAMS_GRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "graduate_programs", "Grad_prog_outputs")
-PROGRAMS_UNDERGRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "undergraduate_programs", "undergrad_prog_outputs")
+PROGRAMS_UNDERGRAD_OUTPUT_DIR = os.path.join(PROGRAMS_DIR, "undergraduate_programs", "Undergrad_prog_outputs")
 
 # Also need to define Inst and Dept output dirs here for the download route
 INST_OUTPUT_DIR = os.path.join(INSTITUTION_DIR, "Inst_outputs")

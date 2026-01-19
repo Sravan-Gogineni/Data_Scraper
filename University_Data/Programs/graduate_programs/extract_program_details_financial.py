@@ -66,7 +66,7 @@ def extract_program_details(program_name, program_url, institute_url):
         f"7. Term: Admission terms (e.g. 'Fall', 'Spring'). Return string or null.\n"
         f"8. LiveDate: Application opening date. Return string or null. look for fall 2026 application opening date\n"
         f"9. DeadlineDate: Application deadline. Return string or null. look for fall 2026 application deadline\n"
-        f"10. Fees: Tuition fee for the program. Return a number.\n"
+        f"10. Fees: Tuition fee for the program. Return a number. Look if the program specific tuition fee is mentioned in any cost of attendance page of the {program_url} website. sample output: $12,000/Semester or $18,000/Year\n"
         f"11. AverageScholarshipAmount: Average scholarship amount. Return string/number or null.\n"
         f"12. CostPerCredit: Cost per credit hour for the program. Return string/number or null.\n"
         f"13. ScholarshipAmount: General scholarship amount available. Return string/number or null.\n"
@@ -124,16 +124,11 @@ def run(university_name_input):
     
     yield f'{{"status": "progress", "message": "Initializing program details & financial extraction for {university_name}..."}}'
     
-    # Quick fetch of website url for context
-    try:
-        website_url_prompt = f"What is the official university website for {university_name}?"
-        institute_url = model.generate_content(website_url_prompt).text.replace("**", "").replace("```", "").strip()
-    except:
-        institute_url = f"https://www.google.com/search?q={university_name}"
+
 
     # Check if CSV file exists
     if not os.path.exists(csv_path):
-        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step.", "files": {{}}}}'
         return
 
     program_data = pd.read_csv(csv_path)
@@ -148,6 +143,15 @@ def run(university_name_input):
     if missing_columns:
         yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
         return
+
+    # Quick fetch of website url for context - LOCAL ONLY
+    try:
+        from urllib.parse import urlparse
+        first_url = program_data.iloc[0]['Program Page url']
+        domain = urlparse(first_url).netloc
+        institute_url = f"https://{domain}"
+    except:
+        institute_url = f"https://www.google.com/search?q={university_name}"
 
     # Load existing data
     program_details_data = []

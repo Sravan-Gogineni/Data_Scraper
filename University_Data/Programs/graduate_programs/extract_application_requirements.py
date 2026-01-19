@@ -51,12 +51,25 @@ def parse_json_from_response(text):
 
 def extract_application_requirements(program_name, program_url, institute_url):
     """Extract application requirements and documents, first from program level, then institute level."""
-    
+    application_requirements_page_url = None
+    prompt = """ Find the website url of the application requirements page for the program '{program_name}' from the official {university_name} website. Return the url if found, otherwise return null. """
+    prompt_institute_level = """ Find the Application Requirements page url for the {university_name} website. Return the url if found, otherwise return null. """
+    response = model.generate_content(prompt)
+    response_text = response.text
+    parsed_data = parse_json_from_response(response_text)
+    if parsed_data and isinstance(parsed_data, dict):
+        application_requirements_page_url = parsed_data.get('application_requirements_page_url')
+    else:
+        response = model.generate_content(prompt_institute_level)
+        response_text = response.text
+        parsed_data = parse_json_from_response(response_text)
+        if parsed_data and isinstance(parsed_data, dict):
+            application_requirements_page_url = parsed_data.get('application_requirements_page_url')
     # First, try program level
     prompt_program = (
         f"You are extracting application requirements and required documents for the program '{program_name}' "
         f"from the official {university_name} website.\n\n"
-        f"IMPORTANT: You MUST ONLY use information from the official {university_name} website ({institute_url} and its subdomains). "
+        f"IMPORTANT: You MUST ONLY use information from the official {university_name} website, {application_requirements_page_url} and ({institute_url} and its subdomains). "
         f"Do NOT use information from any other sources. If the information is not available on the official {university_name} website, return null for that field.\n\n"
         f"Program URL: {program_url}\n\n"
         f"Extract the following fields ONLY if they are present on the official {university_name} website for THIS SPECIFIC PROGRAM:\n\n"
@@ -67,10 +80,10 @@ def extract_application_requirements(program_name, program_url, institute_url):
         f"5. IsAnalyticalNotRequired: MANDATORY BOOLEAN. Is analytical writing section not required? Return true or false.\n"
         f"6. IsAnalyticalOptional: MANDATORY BOOLEAN. Is analytical writing section optional? Return true or false.\n"
         f"7. IsStemProgram: MANDATORY BOOLEAN. Is this a STEM program? Return true or false.\n"
-        f"8. IsACTRequired: MANDATORY BOOLEAN. Is ACT required? Return true or false.\n"
-        f"9. IsSATRequired: MANDATORY BOOLEAN. Is SAT required? Return true or false.\n"
-        f"10. MinimumACTScore: Minimum required ACT score as a number. Return null if not specified.\n"
-        f"11. MinimumSATScore: Minimum required SAT score as a number. Return null if not specified.\n\n"
+        f"8. IsACTRequired: MANDATORY BOOLEAN. Is ACT required to apply for {program_name}? Return true or false.\n"
+        f"9. IsSATRequired: MANDATORY BOOLEAN. Is SAT required to apply for {program_name}? Return true or false.\n"
+        f"10. MinimumACTScore: Minimum required ACT score required to apply for {program_name} as a number. Return null if not specified.\n"
+        f"11. MinimumSATScore: Minimum required SAT score required to apply for {program_name} as a number. Return null if not specified.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {program_url} or other official {university_name} pages\n"
         f"- Extract information SPECIFIC to this program '{program_name}'\n"
@@ -119,7 +132,7 @@ def extract_application_requirements(program_name, program_url, institute_url):
         f"7. IsStemProgram: Boolean (true/false) - This field should be null at institute level (program-specific). Return null.\n"
         f"8. IsACTRequired: Boolean (true/false) - Is ACT required? Return true, false, or null.\n"
         f"9. IsSATRequired: Boolean (true/false) - Is SAT required? Return true, false, or null.\n"
-        f"10. MinimumACTScore: Minimum required ACT score as a number. Return null if not specified.\n"
+        f"10. MinimumACTScore: Minimum required ACT  required to apply for {university_name} as a number. Return null if not specified.\n"
         f"11. MinimumSATScore: Minimum required SAT score as a number. Return null if not specified.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {institute_url} or other official {university_name} pages\n"
@@ -160,16 +173,11 @@ def run(university_name_input):
     
     yield f'{{"status": "progress", "message": "Initializing application requirements extraction for {university_name}..."}}'
     
-    # Quick fetch of website url for context
-    try:
-        website_url_prompt = f"What is the official university website for {university_name}?"
-        institute_url = model.generate_content(website_url_prompt).text.replace("**", "").replace("```", "").strip()
-    except:
-        institute_url = f"https://www.google.com/search?q={university_name}"
+
 
     # Check if CSV file exists
     if not os.path.exists(csv_path):
-        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step.", "files": {{}}}}'
         return
 
     program_data = pd.read_csv(csv_path)
@@ -184,6 +192,15 @@ def run(university_name_input):
     if missing_columns:
         yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
         return
+
+    # Quick fetch of website url for context - LOCAL ONLY
+    try:
+        from urllib.parse import urlparse
+        first_url = program_data.iloc[0]['Program Page url']
+        domain = urlparse(first_url).netloc
+        institute_url = f"https://{domain}"
+    except:
+        institute_url = f"https://www.google.com/search?q={university_name}"
 
     # Load existing data
     application_data = []

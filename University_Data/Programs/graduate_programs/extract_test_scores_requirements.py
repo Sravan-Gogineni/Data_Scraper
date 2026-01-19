@@ -215,16 +215,11 @@ def run(university_name_input):
     # But to keep it simple and consistent with previous modification:
     yield f'{{"status": "progress", "message": "Initializing test score extraction for {university_name}..."}}'
     
-    # Quick fetch of website url for context
-    try:
-        website_url_prompt = f"What is the official university website for {university_name}?"
-        institute_url = model.generate_content(website_url_prompt).text.replace("**", "").replace("```", "").strip()
-    except:
-        institute_url = f"https://www.google.com/search?q={university_name}"
+
 
     # Check if CSV file exists
     if not os.path.exists(csv_path):
-        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step.", "files": {{}}}}'
         return
 
     program_data = pd.read_csv(csv_path)
@@ -239,6 +234,15 @@ def run(university_name_input):
     if missing_columns:
         yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
         return
+
+    # Quick fetch of website url for context - LOCAL ONLY
+    try:
+        from urllib.parse import urlparse
+        first_url = program_data.iloc[0]['Program Page url']
+        domain = urlparse(first_url).netloc
+        institute_url = f"https://{domain}"
+    except:
+        institute_url = f"https://www.google.com/search?q={university_name}"
 
     # Load existing data
     test_scores_data = []

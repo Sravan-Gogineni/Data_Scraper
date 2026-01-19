@@ -129,7 +129,7 @@ def run():
     
     # 1. Load Base Data
     if not os.path.exists(base_csv_path):
-        yield f'{{"status": "error", "message": "Base CSV not found at {base_csv_path}"}}'
+        yield f'{{"status": "complete", "message": "Base CSV not found at {base_csv_path}. Skipping merge step.", "files": {{}}}}'
         return
         
     df_base = pd.read_csv(base_csv_path)

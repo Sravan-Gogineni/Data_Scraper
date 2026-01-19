@@ -80,6 +80,8 @@ def get_undergraduate_programs(url, university_name):
         f"Access the following URL: {url}\n"
         "Extract ALL undergraduate (Bachelor's, Associate's, Minors) program NAMES listed on this page.\n"
         "IMPORTANT: If the university uses a non-traditional curriculum (e.g., 'Areas of Emphasis', 'Fields of Study', 'Concentrations', 'Pathways' instead of Majors), extract those as the program names.\n"
+        "When Extracting the programs names make sure the names are clear and full. which means not just the name i also want the full name like Bachelor of Arts in Education, Bachelor of Science in Computer Science, etc. not just Education, Computer Science, etc.\n"
+        "So, get the full names of the programs.\n"
         "Only Look at the active and latest Programs. Do not include any expired or cancelled programs. or programs from older catalogs."
         "Return a JSON list of STRINGS (just the names).\n"
         "Example: [\"Bachelor of Science in Biology\", \"Associate of Arts\", \"Emphasis in Political Economy\", ...]\n"
@@ -101,7 +103,22 @@ def get_undergraduate_programs(url, university_name):
         if start != -1 and end != -1:
              program_names = json.loads(text[start:end])
         else:
-            yield f'{{"status": "warning", "message": "DEBUG: Could not find JSON list brackets [] in response."}}'
+            # Fallback: Try to parse bulleted list
+            print("DEBUG: JSON not found, attempting fallback parsing for bulleted list.")
+            lines = text.split('\n')
+            for line in lines:
+                line = line.strip()
+                # Match lines starting with *, -, or numbers 1.
+                if line.startswith(('*', '-', '•')) or (len(line) > 0 and line[0].isdigit() and line[1] == '.'):
+                    # Clean up the line
+                    clean_name = re.sub(r'^[\*\-•\d\.]+\s*', '', line).strip()
+                    if clean_name:
+                        program_names.append(clean_name)
+            
+            if not program_names:
+                yield f'{{"status": "warning", "message": "DEBUG: Could not find JSON list brackets [] or bulleted items in response."}}'
+            else:
+                 yield f'{{"status": "progress", "message": "DEBUG: Successfully extracted {len(program_names)} programs using fallback parser."}}'
             
     except Exception as e:
         yield f'{{"status": "error", "message": "Error extracting names: {str(e)}"}}'

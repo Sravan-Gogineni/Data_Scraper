@@ -77,7 +77,9 @@ def process_single_program(row, university_name):
     )
     
     try:
+        print(f"[DEBUG] Generating content for program: {program_name} using model {model.model_name}")
         response = model.generate_content(prompt)
+        print(f"[DEBUG] Received response for program: {program_name}")
         response_text = response.text
         parsed_data = parse_json_from_response(response_text)
         
@@ -107,8 +109,9 @@ def run(university_name_input):
     university_name = university_name_input
     
     # Check if CSV file exists
+    # Check if CSV file exists
     if not os.path.exists(csv_path):
-        yield f'{{"status": "error", "message": "CSV file not found: {csv_path}. Please run Step 1 first."}}'
+        yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step 2.", "files": {{}}}}'
         return
 
     program_data = pd.read_csv(csv_path)
