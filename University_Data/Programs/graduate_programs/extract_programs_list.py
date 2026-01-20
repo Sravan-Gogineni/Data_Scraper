@@ -28,6 +28,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(script_dir, "Grad_prog_outputs")
 # Create directory if it doesn't exist
 # Create directory if it doesn't exist
+prompt = "What is the website url for the graduate programs page of the {university_name}?. return only the url."
+grad_programs_url = model.generate_content(prompt)
 
 os.makedirs(output_dir, exist_ok=True)
 

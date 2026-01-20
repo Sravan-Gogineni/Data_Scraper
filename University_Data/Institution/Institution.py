@@ -1,4 +1,6 @@
 import pandas as pd
+import time
+import random
 from google import genai
 from google.genai import types
 import os
@@ -15,27 +17,46 @@ load_dotenv()
 # Configure the client (using google-genai SDK 1.57.0)
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
+
+
 # Wrapper for compatibility with existing code structure
 class GeminiModelWrapper:
     def __init__(self, client, model_name):
         self.client = client
         self.model_name = model_name
 
-    def generate_content(self, prompt):
+    def generate_content(self, prompt, max_retries=5, base_delay=2):
         # Configure the search tool for every call to ensure live data
         google_search_tool = types.Tool(
             google_search=types.GoogleSearch()
         )
 
-        
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                tools=[google_search_tool]
-            )
-        )
-        return response
+        for attempt in range(max_retries):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        tools=[google_search_tool]
+                    )
+                )
+                return response
+            except Exception as e:
+                # Check for 503 (Unavailable) or 429 (Resource Exhausted)
+                # The google-genai SDK exceptions might vary, so we check broadly for now
+                # and refine if needed. Common codes are 503 and 429.
+                error_str = str(e)
+                if "503" in error_str or "429" in error_str or "Too Many Requests" in error_str or "Overloaded" in error_str:
+                    if attempt < max_retries - 1:
+                        # Exponential backoff with jitter
+                        sleep_time = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                        logger.warning(f"Attempt {attempt + 1} failed with error: {e}. Retrying in {sleep_time:.2f} seconds...")
+                        time.sleep(sleep_time)
+                        continue
+                
+                # If it's not a retryable error or we've run out of retries, raise it
+                logger.error(f"Failed to generate content after {attempt + 1} attempts: {e}")
+                raise e
 
 # Initialize the model wrapper
 model = GeminiModelWrapper(client, "gemini-2.5-pro")
@@ -45,53 +66,62 @@ model = GeminiModelWrapper(client, "gemini-2.5-pro")
 def generate_text_safe(prompt):
     try:
         response = model.generate_content(prompt)
-        if response and response.text:
-            return response.text.replace("**", "").replace("```", "").strip()
-    except Exception as e:
-        logger.error(f"Error generating content: {e}")
-    return ""
- 
- # Default values (will be overridden by function args)
+        
+        # 1. Handle Safety/Empty blocks before accessing .text
+        if not response.candidates or not response.candidates[0].content.parts:
+            logger.warning("Model blocked the response or returned empty.")
+            return "null"
+            
+        text = response.text
+        
+        # 2. Clean up specific artifacts while preserving structure
+        # We keep it simple but ensure we don't return an empty string if we can help it
+        clean_text = text.replace("```json", "").replace("```", "").strip()
+        
+        return clean_text if clean_text else "null"
 
+    except Exception as e:
+        # 3. Log the specific error to help with debugging the Scraper
+        logger.error(f"Error generating content: {e}")
+        return "null"
 
 def extract_clean_value(response_text):
-    """
-    Extract clean value from AI response, removing evidence, URLs, and extra text.
-    Returns only the actual value.
-    """
     if not response_text:
         return None
     
-    # Remove markdown formatting
+    # 1. Basic Cleanup
     text = response_text.replace("**", "").replace("```", "").strip()
     
-    # If empty after cleaning, return None
-    if not text:
-        return None
-    
-    # Split by common separators that indicate evidence/URL sections
-    # Look for patterns like "Evidence:", "URL:", "Source:", etc.
-    separators = ["\nEvidence:", "\nEvidence", "\nURL:", "\nURL", "\nSource:", "\nSource", 
-                  "\nPage:", "\nPage", "\nWebsite:", "\nWebsite", "\nLink:", "\nLink",
-                  "Evidence:", "URL:", "Source:", "Page:", "Website:", "Link:"]
-    
+    # 2. Split by common separators (Evidence, URLs, etc.)
+    separators = ["\nEvidence:", "\nURL:", "\nSource:", "\nSnippet:", "\nQuote:"]
     for sep in separators:
-        if sep.lower() in text.lower():
-            # Take only the part before the separator
-            parts = text.split(sep)
-            if parts:
-                text = parts[0].strip()
+        # Using a case-insensitive search
+        idx = text.lower().find(sep.lower())
+        if idx != -1:
+            text = text[:idx].strip()
             break
-    
-    # Get first line if multiline (before any remaining newlines)
+
+    # 3. Get the first line
     text = text.split('\n')[0].strip()
-    
-    # If the text is "null" (case insensitive), return None
-    if text.lower().strip() == "null":
+
+    # 4. HANDLE KEY-VALUE PAIRS (NEW)
+    # If the first line is "Allowed: True" or "Status: Required", 
+    # we want to strip the "Allowed:" or "Status:" part.
+    if ":" in text:
+        parts = text.split(":", 1) # Split only on the first colon
+        text = parts[1].strip()
+
+    # 5. Handle "null"
+    if text.lower() == "null" or not text:
         return None
-    
-    # Return the cleaned text
-    return text if text else None
+        
+    # 6. Fix incomplete URLs
+    if text.startswith("//"):
+        text = "https:" + text
+    elif text.startswith("www."):
+        text = "https://" + text
+        
+    return text
 
 ################################ Helper Functions to get the URLs ####################################################################################
     #get the academic calender url 
@@ -129,6 +159,17 @@ def get_tuition_fee_url(website_url, university_name):
         "No fabrication or guessing, just the tuition fee URL. "
         "Only if the tuition fee URL is explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the tuition fee URL is explicitly stated."
+    )
+    return generate_text_safe(prompt)
+
+def get_international_students_requirements_url(website_url, university_name):
+    prompt = (
+        f" What is the international students application requirements page url for the university {university_name} on the website {website_url}. "
+        f"Search query: site:{website_url} international students application requirements "
+        "Return only the international students application requirements page url, no other text. "
+        "No fabrication or guessing, just the international students application requirements page url. "
+        "Only if the international students application requirements page url is explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the international students application requirements page url is explicitly stated."
     )
     return generate_text_safe(prompt)
 
@@ -444,6 +485,8 @@ def get_grad_scholarship_high(website_url, university_name, graduate_financial_a
     )
     return generate_text_safe(prompt)
 
+#logopath is retrieved from Azure blob storage as it will be uploaded from the UI
+"""
 def get_logo_path(website_url, university_name):
     prompt = (
         f"What is the logo path or URL for the university {university_name}, {website_url}? "
@@ -453,6 +496,7 @@ def get_logo_path(website_url, university_name):
         "Also provide the evidence for your answer with correct URL or page where the logo path is explicitly stated."
     )
     return generate_text_safe(prompt)
+"""
 
 def get_phone(website_url, university_name):
     prompt = (
@@ -510,6 +554,8 @@ def get_virtual_tour_url(website_url, university_name):
     prompt = (
         f"What is the virtual tour URL for the university {university_name}, {website_url}? "
         "Return only the virtual tour URL, no other text. "
+        "The url should be routed to the virtual tour page of {university_name} and not to the home page of the website"
+        "if the direct url to the virtual tour page is not found then return the url of the page where the virtual tour is mentioned"
         "No fabrication or guessing, just the virtual tour URL. "
         "Only if the virtual tour URL is explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the virtual tour URL is explicitly stated."
@@ -543,7 +589,9 @@ def get_application_fees(website_url, university_name):
 
 def get_test_policy(website_url, university_name):
     prompt = (
-        f"Find a line of text about test policy for both undergraduate and graduate programs for the university {university_name}, {website_url}? "
+        f"Is {university_name} a test optional university? {website_url}? "
+        "If ACT/SAT  scores submission is optional for the university, return 'Test Optional'. "
+        "If ACT/SAT  scores submission is required for the university, return 'null. "
         "Return only the test policy, no other text. "
         "No fabrication or guessing, just a short line of text not a long paragraph. "
         "Only return the test policy if it is explicitly stated in the website, otherwise return null. "
@@ -551,6 +599,7 @@ def get_test_policy(website_url, university_name):
     )
     return generate_text_safe(prompt)
 
+"""
 def get_courses_and_grades(website_url, university_name):
     prompt = (
         f"What are the courses and grades requirements for the university {university_name}, {website_url}? "
@@ -560,24 +609,44 @@ def get_courses_and_grades(website_url, university_name):
         "Also provide the evidence for your answer with correct URL or page where the courses and grades requirements are explicitly stated."
     )
     return generate_text_safe(prompt)
+"""
 
 def get_recommendations(website_url, university_name):
+    url_to_use = get_international_students_requirements_url(website_url, university_name)
     prompt = (
-        f"How many recommendations are required to apply for both undergraduate and graduate programs for the university {university_name}, {website_url}? "
-        "Return only the recommendation requirements, no other text. "
-        "No fabrication or guessing, just the recommendation requirements. "
-        "Only return the recommendation requirements if they are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the recommendation requirements are explicitly stated."
+        f"How many letter of recommendations are required to apply for both undergraduate and graduate programs for the university {university_name}, {url_to_use}? "
+        "Return only the count of letter of recommendations required, no other text. "
+        "Go through the application requirements  using the {url_to_use} to find the count of letter of recommendations required. "
+        "If the count is different for undergraduate and graduate programs, just return the count of letter of recommendations required for graduate programs. "
+        "No fabrication or guessing, just the count of letter of recommendations required. "
+        "Do not return [Cite] in the return response."
+        "Example: 2, 3, 4, etc. "
+        "Only return the count of letter of recommendations required if they are explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the count of letter of recommendations required are explicitly stated."
     )
     return generate_text_safe(prompt)
 
 def get_personal_essay(website_url, university_name):
     prompt = (
-        f"Does applying to the university {university_name}, {website_url} require a personal essay? "
-        "If yes, return Required. if not, return Not Required. no extra text "
-        "No fabrication or guessing, just the personal essay requirements. "
-        "Only if the personal essay requirements are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the personal essay requirements are explicitly stated."
+        f"Investigate the undergraduate admissions requirements for {university_name} at {website_url}. "
+        "I am looking specifically for 'Personal Essays' or 'Personal Statements'.\n\n"
+        
+        "### Task:\n"
+        "Identify if the school requires a narrative-style essay that focuses on character, "
+        "personal growth, or identity. Do NOT include Statement of Purpose (SOP) "
+        "requirements that focus on academic research or career goals.\n\n"
+        
+        "### Instructions:\n"
+        "1. Check if they use the Common App Personal Essay or their own unique 'Personal Statement' prompt.\n"
+        "2. If found, return 'Required'. If explicitly not needed, return 'Not Required'. Otherwise return 'null'.\n"
+        "3. Look for phrases like: 'Tell us your story', 'Personal qualities', 'Background and identity'.\n"
+        "4. Provide the exact URL and a direct quote of the prompt if available.\n\n"
+        
+        "### Format:\n"
+        "Type: [Personal Essay / Personal Statement]\n"
+        "Status: [Required / Not Required / null]\n"
+        "Prompt: [Insert the actual essay question here]\n"
+        "Evidence_URL: [Source URL]"
     )
     return generate_text_safe(prompt)
 
@@ -604,7 +673,7 @@ def get_additional_information(website_url, university_name):
 def get_additional_deadlines(website_url, university_name):
     prompt = (
         f"What are the additional deadlines of {university_name}, {website_url} apart from application deadlines? "
-        "The deadlines can be scholarships, financial aid, or other deadlines. "
+        "The deadlines can be for scholarships, financial aid, or other deadlines. "
         "Return only the additional deadlines like scholarships, financial aid, or other deadlines, no other text. "
         "No fabrication or guessing, just the additional deadlines. "
         "Only if the additional deadlines are explicitly stated in the website, otherwise return null. "
@@ -613,13 +682,26 @@ def get_additional_deadlines(website_url, university_name):
     return generate_text_safe(prompt)
 
 def get_is_multiple_applications_allowed(website_url, university_name):
+    # Ensure we have the most relevant URL to start from
+    requirements_url = get_international_students_requirements_url(website_url, university_name)
+    
     prompt = (
-        f"Can a student apply to multiple programs at the university {university_name}, {website_url}? "
-        "Check through the website or its pages to find the answer. "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
+        f"Investigate the application policy for {university_name} using {website_url} and {requirements_url}.\n\n"
+        
+        "### Objective:\n"
+        "Determine if a single applicant is permitted to submit applications to more than one program "
+        "(e.g., applying to both Data Science and Computer Science) for the same intake term.\n\n"
+        
+        "### Instructions:\n"
+        "1. Search for keywords: 'multiple applications', 'concurrent applications', 'more than one program'.\n"
+        "2. Identify the specific rule: Is it Allowed, Allowed with restrictions, or Strictly Forbidden?\n"
+        "3. If the website does not explicitly mention this, return 'null'.\n\n"
+        
+        "### Output Format (Strict):\n"
+        "Allowed: [True / False / null]\n"
+        "Restrictions: [e.g., 'Only one per department' or 'Requires separate fees' or 'None']\n"
+        "Evidence_URL: [Exact URL where this rule is listed]\n"
+        "Quote: [The specific sentence from the site]"
     )
     return generate_text_safe(prompt)
 
@@ -1037,7 +1119,7 @@ def process_institution_extraction(
         "application_requirements": get_application_requirements(website_url, university_name),
         "application_fees": get_application_fees(website_url, university_name),
         "test_policy": get_test_policy(website_url, university_name),
-        "courses_and_grades": get_courses_and_grades(website_url, university_name),
+        "courses_and_grades": "null",
         "recommendations": get_recommendations(website_url, university_name),
         "personal_essay": get_personal_essay(website_url, university_name),
         "writing_sample": get_writing_sample(website_url, university_name),
@@ -1080,7 +1162,7 @@ def process_institution_extraction(
     yield '{"status": "progress", "message": "Extracting contact information..."}'
     contact_data = {
         "contact_information": get_contact_information(website_url, university_name),
-        "logo_path": get_logo_path(website_url, university_name),
+        "logo_path": None,
         "phone": get_phone(website_url, university_name),
         "email": get_email(website_url, university_name),
         "secondary_email": get_secondary_email(website_url, university_name),

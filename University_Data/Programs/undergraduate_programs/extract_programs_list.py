@@ -38,6 +38,8 @@ def resolve_redirect(url):
     except Exception:
         return url
 
+
+
 def find_program_url(program_name, university_name):
     prompt = (
         f"Use Google Search to find the OFFICIAL '{program_name}' program page on the {university_name} website. "
@@ -188,6 +190,7 @@ def run(university_name_input):
         f"Use Google Search to find the OFFICIAL page listing all Undergraduate Degrees/Programs (Majors) at {university_name}. "
         "Only Look at the active and latest Programs page urls. Do not include any expired or cancelled programs pages urls. or programs page urls from older catalogs."
         "The page should list specific bachelors/associate degrees. "
+        "the page should belong to the official university domain."
         "Return the URL. Do not generate a hypothetical URL."
     )
     try:
