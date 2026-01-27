@@ -1,0 +1,258 @@
+Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,Program name,Program Page url,IsRecommendationSystemOpted,error
+Not Required,Not Required,"Academic Entry Requirements:
+Applicants must have one of the following:
+- GCE ‘A’ level with two passes in grade A to E subjects
+- International Baccalaureate (IB) Diploma
+- Polytechnic Diploma from a local polytechnic in Singapore
+- Other equivalent qualifications from other countries will be assessed on a case-by-case basis
+
+English Language Requirements:
+Applicants are required to satisfy the English Language requirements with one of the following:
+- A minimum score of 79 on the TOEFL (Test of English as a Foreign Language) internet-based test.
+- A minimum score of 6.0 on the IELTS (International English Language Testing System).
+- A minimum grade of ‘C’ in the GCE O-Level English.
+
+Required Documents for Application:
+- Application Form
+- Passport/NRIC
+- 1 Passport size photograph
+- Copies of academic transcripts/certificates
+- English language proficiency test score
+- Application fee",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Aeronautics,https://erci.edu.sg/programmes/bachelors-degree-programmes/erau-bachelor-of-science-in-aeronautics/,,
+,,,,,,,,,,,error,Bachelor of Science in Aeronautical Science,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Optional,"To be considered for admission, applicants must submit the following: an application for admission, official high school transcript(s), and a personal essay (optional, but strongly encouraged). SAT or ACT scores are optional and not required for admission consideration. Letters of recommendation are also optional.",Not Required,True,True,True,False,False,,,program,Bachelor of Science in Aerospace Engineering,https://erau.edu/degrees,,
+Not Required,Optional,"To complete your application, please submit the following: Official high school and/or college transcripts. Official SAT (school code 5190) and/or ACT (school code 0731) scores are optional for most applicants. International students may be required to submit scores to show English proficiency. A recommendation letter is encouraged but not required. An essay is encouraged but not required.",Not Required,True,True,True,False,False,,,program,Bachelor of Science in Aerospace Physiology,https://erau.edu/degrees,,
+Optional,Optional,"To be considered for admission, you must submit the following items. We recommend you send all documents at once.
+1. Completed Application: You may use our ERAU application or the Common App. Please note: The Common App is for Fall admissions only. Be sure to select the correct application term and campus.
+2. Official High School Transcripts
+3. Official College/University Transcripts (if you have earned college credit while in high school)",,True,True,True,False,False,,,program,Bachelor of Science in Air Traffic Management,https://erau.edu/degrees/bachelor/air-traffic-management,,
+Not Required,Not Required,"Completed application: Begin your journey by completing the application for admission. Official transcripts from all previously attended institutions: Please request to have your official transcripts from any high school, college or university you have attended sent directly to Embry-Riddle. Application Fee: There is a non-refundable $50 application fee.",Not Required,True,True,False,False,False,,,program,Bachelor of Science in Aviation Business Administration,https://www.spcollege.edu/friends-partners/community-resources/university-partnership-center/aviation-business-administration,,
+Optional,Optional,"To apply for admission, you must submit the following items. We also have some recommendations that can strengthen your application.
+Required:
+- Completed application
+- Official high school transcript(s)
+Optional:
+- Official SAT and/or ACT scores
+- Letter(s) of recommendation
+- Essay
+- Résumé",Not Required,True,True,True,False,False,,,program,Bachelor of Science in Aviation Maintenance Science,https://erau.edu/degrees,,
+Optional,Optional,"To be considered for admission, applicants must submit a completed application and official high school transcripts. If applicable, official college/university transcripts are also required. The following items are optional for most applicants: SAT and/or ACT scores, a 250-500 word essay, letters of recommendation, and a resume.",Not Required,True,True,False,False,False,,,program,Bachelor of Science in Business Administration,https://erau.edu/degrees,,
+Not Required,Not Required,"Applicants must have completed a secondary school education (high school) with a minimum of five GCE ‘O’ Level passes including English and Mathematics or its equivalent.
+
+Minimum Age Requirement: 16 years old
+
+Academic Requirements for Singaporean Applicants:
+- GCE ‘A’ Level with a minimum of two passes in H2 subjects; or
+- Polytechnic Diploma from a local polytechnic in Singapore or its equivalent; or
+- Other equivalent qualifications from a recognised institution
+
+Academic Requirements for International Applicants:
+- Completion of high school with a minimum Grade 12 or its equivalent; or
+- International Baccalaureate (IB) Diploma
+
+English Language Requirements:
+If English is not the applicant’s first language, he/she will be required to meet one of the following English language requirements:
+- IELTS (International English Language Testing System): 6.0 overall with no individual band lower than 6.0;
+- TOEFL (Test of English as a Foreign Language) iBT: 79;
+- Other equivalent qualifications (e.g. Cambridge English exams)
+
+Note: All applications will be evaluated on a case-by-case basis.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Business Analytics,https://erci.edu.sg/programmes/bachelors-degree-programmes/erau-bachelor-of-science-in-business-analytics/,,
+Optional,Optional,Your application to Embry-Riddle is complete when the Admissions Office has received the following: Completed Application; Official High School Transcripts; Official College/University Transcripts (if you have taken college-level courses); SAT/ACT Scores (See Test-Optional Policy); Essay (Optional); Letters of Recommendation (Optional); Résumé of Activities (Optional).,Not Required,True,True,True,False,False,,,program,Bachelor of Science in Computer Engineering,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Bachelor of Science in Computer Science,https://erau.edu/degrees/bachelor/computer-science,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Science in Cyber Intelligence and Security,https://che.sc.gov/sites/che/files/Documents/Meetings/2024/ACAP/March%2028/4.G.CCU%20New%20Program%20BA%20Cyber%20TI_ACAP.pdf,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Optional,"Application requirements for freshman admission include a completed application and official high school transcripts. Submission of SAT and/or ACT scores, a letter of recommendation, and an essay are optional.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Data Science,https://erau.edu/degrees,,
+Optional,Optional,"To apply, you will need to complete the Embry-Riddle Application or the Common Application and submit your official high school transcripts. If you have earned college credit while in high school, you will need to send those official college transcripts as well. Test scores (SAT/ACT), letters of recommendation, essays, and resumes are all optional for most applicants.",Optional,True,True,True,False,False,,,program,Bachelor of Science in Engineering,https://erau.edu/degrees,,
+Optional,Optional,"To apply for admission, you will need to submit: A completed application. Official high school transcripts showing courses, grades, and grade point average, plus date of graduation. SAT or ACT scores: Embry-Riddle is test-optional for most applicants. If you choose to submit scores, they must be sent directly from the testing agency. Letters of recommendation (optional but recommended). Essay (optional but recommended). Resume of extracurricular activities and work experience (optional but recommended).",Not Required,True,True,False,False,False,,,program,Bachelor of Science in Safety Management,https://erau.edu/degrees,,
+Optional,Optional,"Required application materials include a completed application and official high school transcript(s). If you have attended college, official college/university transcript(s) are also required. Embry-Riddle is a test-optional institution. A personal essay, letters of recommendation, and a resume of activities are recommended but not required.",Not Required,True,False,True,False,False,,,program,"Bachelor of Science in Simulation Science, Games, and Animation",https://erau.edu/degrees,,
+,,,,,,,,,,,error,Bachelor of Science in Software Engineering,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Associate in Science in Aeronautics,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Associate of Science in Air Traffic Management,https://erau.edu/degrees/associate/air-traffic-management,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Optional,Required,"To apply for admission to Embry-Riddle, we require the following items:
+
+Complete the online application or the Common Application.
+
+Submit official transcripts from all high schools and colleges attended.
+
+Submit a written essay of 250-500 words on one of the following topics:
+- Tell us about a time you had to learn a new skill and what that experience was like.
+- Why are you choosing to apply to Embry-Riddle?
+- Tell us about your greatest strength and how you have used it to succeed.
+
+Submit letters of recommendation (optional). Letters can be from teachers, counselors, employers or others who can speak to your academic potential.
+
+Submit official SAT and/or ACT scores (optional for most applicants — see our Test-Optional Policy for details).
+- Embry-Riddle's SAT code is 5190.
+- Embry-Riddle's ACT code is 0731.
+
+Submit a résumé of your activities (optional). Be sure to include any honors, awards or extracurricular activities you have participated in during the last four years.",Required,False,True,True,False,False,,,program,Associate in Science in Aviation Business Administration,https://erau.edu/degrees/associate/aviation-business-administration,,
+,,,,,,,,,,,error,Associate in Science in Aviation Maintenance Science,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,The Minor in Aeronautical Studies is available to all undergraduate students pursuing a baccalaureate degree at Embry-Riddle Worldwide.,Not Required,True,False,True,False,False,,,program,Minor in Aeronautical Studies,https://worldwide.erau.edu/colleges/arts-sciences/pathways,,
+,,,,True,False,False,False,False,,,program,Minor in Aeronautics,https://erau.edu/degrees,,
+Not Required,Not Required,"The Minor in Aerospace Engineering is available to all degree-seeking students at the Daytona Beach and Prescott campuses. Students wishing to declare a Minor in Aerospace Engineering must have a cumulative grade point average of 2.0 or higher in the courses listed below: MA 241, MA 242, PS 113 or PS 219 or PS 250. Students in the B.S. in Aerospace Engineering program are not permitted to take this minor.",Not Required,True,False,True,False,False,,,program,Minor in Aerospace Engineering,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Aerospace Life Sciences,https://daytonabeach.erau.edu/degrees/minors,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Air Cargo Management,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,False,False,False,False,False,,,program,Minor in Airline Operations,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Airport Baggage Handling Systems Implementation,https://worldwide.erau.edu/colleges/arts-sciences/department-mathematics-science-technology,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,"Academic Requirements
+Applicants who have completed one of the following qualifications are eligible for admission into the Bachelor’s degree:
+
+GCE A-Level: Minimum 2 passes in GCE A-Level subjects.
+Polytechnic Diploma: Minimum GPA of 2.0 from any local Polytechnic.
+IB Diploma: Completion of the International Baccalaureate (IB) Diploma.
+Other Qualifications: Other equivalent qualifications will be assessed on a case-by-case basis.
+
+English Language Requirements
+Applicants are required to satisfy one of the following:
+
+A grade C6 or better in English at GCE O-Level.
+A minimum score of 550 for the paper-based TOEFL, or 79 for the internet-based TOEFL.
+A minimum score of 6.0 for IELTS.
+Completed a high school/secondary school certificate or diploma or equivalent where the medium of instruction is English.",,True,False,True,False,False,,,program,Minor in Airport Management,https://erci.edu.sg/programmes/bachelors-degree-programmes/erau-bachelor-of-science-in-aviation-business-administration/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Air Traffic Control,https://erau.edu/degrees,,
+,,,,True,False,False,False,False,,,program,Minor in Air Transportation,https://www.reddit.com/r/AirForce/comments/15gttmz/what_did_you_do_with_your_degree/,,
+,,,,True,False,True,False,False,,,program,Minor in Alternative Energy,https://campus.kennesaw.edu/colleges-departments/spceet/degrees-programs/minors/renewable-energy/index.php,,
+,,,,,,,,,,,error,Minor in Applied Data Science,https://www.youtube.com/@embry-riddle_worldwide_coas,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Applied Mathematics,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,The minor in applied meteorology requires the satisfactory completion of 18 credit hours.,Not Required,True,False,True,False,False,,,program,Minor in Applied Meteorology,https://daytonabeach.erau.edu/college-aviation/applied-aviation-sciences,,
+,,,,,,,,,,,error,Minor in Arabic and Middle Eastern Studies,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,"Minor in Artificial Intelligence, Ethics and Creativity",https://worldwide.erau.edu/colleges/arts-sciences/department-humanities-communication,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"Students pursuing a minor in astronautics must complete 15 credit hours of study. Students will select five classes from a prescribed list of six courses to complete the minor. A student may declare a minor any time after declaring a major by completing a declaration of minor form, which may be obtained from the Records and Registration Office.",Not Required,True,False,True,False,False,,,program,Minor in Astronautics,https://daytonabeach.erau.edu/degrees/minors,,
+Not Required,Not Required,"The minor is available to all degree-seeking students. The curriculum is flexible and can be designed to match student interests. To complete the minor, students must complete 15 credit hours of courses listed below with a grade of C or better in each course.",Not Required,True,False,True,False,False,,,program,Minor in Astronomy and Astrophysics,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Aviation Law,https://daytonabeach.erau.edu/college-aviation/aeronautical-science,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Aviation Maintenance Operations,https://erau.edu/degrees/minors,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,This minor is open to all degree-seeking students.,Not Required,True,False,True,False,False,,,program,Minor in Aviation Maintenance Science Airframe,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Aviation Maintenance Science Powerplant,https://talk.collegeconfidential.com/t/value-of-an-faa-powerplant-certification-as-an-aero-engineer/2003578,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,The Minor in Aviation Management is open to all degree-seeking students at the Daytona Beach campus.,,True,False,False,False,False,,,program,Minor in Aviation Management,https://erau.edu/degrees,,
+,,The Minor in Aviation Safety is available to all undergraduate students.,,True,False,False,False,False,,,program,Minor in Aviation Safety,https://erau.edu/degrees,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,"Minor in Aviation, Technology and Society",https://worldwide.erau.edu/colleges/arts-sciences/department-humanities-communication,,
+,,,,True,False,True,False,False,,,program,Minor in Avionics Line Maintenance,https://daytonabeach.erau.edu/college-aviation/aviation-maintenance-science,,
+Not Required,Not Required,The Minor in Biomedical Engineering is open to all engineering majors. Non-engineering majors may enroll in the minor with the approval of both their department chair and the minor program coordinator.,Not Required,True,False,True,False,False,,,program,Minor in Biomedical Engineering,https://admission.ucla.edu/apply/minors,,
+,,,,,,,,,,,error,Minor in Biomedical Sciences,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,The minor in Business Administration is available to all undergraduate students. The Business Administration Minor is not available to students majoring in Business Administration.,Not Required,True,False,False,False,False,,,program,Minor in Business Administration,https://erau.edu/degrees,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Chemistry,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Chinese Studies,https://prescott.erau.edu/college-business-security-intelligence/foreign-languages,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,False,False,False,False,,,program,Minor in Communication,https://worldwide.erau.edu/colleges/arts-sciences/department-humanities-communication,,
+,,,,True,False,False,False,False,,,program,Minor in Communication and Broadcast Media,https://www.westmont.edu/office-registrar/academic-policies-and-procedures/majors-and-minors,,
+,,,,,,,,,,,error,Minor in Computational Mathematics,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Computer Aided Design/Computer Aided Manufacturing,https://advising.utah.edu/majors/quick-look/index.php,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Computer Science,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"This minor prepares students for careers in the growing computer and network security industry. The minor also provides the foundation for students to continue their studies in a graduate program in Information Assurance. Required courses include: CS 125 Computer Science I, CS 225 Computer Science II, CS 315 Data Structures & Algorithm Analysis, CYB 230 Intro to Cyber Security Engineering, CYB 310 Network Security, and CYB 320 Software Security. To declare a minor, an enrolled student must complete a 'Declaration of Minor' form and submit it to the Records and Registration Office for approval.",Not Required,True,False,True,False,False,,,program,Minor in Computer Security,https://prescott.erau.edu/degrees/minors,,
+,,,,,,,,,,,error,"Minor in Crisis, Risk, and Resilience Communication",https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Optional,Optional,A minor is a supplementary field of study and does not have a separate admissions process. Students apply for admission to an undergraduate degree program at the university. The requirements for undergraduate admission include a completed application and official high school transcripts (and college transcripts if applicable).,Not Required,True,False,True,False,False,,,program,Minor in Cyber Intelligence and Security,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Cybersecurity Application and Management,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,"To enter this minor, a student must have completed CS 125 with a grade of B or better and must be in good academic standing. All minor courses must be completed with a grade of C or better.",,True,False,True,False,False,,,program,Minor in Cybersecurity Engineering,https://erau.edu/degrees/minors,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Data Science,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Defense Studies,https://prescott.erau.edu/degrees/minors,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Optional,"To declare the Minor in Diplomatic and Military History, a student must be in good academic standing and must have a designated faculty advisor from the Department of Global Security and Intelligence Studies. As this is a minor, the primary application requirements are for general undergraduate admission to the university. Required Documents for undergraduate admission include: Official high school transcripts or official GED scores. Optional Documents include: SAT or ACT scores, Letters of recommendation, and a 250-500 word essay.",Not Required,True,True,False,False,False,,,program,Minor in Diplomatic and Military History,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Economics,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,"The minor requires 18 credit hours of coursework in Electrical and Computer Engineering.
+
+Required courses are:
+EE 223 - Electrical Engineering I
+EE 224 - Electrical Engineering II
+EE 335 - Electrical and Computer Engineering Fundamentals
+EE 401 - Digital Systems Design
+EE 420 - Control Systems Analysis and Design
+and one EE or CEC elective (300-400 level, at least 3 credits, excluding Senior Design and Cooperative Education).
+
+To declare this minor, a student must have a minimum cumulative grade point average of 2.0.",,True,False,True,False,False,,,program,Minor in Electrical and Computer Engineering,https://daytonabeach.erau.edu/degrees/minors,,
+,,,,,,,,,,,error,Minor in Electrical Engineering,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Emergency Management,https://daytonabeach.erau.edu/college-arts-sciences/security-studies,,
+Not Required,Optional,"To apply for admission, we require an application, official transcripts, and an application fee. Additional items such as a letter of recommendation, essay, and standardized test scores are encouraged but not required.",Not Required,True,False,True,False,False,,,program,Minor in Emergency Planning and Management,https://prescott.erau.edu/degrees/minors,,
+,,,,True,False,False,False,False,,,program,Minor in Emergency Services,https://erau.edu/degrees/bachelor/homeland-security,,
+Not Required,Not Required,The Minor in Engineering Science is open to any student at Embry-Riddle.,Not Required,True,False,True,False,False,,,program,Minor in Engineering Science,https://erau.edu/degrees,,
+,,,,True,False,True,False,False,,,program,Minor in Engineering Sciences,https://www.scribd.com/document/911096319/B-S-in-Aeronautics-ERAU-Curriculum-Plan,,
+,,,,False,False,False,False,False,,,program,Minor in Entrepreneurship,https://daytonabeach.erau.edu/degrees/minors,,
+,,,,True,False,True,False,False,,,program,Minor in Environmental Science,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Finance,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,The Minor in Flight is available to all students except for those majoring in Aeronautical Science.,,True,False,True,False,False,,,program,Minor in Flight,https://erau.edu/degrees,,
+Not Required,Not Required,"To enter the minor, students must have completed EGR 115, CS 125 or CS 225, and PS 118 or PS 250.",Not Required,True,False,True,False,False,,,program,Minor in Flight Test and Simulation,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Forensic Accounting & Fraud Examination,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,False,True,False,False,,,program,Minor in Forensic Biology,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Geographic Information Systems,https://nwas.org/2021-fall-scholarship-recipients-announced/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,False,False,False,False,,,program,Minor in Global Conflict Studies,https://daytonabeach.erau.edu/college-arts-sciences/security-studies,,
+,,,,True,False,False,False,False,,,program,Minor in Helicopter Operations and Safety,https://erau.edu/course-catalogs,,
+,,,,,,,,,,,error,Minor in Homeland Security,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,The Minor in Human Factors is available to all degree-seeking students.,Not Required,True,False,True,False,False,,,program,Minor in Human Factors,https://erau.edu/degrees,,
+,,,,True,False,True,False,False,,,program,Minor in Human Factors Psychology,https://daytonabeach.erau.edu/college-arts-sciences/human-factors,,
+,,,,True,False,False,False,False,,,program,Minor in Human Resources,https://worldwide.erau.edu/degrees/minors,,
+,,,,True,False,True,False,False,,,program,Minor in Humanistic STEM,https://scispace.com/pdf/what-is-humanistic-stem-and-why-do-we-need-it-y3ejua52fu.pdf,,
+,,,,True,False,False,False,False,,,program,Minor in Humanities,https://erau.edu/degrees,,
+,,,,False,False,False,False,False,,,program,Minor in Industrial/Organizational Psychology,https://www.taylor.edu/academics/degrees/industrial-organizational,,
+,,,,,,,,,,,error,Minor in Intelligence,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,False,False,False,False,False,,,program,Minor in International History,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in International Relations,https://catalog.illinois.edu/undergraduate/minors/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Latin American Studies,https://daytonabeach.erau.edu/college-arts-sciences/humanities-communications/language-classes-culture-minors,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Leadership,https://erau.edu/degrees/minors,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,False,False,False,False,,,program,Minor in Logistics Management,https://www.quora.com/What-minor-should-I-choose-as-a-logistics-and-supply-chain-management-major,,
+,,,,,,,,,,,error,Minor in Management,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Management Information Systems,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Mandarin Chinese,https://prescott.erau.edu/college-business-security-intelligence/foreign-languages,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,The Minor in Marketing is open to all degree-seeking students.,,True,False,False,False,False,,,program,Minor in Marketing,https://erau.edu/degrees,,
+Not Required,Not Required,"A Minor in Mathematics requires the successful completion of 15 credit hours of coursework in mathematics beyond the required general education mathematics courses.
+
+Required Courses (12 credits):
+MA 241 Calculus and Analytic Geometry I
+MA 242 Calculus and Analytic Geometry II
+MA 243 Calculus and Analytic Geometry III
+MA 345 Differential Equations
+
+Electives (3 credits):
+Choose one of the following courses: MA 335 Theory of Numbers; MA 348 Numerical Analysis; MA 350 Introduction to Mathematical Modeling; MA 412 Complex Variables; MA 420 Introduction to Topology; MA 432 Linear Algebra; MA 441 Advanced Engineering Mathematics I; MA 442 Advanced Engineering Mathematics II; MA 443 Game Theory and Its Applications.",Not Required,True,False,True,False,False,,,program,Minor in Mathematics,https://erau.edu/degrees,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Mechanical Engineering,https://prescott.erau.edu/degrees/minors,,
+,,,,,,,,,,,error,Minor in Military Science,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Military Studies,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,False,False,False,False,False,,,program,Minor in Occupational Safety and Health,https://www.scribd.com/document/911096319/B-S-in-Aeronautics-ERAU-Curriculum-Plan,,
+,,,,,,,,,,,error,Minor in Physics,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,True,False,False,False,,,program,Minor in Project Management,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Propulsion,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Psychology,https://erau.edu/degrees,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Research Foundations,https://erau.edu/course-catalogs,,
+,,,,False,False,True,False,False,,,program,Minor in Robotic Systems,https://erau.edu/degrees,,
+Not Required,Not Required,The minor in robotics is intended for engineering and computer science students to provide them with the knowledge and skills necessary to be successful in the field of robotics and automation. Students from other degree programs are encouraged to consult with the minor coordinator about their eligibility.,Not Required,True,False,True,False,False,,,program,Minor in Robotics,https://daytonabeach.erau.edu/degrees/minors,,
+,,"Students must complete 15 credit hours of Russian Studies courses.
+
+Required Courses
+RS 101 Elementary Russian I
+RS 102 Elementary Russian II
+RS 201 Intermediate Russian I
+RS 202 Intermediate Russian II
+RS 301 Advanced Russian I
+
+Prerequisites may apply.
+
+Students may choose to take a language placement exam administered by the Department of Humanities and Communication in order to waive any of the listed required courses. Students will choose from the list of electives below to meet the 15 credit hour minimum for the minor.",,True,False,False,False,False,,,program,Minor in Russian Studies,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Science Literacy,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,False,False,False,False,,,program,Minor in Security and Intelligence,https://www.scribd.com/document/911096319/B-S-in-Aeronautics-ERAU-Curriculum-Plan,,
+,,,,,,,,,,,error,Minor in Small Uncrewed Aircraft Systems (sUAS) Operation,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,The Minor in Space Operations is available to all degree-seeking students at the Daytona Beach campus.,,True,False,False,False,False,,,program,Minor in Space Operations,https://daytonabeach.erau.edu/degrees/minors,,
+,,,,,,,,,,,error,Minor in Space Physics,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,"Minor in Space Policy, History and Culture",https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Space Studies,https://worldwide.erau.edu/degrees/minors,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Spanish,https://en.wikipedia.org/wiki/Academic_minor,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Supply Chain Management in Aviation and Aerospace,https://daytonabeach.erau.edu/degrees/minors,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,The Minor in Systems Engineering is open to all degree-seeking students at the Daytona Beach and Prescott campuses.,,False,False,True,False,False,,,program,Minor in Systems Engineering,https://erau.edu/degrees,,
+Not Required,Not Required,"This minor prepares students from any major for intelligence or counterintelligence careers in government or the private sector. The required courses examine the structure and function of the U.S. Intelligence Community and provide an overview of the four major intelligence disciplines: collection, analysis, counterintelligence, and covert action. Students then have some flexibility to choose from courses focusing on specific regions or issues.
+
+Required Courses:
+SIS 101: Introduction to Security and Intelligence Studies
+SIS 202: Introduction to the Intelligence Community
+SIS 305: Intelligence Collection and Analysis
+SIS 306: Counterintelligence
+SIS 407: Covert Action and National Security
+
+Complete two of the following:
+SIS 303: Non-US Intelligence Agencies
+SIS 320: Terrorism
+SIS 325: Strategic Intelligence and National Security Policymaking
+SIS 330: Special Operations in National Security
+SIS 345: Intelligence, War, and Military Operations
+SIS 350: Unmanned Systems in National Security
+SIS 405: Economic Espionage and Industrial Security
+SIS 420: Transnational Crime and Corruption
+SIS 425: Disinformation & Influence Operations",Not Required,True,False,False,False,False,,,program,Minor in Technical Intelligence,https://prescott.erau.edu/degrees/minors,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Technical Management,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Terrorism Studies,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,False,True,False,False,,,program,Minor in Uncrewed Aircraft Systems,https://www.sdstate.edu/programs/undergraduate/uncrewed-aircraft-systems-minor,,
+,,The minor in Uncrewed Aircraft Systems Applications is open to all degree-seeking students.,,False,False,False,False,False,,,program,Minor in Uncrewed Aircraft Systems Applications,https://erau.edu/degrees,,
+,,,,,,,,,,,error,Minor in Uncrewed Aircraft Systems (UAS) in Public Safety,https://erau.edu/degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."

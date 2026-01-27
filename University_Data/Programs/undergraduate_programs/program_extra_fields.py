@@ -107,8 +107,12 @@ def process_single_program(row, university_name):
 def run(university_name_input):
     global university_name
     university_name = university_name_input
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
     
-    # Check if CSV file exists
+    # Update paths with university name
+    csv_path = os.path.join(output_dir, f'{sanitized_name}_undergraduate_programs.csv')
+    json_path = os.path.join(output_dir, f'{sanitized_name}_extra_fields_data.json')
+
     # Check if CSV file exists
     if not os.path.exists(csv_path):
         yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step 2.", "files": {{}}}}'
@@ -178,7 +182,7 @@ def run(university_name_input):
             yield f'{{"status": "warning", "message": "Error processing {program_name}: {str(e)}"}}'
 
     # Final save
-    csv_output_path = os.path.join(output_dir, 'extra_fields_data.csv')
+    csv_output_path = os.path.join(output_dir, f'{sanitized_name}_extra_fields_data.csv')
     if extra_fields_data:
         df = pd.DataFrame(extra_fields_data)
         df.to_csv(csv_output_path, index=False, encoding='utf-8')

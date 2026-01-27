@@ -1,21 +1,14 @@
-import pandas as pd
+import pandas as pd  
 import os
 
+ug_file_path = "/home/sravan/Downloads/Data_Scraper/University_Data/Programs/undergraduate_programs/Undergrad_prog_outputs/undergraduate_programs_final.csv"
+grad_file_path = "/home/sravan/Downloads/Data_Scraper/University_Data/Programs/graduate_programs/Grad_prog_outputs/graduate_programs_final.csv"
 
-file_path = "/Users/sravan19/projects/Scraper_UI/University_Data/Programs/University-of-Findlay.csv"
-df = pd.read_csv(file_path)
+ug_df = pd.read_csv(ug_file_path)
+grad_df = pd.read_csv(grad_file_path)
 
-# Fill NaN values to avoid errors
-df['Level'] = df['Level'].fillna('')
-df['ProgramName'] = df['ProgramName'].fillna('')
+#merge the dataframes
+merged_df = pd.concat([ug_df, grad_df], ignore_index=True)
 
-# Create a boolean mask where Level is not empty
-mask = df['Level'].str.strip() != ""
-
-# Update ProgramName only for rows where Level is present
-df.loc[mask, 'ProgramName'] = df.loc[mask, 'ProgramName'] + " - " + df.loc[mask, 'Level']
-
-df['Level'] = ""
-
-#csv name is UF.csv
-df.to_csv("UniversityofFindlay.csv", index=False)
+#save the merged dataframe to a csv file
+merged_df.to_csv("University_Data/Programs/merged_programs.csv", index=False)

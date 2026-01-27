@@ -113,19 +113,25 @@ def load_json_data(filepath):
         print(f"Error loading {filepath}: {e}")
         return []
 
-def run():
+def run(university_name=None):
     yield f'{{"status": "progress", "message": "Starting data merge and standardization..."}}'
+    
+    if not university_name:
+        yield f'{{"status": "error", "message": "University name not provided for merge step."}}'
+        return
+
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
     output_dir = os.path.join(script_dir, "Grad_prog_outputs")
     os.makedirs(output_dir, exist_ok=True)
     
     # File paths
-    base_csv_path = os.path.join(output_dir, 'graduate_programs.csv')
-    financial_json_path = os.path.join(output_dir, 'program_details_financial.json')
-    test_scores_json_path = os.path.join(output_dir, 'test_scores_requirements.json')
-    app_req_json_path = os.path.join(output_dir, 'application_requirements.json')
-    extra_fields_json_path = os.path.join(output_dir, 'extra_fields_data.json')
+    base_csv_path = os.path.join(output_dir, f'{sanitized_name}_graduate_programs.csv')
+    financial_json_path = os.path.join(output_dir, f'{sanitized_name}_program_details_financial.json')
+    test_scores_json_path = os.path.join(output_dir, f'{sanitized_name}_test_scores_requirements.json')
+    app_req_json_path = os.path.join(output_dir, f'{sanitized_name}_application_requirements.json')
+    extra_fields_json_path = os.path.join(output_dir, f'{sanitized_name}_extra_fields_data.json')
     
     # 1. Load Base Data
     if not os.path.exists(base_csv_path):
@@ -181,7 +187,7 @@ def run():
     final_df = final_df[TARGET_COLUMNS]
     
     # 6. Save Final CSV
-    output_csv_path = os.path.join(output_dir, 'graduate_programs_final.csv')
+    output_csv_path = os.path.join(output_dir, f'{sanitized_name}_graduate_programs_final.csv')
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')
     
     yield f'{{"status": "complete", "message": "Successfully merged and standardized data", "files": {{"grad_final_csv": "{output_csv_path}"}}}}'

@@ -4,6 +4,8 @@ import json
 import importlib
 import queue
 import threading
+import re
+import time
 
 # Add current directory to path to allow imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -70,7 +72,7 @@ def process_programs_extraction(university_name, step):
     if step == 7: # Special step for Final Merge
         yield f'{{"status": "progress", "message": "Starting Step 7: Final Merge..."}}'
         try:
-            for update in merge_all.run():
+            for update in merge_all.run(university_name):
                 yield update
         except Exception as e:
             yield f'{{"status": "error", "message": "Error in Final Merge: {str(e)}"}}'
@@ -160,6 +162,8 @@ def process_programs_extraction(university_name, step):
                     if 'files_update' in data:
                         accumulated_files.update(data['files_update'])
                         del data['files_update'] # Remove before yielding
+                        # Include all current files in the update
+                        data['files'] = accumulated_files
                         msg = json.dumps(data)
                 except:
                     pass
@@ -189,6 +193,104 @@ def process_programs_extraction(university_name, step):
         })
         return
 
+    if step == 9: # Combined Flow (Step 1 + Step 8)
+        yield f'{{"status": "progress", "message": "Starting Automated Combined Flow for {university_name}..."}}'
+        
+        # Phase 1: Step 1 (Extract List) with Retry
+        max_retries = 5
+        grad_count = 0
+        undergrad_count = 0
+        accumulated_files = {}
+
+        for attempt in range(1, max_retries + 1):
+            yield f'{{"status": "progress", "message": "--- Step 1: Program Extraction Attempt {attempt}/{max_retries} ---"}}'
+            
+            # Run Grad Step 1
+            yield f'{{"status": "progress", "message": "Extracting Graduate programs..."}}'
+            try:
+                for update in grad_step1.run(university_name):
+                    try:
+                        data = json.loads(update)
+                        if data.get('status') == 'complete':
+                            if 'files' in data:
+                                accumulated_files.update(data['files'])
+                            msg = data.get('message', '')
+                            # Extract count
+                            match = re.search(r'Found (\d+) graduate', msg)
+                            if match:
+                                grad_count = int(match.group(1))
+                            yield json.dumps({"status": "progress", "message": f"[Grad] {msg}", "files": accumulated_files})
+                        else:
+                            yield update
+                    except:
+                        yield update
+            except Exception as e:
+                yield f'{{"status": "error", "message": "Error in Grad Step 1: {str(e)}"}}'
+
+            # Run Undergrad Step 1
+            yield f'{{"status": "progress", "message": "Extracting Undergraduate programs..."}}'
+            try:
+                for update in undergrad_step1.run(university_name):
+                    try:
+                        data = json.loads(update)
+                        if data.get('status') == 'complete':
+                            if 'files' in data:
+                                accumulated_files.update(data['files'])
+                            msg = data.get('message', '')
+                            # Extract count
+                            match = re.search(r'Found (\d+) undergraduate', msg)
+                            if match:
+                                undergrad_count = int(match.group(1))
+                            yield json.dumps({"status": "progress", "message": f"[Undergrad] {msg}", "files": accumulated_files})
+                        else:
+                            yield update
+                    except:
+                        yield update
+            except Exception as e:
+                yield f'{{"status": "error", "message": "Error in Undergrad Step 1: {str(e)}"}}'
+
+            if grad_count > 0 and undergrad_count > 0:
+                yield f'{{"status": "progress", "message": "Success! Found {grad_count} Grad and {undergrad_count} Undergrad programs. Proceeding to enrichment."}}'
+                break
+            elif attempt < max_retries:
+                missing = []
+                if grad_count == 0: missing.append("Graduate")
+                if undergrad_count == 0: missing.append("Undergraduate")
+                yield f'{{"status": "warning", "message": "Missing {', '.join(missing)} programs list on attempt {attempt}. Retrying Step 1..."}}'
+                import time
+                time.sleep(2) 
+            else:
+                yield f'{{"status": "error", "message": "Max retries reached. Could not find both Grad and Undergrad lists. (Grad: {grad_count}, Undergrad: {undergrad_count}). Automation stopped."}}'
+                return
+
+        # Phase 2: Step 8 (Parallel)
+        # We only reach here if both counts > 0 due to the 'return' in the else block above
+        yield f'{{"status": "progress", "message": "--- Transitioning to Parallel Extraction (Steps 2-5) ---"}}'
+            # Reuse Step 8 logic by calling recursively or just inline
+            # For simplicity, I'll yield from process_programs_extraction(university_name, 8)
+            # But we need to handle the 'complete' status of Step 8 carefully
+        # Phase 2 Step 8 logic
+        step8_gen = process_programs_extraction(university_name, 8)
+        for update in step8_gen:
+            try:
+                data = json.loads(update)
+                if data.get('status') == 'complete':
+                    if 'files' in data:
+                        accumulated_files.update(data['files'])
+                    # Don't yield 'complete' yet
+                    yield f'{{"status": "progress", "message": "Parallel extraction completed. Finalizing..."}}'
+                else:
+                    yield update
+            except:
+                yield update
+
+        yield json.dumps({
+            "status": "complete", 
+            "message": "Automated combined flow completed successfully.", 
+            "files": accumulated_files
+        })
+        return
+
     if step not in steps_map:
         yield f'{{"status": "error", "message": "Unknown step: {step}"}}'
         return
@@ -203,9 +305,9 @@ def process_programs_extraction(university_name, step):
     # Execute Graduate Script
     yield f'{{"status": "progress", "message": "--- Processing Graduate Programs ---"}}'
     try:
-        if step == 6: # Merge script doesn't take university_name
+        if step == 6: # Standardize step
             if hasattr(grad_module, 'run'):
-                for update in grad_module.run():
+                for update in grad_module.run(university_name):
                     try:
                         data = json.loads(update)
                         if data.get('status') == 'complete':
@@ -243,9 +345,9 @@ def process_programs_extraction(university_name, step):
     if undergrad_module:
         yield f'{{"status": "progress", "message": "--- Processing Undergraduate Programs ---"}}'
         try:
-             if step == 6: # Merge script doesn't take university_name
+             if step == 6: # Standardize step
                  if hasattr(undergrad_module, 'run'):
-                    for update in undergrad_module.run():
+                    for update in undergrad_module.run(university_name):
                         try:
                             data = json.loads(update)
                             if data.get('status') == 'complete':
@@ -283,7 +385,7 @@ def process_programs_extraction(university_name, step):
     if step == 6:
         yield f'{{"status": "progress", "message": "--- Running Final Merge ---"}}'
         try:
-            for update in merge_all.run():
+            for update in merge_all.run(university_name):
                 try:
                     data = json.loads(update)
                     if data.get('status') == 'complete':
