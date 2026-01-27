@@ -46,7 +46,6 @@ COLUMN_MAPPING = {
     'Term': 'Term',
     'LiveDate': 'LiveDate',
     'DeadlineDate': 'DeadlineDate',
-    'Fees': 'CollegeApplicationFee', # Mapping extracted 'Fees' (which are usually app fees) to CollegeApplicationFee
     'Tuition fee': 'Fees',           # Mapping extracted 'Tuition fee' -> Fees column
     'AverageScholarshipAmount': 'AverageScholarshipAmount',
     'CostPerCredit': 'CostPerCredit',
@@ -179,6 +178,16 @@ def run():
     # 5. Select and Reorder Columns
     # Only keep columns that are in TARGET_COLUMNS
     final_df = final_df[TARGET_COLUMNS]
+    #qs_ranking set to null for entire column 
+    final_df['QsWorldRanking'] = ""
+    levels_map = {
+        "Doctoral": ["phd", "edd", "dpt", "pharmd", "otd", "doctor"],
+        "Graduate-Certificate": ["certificate", "certification", "cert"]
+    }
+
+    # Determine level logic:
+    # Default to 'Graduate'
+    final_df['Level'] = final_df['ProgramName'].apply(lambda x: next((k for k, v in levels_map.items() if any(keyword in str(x).lower() for keyword in v)), 'Graduate'))
     
     # 6. Save Final CSV
     output_csv_path = os.path.join(output_dir, 'graduate_programs_final.csv')

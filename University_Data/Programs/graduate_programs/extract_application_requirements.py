@@ -77,13 +77,13 @@ def extract_application_requirements(program_name, program_url, institute_url):
         f"2. StatementOfPurpose: Is a statement of purpose required? Return 'Required', 'Optional', 'Not Required', or null.\n"
         f"3. Requirements: General application requirements text/description. Return null if not specified.\n"
         f"4. WritingSample: Is a writing sample required? Return 'Required', 'Optional', 'Not Required', or null.\n"
-        f"5. IsAnalyticalNotRequired: MANDATORY BOOLEAN. Is analytical writing section not required? Return true or false.\n"
-        f"6. IsAnalyticalOptional: MANDATORY BOOLEAN. Is analytical writing section optional? Return true or false.\n"
-        f"7. IsStemProgram: MANDATORY BOOLEAN. Is this a STEM program? Return true or false.\n"
-        f"8. IsACTRequired: MANDATORY BOOLEAN. Is ACT required to apply for {program_name}? Return true or false.\n"
-        f"9. IsSATRequired: MANDATORY BOOLEAN. Is SAT required to apply for {program_name}? Return true or false.\n"
-        f"10. MinimumACTScore: Minimum required ACT score required to apply for {program_name} as a number. Return null if not specified.\n"
-        f"11. MinimumSATScore: Minimum required SAT score required to apply for {program_name} as a number. Return null if not specified.\n\n"
+        f"5. IsAnalyticalNotRequired: MANDATORY BOOLEAN. Is analytical scores required to apply for this {program_name}? Return true or false.\n"
+        f"6. IsAnalyticalOptional: MANDATORY BOOLEAN. Is analytical scores optional to apply for this {program_name}? Return true or false.\n"
+        f"7. IsStemProgram: MANDATORY BOOLEAN. Is this a STEM(Science, Technology, Engineering, and Mathematics) program? Return true or false.\n"
+        f"8. IsACTRequired: MANDATORY BOOLEAN. Return False.\n"
+        f"9. IsSATRequired: MANDATORY BOOLEAN. Return False.\n"
+        f"10. MinimumACTScore: Return null.\n"
+        f"11. MinimumSATScore: Return null.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {program_url} or other official {university_name} pages\n"
         f"- Extract information SPECIFIC to this program '{program_name}'\n"
@@ -127,13 +127,13 @@ def extract_application_requirements(program_name, program_url, institute_url):
         f"2. StatementOfPurpose: Is a statement of purpose generally required? Return 'Required', 'Optional', 'Not Required', or null.\n"
         f"3. Requirements: General application requirements text/description. Return null if not specified.\n"
         f"4. WritingSample: Is a writing sample generally required? Return 'Required', 'Optional', 'Not Required', or null.\n"
-        f"5. IsAnalyticalNotRequired: Boolean (true/false) - Is analytical writing section not required? Return true, false, or null.\n"
-        f"6. IsAnalyticalOptional: Boolean (true/false) - Is analytical writing section optional? Return true, false, or null.\n"
-        f"7. IsStemProgram: Boolean (true/false) - This field should be null at institute level (program-specific). Return null.\n"
-        f"8. IsACTRequired: Boolean (true/false) - Is ACT required? Return true, false, or null.\n"
-        f"9. IsSATRequired: Boolean (true/false) - Is SAT required? Return true, false, or null.\n"
-        f"10. MinimumACTScore: Minimum required ACT  required to apply for {university_name} as a number. Return null if not specified.\n"
-        f"11. MinimumSATScore: Minimum required SAT score as a number. Return null if not specified.\n\n"
+        f"5. IsAnalyticalNotRequired: MANDATORY BOOLEAN. Is analytical scores generally required to apply for graduate programs? Return true or false.\n"
+        f"6. IsAnalyticalOptional: MANDATORY BOOLEAN. Is analytical scores generally optional to apply for graduate programs? Return true or false.\n"
+        f"7. IsStemProgram: MANDATORY BOOLEAN. Return False.\n"
+        f"8. IsACTRequired: MANDATORY BOOLEAN. Return False.\n"
+        f"9. IsSATRequired: MANDATORY BOOLEAN. Return False.\n"
+        f"10. MinimumACTScore: Return null.\n"
+        f"11. MinimumSATScore: Return null.\n\n"
         f"CRITICAL REQUIREMENTS:\n"
         f"- All data must be extracted ONLY from {institute_url} or other official {university_name} pages\n"
         f"- Extract GENERAL/INSTITUTE-LEVEL requirements (not program-specific)\n"
@@ -155,6 +155,17 @@ def extract_application_requirements(program_name, program_url, institute_url):
         if parsed_data and isinstance(parsed_data, dict):
             parsed_data['extraction_level'] = 'institute'
             return parsed_data
+            #Setting a few default values for the parsed_data like ['IsAnalyticalNotRequired', 'IsAnalyticalOptional', 'IsRecommendationSystemOpted', 'IsStemProgram', 'IsACTRequired', 'IsSATRequired', 'MinimumACTScore', 'MinimumSATScore']
+            
+            parsed_data['IsAnalyticalNotRequired'] = True
+            parsed_data['IsAnalyticalOptional'] = True
+            parsed_data['IsRecommendationSystemOpted'] = False
+            parsed_data['IsACTRequired'] = False
+            parsed_data['IsSATRequired'] = False
+            parsed_data['MinimumACTScore'] = None
+            parsed_data['MinimumSATScore'] = None
+            return parsed_data
+            
     except Exception as e:
         print(f"  Error extracting from institute level: {str(e)}")
     

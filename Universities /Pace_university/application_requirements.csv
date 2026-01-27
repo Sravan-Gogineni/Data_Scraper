@@ -1,0 +1,180 @@
+Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsRecommendationSystemOpted,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,Program name,Program Page url,error
+Required,Required,"In addition to the University graduate admission requirements, the following are required for the Lubin School of Business:
+
+- Completion of the online application form
+- Official transcripts from all post-secondary institutions attended
+- GMAT/GRE is not required.
+- Resume
+- Statement of Purpose
+- Two letters of recommendation
+- $70 non-refundable application fee",Not Required,True,False,False,True,False,False,,,program,Master of Science in Accounting Data Analytics and Technology,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"In addition to the university-wide application and admission requirements, applicants to the Public Accounting, CPA Prep MBA must have completed an undergraduate degree in business with a major in accounting. Students without this background will be referred to the MS in Accounting program. Exceptions to this policy may be made on a case-by-case basis.
+
+The GMAT/GRE is required for admission; however, the GMAT/GRE may be waived for admission if certain criteria are met. Please see the Lubin Graduate Admission page for more details.",Not Required,False,False,False,True,False,False,,,program,"Master of Business Administration in Accounting, Public Accounting, CPA Prep",https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"In addition to the university-wide requirements, the MS in Accounting requires the following:
+
+1. A completed application form.
+2. A non-refundable application fee.
+3. A current resume.
+4. A personal statement (500 words or less) that describes the applicant’s reason for pursuing this graduate degree.
+5. Official transcripts from all post-secondary schools attended.
+6. Two letters of recommendation.
+7. GMAT/GRE test scores are optional. Applicants who don’t submit test scores will not be penalized. Applicants who feel their GMAT/GRE scores will strengthen their application are welcome to submit them.
+8. International applicants must also submit an English language proficiency test score.",Not Required,True,True,,False,False,False,,,program,"Master of Science in Accounting, Public Accounting, CPA Prep",https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master of Science in Applied AI,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Business Administration in Arts and Entertainment Management,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"In addition to the University graduate admission requirements, the following are required:
+
+One letter of recommendation is required
+Resume
+Personal statement",Not Required,True,False,,False,False,False,,,program,Master of Science in Arts and Entertainment Management,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master of Science in Artificial Intelligence,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Completed online application; Application fee; A Statement of Purpose, approximately 500 words, describing your reasons for applying to the MS in Biochemistry and Molecular Biology, your professional goals and aspirations, and how this program will help you achieve them; Two letters of recommendation, at least one academic; Official transcripts from all post-secondary institutions attended; Resume/CV; A bachelor’s degree in chemistry, biology or a related field with a GPA of 3.0 or higher from an accredited institution. Students with a GPA lower than 3.0 may be considered for admission on a conditional basis; Evidence of having completed the following college-level courses with a grade of B or better: Two semesters of general chemistry with lab, Two semesters of organic chemistry with lab, Two semesters of general biology with lab, One semester of biochemistry or molecular biology, One semester of physics, One semester of calculus.",Not Required,True,False,True,True,False,False,,,program,Master of Science in Biochemistry and Molecular Biology,https://www.pace.edu/program/biochemistry-and-molecular-biology-ms,
+,,,,,,,,,,,,error,Master of Business Administration/Juris Doctor in Business Administration,https://prelaw.wisc.edu/wordpress/wp-content/uploads/2015/04/Dual-JD-Programs1.xlsx,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"The Office of Graduate Admission requires the following for the MBA in Business Analytics program: Completed online application; Resume; Official transcripts from all post-secondary institutions attended; One letter of recommendation; Personal Statement; Official GMAT/GRE scores: GMAT/GRE waivers are available for qualified candidates.; $70 non-refundable application fee; Official TOEFL, IELTS, or Pearson PTE academic scores are required of all applicants who did not complete their undergraduate or a graduate degree in the United States.",,False,False,False,True,False,False,,,program,Master of Business Administration in Business Analytics,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,"Master of Business Administration in Business, General",https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"A bachelor's degree in psychology from an accredited institution. A master's degree in psychology or a related field (e.g., mental health counseling) is encouraged but not required. A minimum undergraduate GPA of 3.2 is preferred. A minimum of 18 undergraduate credits in psychology, including statistics and research methods. Graduate Record Examination (GRE) scores from within the last five years. *Please note that the GREs are NOT required for the application for the Fall 2024 admissions cycle.* Three letters of recommendation from individuals familiar with your academic and/or clinical work. A personal statement describing your interests and goals in clinical psychology, and why our program would be a good fit for you. Please indicate faculty you are interested in working with. A curriculum vitae (CV). An interview.",,True,False,,False,False,False,,,program,"Doctor of Philosophy in Clinical Psychology, Health Care Emphasis",https://catalog.pace.edu/graduate/schools/dyson-college-arts-sciences/dyson-graduate-programs-curriculum/doctoral-programs/,
+Required,Required,"In addition to the University graduate admission requirements, the following are required for the MA in Communications and Digital Media program:
+
+- A personal statement (approximately 500 words) addressing the following question: In the field of Communications and Digital Media, it is essential to be a strong storyteller. What is your story? Discuss your personal and professional goals, and how the MA in Communications and Digital Media at Pace University will help you to achieve those goals.
+- One letter of recommendation. Recommenders who can speak to a candidate's academic and/or professional potential are preferred.
+- Resume.",Not Required,True,False,True,False,False,False,,,program,Master of Arts in Communications and Digital Media,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master of Science in Computer Science,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"A completed application for admission to the Seidenberg School of Computer Science and Information Systems.
+Application fee (non-refundable).
+Evidence of a master's degree in computer science or a closely related field from an accredited institution. In some cases, a student with a BS in computer science and evidence of a strong research background may be admitted.
+Official transcripts from all post-secondary institutions attended.
+A minimum undergraduate and graduate grade point average (GPA) of 3.5 on a 4.0 scale.
+Graduate Record Examination (GRE) scores.
+A resume.
+Two letters of recommendation from individuals who can comment on the applicant’s potential for success in a doctoral program.
+A statement of purpose (approximately 500 words) describing the applicant’s academic and professional background, and goals in seeking a doctoral degree.
+For international students whose native language is not English, a minimum Test of English as a Foreign Language (TOEFL) score of 100 on the internet-based exam or a minimum International English Language Testing System (IELTS) of 7.5 is required.
+An interview with the Director of the PhD Program is required. The program director may also ask the student to provide evidence of research and/or software development experience.",Not Required,False,False,False,True,False,False,,,program,Doctor of Philosophy in Computer Science,https://catalog.pace.edu/graduate/schools/seidenberg-school-computer-science-information-systems/graduate-degree-programs/doctoral-programs/computer-science-phd/computer-science-phd.pdf,
+Required,Required,"In addition to University-wide admission requirements, applicants to this Seidenberg School graduate program are required to submit the following:
+- A current resume.
+- Two letters of recommendation.
+- A personal statement that describes the applicant’s reason for pursuing this graduate degree.
+- Official transcripts from all post-secondary institutions attended.
+- GRE is not required.
+- Minimum undergraduate GPA of 3.0",Not Required,True,False,False,True,False,False,,,program,Master of Science in Cybersecurity,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master of Science in Data Science,https://www.pace.edu/program/data-science-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Arts in Homeland Security,https://online.pace.edu/articles/online-learning/top-10-online-programs-military-service-members-veterans/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"In addition to general university admission requirements, applicants must submit the following: a completed online application and application fee, two letters of recommendation, official college/university transcripts from all institutions attended, a resume, and a personal statement. The Master of Science in Education in Literacy Specialist is designed for candidates who hold initial certification in a related field. Candidates must show evidence of having completed coursework or its equivalent in the following four areas: Child/Adolescent Development, Foundations of Education, Teaching Students with Special Needs, and Literacy. GRE/GMAT scores are not required for most School of Education graduate programs.",Not Required,True,False,,False,False,False,,,program,"Master of Science in Education, Literacy Specialist",https://catalog.pace.edu/graduate/schools/school-education/graduate-degree-programs/masters-science-education-msed/literacy-specialist-msed/literacy-specialist-msed_text.pdf,
+,,,,,,,,,,,,error,Master of Science in Physician Assistant Studies Completion Program,"https://www.google.com/search?q=time+in+New+York,+NY,+US","Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"In addition to University-wide graduate admission requirements, applicants to the Psychiatric Mental Health Nurse Practitioner Program must also submit/meet the following: A current New York State license as a registered professional nurse. A Bachelor of Science degree with a major in nursing from a CCNE or ACEN accredited program. Official transcripts from all post-secondary schools attended. A minimum cumulative GPA of 3.0. Two letters of recommendation, one from a faculty member and one from a current employer/supervisor. A resume. A personal statement. Successful completion of an undergraduate statistics course with a minimum grade of a C. At least one year of full-time work experience as a registered nurse in a medical/surgical, psychiatric, or pediatric setting within the last 5 years is required. An interview with the program director or faculty member may be requested.",,True,False,True,False,False,False,,,program,Master of Science in Psychiatric Mental Health Nurse Practitioner Program,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master of Public Administration in Public Administration,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Public Health in Public Health,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Science in Publishing,https://www.pace.edu/program/publishing-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,Applicants to the MS in Software Development and Engineering are required to have a Bachelor’s degree in Computer Science or a related STEM discipline from an accredited institution with a GPA of 3.0 or higher. Applicants must also submit the following: Online application; Application fee; Transcripts from all prior institutions; Resume; Personal statement; Two letters of recommendation; Official GRE scores (optional); Proof of English proficiency (for international students).,Not Required,True,True,False,True,False,False,,,program,Master of Science in Software Development and Engineering,https://www.pace.edu/program/software-development-and-engineering-ms,
+Not Required,Required,"A master's degree from an accredited institution of higher education with a GPA of 3.0 or higher.
+A New York State initial, professional, or permanent teaching certificate in any area.
+An on-site writing sample in both English and in the target language of instruction (Spanish, Chinese, or Haitian Creole).
+An interview with program faculty to be conducted in both English and the target language of instruction.
+A personal statement in English describing your interest in bilingual education.",Required,True,False,False,False,False,False,,,program,Advanced Certificate in Bilingual Education,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"Applicants to the Early Childhood Extension Certification program must hold initial, provisional, permanent, or professional certification in one of the following areas:
+
+- Childhood Education (Grades 1-6)
+- Literacy (Birth-Grade 6)
+- Students with Disabilities (Birth-Grade 2)
+- Students with Disabilities (Grades 1-6)
+
+In addition, applicants must submit:
+- A completed online application
+- A non-refundable application fee
+- Two letters of recommendation
+- A resume listing your chronological employment history
+- A personal statement (300-500 words) describing your purpose and goals in undertaking graduate study
+- Official college transcripts from all colleges and/or universities attended",Not Required,True,False,,False,False,False,,,program,Advanced Certificate in Early Childhood Extension Certification (Birth-Grade 2),https://catalog.pace.edu/graduate/schools/school-education/graduate-degree-programs/advanced-certificates/early-childhood-extension-certification/,
+,,,,,,,,,,,,error,Certificate of Advanced Graduate Study in Integrated Instruction for Literacy and Technology,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Advanced Certificate in Middle School Extension Certification,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"In addition to University requirements, applicants to the Psychiatric Mental Health Nurse Practitioner (PMHNP) program must provide the following:
+
+1. Master's degree in nursing from a CCNE or ACEN accredited program from a college or university.
+2. Current professional registered nurse license and current registration in New York State.
+3. Resume or curriculum vitae.
+4. Personal Statement.
+5. Two letters of recommendation, one professional and one academic.
+6. A grade point average of 3.0 or better is preferred.
+7. Official transcripts from all post-secondary institutions attended.
+8. TOEFL or IELTS scores for applicants for whom English is a second language.
+9. A personal interview may be required.",Not Required,True,False,False,False,False,False,,,program,Psychiatric Mental Health Nurse Practitioner (PMHNP) Certificate,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Advanced Certificate in Security and Information Assurance,https://catalog.pace.edu/graduate/schools/seidenberg-school-computer-science-information-systems/graduate-degree-programs/graduate-certificate-programs/secure-software-and-information-engineering-certificate/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Applicants to the Advanced Certificate in Software Engineering Development are required to hold a bachelor's degree in computer science from an accredited institution. Applicants who do not have a bachelor’s degree in computer science, but have a bachelor’s degree in another field with a strong academic record (GPA of 3.0 or better) and substantial professional experience as a software developer, will also be considered for admission. All applicants must submit: Completed online application form, Application fee, Transcripts from all post-secondary schools attended, Resume, Statement of Purpose. In addition, all applicants must submit a separate departmental application to the Seidenberg School of Computer Science and Information Systems.",,True,False,False,False,False,False,,,program,Advanced Certificate in Software Engineering Development,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"In addition to the University graduate admission requirements, the School of Education requires the following for admission to this program:
+
+- Master's degree in education from an accredited university.
+- New York State initial or professional teacher certification in Childhood Education (grades 1-6) or Adolescent Education (grades 7-12) in a content area.
+- A minimum cumulative graduate GPA of 3.0.
+- Two letters of recommendation.
+- A statement of purpose.
+- An individual interview.
+- Resume",Not Required,True,False,,False,False,False,,,program,Certificate of Advanced Graduate Study in Special Education: Teaching Students with Disabilities (All Grades),https://catalog.pace.edu/graduate/schools/school-education/,
+,,,,,,,,,,,,error,Certificate of Advanced Graduate Study in Teaching English as a Second Language (TESOL),https://catalog.pace.edu/graduate/schools/school-education/graduate-degree-programs/advanced-certificates/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"In addition to the University requirements, applicants to all MBA and MS programs must submit a current resume, an essay/statement of purpose, two letters of recommendation, and an official GMAT or GRE score report. GMAT/GRE is optional for candidates with an undergraduate GPA of 3.2 or above from an accredited U.S. institution and for other qualified applicants.",,False,True,True,True,False,False,,,program,Master of Business Administration in Corporate Finance,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master of Science in Health Informatics,https://catalog.pace.edu/graduate/programs-a-z/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Science in Human Centered Design,http://media.pace.edu/catalog/pace-university-2021-2022-graduate-catalog.pdf,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Science in Information Systems,https://catalog.pace.edu/graduate/schools/seidenberg-school-computer-science-information-systems/graduate-degree-programs/masters-science-programs/information-systems-ms/information-systems-ms.pdf,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"In addition to the University graduate admission requirements, the following are required:
+
+A bachelor’s degree from an accredited institution, with a preferred GPA of 3.0 or higher.
+Official transcripts from all post-secondary institutions attended.
+A current resume.
+A personal statement that addresses the applicant’s reason for pursuing this degree and their career goals.
+Two letters of recommendation.
+GRE general test scores (optional).
+For international applicants, an official TOEFL, IELTS, or Pearson PTE academic score is required. For minimum score requirements and country exemptions, please visit the International Graduate Admission webpage.",,False,True,False,True,False,False,,,program,Master of Science in Applied Quantitative Economic Analysis and Policy,https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master in Bilingual School Psychology,https://catalog.pace.edu/graduate/schools/dyson-college-arts-sciences/dyson-graduate-programs-curriculum/masters-science/school-psychology-specialization-bilingual-school-psychology-ms-ed/school-psychology-specialization-bilingual-school-psychology-ms-ed_text.pdf,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"In addition to the University graduate admission requirements, the School of Education requires the following for admission to this program: A current resume. A personal statement, approximately 250-500 words, that describes your reasons for pursuing the degree. Two letters of recommendation. An official transcript from each college or university attended. A bachelor's degree or higher from an accredited institution. A minimum undergraduate GPA of 3.0. A major of at least 30 credits in a liberal art or science. Completion of the liberal arts and science prerequisite coursework (see below).",Not Required,True,False,False,False,False,False,,,program,Master in Childhood Education,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"Admission to all School of Education graduate programs requires the following: a completed online application form, a nonrefundable application fee, official transcripts from all post-secondary institutions attended, two letters of recommendation, a personal statement (500 words), and a resume. Official Graduate Record Examination (GRE) scores are required if applicable.",Not Required,True,False,,False,False,False,,,program,Master in Childhood Education and TESOL,https://catalog.pace.edu/graduate/schools/school-education/school-education.pdf,
+Required,Required,"General Admission Requirements for all School of Education Master’s and Advanced Certificate Programs include:
+
+1. A completed online application.
+2. A non-refundable application fee.
+3. A bachelor’s degree from an accredited institution with a minimum cumulative GPA of 3.0. A copy of a transcript from each college or university attended is required. Official transcripts must be submitted directly from all previously attended institutions prior to enrollment.
+4. Two letters of recommendation from academic or professional sources.
+5. A personal statement (300-500 words).
+6. A professional resume.
+7. Successful completion of all prerequisite coursework.",Not Required,True,False,False,False,False,False,,,program,Master in Childhood and Bilingual Education,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"The general requirements for admission to graduate study at Pace University are listed in the Graduate Admission section of this catalog. In addition, the following is required for admission to the Master of Science degree program in Mental Health Counseling:
+
+1. A completed application form and fee.
+2. Official transcripts from all post-secondary schools attended. An undergraduate scholastic average of 3.0 or better is required.
+3. Bachelor’s degree in psychology or a related field (e.g., sociology, anthropology, etc.). Eighteen credits of psychology coursework are a prerequisite for admission to the program (undergraduate or graduate credits can be used). These credits must include Introduction to Psychology, Abnormal Psychology (or Psychopathology), Statistics, and Research Methods. Any missing prerequisites can be taken upon admission to the program at the undergraduate level, but will not count towards the graduate degree.
+4. Two letters of recommendation from individuals familiar with the applicant’s academic or professional abilities.
+5. A personal statement of 500-1000 words describing the applicant's reasons for applying to the MS in Mental Health Counseling Program, as well as career goals.
+6. A resume detailing education and work experience.
+7. Standardized test scores (GRE General Test: verbal, quantitative, and writing scores) are not required for admission.
+8. For International students whose native language is not English, a minimum TOEFL score of 88 on the Internet-based test is required.
+9. An interview may be required.",Not Required,True,False,False,False,False,False,,,program,Master of Science in Mental Health Counseling,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"A completed online application, a $70 non-refundable application fee, official transcripts from each college or university attended, a professional/academic resume, a personal statement (300-500 words), and two letters of recommendation are required. A minimum undergraduate GPA of 3.0 is also required. Standardized tests (i.e. GRE) are not required for School of Education graduate program applicants.",Not Required,True,False,False,False,False,False,,,program,Master in Adolescent Education,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"In addition to the University’s general admission procedures, applicants to the Adolescent Education and Adolescent Special Education Generalist (Grades 7-12) MSEd program are required to submit the following: A bachelor’s degree from an accredited institution with a major or concentration of 30 credits in one of the content areas listed above. A minimum undergraduate GPA of 3.0. Two letters of recommendation. A personal statement which describes the applicant’s interest in the program. A current resume. A copy of the applicant’s initial teaching certificate.",Not Required,True,False,False,False,False,False,,,program,Master in Adolescent and Adolescent Special Education,https://www.pace.edu/registrar/registration/academic-catalogs,
+Required,Required,"The following requirements must be met to be considered for admission to the School of Education:
+- A completed Pace University graduate application form.
+- A non-refundable application fee.
+- A bachelor’s degree from an accredited institution, with a liberal arts and sciences major or concentration of at least 30 credits.
+- Two letters of recommendation.
+- A resume.
+- A personal statement.
+- Official transcripts from all post-secondary institutions attended must be submitted. Transcripts must be official and sent directly from the institution to Pace University.
+- A minimum undergraduate grade point average (GPA) of 3.0 on a 4.0 scale. Applicants with a GPA lower than 3.0 may be considered for admission on a conditional basis.
+- Most programs within the School of Education do not require standardized tests (e.g., GRE, GMAT).
+- Some programs may require an audition or an interview.",,True,False,,False,False,False,,,program,Master in Childhood Education and Special Education,https://catalog.pace.edu/graduate/schools/school-education/graduate-degree-programs/master-science-teachers-mst/childhood-childhood-special-education-mst/,
+Required,Required,"In addition to the University graduate admission requirements, the School of Education requires the following for admission to this program:
+
+*   An essay of at least 500 words describing your reasons for wanting to enter the teaching profession at the early childhood level, in particular.
+*   Two letters of recommendation. At least one must be an academic reference commenting on your potential for success in a graduate program.
+*   A resume listing all of your work experience, including any that is related to education or working with children.",Not Required,True,False,False,False,False,False,,,program,Master in Early Childhood Development and Learning,https://catalog.pace.edu/graduate/programs-a-z/,
+Required,Required,"A completed online application is required.
+
+Official transcripts from all post-secondary institutions attended must be submitted from each institution. Pace University accepts official electronic transcripts from secure electronic transcript providers. All other transcripts must be submitted in a sealed envelope from the institution.
+
+A current resume or curriculum vitae.
+
+Two letters of recommendation from academic or professional sources. We highly recommend you use the electronic letter of recommendation service available through the online application.
+
+A 500-word personal statement outlining the applicant’s interest in the program and professional goals.
+
+Official TOEFL, IELTS, or PTE academic scores are required of all applicants who are not citizens of a country where English is the official language. Minimum scores are as follows: 88 on the iBT, 7.0 on the IELTS, 61 on the PTE.",Not Required,True,False,False,False,False,False,,,program,"Master in Early Childhood Development, Learning and Intervention",https://catalog.pace.edu/graduate/programs-a-z/,
+,,,,,,,,,,,,error,Master of Arts in Higher Education Administration and Student Affairs,http://media.pace.edu/catalog/pace-university-2023-2024-graduate-catalog.pdf,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"General requirements for Master's Programs in the School of Education include: a completed online application and a $70 application fee; two letters of recommendation; a personal statement/essay; a professional resume/CV; official transcripts from all post-secondary institutions attended. In addition to these University requirements, applicants for the Literacy Specialist and TESOL MSED program must also provide the following: a minimum 3.0 GPA and an initial teaching certificate.",Not Required,True,False,False,False,False,False,,,program,Literacy Specialist and TESOL (Teaching English to Speakers of Other Languages),https://catalog.pace.edu/graduate/schools/school-education/graduate-degree-programs/masters-science-education-msed/literacy-specialist-tesol-msed/,

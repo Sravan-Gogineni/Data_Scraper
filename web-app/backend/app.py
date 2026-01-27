@@ -205,4 +205,4 @@ def extract_programs_data():
     return Response(stream_with_context(generate()), mimetype='text/event-stream')
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=False, port=5002)

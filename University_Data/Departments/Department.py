@@ -81,7 +81,7 @@ def process_department_extraction(university_name):
         f"   Extract the complete email address. If not available, return null.\n"
         f"4. PhoneNumber: The primary contact phone number for admissions. Include area code and format as provided on the website. "
         f"   If not available, return null.\n"
-        f"5. PhoneType: The type of phone number (e.g., 'Admissions', 'Main', 'Office', etc.). "
+        f"5. PhoneType: The type of phone number (e.g., 'Mobile', 'Landline', etc.). "
         f"   If not specified, return null.\n"
         f"6. AdmissionUrl: The URL specifically for admissions-related information and application process. "
         f"   Must be from the {university_name} domain only. If not available, return null.\n"

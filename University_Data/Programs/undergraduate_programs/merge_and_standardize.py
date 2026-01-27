@@ -8,7 +8,7 @@ TARGET_COLUMNS = [
     'TermCode', 'LiveDate', 'DeadlineDate', 'Resume', 'StatementOfPurpose', 'GreOrGmat',
     'EnglishScore', 'Requirements', 'WritingSample', 'CollegeId', 'IsAnalyticalNotRequired',
     'IsAnalyticalOptional', 'IsDuoLingoRequired', 'IsELSRequired', 'IsGMATOrGreRequired',
-    'IsGMATRequired', 'IsGreRequired', 'IsIELTSRequired', 'IsLSATRequired', 'IsMATRequired',
+    'IsGMATRequired', 'IsGRERequired', 'IsIELTSRequired', 'IsLSATRequired', 'IsMATRequired',
     'IsMCATRequired', 'IsPTERequired', 'IsTOEFLIBRequired', 'IsTOEFLPBTRequired',
     'IsEnglishNotRequired', 'IsEnglishOptional', 'AcademicYear', 'AlternateProgram',
     'ApplicationType', 'Department', 'Fees', 'IsAvailable', 'ProgramType',
@@ -61,7 +61,7 @@ COLUMN_MAPPING = {
     'IsELSRequired': 'IsELSRequired',
     'IsGMATOrGreRequired': 'IsGMATOrGreRequired',
     'IsGMATRequired': 'IsGMATRequired',
-    'IsGreRequired': 'IsGreRequired',
+    'IsGRERequired': 'IsGRERequired',
     'IsIELTSRequired': 'IsIELTSRequired',
     'IsLSATRequired': 'IsLSATRequired',
     'IsMATRequired': 'IsMATRequired',
@@ -180,6 +180,20 @@ def run():
     # Only keep columns that are in TARGET_COLUMNS
     final_df = final_df[TARGET_COLUMNS]
     
+    # Define keywords for undergraduate levels
+    # Using lowercase for case-insensitive matching
+    levels_map = {
+        "Undergraduate-Certificate": ["certificate", "certification", "cert"],
+        "Associate": ["associate", "aa", "as", "aas"],
+         
+    }
+
+    # Determine level logic:
+    # Default to 'Undergraduate' (which covers general Bachelors if not explicitly matched, or we can default to Bachelor)
+    # The user asked for specific logic for certs, but we should make it robust for undergrad.
+    final_df['Level'] = final_df['ProgramName'].apply(lambda x: next((k for k, v in levels_map.items() if any(keyword in str(x).lower() for keyword in v)), 'Undergraduate'))
+
+
     # 6. Save Final CSV
     output_csv_path = os.path.join(output_dir, 'undergraduate_programs_final.csv')
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')

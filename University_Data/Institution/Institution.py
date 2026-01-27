@@ -266,8 +266,10 @@ def get_type_of_institution(website_url, university_name):
 
 def get_student_faculty(website_url, university_name):
     prompt = (
-        f"What is the student faculty ratio for the university {university_name}, {website_url}? "
-        "Return only the student faculty, no other text. "
+        f"What is the student faculty ratio for the university {university_name}? "
+        "Return only the student faculty ration, no other text. "
+        "Example: 15:1, 16:1, etc. "
+        "No extra text or explanation, just the student faculty ratio. "
         "No fabrication or guessing, just the student faculty ratio. "
         "Only if the student faculty ratio is explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the student faculty ratio is explicitly stated."
@@ -552,9 +554,9 @@ def get_admission_office_url(website_url, university_name):
 
 def get_virtual_tour_url(website_url, university_name):
     prompt = (
-        f"What is the virtual tour URL for the university {university_name}, {website_url}? "
+        f"What is the virtual tour URL for the university {university_name}? "
+        "Identify the url that is routed to the virtual tour page of {university_name} and not to the home page of the website"
         "Return only the virtual tour URL, no other text. "
-        "The url should be routed to the virtual tour page of {university_name} and not to the home page of the website"
         "if the direct url to the virtual tour page is not found then return the url of the page where the virtual tour is mentioned"
         "No fabrication or guessing, just the virtual tour URL. "
         "Only if the virtual tour URL is explicitly stated in the website, otherwise return null. "
@@ -591,9 +593,11 @@ def get_test_policy(website_url, university_name):
     prompt = (
         f"Is {university_name} a test optional university? {website_url}? "
         "If ACT/SAT  scores submission is optional for the university, return 'Test Optional'. "
-        "If ACT/SAT  scores submission is required for the university, return 'null. "
+        "If ACT/SAT  scores submission is required for the university, return 'Test Required'. "
         "Return only the test policy, no other text. "
         "No fabrication or guessing, just a short line of text not a long paragraph. "
+        "Do not return [Cite] in the return response."
+        "The answers should be either 'Test Optional' or 'Test Required'"
         "Only return the test policy if it is explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the test policy is explicitly stated."
     )
@@ -630,36 +634,27 @@ def get_personal_essay(website_url, university_name):
     prompt = (
         f"Investigate the undergraduate admissions requirements for {university_name} at {website_url}. "
         "I am looking specifically for 'Personal Essays' or 'Personal Statements'.\n\n"
-        
-        "### Task:\n"
-        "Identify if the school requires a narrative-style essay that focuses on character, "
-        "personal growth, or identity. Do NOT include Statement of Purpose (SOP) "
-        "requirements that focus on academic research or career goals.\n\n"
-        
-        "### Instructions:\n"
-        "1. Check if they use the Common App Personal Essay or their own unique 'Personal Statement' prompt.\n"
-        "2. If found, return 'Required'. If explicitly not needed, return 'Not Required'. Otherwise return 'null'.\n"
-        "3. Look for phrases like: 'Tell us your story', 'Personal qualities', 'Background and identity'.\n"
-        "4. Provide the exact URL and a direct quote of the prompt if available.\n\n"
-        
-        "### Format:\n"
-        "Type: [Personal Essay / Personal Statement]\n"
-        "Status: [Required / Not Required / null]\n"
-        "Prompt: [Insert the actual essay question here]\n"
-        "Evidence_URL: [Source URL]"
+        "Return only  Required or Not Required or null. "
+        "No fabrication or guessing, just the personal essay requirements. "
+        "Only if the personal essay requirements are explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the personal essay requirements are explicitly stated."
+        "Critical: Except Required or Not Required or null, do not return any other text."
+       
     )
     return generate_text_safe(prompt)
 
 def get_writing_sample(website_url, university_name):
     prompt = (
-        f"Does applying to the university {university_name}, {website_url} require a writing sample? "
+        f"Does applying to the university {university_name}, {website_url} require a writing sample to submit as part of the application? "
         "If yes, return Required. if not, return Not Required. no extra text "
         "No fabrication or guessing, just the writing sample requirements. "
         "Only if the writing sample requirements are explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the writing sample requirements are explicitly stated."
+        "Critical: Except Required or Not Required or null, do not return any other text."
     )
     return generate_text_safe(prompt)
 
+"""
 def get_additional_information(website_url, university_name):
     prompt = (
         f"Is there any additional information required to apply to the university {university_name}, {website_url}? "
@@ -669,39 +664,37 @@ def get_additional_information(website_url, university_name):
         "Also provide the evidence for your answer with correct URL or page where the additional information requirements are explicitly stated."
     )
     return generate_text_safe(prompt)
-
+"""
 def get_additional_deadlines(website_url, university_name):
     prompt = (
-        f"What are the additional deadlines of {university_name}, {website_url} apart from application deadlines? "
-        "The deadlines can be for scholarships, financial aid, or other deadlines. "
-        "Return only the additional deadlines like scholarships, financial aid, or other deadlines, no other text. "
-        "No fabrication or guessing, just the additional deadlines. "
-        "Only if the additional deadlines are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the additional deadlines are explicitly stated."
+        f"Context: Researching {university_name} using {website_url}.\n"
+        "Task: Identify specific non-application deadlines (scholarships, financial aid, housing, etc.).\n\n"
+        "Constraint 1: Use ONLY information explicitly stated on the provided website. Do not use external knowledge.\n"
+        "Constraint 2: If no specific dates are found, return exactly the word 'null' and nothing else.\n"
+        "Constraint 3: Do not provide introductory text, explanations, or conversational fillers.\n\n"
+        "Format your response exactly as follows:\n"
+        "[Additional Deadlines] [Deadline Name]: [Date], [Deadline Name]: [Date]\n"
+        "[Source URL] [Direct link to the page containing these dates]\n\n"
+        "If no dates found, return: null"
     )
     return generate_text_safe(prompt)
 
 def get_is_multiple_applications_allowed(website_url, university_name):
-    # Ensure we have the most relevant URL to start from
     requirements_url = get_international_students_requirements_url(website_url, university_name)
     
     prompt = (
-        f"Investigate the application policy for {university_name} using {website_url} and {requirements_url}.\n\n"
-        
-        "### Objective:\n"
-        "Determine if a single applicant is permitted to submit applications to more than one program "
-        "(e.g., applying to both Data Science and Computer Science) for the same intake term.\n\n"
-        
-        "### Instructions:\n"
-        "1. Search for keywords: 'multiple applications', 'concurrent applications', 'more than one program'.\n"
-        "2. Identify the specific rule: Is it Allowed, Allowed with restrictions, or Strictly Forbidden?\n"
-        "3. If the website does not explicitly mention this, return 'null'.\n\n"
-        
-        "### Output Format (Strict):\n"
-        "Allowed: [True / False / null]\n"
-        "Restrictions: [e.g., 'Only one per department' or 'Requires separate fees' or 'None']\n"
-        "Evidence_URL: [Exact URL where this rule is listed]\n"
-        "Quote: [The specific sentence from the site]"
+        f"Context: {university_name} application policy ({website_url}, {requirements_url}).\n\n"
+        "Task: Determine if an applicant can apply to more than one program for the same term.\n\n"
+        "Return ONLY a valid JSON object. Do not include any other text, markdown formatting, or explanations.\n"
+        "If the information is not explicitly found, return the JSON with null values.\n\n"
+        "JSON Schema:\n"
+        "{\n"
+        "  \"allowed\": boolean or null,\n"
+        "  \"restrictions\": \"string or null\",\n"
+        "  \"evidence_url\": \"string or null\",\n"
+        "  \"quote\": \"string or null\"\n"
+        "}\n\n"
+        "Constraint: The 'allowed' field must be true, false, or null based on the evidence."
     )
     return generate_text_safe(prompt)
 
@@ -822,7 +815,8 @@ def get_is_ielts_required(website_url, university_name):
 
 def get_is_lsat_required(website_url, university_name):
     prompt = (
-        f"Is LSAT required for the university {university_name}, {website_url}? "
+        f"Is LSAT scores are required to apply for the law school programs at the university {university_name}, {website_url}? "
+        "If LSAT is mandatory then return 'True' otherwise return 'False'. "
         "Return only 'True' or 'False', no other text. "
         "No fabrication or guessing, just True or False. "
         "Only if this information is explicitly stated in the website, otherwise return null. "
@@ -832,11 +826,17 @@ def get_is_lsat_required(website_url, university_name):
 
 def get_is_mat_required(website_url, university_name):
     prompt = (
-        f"Is MAT required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
+        f"Context: Investigating graduate admission requirements for {university_name} using {website_url}.\n\n"
+        "Task: Check if the Miller Analogies Test (MAT) is still listed as a requirement for any program.\n"
+        "Note: The MAT was retired in late 2023. Look for whether the school explicitly accepts old scores or has replaced the requirement.\n\n"
+        "Return ONLY a valid JSON object with the following keys:\n"
+        "{\n"
+        "  \"Allowed\": boolean or null,\n"
+        "  \"status\": \"string (e.g., 'Required', 'Optional', 'Retired/No longer accepted', or 'null')\",\n"
+        "  \"evidence_url\": \"string (The exact URL where this is mentioned)\",\n"
+        "  \"quote\": \"string (The specific text from the site)\"\n"
+        "}\n\n"
+        "Constraint: If the information is missing or the site only mentions GRE/GMAT, set is_required to false and status to 'null'. Do not guess."
     )
     return generate_text_safe(prompt)
 
@@ -889,6 +889,7 @@ def get_tuition_fees(website_url, university_name):
         "Please find the tuition fee for semester or year according to the website for the for both the undergraduate and graduate programs. "
         "The answer should be like this: 'Undergraduate (Full-Time): ~$7,438 per year (Resident), ~$19,318 (Non-Resident/Supplemental Tuition).Graduate (Full-Time): ~$8,872 per year (Resident), ~$18,952 (Non-Resident/Supplemental Tuition).' "
         "Return exactly how the above format is. "
+        "Find for both the Graduate and Undergraduate tuition fees. "
         "No fabrication or guessing, just the answer you find in the website. or it's pages. "
         "Only if the tuition fees are explicitly stated in the website, otherwise return null. "
         "Also provide the evidence for your answer with correct URL or page where the tuition fees are explicitly stated."
@@ -1079,6 +1080,17 @@ def get_term_format(website_url, university_name):
     )
     return generate_text_safe(prompt)
 
+def get_introduction(website_url, university_name):
+    prompt = (
+        f"Find 2-3 paragraphs of introduction for {university_name} at {website_url}? "
+        "The introduction should be about the university, its history, mission, vision, and values. "
+        "Return only the introduction, no other text. "
+        "No fabrication or guessing, just the introduction. "
+        "Only if the introduction is explicitly stated in the website, otherwise return null. "
+        "Also provide the evidence for your answer with correct URL or page where the introduction is explicitly stated."
+    )
+    return generate_text_safe(prompt)
+
 def process_institution_extraction(
     university_name, 
     undergraduate_tuition_fee_urls=None, 
@@ -1112,6 +1124,7 @@ def process_institution_extraction(
         "orientation_available": get_orientation_available(website_url, university_name),
         "college_tour_after_admissions": get_college_tour_after_admissions(website_url, university_name),
         "term_format": get_term_format(website_url, university_name),
+        "introduction": get_introduction(website_url, university_name),
     }
 
     yield '{"status": "progress", "message": "Extracting application requirements..."}'
@@ -1119,11 +1132,11 @@ def process_institution_extraction(
         "application_requirements": get_application_requirements(website_url, university_name),
         "application_fees": get_application_fees(website_url, university_name),
         "test_policy": get_test_policy(website_url, university_name),
-        "courses_and_grades": "null",
+        "courses_and_grades": None,
         "recommendations": get_recommendations(website_url, university_name),
         "personal_essay": get_personal_essay(website_url, university_name),
         "writing_sample": get_writing_sample(website_url, university_name),
-        "additional_information": get_additional_information(website_url, university_name),
+        "additional_information": None,
         "additional_deadlines": get_additional_deadlines(website_url, university_name),
         "tuition_fees": get_tuition_fees(website_url, university_name),
     }
@@ -1197,9 +1210,26 @@ def process_institution_extraction(
     }
 
     yield '{"status": "progress", "message": "Finalizing data..."}'
+    raw_multiple = get_is_multiple_applications_allowed(website_url, university_name)
+    raw_mat = get_is_mat_required(website_url, university_name)
+    clean_multiple = raw_multiple.strip('`').replace('json', '').strip()
+    data_multiple = json.loads(clean_multiple)
+
+    # 2. Extract and format the value
+    # result will be "True", "False", or "None" (as a string)
+    value = str(data_multiple.get("allowed"))
+
+
+    # --- Handling for MAT Requirement ---
+    # 1. Clean and parse the string into a dictionary
+    clean_mat = raw_mat.strip('`').replace('json', '').strip()
+    data_mat = json.loads(clean_mat)
+
+   
+    mat_value = str(data_mat.get("Allowed"))
     boolean_fields_data = {
-        "is_additional_information_available": True if get_additional_information(website_url, university_name) else False, 
-        "is_multiple_applications_allowed": get_is_multiple_applications_allowed(website_url, university_name),
+        "is_additional_information_available": "FALSE", 
+        "is_multiple_applications_allowed": value,
         "is_act_required": get_is_act_required(website_url, university_name),
         "is_analytical_not_required": get_is_analytical_not_required(website_url, university_name),
         "is_analytical_optional": get_is_analytical_optional(website_url, university_name),
@@ -1211,15 +1241,15 @@ def process_institution_extraction(
         "is_gmat_required": get_is_gmat_required(website_url, university_name),
         "is_gre_required": get_is_gre_required(website_url, university_name),
         "is_ielts_required": get_is_ielts_required(website_url, university_name),
-        "is_lsat_required": get_is_lsat_required(website_url, university_name),
-        "is_mat_required": get_is_mat_required(website_url, university_name),
+        "is_lsat_required": str(get_is_lsat_required(website_url, university_name)),
+        "is_mat_required": mat_value,
         "is_mcat_required": get_is_mcat_required(website_url, university_name),
         "is_pte_required": get_is_pte_required(website_url, university_name),
         "is_sat_required": get_is_sat_required(website_url, university_name),
         "is_toefl_ib_required": get_is_toefl_ib_required(website_url, university_name),
-        "is_import_verified": False,
-        "is_imported": False,
-        "is_enrolled": False,
+        "is_import_verified": "FALSE",
+        "is_imported": None,
+        "is_enrolled": "FALSE",
     }
 
     #combine the data into one dict
@@ -1332,6 +1362,7 @@ def process_institution_extraction(
             'youtube': 'Youtube',
             'tiktok': 'Tiktok',
             'linkedin': 'LinkedIn',
+            'introduction': 'Introduction',
             'grad_avg_tuition': 'GradAvgTuition',
             'grad_international_students': 'GradInternationalStudents',
             'grad_scholarship_high': 'GradScholarshipHigh',
@@ -1353,7 +1384,7 @@ def process_institution_extraction(
             'is_english_optional': 'IsEnglishOptional',
             'is_gmat_or_gre_required': 'IsGMATOrGreRequired',
             'is_gmat_required': 'IsGMATRequired',
-            'is_gre_required': 'IsGreRequired',
+            'is_gre_required': 'IsGRERequired',
             'is_ielts_required': 'IsIELTSRequired',
             'is_lsat_required': 'IsLSATRequired',
             'is_mat_required': 'IsMATRequired',
@@ -1379,7 +1410,7 @@ def process_institution_extraction(
             'CreatedDate', 'LiveDate', 'TuitionFees', 'UpdatedBy', 'UpdatedDate', 'CountryCode',
             'LinkedIn', 'IsACTRequired', 'IsAnalyticalNotRequired', 'IsAnalyticalOptional',
             'IsDuoLingoRequired', 'IsELSRequired', 'IsEnglishNotRequired', 'IsEnglishOptional',
-            'IsGMATOrGreRequired', 'IsGMATRequired', 'IsGreRequired', 'IsIELTSRequired',
+            'IsGMATOrGreRequired', 'IsGMATRequired', 'IsGRERequired', 'IsIELTSRequired',
             'IsLSATRequired', 'IsMATRequired', 'IsMCATRequired', 'IsPTERequired', 'IsSATRequired',
             'IsTOEFLIBRequired', 'QsWorldRanking', 'UsRanking', 'BatchId', 'IsImportVerified',
             'IsImported', 'BannerImagePath', 'CollegeHtmlAdditionalInfo', 'Introduction',

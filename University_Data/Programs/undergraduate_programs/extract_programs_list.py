@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 import json
 import re
 import requests
+from Institution import GeminiModelWrapper, client
+
 
 load_dotenv()
 
@@ -18,10 +20,9 @@ university_data_dir = os.path.dirname(programs_dir)
 institution_dir = os.path.join(university_data_dir, 'Institution')
 sys.path.append(institution_dir)
 
-from Institution import GeminiModelWrapper, client
 
 # Initialize the model using the wrapper (consistent with check.py)
-model = GeminiModelWrapper(client, "gemini-2.5-flash")
+model = GeminiModelWrapper(client, "gemini-2.5-pro")
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -76,7 +77,9 @@ def find_program_url(program_name, university_name):
     except Exception:
         return None
 
-def get_undergraduate_programs(url, university_name):
+def get_undergraduate_programs(url, university_name, existing_names=None):
+    if existing_names is None:
+        existing_names = set()
     # Step 1: Extract just the names
     prompt_names = (
         f"Access the following URL: {url}\n"
@@ -87,6 +90,8 @@ def get_undergraduate_programs(url, university_name):
         "Only Look at the active and latest Programs. Do not include any expired or cancelled programs. or programs from older catalogs."
         "Return a JSON list of STRINGS (just the names).\n"
         "Example: [\"Bachelor of Science in Biology\", \"Associate of Arts\", \"Emphasis in Political Economy\", ...]\n"
+        "Always make sure the names are above format and clear"
+        "Never return the raw names like Biology - BS, or Business - BA, etc."
         "Exclude headers, categories, or navigation items."
     )
     
@@ -134,6 +139,10 @@ def get_undergraduate_programs(url, university_name):
     
     for i, name in enumerate(program_names):
         # Yield progress update
+        if name in existing_names:
+             yield f"Skipping existing program: {name}"
+             continue
+
         yield f"Finding URL for ({i+1}/{total_programs}): {name}"
         
         found_url = find_program_url(name, university_name)
@@ -242,7 +251,7 @@ def run(university_name_input):
     existing_names = set(p['Program name'] for p in current_programs)
     
     count = 0 
-    for item in get_undergraduate_programs(undergraduate_program_url, university_name):
+    for item in get_undergraduate_programs(undergraduate_program_url, university_name, existing_names):
         if isinstance(item, str):
             # This is a progress message
             safe_msg = item.replace('"', "'")
@@ -257,6 +266,8 @@ def run(university_name_input):
                 count += 1
                 # Optional: Yield a granular progress update for the save
                 # yield f'{{"status": "progress", "message": "Saved: {p_name}"}}'
+        if count == 5:
+            break
     
     undergraduate_programs = current_programs
 

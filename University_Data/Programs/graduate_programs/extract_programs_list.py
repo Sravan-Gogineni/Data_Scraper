@@ -190,7 +190,9 @@ def run(university_name_input):
     
     # Process the generator
     graduate_programs = []
+    count = 0
     for item in get_graduate_programs(graduate_program_url, university_name):
+        count += 1
         if isinstance(item, str):
             # This is a progress message
             safe_msg = item.replace('"', "'")
@@ -198,6 +200,8 @@ def run(university_name_input):
         elif isinstance(item, list):
             # This is the final result
             graduate_programs = item
+        if count == 5:
+            break
 
     if graduate_programs:
         # Save the graduate programs to JSON file
