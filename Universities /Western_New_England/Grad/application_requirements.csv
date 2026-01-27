@@ -1,0 +1,106 @@
+Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsRecommendationSystemOpted,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,Program name,Program Page url,error
+Required,Required,"Application requirements include: A completed Application for Admission to Graduate Study, official transcripts of all academic work from each college or university attended, two letters of recommendation, a current résumé, and a personal statement describing your reasons for pursuing a graduate degree and your professional goals.",Not Required,True,False,False,True,False,False,,,program,Master of Science in Accounting and Finance,https://wne.edu/academics/graduate/index.cfm,
+Not Required,Required,"To apply, students must submit the following: An official transcript from all universities and colleges attended, indicating the award of a bachelor's degree from an accredited institution. A personal statement. Two letters of recommendation from individuals who can speak to your academic and/or professional capabilities. A completed application.",Not Required,True,False,True,False,False,False,,,program,Master of Science in Applied Behavior Analysis,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"A completed online application, including: Official transcripts from all undergraduate and graduate institutions attended. Two letters of recommendation from individuals who can speak to your academic and/or professional capabilities. Current résumé. Statement of Purpose: Describe in approximately 500 words your reasons for wishing to pursue graduate study at Western New England University. This essay should include your career goals and how a graduate degree from Western New England University will help you achieve them. $30 nonrefundable application fee. No GMAT/GRE Required.",Not Required,True,False,False,False,False,False,,,program,Master of Business Administration (MBA),https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"Completed online application and $50 application fee, Official transcripts from all undergraduate and graduate institutions attended, Personal Statement, Current résumé, Two letters of recommendation, Official GMAT or GRE scores (may be waived).",Not Required,False,False,True,True,False,False,,,program,Master of Science in Business Analytics,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"To be considered for admission to a graduate program at Western New England University, you will need to submit the following: Completed online application, Official transcripts from all colleges and universities attended, Two letters of recommendation, A current résumé, A personal statement. For the Master of Science in Civil Engineering program, no GRE or GMAT is required.",Not Required,True,False,,True,False,False,,,program,Master of Science in Civil Engineering,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"The following are required for admission to the MS in Construction Management program:
+
+Completed online application and $30 fee.
+Official transcripts from all undergraduate and graduate institutions attended.
+A personal statement describing your reasons for pursuing graduate study.
+Two letters of recommendation from individuals who can speak to your academic and/or professional potential.
+A current résumé.",Not Required,True,False,False,True,False,False,,,program,Master of Science in Construction Management,https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Master of Science in Electrical Engineering,https://www.kuleuven.be/programmes/master-electrical-engineering,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Science in Engineering Management,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Science in Industrial Engineering,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Master of Science in Mechanical Engineering,https://wne.edu/academics/graduate/mechanical-engineering-ms.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Applicants must apply online and submit the following:
+* Official college transcript(s) from all institutions attended
+* A personal statement of career goals and why the applicant is a good fit for this program
+* Three letters of recommendation (at least two must be from science faculty)
+* A current résumé or curriculum vitae (CV)",,True,False,False,True,False,False,,,program,Master of Science in Medical Sciences,https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Master of Science in Organizational Leadership,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Completed online application and $30 fee
+Official transcripts from all colleges and universities attended
+A bachelor's degree in chemistry, biology, pharmacy, or related fields from a regionally accredited institution is required.
+Cumulative GPA of 3.0 or higher is required.
+International applicants: Test of English as a Foreign Language (TOEFL) score of 80, an International English Language Testing System (IELTS) score of 6.5, a Pearson Test of English Academic (PTE) score of 56, or an EIKEN score of Pre-1.
+Official test scores are required for all international students.
+Personal statement: a brief essay of at least 250 words describing your reasons for pursuing a graduate degree and your academic/research interests and goals.
+Two letters of recommendation
+Résumé
+No GRE, GMAT, or PCAT required for admission.",Not Required,True,False,False,True,False,False,,,program,Master of Science in Pharmaceutical Sciences,https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Master of Science in Pharmacogenomics,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"All application materials must be submitted through the Occupational Therapy Centralized Application Service (OTCAS). A completed application includes:
+
+*   Official transcripts from all undergraduate and graduate institutions attended.
+*   Three letters of recommendation. We strongly suggest that you provide letters from an academic source, a work supervisor, and a healthcare provider.
+*   A minimum of 40 hours of observation of occupational therapy services in at least two different practice settings is required. We strongly recommend that you seek out observation experiences in a variety of practice settings and with a variety of client populations. Please note that these hours must be completed prior to submitting your application.
+*   A personal essay addressing why you selected occupational therapy as a career and how an occupational therapy degree relates to your immediate and long-term professional goals.
+*   A personal interview with a member of the OTD faculty will be required for qualified applicants. The interview is an opportunity for us to learn more about you, and for you to learn more about our program. Interviews will be conducted on a rolling basis beginning in the fall.
+*   Prerequisite Courses
+*   A cumulative GPA of 3.0 or higher on a 4.0 scale is required.
+*   A prerequisite GPA of 3.2 or higher on a 4.0 scale is required. All prerequisite courses must have a grade of C or better. All science prerequisites must have been taken within the last 10 years.
+*   The GRE is NOT required for admission to the OTD Program.",Not Required,True,False,False,False,False,False,,,program,Doctor of Occupational Therapy (OTD),https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Doctor of Pharmacy (PharmD),https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"A completed online application and a $30 application fee.
+A bachelor’s degree from an accredited college or university with a preferred GPA of 3.0 or higher.
+A master’s degree in behavior analysis or a closely related field (e.g., psychology, education) from an accredited institution. A GPA of 3.5 or higher is preferred. Applicants with a bachelor’s degree and substantial experience in behavior analysis may be considered for admission.
+Official transcripts from all colleges and universities attended.
+A statement of purpose describing the applicant's research interests and career goals.
+Two letters of recommendation from individuals who can speak to the applicant’s academic and/or professional potential.
+A curriculum vitae (CV).
+A writing sample demonstrating scholarly writing ability (e.g., master's thesis, published article).
+An interview with program faculty.",Required,True,False,False,False,False,False,,,program,Doctor of Philosophy in Behavior Analysis,https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Doctor of Philosophy in Engineering Management,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"The following must be submitted to be considered for admission:
+
+Completed online application and $50 application fee (fee waived for WNE alumni, students, and employees; military personnel; and open house attendees).
+Official transcripts from all undergraduate and graduate institutions attended. (A minimum GPA of 3.0 is required. Applicants with a GPA below 3.0 may be considered for conditional acceptance.)
+A bachelor’s degree from an accredited college or university is required. A master’s degree is preferred.
+Two letters of recommendation from individuals who know you in a professional or academic capacity and can attest to your ability to succeed in a graduate program.
+A Statement of Purpose highlighting academic and professional goals.
+A current résumé or curriculum vitae (CV).
+PhD applicants who earned a degree from a non-U.S. institution must take the TOEFL or IELTS exam unless they have earned a degree from a U.S. institution.",Not Required,True,False,False,True,False,False,,,program,Doctor of Philosophy in Industrial Management,https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Juris Doctor (JD),https://wne.edu/law/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Applicants must complete an application for admission. The application for the Estate Planning track is administered through the Law School Admission Council (LSAC) at www.lsac.org. The application for the Elder Law track is a downloadable application that may be submitted directly to the School of Law. A $40 nonrefundable application fee must be submitted with your application. Applicants must have official copies of their law school transcripts sent directly to the School of Law. Applicants must submit a personal statement of one to three pages. The personal statement should be a narrative that enables the Admissions Committee to learn more about the applicant and his/her motivation to pursue the LLM. Applicants should submit a current resume that includes their employment history and any other relevant activities, such as publications, and pro bono or community service. Letters of recommendation are not required, but are strongly encouraged.",Not Required,True,False,True,False,False,False,,,program,Master of Laws (LL.M.) in Elder Law and Estate Planning,https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Graduate Certificate in Artificial Intelligence,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Graduate Certificate in Business Foundations,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Not Required,"For admission to the Graduate Certificate in Data Analytics, applicants must possess a bachelor's degree from an accredited institution. Applicants must submit the following to be considered for admission:
+
+Completed online application
+Official transcripts of all undergraduate and graduate coursework
+A current résumé
+$30 application fee
+Please note that GMAT/GRE scores are NOT required for admission to this program.",Not Required,True,False,False,False,False,False,,,program,Graduate Certificate in Data Analytics,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"A completed online application
+Official transcripts from all undergraduate and graduate institutions attended
+Current résumé
+Statement of Purpose
+One letter of recommendation
+Official GMAT or GRE scores are not required for admission to our graduate certificate programs. Scores may be submitted to strengthen your application.",Not Required,True,True,False,False,False,False,,,program,Graduate Certificate in Finance,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"The following materials are required to complete an application for all graduate programs at Western New England University: Completed Online Application and $30 Application Fee, Official Transcripts from all undergraduate and graduate institutions attended, Essay/Personal Statement, Résumé, Two Letters of Recommendation. Test Scores (GMAT/GRE) may be required for some programs, but are not specified as required for the Graduate Certificate in Financial Accounting.",Not Required,True,False,,False,False,False,,,program,Graduate Certificate in Financial Accounting,https://wne.edu/academics/graduate/index.cfm,
+,,,,,,,,,,,,error,Graduate Certificate in Green Belt,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Graduate Certificate in Industrial Safety and Public Health,https://wne.edu/academics/graduate/college-engineering-certificates.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Graduate Certificate in Information Management,https://wne.edu/academics/graduate/index.cfm,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To apply for the Graduate Certificate in Leadership, applicants must submit a completed online application and a $30 fee, along with official transcripts from all colleges/universities attended. Additional requirements for business certificate applicants include a one-page personal statement describing your background and reasons for pursuing a graduate degree at Western New England University, and a current résumé. One letter of recommendation is optional. GMAT and GRE test scores are not required.",Not Required,True,False,True,False,False,False,,,program,Graduate Certificate in Leadership,https://wne.edu/academics/graduate/index.cfm,
+Not Required,Not Required,Students applying to a certificate program or as a nondegree student need only to complete the online application and submit official transcripts from all institutions attended.,Not Required,True,False,False,False,False,False,,,program,Graduate Certificate in Operations Management,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"Completed Application, Official Transcripts from all undergraduate and graduate institutions attended, Statement of Purpose, Current Résumé, Letters of Recommendation (optional), GMAT or GRE Test Scores*, TOEFL or IELTS (International Applicants). *The GMAT/GRE is waived for applicants who have a cumulative GPA of 3.3 or higher, or five or more years of progressive professional experience.",,False,False,True,False,False,False,,,program,Graduate Certificate in Operations Research,https://wne.edu/academics/graduate/index.cfm,
+Not Required,Not Required,"Applicants must hold a baccalaureate degree from an accredited college or university. All applicants must submit the following: Application for Graduate Admission, Official transcript of all academic work, Two letters of recommendation. International students must also submit the Test of English as a Foreign Language (TOEFL) and a WES evaluation. For more information, please visit the International Admissions section.",Not Required,True,False,False,False,False,False,,,program,Graduate Certificate in Project Management,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"To be considered for admission, you will need to submit the following: Completed Online Application, Official transcripts from all undergraduate and graduate institutions attended, Current résumé, One-page statement of purpose, One Letter of Recommendation (Some programs require two. Check program pages for specific requirements.), Application Fee of $30.00, Official GMAT/GRE scores (Many programs are test-optional or test-waived. Check program pages for specific requirements.)",Not Required,True,False,False,False,False,False,,,program,Graduate Certificate in Risk and Emergency Management,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"A completed online application
+A bachelor's degree from an accredited institution
+Official transcripts of all undergraduate and graduate coursework
+One letter of recommendation (academic or professional)
+A personal statement
+A current résumé
+An interview may be requested at the discretion of the Program Director.",Not Required,True,False,False,False,False,False,,,program,Graduate Certificate in Sport Leadership,https://wne.edu/academics/graduate/index.cfm,
+Required,Required,"Completed online application
+Official transcripts of all undergraduate and graduate coursework
+A personal statement
+A current résumé
+One letter of recommendation (optional)
+GMAT/GRE is not required for this program",Not Required,True,False,True,False,False,False,,,program,Graduate Certificate in Strategic Decision-Making,https://wne.edu/academics/graduate/index.cfm,
+Not Required,Not Required,"Admission to a Graduate Certificate program requires an earned bachelor’s degree in a related field from an accredited college or university. An undergraduate GPA of 3.0 or better is required. Under special circumstances, an applicant with a GPA below 3.0 may be admitted on a conditional basis. To apply, complete the online application. There is no application fee.",Not Required,True,False,,False,False,False,,,program,Graduate Certificate in Supply Chain,https://wne.edu/academics/graduate/college-engineering-certificates.cfm,
+,,,,,,,,,,,,error,Graduate Certificate in Tax Planning,https://wne-academic-catalog-2025-26.catalog.prod.coursedog.com/programs/0rxpDBvjRLpBuwZW77ug,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."

@@ -4,6 +4,9 @@
 Inst_outputs
 # Ignore venv directory
 /.venv
-
-
-Residential Rate: The undergraduate cost is a "block rate" covering 12-16 credits per semester. The per-credit rate for graduate and extra undergraduate credits is $1,912. Worldwide Rate: Tuition is charged per credit hour ($542 for undergraduate / $902 for graduate) regardless of residency.
+# Ignore University_Data director
+# Universities/
+Universities/*
+Universities/*/*
+Universities
+/Universities

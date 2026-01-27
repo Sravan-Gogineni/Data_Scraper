@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             gap: 1rem;
             margin-top: 1.5rem;
         }
+
         .step-btn {
             display: flex;
             flex-direction: column;
@@ -26,27 +28,32 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
+
         .step-btn:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
+
         .step-btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
             transform: none;
         }
+
         .step-number {
             font-size: 2rem;
             font-weight: 700;
             opacity: 0.3;
             margin-bottom: 0.5rem;
         }
+
         .step-label {
             font-weight: 500;
             text-align: center;
         }
     </style>
 </head>
+
 <body>
     <div class="background-blobs">
         <div class="blob blob-1"></div>
@@ -57,7 +64,12 @@
     <div class="container">
         <header>
             <div class="logo-area">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="logo-icon">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
                 <h1>UniScraper <span style="font-weight: 300; opacity: 0.7;">| Programs</span></h1>
             </div>
             <nav class="main-nav">
@@ -76,7 +88,8 @@
 
                 <div class="form-group main-input">
                     <label for="universityName">University Name <span class="required">*</span></label>
-                    <input type="text" id="universityName" placeholder="e.g. Stanford University" required autocomplete="off">
+                    <input type="text" id="universityName" placeholder="e.g. Stanford University" required
+                        autocomplete="off">
                 </div>
 
                 <div class="step-grid">
@@ -100,13 +113,20 @@
                         <div class="step-number">05</div>
                         <div class="step-label">Financial Details</div>
                     </button>
-                    <button class="step-btn" data-step="8" style="border-color: rgba(100, 255, 100, 0.3); background: rgba(50, 150, 80, 0.1);">
+                    <button class="step-btn" data-step="8"
+                        style="border-color: rgba(100, 255, 100, 0.3); background: rgba(50, 150, 80, 0.1);">
                         <div class="step-number">⚡</div>
                         <div class="step-label">Parallel (2-5)</div>
                     </button>
                     <button class="step-btn" data-step="6">
                         <div class="step-number">06</div>
                         <div class="step-label">Merge & Finalize</div>
+                    </button>
+                    <button class="step-btn" data-step="9"
+                        style="grid-column: 1 / -1; margin-top: 1rem; border-color: var(--primary); background: rgba(37, 99, 235, 0.1); padding: 2rem;">
+                        <div class="step-number" style="opacity: 0.8; font-size: 1.5rem;">🚀</div>
+                        <div class="step-label" style="font-size: 1.1rem; font-weight: 600;">Full Automation: Steps 1-5
+                        </div>
                     </button>
                 </div>
             </div>
@@ -120,7 +140,7 @@
                         </div>
                         <span id="statusBadge" class="badge">Initializing</span>
                     </div>
-                    
+
                     <div class="terminal-window">
                         <div class="terminal-header">
                             <span class="dot red"></span>
@@ -143,4 +163,5 @@
 
     <script src="programs.js"></script>
 </body>
+
 </html>

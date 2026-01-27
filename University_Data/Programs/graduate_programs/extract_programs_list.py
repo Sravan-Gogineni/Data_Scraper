@@ -27,10 +27,6 @@ model = GeminiModelWrapper(client, "gemini-2.5-flash")
 script_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(script_dir, "Grad_prog_outputs")
 # Create directory if it doesn't exist
-# Create directory if it doesn't exist
-prompt = "What is the website url for the graduate programs page of the {university_name}?. return only the url."
-grad_programs_url = model.generate_content(prompt)
-
 os.makedirs(output_dir, exist_ok=True)
 
 def resolve_redirect(url):
@@ -77,7 +73,7 @@ def find_program_url(program_name, university_name):
     except Exception:
         return None
 
-def get_graduate_programs(url, university_name):
+def get_graduate_programs(url, university_name, existing_data=None):
     # Step 1: Extract just the names
     prompt_names = (
         f"Access the following URL: {url}\n"
@@ -106,27 +102,30 @@ def get_graduate_programs(url, university_name):
         return
 
     # Step 2: Iterate and find URLs
-    results = []
+    results = existing_data if existing_data else []
+    existing_urls = {p['Program name']: p['Program Page url'] for p in results if p.get('Program Page url') and p['Program Page url'] != url}
+    
     total_programs = len(program_names)
     yield f"Found {total_programs} programs. Starting detailed URL search..."
     
     for i, name in enumerate(program_names):
+        # Skip if already found with a valid URL
+        if name in existing_urls:
+            yield f"Skipping (already found) ({i+1}/{total_programs}): {name}"
+            continue
+
         # Yield progress update
         yield f"Finding URL for ({i+1}/{total_programs}): {name}"
         
         found_url = find_program_url(name, university_name)
-        if found_url:
-            results.append({
-                "Program name": name,
-                "Program Page url": found_url
-            })
-        else:
-             results.append({
-                "Program name": name,
-                "Program Page url": url # Fallback to listing page
-            })
-            
-    yield results
+        program_entry = {
+            "Program name": name,
+            "Program Page url": found_url if found_url else url
+        }
+        
+        # Save incrementally 
+        # (We need to communicate this back to run())
+        yield program_entry
 
 def run(university_name_input):
     global university_name, institute_url
@@ -134,11 +133,14 @@ def run(university_name_input):
     
     yield f'{{"status": "progress", "message": "Finding official website for {university_name}..."}}'
     
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
+    
     # Check if we already have the output
-    csv_path = os.path.join(output_dir, 'graduate_programs.csv')
+    csv_path = os.path.join(output_dir, f'{sanitized_name}_graduate_programs.csv')
     if os.path.exists(csv_path) and os.path.getsize(csv_path) > 0:
-        yield f'{{"status": "progress", "message": "Graduate programs list already exists. Skipping extraction."}}'
-        yield f'{{"status": "complete", "message": "Using existing graduate programs list", "files": {{"grad_csv": "{csv_path}"}}}}'
+        count = len(pd.read_csv(csv_path))
+        yield f'{{"status": "progress", "message": "Graduate programs list for {university_name} already exists. Skipping extraction."}}'
+        yield f'{{"status": "complete", "message": "Found {count} graduate programs (using existing list)", "files": {{"grad_csv": "{csv_path}"}}}}'
         return
 
     prompt = f"What is the official university website for {university_name}?"
@@ -188,33 +190,50 @@ def run(university_name_input):
 
     yield f'{{"status": "progress", "message": "Extracting graduate programs list (this may take a while)..."}}'
     
+    # Reload existing data just in case
+    existing_programs = []
+    json_path = os.path.join(output_dir, f'{sanitized_name}_graduate_programs.json')
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                existing_programs = json.load(f)
+            yield f'{{"status": "progress", "message": "Resuming: Loaded {len(existing_programs)} already found programs."}}'
+        except:
+            pass
+
+    def save_progress(programs_list):
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(programs_list, f, indent=4, ensure_ascii=False)
+        df = pd.DataFrame(programs_list)
+        csv_path = os.path.join(output_dir, f'{sanitized_name}_graduate_programs.csv')
+        df.to_csv(csv_path, index=False, encoding='utf-8')
+
     # Process the generator
-    graduate_programs = []
-    count = 0
-    for item in get_graduate_programs(graduate_program_url, university_name):
-        count += 1
+    current_programs = existing_programs.copy()
+    existing_names = set(p['Program name'] for p in current_programs)
+    
+    for item in get_graduate_programs(graduate_program_url, university_name, existing_data=current_programs):
         if isinstance(item, str):
             # This is a progress message
             safe_msg = item.replace('"', "'")
             yield f'{{"status": "progress", "message": "{safe_msg}"}}'
-        elif isinstance(item, list):
-            # This is the final result
-            graduate_programs = item
-        if count == 5:
-            break
+        elif isinstance(item, dict):
+            # This is a single program entry
+            p_name = item.get('Program name')
+            if p_name not in existing_names:
+                current_programs.append(item)
+                existing_names.add(p_name)
+                save_progress(current_programs)
+            else:
+                # If name exists but we want to update URL (unlikely but safe)
+                for p in current_programs:
+                    if p['Program name'] == p_name:
+                        p['Program Page url'] = item['Program Page url']
+                        break
+                save_progress(current_programs)
 
-    if graduate_programs:
-        # Save the graduate programs to JSON file
-        json_path = os.path.join(output_dir, 'graduate_programs.json')
-        with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(graduate_programs, f, indent=4, ensure_ascii=False)
-        
-        # Save the graduate programs to CSV file
-        csv_path = os.path.join(output_dir, 'graduate_programs.csv')
-        df = pd.DataFrame(graduate_programs)
-        df.to_csv(csv_path, index=False, encoding='utf-8')
-        
-        yield f'{{"status": "complete", "message": "Found {len(graduate_programs)} graduate programs", "files": {{"grad_csv": "{csv_path}"}}}}'
+    if current_programs:
+        yield f'{{"status": "complete", "message": "Found {len(current_programs)} graduate programs", "files": {{"grad_csv": "{os.path.join(output_dir, f"{sanitized_name}_graduate_programs.csv")}"}}}}'
     else:
         yield f'{{"status": "complete", "message": "No graduate programs found", "files": {{}}}}'
 

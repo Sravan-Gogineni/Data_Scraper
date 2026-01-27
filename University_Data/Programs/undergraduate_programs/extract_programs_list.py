@@ -68,6 +68,8 @@ def find_program_url(program_name, university_name):
             return real_urls[0]
         
         # Fallback to text
+        if not response.text:
+             return None
         text_url = response.text.replace("```", "").strip()
         # Basic clean
         match = re.search(r'https?://[^\s<>"]+|www\.[^\s<>"]+', text_url)
@@ -77,67 +79,85 @@ def find_program_url(program_name, university_name):
     except Exception:
         return None
 
-def get_undergraduate_programs(url, university_name, existing_names=None):
-    if existing_names is None:
-        existing_names = set()
+def get_undergraduate_programs(url, university_name, existing_data=None):
     # Step 1: Extract just the names
     prompt_names = (
-        f"Access the following URL: {url}\n"
-        "Extract ALL undergraduate (Bachelor's, Associate's, Minors) program NAMES listed on this page.\n"
-        "IMPORTANT: If the university uses a non-traditional curriculum (e.g., 'Areas of Emphasis', 'Fields of Study', 'Concentrations', 'Pathways' instead of Majors), extract those as the program names.\n"
-        "When Extracting the programs names make sure the names are clear and full. which means not just the name i also want the full name like Bachelor of Arts in Education, Bachelor of Science in Computer Science, etc. not just Education, Computer Science, etc.\n"
-        "So, get the full names of the programs.\n"
-        "Only Look at the active and latest Programs. Do not include any expired or cancelled programs. or programs from older catalogs."
-        "Return a JSON list of STRINGS (just the names).\n"
-        "Example: [\"Bachelor of Science in Biology\", \"Associate of Arts\", \"Emphasis in Political Economy\", ...]\n"
-        "Always make sure the names are above format and clear"
-        "Never return the raw names like Biology - BS, or Business - BA, etc."
-        "Exclude headers, categories, or navigation items."
+        f"I am providing you with the URL of the official undergraduate programs listing for {university_name}: {url}\n\n"
+        "Your task is to identify and extract the names of ALL undergraduate programs (Majors, Bachelors, Associates, and Minors) listed on that page.\n"
+        "1. Carefully identify every program name.\n"
+        "2. Include the full degree designation if available (e.g., 'Bachelor of Science in Biology' instead of just 'Biology').\n"
+        "3. Only include active programs.\n"
+        "4. If the university uses 'Concentrations', 'Areas of Study', or 'Fields of Study', treat those as the program names.\n\n"
+        "RETURN ONLY A JSON LIST OF STRINGS.\n"
+        "Example format: [\"Bachelor of Science in Computer Science\", \"Associate of Applied Science in Nursing\"]\n\n"
+        "DO NOT explain your limitations or mention your search tools. Just return the JSON list based on your knowledge of this page's structure or by searching for its content."
     )
     
     program_names = []
-    try:
-        # yield f'{{"status": "progress", "message": "DEBUG: Prompting for names with URL: {url}"}}'
-        response = model.generate_content(prompt_names)
-        text = response.text.replace("```json", "").replace("```", "").strip()
-        
-        # Escape quotes for JSON safety in the message
-        safe_text = text.replace('"', "'").replace('\n', ' ')
-        yield f'{{"status": "progress", "message": "DEBUG: Raw response text: {safe_text}"}}'
-        
-        start = text.find('[')
-        end = text.rfind(']') + 1
-        if start != -1 and end != -1:
-             program_names = json.loads(text[start:end])
-        else:
-            # Fallback: Try to parse bulleted list
-            print("DEBUG: JSON not found, attempting fallback parsing for bulleted list.")
-            lines = text.split('\n')
-            for line in lines:
-                line = line.strip()
-                # Match lines starting with *, -, or numbers 1.
-                if line.startswith(('*', '-', '•')) or (len(line) > 0 and line[0].isdigit() and line[1] == '.'):
-                    # Clean up the line
-                    clean_name = re.sub(r'^[\*\-•\d\.]+\s*', '', line).strip()
-                    if clean_name:
-                        program_names.append(clean_name)
+    max_attempts = 2
+    for attempt_num in range(1, max_attempts + 1):
+        try:
+            # yield f'{{"status": "progress", "message": "DEBUG: Prompting for names with URL: {url}"}}'
+            response = model.generate_content(prompt_names)
+            if not response.text:
+                if attempt_num < max_attempts: continue
+                yield f'{{"status": "error", "message": "Error extracting names: Model returned empty response (text is None)"}}'
+                yield []
+                return
+                
+            text = response.text.replace("```json", "").replace("```", "").strip()
             
-            if not program_names:
-                yield f'{{"status": "warning", "message": "DEBUG: Could not find JSON list brackets [] or bulleted items in response."}}'
+            # Escape quotes for JSON safety in the message
+            safe_text = text.replace('"', "'").replace('\n', ' ')
+            yield f'{{"status": "progress", "message": "DEBUG: Raw response text: {safe_text}"}}'
+            
+            start = text.find('[')
+            end = text.rfind(']') + 1
+            if start != -1 and end != -1:
+                 program_names = json.loads(text[start:end])
             else:
-                 yield f'{{"status": "progress", "message": "DEBUG: Successfully extracted {len(program_names)} programs using fallback parser."}}'
-            
-    except Exception as e:
-        yield f'{{"status": "error", "message": "Error extracting names: {str(e)}"}}'
-        yield [] # Return empty list on error
-        return
+                # Fallback: Try to parse bulleted list
+                print("DEBUG: JSON not found, attempting fallback parsing for bulleted list.")
+                lines = text.split('\n')
+                for line in lines:
+                    line = line.strip()
+                    # Match lines starting with *, -, or numbers 1.
+                    if line.startswith(('*', '-', '•')) or (len(line) > 0 and line[0].isdigit() and line[1] == '.'):
+                        # Clean up the line
+                        clean_name = re.sub(r'^[\*\-•\d\.]+\s*', '', line).strip()
+                        if clean_name:
+                            program_names.append(clean_name)
+                
+            if program_names:
+                break # Success
+            elif attempt_num < max_attempts:
+                yield f'{{"status": "warning", "message": "Attempt {attempt_num} failed to parse program names. Retrying with refined focus..."}}'
+                # Slightly refine prompt for retry
+                prompt_names += "\n\nCRITICAL: You must return a list of at least 5-10 programs. Do not return an empty list."
+                
+        except Exception as e:
+            if attempt_num < max_attempts: continue
+            yield f'{{"status": "error", "message": "Error extracting names: {str(e)}"}}'
+            yield [] # Return empty list on error
+            return
+
+    if not program_names:
+        yield f'{{"status": "warning", "message": "DEBUG: Could not find any program names after {max_attempts} attempts."}}'
 
     # Step 2: Iterate and find URLs
-    results = [] # Keep for final complete yield
+    results = existing_data if existing_data else []
+    existing_urls = {p['Program name']: p['Program Page url'] for p in results if p.get('Program Page url') and p['Program Page url'] != url}
+    existing_names = set(p['Program name'] for p in results)
+
     total_programs = len(program_names)
     yield f"Found {total_programs} programs. Starting detailed URL search..."
     
     for i, name in enumerate(program_names):
+        # Skip if already found with a valid URL
+        if name in existing_urls:
+            yield f"Skipping (already found) ({i+1}/{total_programs}): {name}"
+            continue
+
         # Yield progress update
         if name in existing_names:
              yield f"Skipping existing program: {name}"
@@ -158,11 +178,18 @@ def run(university_name_input):
     global university_name, institute_url
     university_name = university_name_input
     
-    yield f'{{"status": "progress", "message": "Finding official website for {university_name}..."}}'
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
     
     # Define output files
-    json_path = os.path.join(output_dir, 'undergraduate_programs.json')
-    csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
+    json_path = os.path.join(output_dir, f'{sanitized_name}_undergraduate_programs.json')
+    csv_path = os.path.join(output_dir, f'{sanitized_name}_undergraduate_programs.csv')
+
+    # Early check for completed list
+    if os.path.exists(csv_path) and os.path.getsize(csv_path) > 0:
+        count = len(pd.read_csv(csv_path))
+        yield f'{{"status": "progress", "message": "Undergraduate programs list for {university_name} already exists. Skipping extraction."}}'
+        yield f'{{"status": "complete", "message": "Found {count} undergraduate programs (using existing list)", "files": {{"undergrad_csv": "{csv_path}"}}}}'
+        return
 
     # Load existing data to handle resuming/appending
     existing_programs = []
@@ -170,11 +197,9 @@ def run(university_name_input):
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 existing_programs = json.load(f)
+            yield f'{{"status": "progress", "message": "Resuming: Loaded {len(existing_programs)} already found programs."}}'
         except:
             pass
-            
-    # Check if we already have a significant number of programs and if the user wants to skip
-    # (Optional logic, but for now we just append/overwrite if duplicates)
     
     # Helper to save progress
     def save_progress(programs_list):
@@ -186,9 +211,13 @@ def run(university_name_input):
     
     prompt = f"What is the official university website for {university_name}?"
     try:
-        website_url = model.generate_content(prompt).text.replace("**", "").replace("```", "").strip()
-        institute_url = website_url
-        yield f'{{"status": "progress", "message": "Website found: {website_url}"}}'
+        resp = model.generate_content(prompt)
+        if resp.text:
+            website_url = resp.text.replace("**", "").replace("```", "").strip()
+            institute_url = website_url
+            yield f'{{"status": "progress", "message": "Website found: {website_url}"}}'
+        else:
+             raise Exception("Model returned empty text")
     except Exception as e:
         yield f'{{"status": "error", "message": "Failed to find website: {str(e)}"}}'
         return
@@ -221,7 +250,10 @@ def run(university_name_input):
             undergraduate_program_url = real_urls[0]
         else:
              # Fallback to text
-            undergraduate_program_url = response.text.strip()
+            if response.text:
+                undergraduate_program_url = response.text.strip()
+            else:
+                 undergraduate_program_url = ""
             # clean url
             url_match = re.search(r'https?://[^\s<>"]+|www\.[^\s<>"]+', undergraduate_program_url)
             if url_match:
@@ -234,8 +266,9 @@ def run(university_name_input):
     yield f'{{"status": "progress", "message": "Extracting undergraduate programs list (this may take a while)..."}}'
     
     # Define output files
-    json_path = os.path.join(output_dir, 'undergraduate_programs.json')
-    csv_path = os.path.join(output_dir, 'undergraduate_programs.csv')
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
+    json_path = os.path.join(output_dir, f'{sanitized_name}_undergraduate_programs.json')
+    csv_path = os.path.join(output_dir, f'{sanitized_name}_undergraduate_programs.csv')
 
     # Load existing data to handle resuming/appending
     existing_programs = []
@@ -250,8 +283,7 @@ def run(university_name_input):
     current_programs = existing_programs.copy()
     existing_names = set(p['Program name'] for p in current_programs)
     
-    count = 0 
-    for item in get_undergraduate_programs(undergraduate_program_url, university_name, existing_names):
+    for item in get_undergraduate_programs(undergraduate_program_url, university_name, existing_data=current_programs):
         if isinstance(item, str):
             # This is a progress message
             safe_msg = item.replace('"', "'")
@@ -263,11 +295,8 @@ def run(university_name_input):
                 current_programs.append(item)
                 existing_names.add(p_name)
                 save_progress(current_programs)
-                count += 1
-                # Optional: Yield a granular progress update for the save
                 # yield f'{{"status": "progress", "message": "Saved: {p_name}"}}'
-        if count == 5:
-            break
+        
     
     undergraduate_programs = current_programs
 

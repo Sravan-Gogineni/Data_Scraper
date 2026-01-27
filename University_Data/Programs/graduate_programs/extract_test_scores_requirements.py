@@ -209,7 +209,12 @@ def extract_test_scores(program_name, program_url, institute_url):
 def run(university_name_input):
     global university_name, institute_url
     university_name = university_name_input
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
     
+    # Update paths with university name
+    csv_path = os.path.join(output_dir, f'{sanitized_name}_graduate_programs.csv')
+    json_path = os.path.join(output_dir, f'{sanitized_name}_test_scores_requirements.json')
+
     # We need to find the institute URL first if not hardcoded, but for now we can rely on the previous steps or simple search if needed.
     # For now, let's just find it if we can, or pass it in. 
     # But to keep it simple and consistent with previous modification:
@@ -310,7 +315,7 @@ def run(university_name_input):
             save_to_json(test_scores_data, json_path)
 
     # Final save
-    csv_output_path = os.path.join(output_dir, 'test_scores_requirements.csv')
+    csv_output_path = os.path.join(output_dir, f'{sanitized_name}_test_scores_requirements.csv')
     if test_scores_data:
         df = pd.DataFrame(test_scores_data)
         df.to_csv(csv_output_path, index=False, encoding='utf-8')

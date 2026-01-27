@@ -172,7 +172,12 @@ def extract_application_requirements(program_name, program_url, institute_url):
 def run(university_name_input):
     global university_name, institute_url
     university_name = university_name_input
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
     
+    # Update paths with university name
+    csv_path = os.path.join(output_dir, f'{sanitized_name}_undergraduate_programs.csv')
+    json_path = os.path.join(output_dir, f'{sanitized_name}_application_requirements.json')
+
     yield f'{{"status": "progress", "message": "Initializing application requirements extraction for {university_name}..."}}'
     
     # Quick fetch of website url for context
@@ -263,7 +268,7 @@ def run(university_name_input):
             save_to_json(application_data, json_path)
 
     # Final save
-    csv_output_path = os.path.join(output_dir, 'application_requirements.csv')
+    csv_output_path = os.path.join(output_dir, f'{sanitized_name}_application_requirements.csv')
     if application_data:
         df = pd.DataFrame(application_data)
         df.to_csv(csv_output_path, index=False, encoding='utf-8')

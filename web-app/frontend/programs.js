@@ -26,14 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        setLoading(true);
-        setStatus(`Running Step ${step}`, 'initializing');
-        log(`Starting Step ${step} for ${universityName}...`);
-
         const payload = {
             university_name: universityName,
             step: parseInt(step)
         };
+
+        const stepMsg = step === '9' ? "Full Automation (Steps 1-5)" : `Step ${step}`;
+        setLoading(true);
+        setStatus(`Running ${stepMsg}`, 'initializing');
+        log(`Starting ${stepMsg} for ${universityName}...`);
 
         try {
             const startTime = Date.now();
@@ -44,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (!response.ok) {
-                 const result = await response.json();
-                 throw new Error(result.error || 'Server error');
+                const result = await response.json();
+                throw new Error(result.error || 'Server error');
             }
 
             const reader = response.body.getReader();
@@ -55,32 +56,36 @@ document.addEventListener('DOMContentLoaded', () => {
             while (true) {
                 const { done, value } = await reader.read();
                 if (done) break;
-                
+
                 buffer += decoder.decode(value, { stream: true });
                 const lines = buffer.split('\n\n');
-                buffer = lines.pop(); 
+                buffer = lines.pop();
 
                 for (const line of lines) {
                     if (line.startsWith('data: ')) {
                         const data = JSON.parse(line.slice(6));
-                        
+
                         if (data.status === 'progress') {
-                             log(data.message, 'system');
-                        } else if (data.status === 'warning') {
-                             log(data.message, 'warning');
-                        } else if (data.status === 'complete') {
-                             const duration = ((Date.now() - startTime) / 1000).toFixed(1);
-                             log(`Step ${step} completed in ${duration}s`, 'success');
-                             setStatus('Success', 'success');
-                             if (data.files && Object.keys(data.files).length > 0) {
+                            log(data.message, 'system');
+                            // Show files incrementally if they arrive
+                            if (data.files && Object.keys(data.files).length > 0) {
                                 showResults(data.files);
-                             }
-                             setLoading(false);
-                             return;
+                            }
+                        } else if (data.status === 'warning') {
+                            log(data.message, 'warning');
+                        } else if (data.status === 'complete') {
+                            const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                            log(`Step ${step} completed in ${duration}s`, 'success');
+                            setStatus('Success', 'success');
+                            if (data.files && Object.keys(data.files).length > 0) {
+                                showResults(data.files);
+                            }
+                            setLoading(false);
+                            return;
                         } else if (data.error) {
-                             throw new Error(data.error);
+                            throw new Error(data.error);
                         } else if (data.status === 'error') {
-                             throw new Error(data.message);
+                            throw new Error(data.message);
                         }
                     }
                 }
@@ -96,13 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function setLoading(isLoading) {
         isProcessing = isLoading;
         stepButtons.forEach(btn => btn.disabled = isLoading);
-        
+
         if (isLoading) {
             statusArea.classList.remove('hidden');
             resultsContainer.classList.add('hidden'); // Hide previous results while running new step
             // We don't clear logs here to keep history, or maybe we should?
             // Let's clear for cleaner view
-            logsContainer.innerHTML = ''; 
+            logsContainer.innerHTML = '';
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         }
     }
@@ -122,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showResults(files) {
         resultsContainer.classList.remove('hidden');
-        fileList.innerHTML = ''; 
+        fileList.innerHTML = '';
 
         const fileTypes = {
             'csv': { icon: '📊', label: 'CSV Data' },
@@ -140,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const filename = path.split('/').pop(); // path is /api/download/filename
 
             const link = document.createElement('a');
-            link.href = path; 
+            link.href = path;
             link.download = filename;
             link.className = 'file-item';
             link.style.textDecoration = 'none';
@@ -165,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { transform: 'translateX(10px)' },
             { transform: 'translateX(0)' }
         ], { duration: 300 });
-        
+
         setTimeout(() => {
             element.style.borderColor = 'rgba(255, 255, 255, 0.1)';
         }, 2000);

@@ -171,7 +171,7 @@ def extract_programs_data():
     step = data.get("step")
     
     if not university_name:
-        return jsonify({"error": "University name is required"}), 400
+        return jsonify({"error": "Universities name is required"}), 400
     if not step:
          return jsonify({"error": "Step number is required"}), 400
 
@@ -183,17 +183,16 @@ def extract_programs_data():
             for update in generator:
                 try:
                     update_obj = json.loads(update)
-                    if update_obj.get("status") == "complete":
-                        # Modify result_files to return relative filenames for download
+                    
+                    # Transform file paths in ANY update that contains them
+                    if "files" in update_obj and update_obj["files"]:
                         download_links = {}
-                        if "files" in update_obj:
-                             for key, path in update_obj["files"].items():
-                                filename = os.path.basename(path)
-                                download_links[key] = f"/api/download/{filename}"
-                             update_obj["files"] = download_links
-                        yield f"data: {json.dumps(update_obj)}\n\n"
-                    else:
-                         yield f"data: {update}\n\n"
+                        for key, path in update_obj["files"].items():
+                            filename = os.path.basename(path)
+                            download_links[key] = f"/api/download/{filename}"
+                        update_obj["files"] = download_links
+                    
+                    yield f"data: {json.dumps(update_obj)}\n\n"
                 except json.JSONDecodeError:
                      yield f"data: {json.dumps({'status': 'progress', 'message': update})}\n\n"
                      

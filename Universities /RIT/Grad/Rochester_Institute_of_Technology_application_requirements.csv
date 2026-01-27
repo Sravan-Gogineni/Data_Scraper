@@ -1,0 +1,426 @@
+Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsRecommendationSystemOpted,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,Program name,Program Page url,error
+Required,Required,"To be considered for admission to the MS program in accounting and analytics, candidates must fulfill the following requirements:
+
+- Completed online application.
+- Baccalaureate degree (or equivalent) from an accredited university or college. A business undergraduate degree is preferred.
+- Official transcripts (in English) from all previously attended colleges and universities.
+- A current resume or curriculum vitae.
+- A personal statement.
+- Letters of recommendation (optional).
+- GMAT or GRE scores are not required but may be submitted to strengthen a candidate’s application.
+- Official TOEFL, IELTS, or PTE scores.
+- A copy of your passport biopage.",Not Required,True,True,,True,False,False,,,program,Accounting and Analytics MS,https://www.shiksha.com/studyabroad/usa/universities/rochester-institute-of-technology/ms-accounting-and-analytics,
+Required,Required,All applicants for Saunders graduate programs are required to complete or submit the following: An online application; Transcripts from all undergraduate and graduate schools attended; A current resume; A personal statement of approximately 500 words; At least one letter of recommendation (at least two for scholarship consideration). Advanced certificates do not require GMAT/GRE scores for admission.,Not Required,True,False,False,True,False,False,,,program,Accounting and Financial Analytics Advanced Certificate,https://www.mtu.edu/senate/policies-procedures/proposals-year/2019-20/10-20/,
+,,,,,,,,,,,,error,Applied and Computational Mathematics MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Applied Statistics Advanced Certificate,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Applied Statistics MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Architecture Master of Architecture,https://studyarchitecture.com/school/rochester-institute-of-technology/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Artificial Intelligence in Computer Science advanced certificate program, candidates must fulfill the following requirements:
+
+- Hold a baccalaureate degree (or equivalent) from an accredited university or college in a computing field.
+- Have a minimum cumulative GPA of 3.0 (or equivalent).
+- Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+- Submit a current resume or curriculum vitae.
+- Submit a personal statement.
+- Submit two letters of recommendation from academic or professional sources.
+- Complete a graduate application.",,True,False,False,True,False,False,,,program,Artificial Intelligence in Computer Science Advanced Certificate,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Artificial Intelligence MS,https://www.reddit.com/r/rit/comments/195plo2/choosing_universities_for_ms_in_artificial/,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the astrophysical sciences and technology MS program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college in a program of physics, mathematics, computer science, or engineering.
+Have a minimum undergraduate GPA of 3.0 (or equivalent).
+Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+Submit a statement of purpose.
+Submit a current resume or curriculum vitae.
+Submit two letters of recommendation.
+Writing samples are not required.
+Graduate Record Exam (GRE) scores are not required.",Not Required,True,False,,True,False,False,,,program,Astrophysical Sciences and Technology MS,https://www.rit.edu/study/astrophysical-sciences-and-technology-ms,
+,,,,,,,,,,,,error,Astrophysical Sciences and Technology PhD,https://www.rit.edu/study/astrophysical-sciences-and-technology-phd,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Big Data Analytics advanced certificate program, candidates must fulfill the following requirements:
+
+*   Complete an online graduate application.
+*   Hold a baccalaureate degree (or equivalent) from an accredited university or college.
+*   Have a minimum cumulative GPA of 3.0 (or equivalent). Applicants with a lower GPA may be considered, but may be required to submit Graduate Record Exam (GRE) scores.
+*   Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+*   Submit a current resume or curriculum vitae.
+*   Submit a personal statement of educational objectives.
+*   Submit two letters of recommendation from academic or professional sources.
+*   International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 92 (internet-based) is required. A minimum IELTS score of 7.0 is required. A minimum PTE score of 63 is required.",,False,False,False,True,False,False,,,program,Big Data Analytics Advanced Certificate,https://www.rit.edu/study/big-data-analytics-adv-cert,
+,,,,,,,,,,,,error,Bioinformatics MS,https://www.rit.edu/science/sites/rit.edu.science/files/2020-10/bioinformatics-graduate2020.pdf,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the biomedical and chemical engineering PhD program, candidates must fulfill the following requirements:
+* Complete a graduate application.
+* Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or a related field (e.g., chemistry, physics, mathematics, biology, etc.).
+* Have a minimum cumulative GPA of 3.0 (or equivalent).
+* Submit official transcripts (in English) from all previously completed undergraduate and graduate course work.
+* Submit a statement of purpose.
+* Submit a current resume or curriculum vitae.
+* Submit three letters of recommendation.
+* International applicants whose native language is not English must submit scores from the Test of English as a Foreign Language (TOEFL), International English Language Testing System (IELTS), or Pearson Test of English (PTE). A minimum TOEFL score of 88 (internet-based), a minimum IELTS score of 6.5, or a minimum PTE score of 58 is required.",Not Required,True,False,,True,False,False,,,program,Biomedical and Chemical Engineering PhD,https://www.rit.edu/marketing/sites/rit.edu.marketing/files/docs/pdfs/Graduate_Catalog.pdf,
+Required,Required,"Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or a related field (e.g., biology, chemistry, math, or physics). Have a minimum cumulative GPA of 3.0 (or equivalent). Submit official transcripts (in English) of all previously completed undergraduate and graduate course work. Submit a statement of purpose. Submit a current resume or curriculum vitae. Submit two letters of recommendation from academic or professional sources. Graduate Record Exam (GRE) scores are not required but will be considered if submitted. Complete a graduate application. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The PTE score of 58 is required.",,True,True,False,True,False,False,,,program,Biomedical Engineering MS,https://www.rit.edu/study/biomedical-engineering-ms,
+Required,,"To be considered for admission to the Executive MBA program, candidates must fulfill the following requirements:
+
+A completed graduate application.
+A current resume.
+Official transcripts (in English) of all previously completed undergraduate and graduate course work.
+A personal interview with the admissions committee (by invitation only).
+A minimum of six-to-eight years of professional work experience including significant management or leadership experience.
+GMAT/GRE scores are not required.
+Two letters of recommendation.
+A non-refundable $65 application fee.",,True,False,False,False,False,False,,,program,Business Administration Executive MBA,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKfvM6vqPQaC3dPNZ3vBUSh-zZAo2p1AC8xgJFdT1MP8ER99AuloBKFyEBAybL9EfoNeAW74_xOvoxFfQdTIumVc7QTxiPaMjhyfTkR5h2uCAZXoGh8vqL5whTQs31n1czrFkUOSSQmRImOhI7GR3Q-ZtjwRN1tVDxJaeiioupCtZpuNnB0H4NJ1jJ0fnmgeKSN0Vij_GNN0cF9Nx2bwkbiUm2w9xSH7hMc_L_UVVw6r6wwxxqfYeRQPTqypHGJl7UUyxjQFQQPbhH-UCou7s1,
+,,,,,,,,,,,,error,Business Administration MBA,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,,"To be considered for admission to the Executive MBA program, candidates must fulfill the following requirements:
+
+*   Have a minimum of six to eight years of work experience with an increasing level of responsibility (management experience is strongly preferred)
+*   Hold a baccalaureate degree from an accredited institution
+*   Submit a completed graduate application
+*   Submit official transcripts (in English) of all previously completed undergraduate and graduate course work
+*   Submit a current resume
+*   Submit a personal interview with the admissions team
+*   Submit two letters of recommendation
+*   A GMAT or GRE is not required.",,True,False,,False,False,False,,,program,Business Administration Online Executive MBA,https://www.rit.edu/study/graduate,
+Required,Required,"A completed graduate application.
+A master’s degree in a business or non-business field or a bachelor’s degree with a very high GPA from an accredited institution. An MBA or a specialized business master’s degree is preferred.
+Official transcripts (in English) of all previously completed undergraduate and graduate course work.
+A minimum GPA of 3.3 (or equivalent).
+A competitive GMAT or GRE score, taken within five years of applying. GMAT/GRE waivers are considered on a case-by-case basis. To be considered, please submit a GMAT/GRE waiver request.
+A statement of purpose.
+A current resume or curriculum vitae (CV).
+Three letters of recommendation from individuals such as college faculty or employers who can attest to your academic potential to succeed in a PhD program.
+A writing sample. Examples of writing samples can include a master's thesis, a research paper, or a technical report.
+Applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 100 (internet-based) is required. A minimum IELTS score of 7.5 is required. A minimum PTE score of 76 is required.
+A personal interview with the PhD program director (by invitation only).",Required,False,False,False,True,False,False,,,program,Business Administration PhD,https://www.youtube.com/watch?v=E1WOSO2I40g,
+Required,Required,"To be considered for admission to the MS in business analytics and AI program, candidates must fulfill the following requirements:
+
+- Completed online application.
+- A bachelor's degree (or equivalent) from an accredited university or college.
+- Official transcripts (in English) from all previously completed undergraduate and graduate course work.
+- A minimum cumulative GPA of 3.0 (or equivalent).
+- A personal statement.
+- A current resume or curriculum vitae.
+- Two letters of recommendation.
+- A writing sample of no more than three pages, single-spaced. The topic of the writing sample should address the future of business analytics and artificial intelligence and how you believe the MS degree will prepare you for this future.
+- Scores from the Graduate Management Admission Test (GMAT) or Graduate Record Exam (GRE) (optional).
+- A personal interview with a member of the graduate admissions staff may be required.
+- International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 92 (internet-based) is required. A minimum IELTS score of 7.0 is required. A minimum PTE score of 63 is required.",Required,False,True,False,True,False,False,,,program,Business Analytics and AI MS,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Ceramics MFA,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhVkN4MdiAdjnUw__kwQRSoECJbGb6y9GYTKhg9em_AXSyNRtCARqtGtzf-UYUqGQX-TGKa_M_zYIYrQaCZ2Ry-pmnwDMJtZzNJczDwZLl69pNugPP8D6Q1yVdIGTy5ei8,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Chemical Engineering MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the chemistry MS program, candidates must fulfill the following requirements:
+
+- Hold a baccalaureate degree (or equivalent) from an accredited university or college in chemistry or a related field.
+- Have a minimum cumulative GPA of 3.0 (or equivalent).
+- Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+- Submit a personal statement of educational objectives.
+- Submit a current resume or curriculum vitae.
+- Submit two letters of recommendation from academic or professional sources.
+- Complete a graduate application.
+- International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based), IELTS score of 6.5, or PTE score of 60 is required.",Not Required,True,False,True,True,False,False,,,program,Chemistry MS,https://www.youtube.com/watch?v=sIKleE74rM0,
+,,,,,,,,,,,,error,Cognitive Science PhD,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Color Science MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Color Science PhD,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Communication MS program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college.
+Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+A minimum cumulative GPA of 3.0 (or equivalent) is preferred.
+Submit a current resume or curriculum vitae.
+Submit a statement of purpose.
+Submit a writing sample.
+Submit two letters of recommendation.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 92 (internet-based) is required. A minimum IELTS score of 7.0 is required. A minimum PTE score of 65 is required.
+The GRE is not required for admission.",Required,True,False,True,False,False,False,,,program,Communication MS,https://www.rit.edu/study/communication-ms,
+,,,,,,,,,,,,error,Communication Networks MS,https://www.rit.edu/study/communication-networks-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Computer Engineering MS,https://www.rit.edu/study/computer-engineering-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Computer Science MS program, candidates must fulfill the following requirements: Completed online application. Hold a baccalaureate degree (or equivalent) from an accredited university or college in computer science or a related field. A minimum cumulative GPA of 3.0 (or equivalent). Official transcripts (in English) from all previously completed undergraduate and graduate course work. A statement of purpose. A current resume or curriculum vitae. Two letters of recommendation. GRE scores are optional, but recommended for applicants who do not have a degree from a U.S. institution. Writing samples are optional. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based), IELTS score of 6.5, or PTE score of 60 is required.",Optional,True,True,False,True,False,False,,,program,Computer Science MS,https://www.rit.edu/computing/department-computer-science/resources,
+,,,,,,,,,,,,error,Computing and Information Sciences PhD,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Cybersecurity advanced certificate program, candidates must fulfill the following requirements: Complete an online graduate application. Hold a baccalaureate degree (or equivalent) from an accredited university or college in a computing field including computer science, information technology, software engineering, or computer engineering. Have a minimum cumulative GPA of 3.0 (or equivalent). Submit official transcripts (in English) of all previously completed undergraduate and graduate course work. Submit a current resume or curriculum vitae. Submit a personal statement of educational objectives. Submit two letters of recommendation from academic or professional sources. Submit scores from the GRE exam (not required).",,True,False,False,False,False,False,,,program,Cybersecurity Advanced Certificate,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Cybersecurity MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the data science MS program, candidates must fulfill the following requirements:
+
+Hold a baccalaureate degree (or equivalent) from an accredited university or college in a quantitatively-based field, including mathematics, statistics, computer science, engineering, information science, or other related scientific discipline.
+A recommended minimum cumulative GPA of 3.0 (or equivalent).
+Completed application form.
+A personal statement of educational objectives.
+A current resume or curriculum vitae.
+Two letters of recommendation.
+Official transcripts (in English) of all previously completed undergraduate and graduate course work.
+GRE scores are optional and are not required for admission.
+For international applicants whose native language is not English, a minimum TOEFL score of 92 (internet-based), or a minimum IELTS score of 7.0 is required. Applicants with TOEFL scores between 79 and 91, or IELTS scores of 6.5, may be considered for admission with required English language courses.",,True,True,,True,False,False,,,program,Data Science MS,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the Master of Science Program in Secondary Education of Students Who Are Deaf or Hard of Hearing (MSSE), candidates must fulfill the following requirements:
+- Complete an online application.
+- Hold a baccalaureate degree from an accredited college or university.
+- Have a minimum cumulative GPA of 3.0 (on a 4.0 scale). Applicants with a GPA lower than 3.0 may be considered for admission based on other indicators of success, including a successful interview with program faculty.
+- Provide official transcripts (in English) of all previously completed undergraduate and graduate course work.
+- Provide two letters of recommendation. It is strongly recommended that at least one of these be from a former professor or instructor.
+- A current resume.
+- A two- to three-page, typed, double-spaced statement of purpose that discusses the following:
+  - Your reason for choosing teaching as a profession
+  - How prior work, volunteer and/or life experiences have prepared you for a career in teaching
+  - Your philosophy of education for deaf and hard-of-hearing students
+- Participate in a personal interview (in person or by videophone/videoconference).
+- Applicants must demonstrate a minimum level of sign language proficiency equivalent to the successful completion of ASL IV.",Not Required,True,False,False,False,False,False,,,program,Deaf Education MS,https://www.cobleskill.edu/academics/gradschool/pdfs/RIT_MS_DeafEducation.pdf,
+,,,,,,,,,,,,error,Dietetics and Nutrition MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Electrical and Computer Engineering PhD,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Complete an online graduate application. Submit official transcripts (in English) of all previously completed undergraduate and graduate course work. Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or a related field, such as mathematics, computer science, or physics. A minimum cumulative GPA of 3.0 (or equivalent). Submit a personal statement. Submit a current resume or curriculum vitae. Submit two letters of recommendation from academic or professional sources. Entrance exam requirements: GRE is required. Submit official scores. The program code is 1203. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based), a minimum IELTS score of 6.5, or a PTE score of 60 is required.",Not Required,False,False,False,True,False,False,,,program,Electrical Engineering MS,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the Engineering Management MS program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or a related technical discipline.
+Have a minimum cumulative GPA of 3.0 (or equivalent).
+Submit official transcripts (in English) from all previously completed undergraduate and graduate course work.
+Submit a current resume or curriculum vitae.
+Submit a personal statement of educational objectives.
+Submit two letters of recommendation from academic or professional sources.
+Entrance exam requirements: GRE required, waived if cumulative undergraduate GPA is 3.0 or greater.
+Writing samples are not required.
+Submit English language test scores (TOEFL, IELTS, or PTE), if applicable.",Not Required,False,False,False,True,False,False,,,program,Engineering Management MS,https://www.rit.edu/study/engineering-management-ms,
+,,,,,,,,,,,,error,Engineering Psychology Advanced Certificate,https://www.scribd.com/document/323846830/Graduate-Bulletin,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Hold a baccalaureate degree (or equivalent) from an accredited university or college in engineering, engineering technology, or a related science (e.g., biology, chemistry, physics). Have an undergraduate GPA of 3.0 or higher. Submit official transcripts (in English) of all previously completed undergraduate and graduate course work. Submit a current resume or curriculum vitae. Submit a personal statement of educational objectives. Two letters of recommendation are required. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE.",,True,False,True,True,False,False,,,program,"Environmental, Health and Safety Management MS",https://www.rit.edu/admissions/sites/rit.edu.admissions/files/grad_open_house/engineering_and_engineering_technology/cet/Environmental%20Health%20and%20Safety%20Management%20MS.pdf,
+,,,,,,,,,,,,error,Environmental Science MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the experimental psychology MS program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college.
+Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+A minimum cumulative GPA of 3.0 (or equivalent).
+Submit a current resume or curriculum vitae.
+Submit a personal statement of educational objectives.
+Submit three letters of recommendation.
+Submit a writing sample. This should be an empirical paper written for an undergraduate course (ideally in APA style).
+Entrance exam requirements: The GRE is not required.",Required,True,False,False,True,False,False,,,program,Experimental Psychology MS,https://www.rit.edu/study/graduate,
+Required,Required,"In addition to the university graduate application requirements, you must submit the following materials:
+
+- A portfolio of your work (see below for specific details and options)
+- A statement of purpose of no more than two pages
+- A resume or curriculum vitae
+- Three letters of recommendation
+- Official transcripts (in English) of all previously completed undergraduate and graduate course work
+- A writing sample of no more than 10 pages, either academic or creative (optional)
+- A bachelor’s degree (or equivalent) from an accredited university or college
+- A minimum cumulative GPA of 3.0 (or equivalent)",Optional,True,False,False,False,False,False,,,program,Film and Animation MFA,https://www.rit.edu/study/film-and-animation-mfa,
+Required,Required,"To be considered for admission to the Finance MS program, candidates must fulfill the following requirements:
+
+Completed online application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college.
+A recommended minimum cumulative GPA of 3.0 (or equivalent).
+Official transcripts (in English) of all previously completed undergraduate and graduate course work.
+A statement of purpose.
+A current resume or curriculum vitae.
+Letters of recommendation (two are required).
+GMAT or GRE exam scores may be submitted, but are not required. The GMAT/GRE requirement is waived for all applicants.",,True,True,False,True,False,False,,,program,Finance MS,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Fine Arts Studio MFA,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Furniture Design MFA,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Game Design and Development MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Glass MFA program, candidates must fulfill the following requirements: Hold a baccalaureate degree from an accredited university or college; have a recommended minimum cumulative GPA of 3.0 (or equivalent); and submit a completed online graduate application, a statement of purpose, a resume or curriculum vitae, three letters of recommendation, a portfolio of 15-20 images, and official transcripts from all previously attended colleges and universities. Graduate Record Examination (GRE) scores are not required.",Not Required,True,False,,False,False,False,,,program,Glass MFA,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the MS in global supply chain management program, candidates must fulfill the following requirements:
+
+Completed online application
+A current résumé
+A personal statement of educational objectives
+Official transcripts (in English) of all previously completed undergraduate and graduate course work
+A bachelor's degree (or equivalent) from an accredited university or college
+A recommended minimum cumulative GPA of 3.0 (or equivalent)
+Two letters of recommendation from academic or professional sources
+A possible interview (at the discretion of the admissions committee)",Not Required,True,False,,True,False,False,,,program,Global Supply Chain Management MS,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the Health and Well-being Management MS program, candidates must fulfill the following requirements:
+
+- Complete an online graduate application.
+- Hold a baccalaureate degree (or equivalent) from an accredited university or college in an appropriate area of study, including, but not limited to, exercise science, nutrition, health science, biology, psychology, or management.
+- Have a minimum cumulative GPA of 3.0 (or equivalent).
+- Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+- Submit a personal statement of educational objectives.
+- Submit a current resume or curriculum vitae.
+- Submit two letters of recommendation from academic or professional sources.
+- International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The English language test score requirement is waived for native speakers of English or for those who have submitted transcripts from a college or university where English is the language of instruction. You can request a waiver for your English language test score by emailing the Office of Graduate Enrollment at gradinfo@rit.edu.",,True,False,False,False,False,False,,,program,Health and Well-Being Management MS,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Health Care Interpretation MS,https://www.proquest.com/openview/202390229f185a3eefefe1fa981ace41/1?pq-origsite=gscholar&cbl=18750&diss=y,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Hospitality Business Management MS,https://www.rit.edu/study/hospitality-business-management-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the human-computer interaction MS program, candidates must fulfill the following requirements: complete an online graduate application; submit official transcripts (in English) of all previously completed undergraduate and graduate course work; hold a bachelor's degree (or equivalent) from an accredited university or college; a recommended minimum GPA of 3.0 (or equivalent); submit a current resume or curriculum vitae; submit a statement of purpose; submit two letters of recommendation; submit a writing sample; submit a portfolio of your work (optional); and submit English language test scores (if required).",Required,True,False,False,True,False,False,,,program,Human-Computer Interaction MS,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the imaging science MS program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college in engineering, computer science, applied mathematics, physics, or a related science.
+Have a minimum GPA of 3.0 (or equivalent).
+Submit official transcripts (in English) from all previously completed undergraduate and graduate course work.
+Submit a statement of purpose.
+Submit a current resume or curriculum vitae.
+Submit two letters of recommendation.
+Writing samples are not required.
+GRE scores are not required.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The PTE is also accepted. A minimum score of 60 is required.",Not Required,True,False,False,True,False,False,,,program,Imaging Science MS,https://www.youtube.com/watch?v=F8bzOJPK_Dk,
+Required,Required,"To be considered for admission to the imaging science Ph.D. program, candidates must:
+
+Hold a baccalaureate degree in engineering, computer science, physics, mathematics, or a related science from an accredited university or college.
+Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+Have a minimum cumulative GPA of 3.2 (or equivalent).
+Submit a statement of purpose.
+Submit a curriculum vitae or resume.
+Submit two letters of recommendation.
+The Graduate Record Exam (GRE) is not required but may be submitted to strengthen a candidate's application.
+Complete a graduate application.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 92 (internet-based) is required. A minimum IELTS score of 7.0 is required. A minimum PTE score of 65 is required.",,True,True,False,True,False,False,,,program,Imaging Science PhD,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Industrial and Systems Engineering MS,https://www.rit.edu/study/industrial-and-systems-engineering-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Industrial Design MFA,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the MS in information technology and analytics, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college. A degree in an area of computing is preferred but not required.
+Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+A minimum GPA of 3.0 (or equivalent) is required.
+Submit a current resume or curriculum vitae.
+Submit a personal statement of educational objectives.
+Submit two letters of recommendation.
+Entrance exam requirements: GRE is required. The GRE may be waived for applicants who meet the criteria listed on the GRE waiver page.
+Submit English language test scores (TOEFL, IELTS, or PTE) if you are an international applicant.",,False,False,,True,False,False,,,program,Information Technology and Analytics MS,https://www.shiksha.com/studyabroad/usa/universities/rochester-institute-of-technology/ms-information-technology-and-analytics,
+,,,,,,,,,,,,error,Lean Six Sigma Advanced Certificate,https://www.scribd.com/document/323846830/Graduate-Bulletin,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Manufacturing Leadership MS program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or engineering technology discipline.
+Have a minimum cumulative GPA of 3.0 (or equivalent).
+Submit official transcripts (in English) from all previously completed undergraduate and graduate course work.
+Submit a current resume or curriculum vitae.
+Submit a statement of purpose.
+Submit two letters of recommendation.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based), IELTS score of 6.5, or PTE score of 60 is required.
+Graduate Record Exam (GRE) is not required.",,True,False,False,True,False,False,,,program,Manufacturing Leadership MS,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the Materials Science and Engineering advanced certificate, candidates must fulfill the following requirements: Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or science discipline. Have a minimum cumulative GPA of 3.0 (or equivalent). Submit official transcripts (in English) of all previously completed undergraduate and graduate course work. Submit a current resume or curriculum vitae. Submit a statement of purpose. Submit two letters of recommendation from academic or professional sources. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE.",Not Required,True,False,,True,False,False,,,program,Materials Science and Engineering Advanced Certificate,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Materials Science and Engineering MS,https://www.rit.edu/study/materials-science-and-engineering-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Complete an online application; Hold a baccalaureate degree from an accredited university or college in mathematics, science, engineering, or a related field; Submit official transcripts (in English) from all previously completed undergraduate and graduate course work; A grade point average of 3.0 or higher (or equivalent); Submit a current resume or curriculum vitae; Submit a statement of purpose; Three letters of recommendation; GRE scores are not required.",Not Required,True,False,False,True,False,False,,,program,Mathematical Modeling PhD,https://www.rit.edu/admissions/sites/rit.edu.admissions/files/grad_open_house/science_and_math/Mathematical%20Modeling%20PhD.pdf,
+,,,,,,,,,,,,error,Mechanical and Industrial Engineering PhD,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Mechanical Engineering ME,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the Mechanical Engineering MS program, candidates must fulfill the following requirements:
+
+* Complete a graduate application.
+* Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering discipline. Applicants with degrees in math, physics, or other technical disciplines may be admitted but may be required to complete undergraduate bridge courses before matriculating into the graduate program.
+* Have a minimum cumulative GPA of 3.0 (or equivalent). Applicants with a GPA lower than 3.0 may be admitted on a conditional basis. These candidates must achieve a GPA of 3.0 in their first nine credit hours of graduate course work to continue in the program.
+* Submit official transcripts (in English) from all previously completed undergraduate and graduate course work.
+* Submit a statement of purpose (approximately 500 words).
+* Submit a current resume or curriculum vitae.
+* Submit two letters of recommendation from academic or professional sources.
+* Submit GRE scores. The GRE is required. To be competitive, recommended scores are verbal 151, quantitative 159, and analytical writing 3.5. (GRE requirement is waived for applicants who have a degree from an ABET-accredited U.S. institution or a school on our international top university list. Please consult your graduate program director.)
+* International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based), IELTS score of 6.5, or PTE score of 58 is required.",,False,False,False,True,False,False,,,program,Mechanical Engineering MS,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Mechatronics and Mechanical Systems MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Medical Illustration MFA,https://www.learnmedical.art/medical-illustration-schools/rochester-institute-of-technology-graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the metals and jewelry design MFA program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college. A major in a studio art or design discipline is recommended.
+Submit official transcripts (in English) from all previously completed undergraduate and graduate course work. A minimum cumulative GPA of 3.0 (or equivalent) is required.
+Submit a current résumé or curriculum vitae.
+Submit a one-page statement of purpose detailing your artistic and career objectives.
+Submit two letters of recommendation.
+Submit a portfolio of 15-20 images. Provide a corresponding inventory sheet that includes the title, media, size, and date for each piece.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The PTE is also accepted. A minimum score of 60 is required.
+Submit a writing sample, such as a paper submitted for a course in art history or general studies.
+An interview is not required, but applicants are welcome to visit the campus to meet faculty and tour the facilities.",Required,True,False,True,False,False,False,,,program,Metals and Jewelry Design MFA,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the microelectronic engineering MS program, candidates must fulfill the following requirements: Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or a related field such as physics, applied physics, chemistry, applied mathematics, or materials science. Applicants from other areas are considered on a case-by-case basis. Have a minimum cumulative GPA of 3.0 (or equivalent). Submit official transcripts (in English) from all previously completed undergraduate and graduate course work. Submit a current resume or curriculum vitae. Submit a statement of purpose. Submit two letters of recommendation from academic or professional sources. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The English language test score requirement is waived for native speakers of English or for those submitting transcripts from degrees earned at American institutions. For more information, please visit the English Language Requirements page.",Not Required,True,True,,True,False,False,,,program,Microelectronic Engineering MS,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the microsystems engineering Ph.D. program, candidates must fulfill the following requirements: Hold a baccalaureate degree in engineering or a related science from an accredited university or college; Have a minimum cumulative GPA of 3.0 (or equivalent); Submit a statement of purpose; Submit two letters of recommendation from individuals well-qualified to judge their ability for graduate study; Submit a current resume or curriculum vitae; Submit official transcripts (in English) of all previously completed undergraduate and graduate course work; Complete a graduate application. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The PTE score requirement is 58. GRE scores are not required but will be considered if submitted.",,True,True,,True,False,False,,,program,Microsystems Engineering PhD,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLXOp8i5GhfThd-78kj3VjWojLLdi4dJMmk1Mvc9RF6L2G3lAd0QO6KaZXqDsNRZ3wY6iqIR-eUPnyqLMXpbKer-ceptuOjpSlnE9QgkEJ8FvlEPlViRSzsHRTJHEi67ouyhSUmMEIFqWWl94wvfEGE4blXYProw==,
+,,,,,,,,,,,,error,Organizational Leadership and Innovation MS,https://www.youtube.com/watch?v=4QOeMbepL60,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Packaging Science MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Complete a graduate application. A statement of purpose of approximately 500 words describing your reasons for pursuing graduate study, your academic and professional background, and your career goals. A current resume or curriculum vitae. Official transcripts (in English) of all previously completed undergraduate and graduate course work. Two letters of recommendation from individuals who can assess your academic potential. A portfolio of 20 images that best represents your work and interests. A writing sample is optional. Submit official scores from an English language proficiency test (TOEFL, IELTS, or PTE Academic), if applicable.",Optional,True,False,,False,False,False,,,program,Photography and Related Media MFA,https://www.rit.edu/artdesign/sites/rit.edu.artdesign/files/documents/Photo-MFA-RIT.pdf,
+,,,,,,,,,,,,error,Physics MS,https://www.rit.edu/study/physics-ms,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the astrophysical sciences and technology PhD program, candidates must fulfill the following requirements: Hold a baccalaureate degree in a physical science, mathematics, computer science, or engineering from an accredited university or college. Submit official transcripts (in English) from all previously completed undergraduate and graduate course work. Have a minimum cumulative GPA of 3.2 (or equivalent). Submit a statement of purpose. Submit a resume or curriculum vitae. Submit three letters of recommendation. The GRE is not required, but students may submit their scores to supplement their application. Submit English language test scores (TOEFL, IELTS, or PTE), if applicable.",,True,True,False,True,False,False,,,program,Physics PhD,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the Product Development MS program, candidates must fulfill the following requirements: Complete an online graduate application. Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or related discipline. Have a minimum cumulative GPA of 3.0 (or equivalent). Submit official transcripts (in English) from all previously completed undergraduate and graduate course work. Submit a current resume or curriculum vitae. Submit a personal statement of educational objectives. Submit two letters of recommendation. International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based), IELTS score of 6.5, or PTE score of 60 is required. The GRE is not required.",Not Required,True,False,True,True,False,False,,,program,Product Development MS,https://www.rit.edu/study/product-development-ms,
+Required,Required,"To be considered for admission to the professional studies MS program, candidates must fulfill the following requirements:
+
+Completed online application.
+Baccalaureate degree (or equivalent) from an accredited university or college.
+Official undergraduate transcripts (in English).
+A statement of purpose of approximately 500 words that describes your rationale for seeking the MS degree in professional studies and how you plan to use this degree to further your career goals.
+A current resume or curriculum vitae.
+Two letters of recommendation.
+GRE scores are not required.
+Writing sample (optional): You may include a sample of your writing (e.g., a report from a previous course, professional correspondence, an article) with your application materials.
+An interview may be required.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. A minimum PTE score of 60 is required.",Optional,True,False,,False,False,False,,,program,Professional Studies MS,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the project management advanced certificate program, candidates must fulfill the following requirements:
+
+*   Complete an online graduate application.
+*   Hold a baccalaureate degree (or equivalent) from an accredited university or college.
+*   Submit official transcripts (in English) from all previously completed undergraduate and graduate course work.
+*   A minimum cumulative GPA of 3.0 (or equivalent).
+*   Submit a current resume or curriculum vitae.
+*   Submit a personal statement.
+*   Submit two letters of recommendation.
+*   Writing samples are not required.
+*   Entrance exam scores (GRE, GMAT) are not required.
+*   International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The English language test score requirement is waived for native speakers of English or for those submitting transcripts from degrees earned at American institutions.",Not Required,True,False,,False,False,False,,,program,Project Management Advanced Certificate,https://www.rit.edu/study/project-management-adv-cert,
+,,,,,,,,,,,,error,Project Management MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Completed online application. A bachelor’s degree (or equivalent) from an accredited university or college. Official transcripts (in English) of all previously completed undergraduate and graduate course work. A grade point average (GPA) of 3.0 (or equivalent). A statement of purpose. This should be a one- to two-page essay that describes your reasons for pursuing the MS degree, your academic and professional background, your specific areas of interest in the science, technology, and public policy field, and your career goals. A current resume or curriculum vitae. Two letters of recommendation. The letters should be from individuals who know your academic and/or professional background. A writing sample. This should be an example of your analytic and writing abilities. The sample can be a paper submitted for a course or a report prepared for a professional audience. A sample of 10-15 pages is preferred.",Required,False,True,,True,False,False,,,program,"Science, Technology, and Public Policy MS",https://www.rit.edu/study/science-technology-and-public-policy-ms,
+Required,Required,"To be considered for admission to the Smart Cities Construction Management MS program, candidates must fulfill the following requirements:
+
+Completed online application.
+A bachelor’s degree (or equivalent) from an accredited university or college in civil engineering technology, construction management, architecture, or a related field.
+A minimum cumulative GPA of 3.0 (or equivalent).
+A statement of purpose.
+Official transcripts (in English) from all previously completed undergraduate and graduate course work.
+A current resume or curriculum vitae.
+Two letters of recommendation from individuals who can assess your academic and/or professional performance and your potential for success in a graduate program.
+A portfolio (optional, but encouraged) that may include evidence of any of the following: construction documents, 3D models and renderings, building information models, presentations, construction project schedules, videos and animations, and/or other related documentation.
+A writing sample (optional).
+A completed RIT Graduate Application.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. The PTE score of 60 is required.
+
+The GRE is not required.",Optional,True,False,True,True,False,False,,,program,Smart Cities Construction Management MS,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Software Engineering MS,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXfsk_qz_pUpOr4gvob4Ch7otR4yy8pWQ_fim07fxIB4WVVB39ATdH0FTJ31cLNvMx2ZXrrZSMYg9ix32tCg-4YNBaIzTvwnJtc6_VvdCfbhwpbH8qNjoI8pGHnyB0qg21wJBRBm3TsXBbZPb_jZMLuo4QZS_LGUN77gxL8SplW0A=,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Sustainability PhD,https://www.rit.edu/study/sustainability-phd,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Sustainable Systems MS,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,,error,Technology Entrepreneurship Advanced Certificate,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"To be considered for admission to the technology innovation management and entrepreneurship MS program, candidates must fulfill the following requirements:
+
+* Complete an online graduate application.
+* Hold a baccalaureate degree (or equivalent) from an accredited university or college.
+* Submit official transcripts (in English) from all previously completed undergraduate and graduate course work. A minimum cumulative GPA of 3.0 (or equivalent) is preferred.
+* Submit a current resume or curriculum vitae.
+* Submit a statement of purpose.
+* Submit a writing sample.
+* Submit two letters of recommendation.
+* GRE/GMAT scores are not required.
+* International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 88 (internet-based) is required. A minimum IELTS score of 6.5 is required. A minimum PTE score of 60 is required. Test scores that are more than two years old from the date of the test administration will not be accepted.",Required,True,False,True,True,False,False,,,program,Technology Innovation Management and Entrepreneurship MS,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkpfVnIOgJX7V4kD09KVmRwRSVBLYI5qOP7422jVW5HPY3LVdscgoHWS7twKEzt6eUgPHNg44jCYGrVwfjIWKLIVbVKTYTnmHniRicT4PFKwiHmVIeD4O9jk-IR4D3mG0vQ-omVwZiBwRVFheD5I70J-D_mYCE9-eKqqCLp83UwKq03BLDwqhv6_ZoflY=,
+Required,Required,"To be considered for admission to the Vibrations advanced certificate program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college in an engineering or a related field.
+Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+Have a minimum cumulative GPA of 3.0 (or equivalent).
+Submit a current resume or curriculum vitae.
+Submit a statement of purpose.
+Submit letters of recommendation (not required).
+GRE/GMAT scores are not required.
+Writing samples are not required.",Not Required,True,False,True,True,False,False,,,program,Vibrations Advanced Certificate,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the visual arts-all grades (art education) MST program, candidates must fulfill the following requirements:
+
+Complete an online graduate application.
+Hold a baccalaureate degree (or equivalent) from an accredited university or college in a studio-based major.
+A minimum cumulative GPA of 3.0 (or equivalent) is required.
+Submit official transcripts (in English) of all previously completed undergraduate and graduate course work.
+Submit a statement of purpose. In a well-crafted essay of approximately 500 words, you should describe your personal, professional, and educational goals; how your past academic, professional, and life experiences have prepared you for graduate study; and how this degree will help you achieve your goals.
+Submit two letters of recommendation.
+Submit a current résumé or curriculum vitae.
+Submit a portfolio. A portfolio is required. The portfolio should represent your breadth and depth of experience and is evaluated based on the quality of the work and its professional presentation. The portfolio should include 10 to 20 examples of your best work in art, design, and craft.
+Submit a writing sample.
+International applicants whose native language is not English must submit scores from the TOEFL, IELTS, or PTE. A minimum TOEFL score of 92 (internet-based) is required. A minimum IELTS score of 7.0 is required. A minimum PTE score of 65 is required. Test scores that are more than two years old will not be accepted.",Required,True,False,,False,False,False,,,program,Visual Arts All Grades (Art Education) MST,https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6zIStUNutte6pdFybDMdBkKiCO4Z1O-aipHbtbqBBQB_GvxdpTYnKdI4vfTbZhEeabVl2mUE5pQostMlYutwsX0iiqs856PZNu74NPcuISogPhqKn3zfL8XefbRsXh5hMxQfo2JhprL1Bqd4cBPM_Ckq8ZRUsuiRxrUgQmg==,
+Required,Required,"To be considered for admission to the Visual Communication Design MFA program, candidates must fulfill the requirements for graduate study at RIT, as well as the specific program requirements. All supporting documents can be uploaded to the RIT graduate online application. Applicants must submit:
+
+* A completed graduate application.
+* A portfolio of 10 to 20 samples of your recent work. 
+* A statement of purpose of approximately 500 words describing your reasons for pursuing graduate study, your professional and academic interests and goals, as well as an explanation of why you are a strong candidate for the program.
+* A resume or curriculum vitae.
+* Two letters of recommendation from individuals well qualified to judge your capacity for graduate study. 
+* Official transcripts (in English) from all post-secondary education. A bachelor's degree (or equivalent) from an accredited university or college is required.
+* A minimum cumulative GPA of 3.0 (or equivalent).
+* Applicants whose native language is not English must submit scores from the Test of English as a Foreign Language (TOEFL), International English Language Testing System (IELTS), or Pearson Test of English (PTE).",Optional,True,False,,False,False,False,,,program,Visual Communication Design MFA,https://www.rit.edu/study/graduate,
+Required,Required,"To be considered for admission to the Web Development advanced certificate program, candidates must fulfill the following requirements:
+
+Completed online application.
+A bachelor’s degree (or equivalent) from an accredited university or college.
+Official transcripts (in English) of all previously completed undergraduate and graduate course work.
+A statement of purpose of two to three pages, describing in detail your career objectives and reasons for seeking admission to the program.
+A current resume or curriculum vitae.
+Two letters of recommendation.
+A portfolio of recent work is recommended but not required.
+A writing sample is optional.
+Graduate Record Exam (GRE) scores are not required.
+Test of English as a Foreign Language (TOEFL), International English Language Testing System (IELTS), or Pearson Test of English (PTE) scores are required for any applicant whose native language is not English.",Optional,True,False,,True,False,False,,,program,Web Development Advanced Certificate,https://www.rit.edu/study/graduate,
+,,,,,,,,,,,,error,Workplace Learning and Instruction Advanced Certificate,https://www.rit.edu/study/graduate,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."

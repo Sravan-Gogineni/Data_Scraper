@@ -121,11 +121,14 @@ def process_single_program(row, institute_url):
 def run(university_name_input):
     global university_name, institute_url
     university_name = university_name_input
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
     
+    # Update paths with university name
+    csv_path = os.path.join(output_dir, f'{sanitized_name}_graduate_programs.csv')
+    json_path = os.path.join(output_dir, f'{sanitized_name}_program_details_financial.json')
+
     yield f'{{"status": "progress", "message": "Initializing program details & financial extraction for {university_name}..."}}'
     
-
-
     # Check if CSV file exists
     if not os.path.exists(csv_path):
         yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step.", "files": {{}}}}'
@@ -213,7 +216,7 @@ def run(university_name_input):
             save_to_json(program_details_data, json_path)
 
     # Final save
-    csv_output_path = os.path.join(output_dir, 'program_details_financial.csv')
+    csv_output_path = os.path.join(output_dir, f'{sanitized_name}_program_details_financial.csv')
     if program_details_data:
         df = pd.DataFrame(program_details_data)
         df.to_csv(csv_output_path, index=False, encoding='utf-8')

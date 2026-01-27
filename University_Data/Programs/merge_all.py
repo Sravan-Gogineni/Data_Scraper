@@ -1,31 +1,21 @@
 import pandas as pd
 import os
 
-def run():
+def run(university_name=None):
     yield f'{{"status": "progress", "message": "Starting final merge of Graduate and Undergraduate programs..."}}'
     
+    if not university_name:
+        yield f'{{"status": "error", "message": "University name not provided for final merge."}}'
+        return
+
+    sanitized_name = university_name.replace(" ", "_").replace("/", "_")
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Paths to the final CSVs
-    grad_csv_path = os.path.join(script_dir, 'graduate_programs', 'Grad_prog_outputs', 'graduate_programs_final.csv')
-    undergrad_csv_path = os.path.join(script_dir, 'undergraduate_programs', 'Undergrad_prog_outputs', 'undergraduate_programs_final.csv')
-    # Get University Name from Institution CSV
-    inst_outputs_dir = os.path.join(script_dir, '..', 'Institution', 'Inst_outputs')
-    university_name = "University_Final" # Default fallback
+    grad_csv_path = os.path.join(script_dir, 'graduate_programs', 'Grad_prog_outputs', f'{sanitized_name}_graduate_programs_final.csv')
+    undergrad_csv_path = os.path.join(script_dir, 'undergraduate_programs', 'Undergrad_prog_outputs', f'{sanitized_name}_undergraduate_programs_final.csv')
     
-    if os.path.exists(inst_outputs_dir):
-        inst_files = [f for f in os.listdir(inst_outputs_dir) if f.endswith('_Institution.csv')]
-        if inst_files:
-            # Taking the first one found, assuming one university being processed at a time
-            inst_filename = inst_files[0]
-            university_name = inst_filename.replace('_Institution.csv', '')
-            yield f'{{"status": "progress", "message": "Identified university: {university_name}"}}'
-        else:
-             yield f'{{"status": "warning", "message": "No Institution CSV found to extract name in {inst_outputs_dir}. Using default."}}'
-    else:
-         yield f'{{"status": "warning", "message": "Institution outputs directory not found at {inst_outputs_dir}. Using default name."}}'
-
-    output_csv_path = os.path.join(script_dir, f'{university_name}_Final.csv')
+    output_csv_path = os.path.join(script_dir, f'{sanitized_name}_Final.csv')
     
     dfs = []
     
