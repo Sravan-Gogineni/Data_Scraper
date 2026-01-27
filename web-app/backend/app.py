@@ -171,7 +171,7 @@ def extract_programs_data():
     step = data.get("step")
     
     if not university_name:
-        return jsonify({"error": "University name is required"}), 400
+        return jsonify({"error": "Universities name is required"}), 400
     if not step:
          return jsonify({"error": "Step number is required"}), 400
 
