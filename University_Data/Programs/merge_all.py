@@ -49,6 +49,8 @@ def run():
         yield f'{{"status": "error", "message": "No data found to merge."}}'
         return
 
+
+
     # Merge
     yield f'{{"status": "progress", "message": "Merging datasets..."}}'
     final_df = pd.concat(dfs, ignore_index=True)
@@ -73,9 +75,36 @@ def run():
     final_df['IsAnalyticalOptional'] = final_df['IsAnalyticalOptional'].fillna(True)
     final_df['IsAnalyticalOptional'] = final_df['IsAnalyticalOptional'].astype(bool)
 
-    
-    
+    final_df['ProgramName'] = final_df['ProgramName'].apply(standardize_program_name)
+
     
     ###############
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')
     yield f'{{"status": "complete", "message": "Successfully merged {len(final_df)} programs", "files": {{"final_csv": "{output_csv_path}"}}}}'
+
+
+def standardize_program_name(name):
+    name_str = str(name).strip()
+    # Mapping of suffix to prefix
+    mappings = {
+        " MS": "Master of Science in",
+        " MFA": "Master of Fine Arts in",
+        " BS": "Bachelor of Science in",
+        " BA": "Bachelor of Arts in",
+        " MA": "Master of Arts in",
+        "AAS": "Associate of Applied Science in",
+        "AS": "Associate of Science in",
+        "AA": "Associate of Arts in",
+        "BFA": "Bachelor of Fine Arts in",
+        "MBA": "Master of Business Administration in",
+        "AOS": "Associate of Science in",
+    }
+    
+    for suffix, prefix in mappings.items():
+        if name_str.endswith(suffix):
+            # Remove the suffix (e.g. " MS") and prepend the prefix
+            # Original: "Program MS" -> "Program" -> "Master of Science in Program"
+            clean_name = name_str[:-len(suffix)]
+            return f"{prefix} {clean_name}"
+            
+    return name_str
