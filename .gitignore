@@ -4,3 +4,8 @@
 Inst_outputs
 # Ignore venv directory
 /.venv
+# Ignore University_Data director
+# Universities/
+Universities/*
+Universities/*/*
+Universities
