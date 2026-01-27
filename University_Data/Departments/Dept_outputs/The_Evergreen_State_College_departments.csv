@@ -1,3 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Admissions,,,,,,,,Olympia,US,US,United States,admissions@evergreen.edu,(360) 867-6170,,WA,2700 Evergreen Pkwy NW,,98505,Washington,,False,https://www.evergreen.edu/admissions,Evans Hall,,False,False,The Evergreen State College
-Office of Admissions,,,,,,,,Tacoma,US,US,United States,admissions@evergreen.edu,(253) 680-3000,,WA,1210 6th Ave,,98405,Washington,,False,https://www.evergreen.edu/admissions,,,False,False,The Evergreen State College
