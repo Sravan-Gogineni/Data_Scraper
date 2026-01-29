@@ -11,7 +11,8 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 tools = [genai.protos.Tool(google_search=genai.protos.Tool.GoogleSearch())]
-model = genai.GenerativeModel("gemini-2.0-flash", tools=tools)
+model = os.getenv("MODEL")
+model = genai.GenerativeModel(model, tools=tools)
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
