@@ -59,7 +59,7 @@ class GeminiModelWrapper:
                 raise e
 
 # Initialize the model wrapper
-model = GeminiModelWrapper(client, "gemini-2.5-pro")
+model = GeminiModelWrapper(client, "gemini-2.0-flash")
 
 # Logic moved to process_institution_extraction
 
@@ -1212,21 +1212,31 @@ def process_institution_extraction(
     yield '{"status": "progress", "message": "Finalizing data..."}'
     raw_multiple = get_is_multiple_applications_allowed(website_url, university_name)
     raw_mat = get_is_mat_required(website_url, university_name)
-    clean_multiple = raw_multiple.strip('`').replace('json', '').strip()
-    data_multiple = json.loads(clean_multiple)
+    
+    # Handle multiple applications parsing with error handling
+    try:
+        clean_multiple = raw_multiple.strip('`').replace('json', '').strip()
+        if clean_multiple:
+            data_multiple = json.loads(clean_multiple)
+            value = str(data_multiple.get("allowed", "None"))
+        else:
+            value = "None"
+    except (json.JSONDecodeError, AttributeError, Exception) as e:
+        print(f"Error parsing multiple applications data: {e}")
+        value = "None"
 
-    # 2. Extract and format the value
-    # result will be "True", "False", or "None" (as a string)
-    value = str(data_multiple.get("allowed"))
 
-
-    # --- Handling for MAT Requirement ---
-    # 1. Clean and parse the string into a dictionary
-    clean_mat = raw_mat.strip('`').replace('json', '').strip()
-    data_mat = json.loads(clean_mat)
-
-   
-    mat_value = str(data_mat.get("Allowed"))
+    # Handle MAT requirement parsing with error handling
+    try:
+        clean_mat = raw_mat.strip('`').replace('json', '').strip()
+        if clean_mat:
+            data_mat = json.loads(clean_mat)
+            mat_value = str(data_mat.get("Allowed", "None")) if data_mat else "None"
+        else:
+            mat_value = "None"
+    except (json.JSONDecodeError, AttributeError, Exception) as e:
+        print(f"Error parsing MAT requirement data: {e}")
+        mat_value = "None"
     boolean_fields_data = {
         "is_additional_information_available": "FALSE", 
         "is_multiple_applications_allowed": value,

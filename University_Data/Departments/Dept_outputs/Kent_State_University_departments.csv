@@ -1,0 +1,7 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Undergraduate Admissions,,,,,,,,Kent,US,US,United States,admissions@kent.edu,1-800-988-KENT,,OH,800 E. Summit St.,,,Ohio,,False,,,,False,False,Kent State University
+Graduate Admissions,,,,,,,,,,,,gradadmissions@kent.edu,330-672-2444,,,,,,,,False,,,,False,False,Kent State University
+International Admissions,,,,,,,,Kent,US,US,United States,intladm@kent.edu,330-672-7970,,OH,,room 106,,Ohio,,False,,Van Campen Hall,,False,False,Kent State University
+Admissions,,,,,,,,North Canton,US,US,United States,starkadmissions@kent.edu,330-499-9600,,OH,6000 Frank Avenue NW,132 Main Hall,44720,Ohio,,False,,Main Hall,,False,False,Kent State University
+Admissions & Student Services,,,,,,,,New Philadelphia,US,US,United States,infotusc@kent.edu,330-339-3391,,OH,330 University Drive NE,,44663,Ohio,,False,,Founders Hall,,False,False,Kent State University
+Admissions,,,,,,,,,,,,trumbullinfo@kent.edu,330-847-0571,,,,,,,,False,,,,False,False,Kent State University

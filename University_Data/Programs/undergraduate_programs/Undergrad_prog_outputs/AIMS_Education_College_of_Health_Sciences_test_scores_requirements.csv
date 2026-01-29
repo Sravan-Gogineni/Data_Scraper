@@ -1,0 +1,9 @@
+GreOrGmat,EnglishScore,IsDuoLingoRequired,IsELSRequired,IsGMATOrGreRequired,IsGMATRequired,IsGRERequired,IsIELTSRequired,IsLSATRequired,IsMATRequired,IsMCATRequired,IsPTERequired,IsTOEFLIBRequired,IsTOEFLPBTRequired,IsEnglishNotRequired,IsEnglishOptional,MinimumDuoLingoScore,MinimumELSScore,MinimumGMATScore,MinimumGreScore,MinimumIELTSScore,MinimumMATScore,MinimumMCATScore,MinimumPTEScore,MinimumTOEFLScore,MinimumLSATScore,extraction_level,Program name,Program Page url
+Not Required,Not Required,False,False,False,False,False,False,False,False,False,False,False,False,True,False,,,,,,,,,,,program,Diagnostic Medical Sonography,https://aimseducation.edu/programs
+Not Required,Required,False,False,False,False,False,False,False,False,False,False,True,True,False,False,,,,,,,,,61.0,,program,MRI Technologist,https://aimseducation.edu/programs
+Not Required,Required,False,False,False,False,False,True,False,False,False,False,False,False,False,False,,,,,,,,,,,program,Medical Assistant,https://aimseducation.edu/programs
+Not Required,Not Required,False,False,False,False,False,False,False,False,False,False,False,False,True,False,,,,,,,,,,,program,Surgical Technologist,https://aimseducation.edu/programs
+Not Required,Not Required,False,False,False,False,False,False,False,False,False,False,False,False,True,False,,,,,,,,,,,program,Special Education Teacher,https://aimseducation.edu/programs
+Not Required,Not Required,False,False,False,False,False,False,False,False,False,False,False,False,True,False,,,,,,,,,,,program,Pharmacy Technician,https://aimseducation.edu/programs
+Not Required,Not Required,False,False,False,False,False,False,False,False,False,False,False,False,True,False,,,,,,,,,,,program,Endoscopy Technician,https://aimseducation.edu/programs
+Not Required,Required,False,False,False,False,False,True,False,False,False,False,False,False,False,False,,,,,,,,,,,program,Medical Billing and Coding Specialist,https://aimseducation.edu/programs

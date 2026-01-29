@@ -1,0 +1,40 @@
+[
+    {
+        "Website_url": "https://www.uhcl.edu/admissions/",
+        "DepartmentName": "Office of Admissions",
+        "Email": "admissions@uhcl.edu",
+        "PhoneNumber": "281-283-2500",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.uhcl.edu/admissions/apply/",
+        "BuildingName": "Student Services and Classroom Building",
+        "Street1": "2700 Bay Area Blvd",
+        "Street2": "SSCB 1.101",
+        "City": "Houston",
+        "State": "TX",
+        "StateName": "Texas",
+        "Country": "USA",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "77058",
+        "AirportPickup": null
+    },
+    {
+        "Website_url": "https://www.uhcl.edu/admissions/international/",
+        "DepartmentName": "International Admissions",
+        "Email": "internationaladmissions@uhcl.edu",
+        "PhoneNumber": "281-283-2740",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.uhcl.edu/admissions/international/apply/",
+        "BuildingName": null,
+        "Street1": "2700 Bay Area Blvd",
+        "Street2": "SSCB 1.101",
+        "City": "Houston",
+        "State": "TX",
+        "StateName": "Texas",
+        "Country": "USA",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "77058",
+        "AirportPickup": null
+    }
+]

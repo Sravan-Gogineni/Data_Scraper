@@ -1,0 +1,40 @@
+[
+    {
+        "Website_url": "https://www.mtsac.edu/admissions/",
+        "DepartmentName": "Admissions & Records Office",
+        "Email": null,
+        "PhoneNumber": "(909) 274-4415",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.mtsac.edu/admissions/apply-now.html",
+        "BuildingName": "Student Services Center, Building 9B",
+        "Street1": "1100 N. Grand Ave",
+        "Street2": null,
+        "City": "Walnut",
+        "State": "CA",
+        "StateName": "California",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "91789",
+        "AirportPickup": null
+    },
+    {
+        "Website_url": "https://www.mtsac.edu/international/",
+        "DepartmentName": "International Student Program",
+        "Email": "f1visa@mtsac.edu",
+        "PhoneNumber": "(909) 274-4705",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.mtsac.edu/international/application_process/",
+        "BuildingName": "Student Services Center, Building 9B",
+        "Street1": "1100 N. Grand Ave",
+        "Street2": "Ground Floor",
+        "City": "Walnut",
+        "State": "CA",
+        "StateName": "California",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "91789",
+        "AirportPickup": null
+    }
+]

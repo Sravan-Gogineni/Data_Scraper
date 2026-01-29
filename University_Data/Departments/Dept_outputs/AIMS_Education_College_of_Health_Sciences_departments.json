@@ -1,0 +1,21 @@
+[
+    {
+        "Website_url": "https://www.aims.education/admissions",
+        "DepartmentName": "Admissions Department",
+        "Email": "contact@aimseducation.edu",
+        "PhoneNumber": "908-222-0002, Ext. 553",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.aims.education/admissions-process",
+        "BuildingName": "Main Building",
+        "Street1": "4500 New Brunswick Ave",
+        "Street2": null,
+        "City": "Piscataway",
+        "State": "NJ",
+        "StateName": "New Jersey",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "08854",
+        "AirportPickup": null
+    }
+]

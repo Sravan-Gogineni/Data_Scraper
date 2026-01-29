@@ -22,7 +22,7 @@ sys.path.append(institution_dir)
 
 
 # Initialize the model using the wrapper (consistent with check.py)
-model = GeminiModelWrapper(client, "gemini-2.5-pro")
+model = GeminiModelWrapper(client, "gemini-2.0-flash")
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))

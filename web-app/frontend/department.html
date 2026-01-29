@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="background-blobs">
         <div class="blob blob-1"></div>
@@ -17,13 +19,19 @@
     <div class="container">
         <header>
             <div class="logo-area">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="logo-icon">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
                 <h1>UniScraper <span style="font-weight: 300; opacity: 0.7;">| Departments</span></h1>
             </div>
             <nav class="main-nav">
                 <a href="/" class="nav-link">Institution</a>
                 <a href="/department.html" class="nav-link active">Departments</a>
                 <a href="/programs.html" class="nav-link">Programs</a>
+                <a href="/all_extraction.html" class="nav-link">All Extraction</a>
             </nav>
         </header>
 
@@ -36,11 +44,13 @@
 
                 <div class="form-group main-input">
                     <label for="universityName">University Name <span class="required">*</span></label>
-                    <input type="text" id="universityName" placeholder="e.g. Stanford University" required autocomplete="off">
+                    <input type="text" id="universityName" placeholder="e.g. Stanford University" required
+                        autocomplete="off">
                 </div>
 
                 <div class="info-box">
-                    <p>Department extraction will automatically find the official website and extract all admissions-related departments.</p>
+                    <p>Department extraction will automatically find the official website and extract all
+                        admissions-related departments.</p>
                 </div>
 
                 <div class="actions">
@@ -60,7 +70,7 @@
                         </div>
                         <span id="statusBadge" class="badge">Initializing</span>
                     </div>
-                    
+
                     <div class="terminal-window">
                         <div class="terminal-header">
                             <span class="dot red"></span>
@@ -83,4 +93,5 @@
 
     <script src="department.js"></script>
 </body>
+
 </html>

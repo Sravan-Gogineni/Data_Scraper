@@ -88,6 +88,18 @@ def standardize_program_name(name):
         "BFA": "Bachelor of Fine Arts in",
         "MBA": "Master of Business Administration in",
         "AOS": "Associate of Science in",
+        " (MS)": "Master of Science in",
+        " (MFA)": "Master of Fine Arts in",
+        " (BS)": "Bachelor of Science in",
+        " (BA)": "Bachelor of Arts in",
+        " (MA)": "Master of Arts in",
+        " (AAS)": "Associate of Applied Science in",
+        " (AS)": "Associate of Science in",
+        " (AA)": "Associate of Arts in",
+        " (BFA)": "Bachelor of Fine Arts in",
+        " (MBA)": "Master of Business Administration in",
+        "(BA, BS)": "Bachelor of Arts in"
+
     }
     
     for suffix, prefix in mappings.items():

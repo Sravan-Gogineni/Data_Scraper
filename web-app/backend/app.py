@@ -46,6 +46,10 @@ def department():
 def programs():
     return send_from_directory(app.static_folder, "programs.html")
 
+@app.route("/all_extraction.html")
+def all_extraction():
+    return send_from_directory(app.static_folder, "all_extraction.html")
+
 @app.route("/api/download/<path:filename>")
 def download_file(filename):
     # Check if file is in Institution output or Department output or Programs output
@@ -196,6 +200,167 @@ def extract_programs_data():
                 except json.JSONDecodeError:
                      yield f"data: {json.dumps({'status': 'progress', 'message': update})}\n\n"
                      
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
+@app.route("/api/extract/all", methods=["POST"])
+def extract_all_data():
+    """Sequential extraction: Institution -> Department -> Programs"""
+    data = request.json
+    university_name = data.get("university_name")
+    
+    if not university_name:
+        return jsonify({"error": "University name is required"}), 400
+
+    def generate():
+        all_files = {}
+        try:
+            # Prepare paths for checking existing files
+            sanitized_name = university_name.replace(" ", "_").replace("/", "_").replace("\\", "_")
+            inst_csv_path = f"/Users/sravan/projects/Scraper_UI/University_Data/Institution/Inst_outputs/{sanitized_name}_Institution.csv"
+            dept_csv_path = f"/Users/sravan/projects/Scraper_UI/University_Data/Departments/Dept_outputs/{sanitized_name}_departments.csv"
+            
+            # Step 1: Institution (check if exists first)
+            yield f"data: {json.dumps({'status': 'progress', 'message': '--- Step 1: Institution Extraction ---'})}\n\n"
+            
+            if os.path.exists(inst_csv_path):
+                yield f"data: {json.dumps({'status': 'progress', 'message': '[Institution] CSV already exists - skipping extraction'})}\n\n"
+                # Add existing file to results
+                filename = os.path.basename(inst_csv_path)
+                all_files[f"inst_csv"] = f"/api/download/{filename}"
+            else:
+                inst_generator = process_institution_extraction(university_name)
+                for update in inst_generator:
+                    try:
+                        update_obj = json.loads(update)
+                        if update_obj.get("status") == "complete":
+                            yield f"data: {json.dumps({'status': 'progress', 'message': '[Institution] Complete'})}\n\n"
+                            if "files" in update_obj:
+                                for key, path in update_obj["files"].items():
+                                    filename = os.path.basename(path)
+                                    all_files[f"inst_{key}"] = f"/api/download/{filename}"
+                        else:
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f"[Institution] {update_obj.get('message', '')}"})}\n\n"
+                    except json.JSONDecodeError:
+                        yield f"data: {json.dumps({'status': 'progress', 'message': f'[Institution] {update}'})}\n\n"
+            
+            # Step 2: Department (with retry)
+            yield f"data: {json.dumps({'status': 'progress', 'message': '--- Step 2: Department Extraction ---'})}\n\n"
+            
+            departments_found = False
+            retry_count = 0
+            max_retries = 10
+            
+            while not departments_found and retry_count < max_retries:
+                # Check if file exists first
+                if os.path.exists(dept_csv_path):
+                    yield f"data: {json.dumps({'status': 'progress', 'message': '[Department] CSV already exists - skipping extraction'})}\n\n"
+                    departments_found = True
+                    # Add existing file to results
+                    filename = os.path.basename(dept_csv_path)
+                    all_files[f"dept_csv"] = f"/api/download/{filename}"
+                    break
+                if retry_count > 0:
+                    yield f"data: {json.dumps({'status': 'warning', 'message': f'Retry attempt {retry_count} for departments...'})}\n\n"
+                    import time
+                    time.sleep(5)
+                
+                dept_generator = process_department_extraction(university_name)
+                dept_files_found = False
+                
+                for update in dept_generator:
+                    try:
+                        update_obj = json.loads(update)
+                        if update_obj.get("status") == "complete":
+                            if "files" in update_obj and len(update_obj["files"]) > 0:
+                                departments_found = True
+                                dept_files_found = True
+                                yield f"data: {json.dumps({'status': 'progress', 'message': '[Department] Complete - Departments found'})}\n\n"
+                                for key, path in update_obj["files"].items():
+                                    filename = os.path.basename(path)
+                                    all_files[f"dept_{key}"] = f"/api/download/{filename}"
+                            else:
+                                yield f"data: {json.dumps({'status': 'warning', 'message': '[Department] No departments found'})}\n\n"
+                        else:
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f"[Department] {update_obj.get('message', '')}"})}\n\n"
+                    except json.JSONDecodeError:
+                        yield f"data: {json.dumps({'status': 'progress', 'message': f'[Department] {update}'})}\n\n"
+                
+                if not dept_files_found:
+                    retry_count += 1
+                    if retry_count < max_retries:
+                        yield f"data: {json.dumps({'status': 'warning', 'message': f'No departments found. Retrying in 5 seconds... (Attempt {retry_count}/{max_retries})'})}\n\n"
+            
+            if not departments_found:
+                yield f"data: {json.dumps({'status': 'warning', 'message': 'Max retries reached for department extraction. Proceeding to programs...'})}\n\n"
+            
+            # Step 3: Programs (Full Extraction + Merge)
+            yield f"data: {json.dumps({'status': 'progress', 'message': '--- Step 3: Programs Full Extraction ---'})}\n\n"
+            
+            # First run step 9 (full automation: extract + enrich)
+            yield f"data: {json.dumps({'status': 'progress', 'message': '[Programs] Running full automation (extraction + enrichment)...'})}\n\n"
+            prog_generator_step9 = process_programs_extraction(university_name, 9)
+            
+            for update in prog_generator_step9:
+                try:
+                    update_obj = json.loads(update)
+                    if update_obj.get("status") == "complete":
+                        yield f"data: {json.dumps({'status': 'progress', 'message': '[Programs] Full automation completed. Starting merge...'})}\n\n"
+                        break
+                    else:
+                        yield f"data: {json.dumps({'status': 'progress', 'message': f"[Programs] {update_obj.get('message', '')}"})}\n\n"
+                except json.JSONDecodeError:
+                    yield f"data: {json.dumps({'status': 'progress', 'message': f'[Programs] {update}'})}\n\n"
+            
+            # Then run step 6 (standardize + merge)
+            yield f"data: {json.dumps({'status': 'progress', 'message': '[Programs] Running standardization and merge...'})}\n\n"
+            prog_generator_step6 = process_programs_extraction(university_name, 6)
+            programs_final_file = None
+            
+            for update in prog_generator_step6:
+                try:
+                    update_obj = json.loads(update)
+                    if update_obj.get("status") == "complete":
+                        yield f"data: {json.dumps({'status': 'progress', 'message': '[Programs] Merge completed successfully'})}\n\n"
+                        if "files" in update_obj:
+                            # Look for the final merged CSV
+                            for key, path in update_obj["files"].items():
+                                if "_Final.csv" in path or "final_csv" in key:
+                                    programs_final_file = path
+                                    break
+                        break
+                    else:
+                        yield f"data: {json.dumps({'status': 'progress', 'message': f"[Programs] {update_obj.get('message', '')}"})}\n\n"
+                except json.JSONDecodeError:
+                    yield f"data: {json.dumps({'status': 'progress', 'message': f'[Programs] {update}'})}\n\n"
+            
+            # Build final output with only 3 essential files
+            final_output_files = {}
+            
+            # 1. Institution file (look for CSV)
+            for key, path in all_files.items():
+                if key.startswith("inst_") and "csv" in key.lower():
+                    final_output_files["institution_data"] = path
+                    break
+            
+            # 2. Department file (look for CSV)
+            for key, path in all_files.items():
+                if key.startswith("dept_") and "csv" in key.lower():
+                    final_output_files["departments_data"] = path
+                    break
+            
+            # 3. Programs final merged file
+            if programs_final_file:
+                filename = os.path.basename(programs_final_file)
+                final_output_files["programs_final"] = f"/api/download/{filename}"
+            
+            # Final completion
+            yield f"data: {json.dumps({'status': 'complete', 'message': 'All extractions completed successfully', 'files': final_output_files})}\n\n"
+            
         except Exception as e:
             import traceback
             traceback.print_exc()

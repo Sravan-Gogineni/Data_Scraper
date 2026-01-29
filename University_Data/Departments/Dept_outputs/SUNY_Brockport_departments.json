@@ -1,0 +1,40 @@
+[
+    {
+        "Website_url": "https://www.brockport.edu/admissions/",
+        "DepartmentName": "Admissions Office, Undergraduate",
+        "Email": "admit@brockport.edu",
+        "PhoneNumber": "(585) 395-2751",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.brockport.edu/admissions/",
+        "BuildingName": "Rakov Center for Student Services",
+        "Street1": "350 New Campus Drive",
+        "Street2": null,
+        "City": "Brockport",
+        "State": "NY",
+        "StateName": "New York",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "14420",
+        "AirportPickup": null
+    },
+    {
+        "Website_url": "https://www.brockport.edu/academics/graduate_studies/admissions.html",
+        "DepartmentName": "Admissions Office, Graduate",
+        "Email": "gradadmit@brockport.edu",
+        "PhoneNumber": "(585) 395-2525",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.brockport.edu/academics/graduate_studies/admissions.html",
+        "BuildingName": "Rakov Center for Student Services",
+        "Street1": "350 New Campus Drive",
+        "Street2": "Rakov 101",
+        "City": "Brockport",
+        "State": "NY",
+        "StateName": "New York",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "14420",
+        "AirportPickup": null
+    }
+]

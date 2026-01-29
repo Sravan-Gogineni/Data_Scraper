@@ -1,0 +1,346 @@
+Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,Program name,Program Page url,IsRecommendationSystemOpted,error
+Not Required,Not Required,"To be considered for admission as a first-time freshman, you must be a high school graduate (or have the legal equivalent of a high school diploma), complete the 15-unit college preparatory 'a-g' course pattern with a grade of C- or better, and have a 2.5 or greater 'a-g' GPA. For California residents, a 2.0-2.49 GPA may be considered.",Not Required,True,False,False,False,False,,,program,Bachelor of Science in Business Administration,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Arts in Humanities,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission as a first-time freshman, you must graduate from high school, complete the 15-unit comprehensive ""a-g"" pattern of college preparatory courses, and have a qualifying ""a-g"" grade point average (GPA).",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Liberal Arts,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-year student, you must: Be a high school graduate (or have a GED or California High School Proficiency Exam). Complete the 15-unit comprehensive ""a-g"" pattern of college preparatory courses. Earn a qualifying ""a-g"" grade point average (GPA). California residents need a 2.50 or greater GPA. Non-residents of California need a 3.00 or greater GPA. The GPA is based on the ""a-g"" courses taken during the 10th and 11th grades of high school.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Liberal Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Arts in Multicultural and Gender Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The RN-BSN program admits once a year for the spring semester. Application to the University and the School of Nursing are due August 1-31. There are two separate application processes, one to the University and one to the School of Nursing. To be considered for admission to the RN-BSN program, all applicants must have the following:
+
+- A current, valid, and unrestricted California Registered Nurse license.
+- An Associate Degree in Nursing (ADN) or a diploma in nursing from an accredited school.
+- A cumulative GPA of 3.0 or higher.
+- Completion of all prerequisite courses with a 'C' or higher.
+- A 'B' or higher in all nursing transfer courses.",Not Required,True,False,True,False,False,,,program,RN to BSN,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Arts in Religious Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Arts in Social Science,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Arts in Sociology,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in 3D Digital Modeling and Environments,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"All courses taken to fulfill program requirements must be taken for a letter grade, except for those courses specified by the department as credit/no credit grading only. A 2.0 grade point average in all minor coursework is required for graduation.",Not Required,True,False,False,False,False,,,program,Minor in Accounting,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"Total units required for minor: 21.
+
+Required Courses (6 units):
+KINE 342 - Introduction to Adapted Physical Activity
+KINE 443 - Practicum in Adapted Physical Activity
+
+Electives (15 units):
+Select 15 units from the following: KINE 323, KINE 331, KINE 344, KINE 345, KINE 442, KINE 444, KINE 445, KINE 490, PSYC 356, EDSP 451.",Not Required,True,False,False,False,False,,,program,Minor in Adapted Physical Activity,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Advanced Manufacturing and Applied Robotics,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be admitted to the minor, a student must have a Chico State grade point average of at least 2.0. The minor requires 21 units. A minimum grade of C- is required in all coursework for the minor.",Not Required,True,False,True,False,False,,,program,Minor in Advanced Manufacturing,https://catalog.csuchico.edu/,,
+,,,,True,False,False,False,False,,,program,Minor in African American Studies,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in African Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Agricultural Business,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Agricultural Business,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Science in Agricultural Science,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Agriculture,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The minor in agriculture, food, and the environment is a 21-unit interdisciplinary course of study that offers a critical perspective on agriculture and food systems. The minor also meets the requirements for a General Education Pathway. A grade of C or higher is required in all coursework. Advising is mandatory for all students in the minor.",Not Required,True,False,True,False,False,,,program,"Minor in Agriculture, Food, and the Environment GE",https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in American Indian Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Animal Science,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Animal Science,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Arts in Anthropology,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The Minor in Anthropology requires 18 units of coursework. At least 9 units must be upper-division. A 2.0 grade point average is required in all coursework taken to complete the minor. All courses must be taken for a letter grade, except those courses specified by the department as credit/no credit grading only.",Not Required,True,False,False,False,False,,,program,Minor in Anthropology,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Applied Statistics,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission as a first-time freshman, you must meet the minimum California State University (CSU) eligibility requirements. The CSU requires a minimum 15-unit pattern of college preparatory courses ('a-g' courses) for admission as a first-time freshman. Each unit is equal to a year of study in a subject. A grade of C- or better is required for each course. You will be considered for admission based on your high school courses and GPA.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Art,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Fine Arts in Art,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Art History,https://catalog.csuchico.edu/,,
+Not Required,Not Required,The minor in Art Studio requires 21 units. At least nine units must be upper-division. Requirements are fulfilled by taking 12 units of lower-division studio courses and 9 units of upper-division studio courses from approved lists.,Not Required,True,False,False,False,False,,,program,Minor in Art Studio,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Asian American Studies,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State, first-year students must have graduated from high school (or have the legal equivalent), have completed the 15-unit college preparatory 'a-g' course pattern, and have a 2.5 or greater 'a-g' GPA. Transfer students must meet minimum California State University (CSU) eligibility requirements.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Asian Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Asian Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Astronomy,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Biochemistry,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The minor in biochemistry requires 24 units of coursework.
+
+Required Courses: 18 units
+CHEM 111 General Chemistry I (5 units)
+CHEM 112 General Chemistry II (5 units)
+CHEM 370 Fundamentals of Organic Chemistry (4 units)
+BIOL 151 Cellular and Molecular Biology (4 units)
+
+6 units selected from:
+BIOL 152 Introductory Organismal Biology (4 units)
+BIOL 321 Principles of Genetics (4 units)
+BIOL 341 Microbiology (4 units)
+CHEM 451 Biochemistry I (3 units)
+CHEM 451L Biochemistry Laboratory I (1 unit)
+CHEM 452 Biochemistry II (3 units)
+CHEM 452L Biochemistry Laboratory II (1 unit)",Not Required,True,False,True,False,False,,,program,Minor in Biochemistry,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission as a first-time freshman, you must be a high school graduate (or be in the process of graduating), have completed the 15-unit comprehensive ""a-g"" pattern of college preparatory courses, and have a 2.50 or greater ""a-g"" GPA for California residents or graduates of a California high school. Non-California residents must have a 3.00 or greater ""a-g"" GPA.",Not Required,True,False,True,False,False,,,program,Bachelor of Arts in Biological Sciences,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-year student, you must: be a high school graduate or have a legal equivalent; have completed the 15-unit college preparatory 'a-g' course pattern with a grade of C- or better; have a 2.5 or higher 'a-g' GPA to be considered for admission (for California residents or graduates of a California high school). Non-California residents must have a 3.0 or higher 'a-g' GPA.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Biological Sciences,https://catalog.csuchico.edu/,,
+Not Required,Not Required,A minimum of 18 units in biological sciences is required for the minor. At least nine units must be upper-division. BIOL 151 and BIOL 152 are required. The remaining units must be selected in consultation with a biological sciences advisor. A grade of C- or higher must be earned in each course applied to the minor.,Not Required,True,False,True,False,False,,,program,Minor in Biological Sciences,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Biomedical Engineering,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The minor in broadcasting provides students in other majors with the opportunity to gain a basic understanding of the history, theory, and skills involved in radio and television broadcasting.
+
+Course Requirements for the Minor: 18 units
+
+The following courses, or their approved transfer equivalents, are required of all candidates for this minor.
+
+2 courses required:
+MADT 110 Introduction to Media and Culture
+MADT 254 Audio Production
+
+4 courses selected from:
+Select four courses from the following:
+MADT 255 Announcing
+MADT 354 Advanced Audio Production
+MADT 356 Broadcast News
+MADT 364 TV Studio Production
+MADT 454 Topics in Broadcasting",Not Required,True,False,False,False,False,,,program,Minor in Broadcasting,https://catalog.csuchico.edu/,,
+Not Required,Not Required,Prerequisites for Admission to the Minor: A grade of C- or higher in ACCT 201 is required.,Not Required,True,False,False,False,False,,,program,Minor in Business Administration,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"All first-time freshman applicants must complete, with a grade of C- or better, the 15-unit comprehensive ""A-G"" pattern of college preparatory courses. For fall 2024 admissions, first-time freshmen must meet a minimum GPA of 2.50 for California residents or California high school graduates, and a minimum GPA of 3.00 for non-residents.",Not Required,True,False,False,False,False,,,program,Bachelor of Science in Business Information Systems,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in California Studies GE,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The minor in California: People, Places, and Cultures, offered for the first time in fall 2018, is an interdisciplinary minor which explores the physical and human geography of the state. The curriculum draws on the insights and methodologies of a wide range of academic disciplines, including history, geography, anthropology, English, political science, and the fine arts. The minor consists of 18 units, of which nine are required and nine are electives.",Not Required,True,False,False,False,False,,,program,"Minor in California: People, Places, and Cultures",https://catalog.csuchico.edu/,,
+Not Required,Not Required,The minor in career and life planning requires 18 units of coursework. At least nine units must be taken in residence at Chico State.,Not Required,True,False,False,False,False,,,program,Minor in Career and Life Planning,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission as a first-time freshman, you must: 1. Have graduated from high school (or have a GED or passed the California High School Proficiency Examination). 2. Have a 2.5 or greater ""a-g"" GPA (if you are a California resident) or a 3.0 or greater ""a-g"" GPA (if you are not a California resident). 3. Have completed the 15-unit ""a-g"" college preparatory course pattern.",Not Required,True,False,True,False,False,,,program,Bachelor of Arts in Chemistry,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Chemistry,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be admitted to the minor, you must have completed CHEM 111 with a C- or higher and have a GPA of at least 2.0 in any chemistry coursework taken. The minor in chemistry requires a minimum of 20 units of coursework in chemistry, at least nine of which must be upper-division. All courses taken in the minor must be passed with a grade of C- or higher and must be taken for a letter grade, except for courses offered only for credit/no credit.",Not Required,True,False,True,False,False,,,program,Minor in Chemistry,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"You must meet the minimum California State University (CSU) eligibility requirements listed below to be considered for admission. Please note: meeting the minimum requirements does not guarantee admission to Chico State.
+
+Graduation from high school (or have the legal equivalent).
+Completion of the 15-unit comprehensive ""a-g"" pattern of college preparatory courses.
+Have a 2.50 or greater ""a-g"" GPA for California residents or graduates of a California high school.
+Have a 3.00 or greater ""a-g"" GPA for non-residents of California.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Child Development,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The minor in child development requires 21 units. At least nine units must be upper-division and taken in residence.
+
+Required Core Course (3 units)
+CHLD 252 Principles of Child/Adolescent Development 3.0
+
+Select two of the following for 6 units:
+CHLD 332 Child and Adolescent Social and Emotional Development 3.0
+CHLD 342 Cognitive and Language Development in Children and Adolescents 3.0
+CHLD 352 Child and Adolescent Development in the Family 3.0
+
+Select four of the following for 12 units:
+You may take any upper-division child development course not used in the core requirements above.",Not Required,True,False,False,False,False,,,program,Minor in Child Development,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Cinema Studies,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-time freshman, applicants must meet the following requirements:
+1. Have graduated from high school or will graduate from high school prior to the start of the academic term for which you are applying.
+2. Complete all of the 15-unit comprehensive ""a-g"" pattern of college preparatory courses. For fall admission, you must complete the courses by the spring term prior to enrollment.
+3. Earn a qualifying ""a-g"" grade point average (GPA).
+   - California residents and graduates of California high schools must have a 2.50 or greater ""a-g"" GPA.
+   - Non-California residents must have a 3.00 or greater ""a-g"" GPA.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Civil Engineering,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Classical Civilization,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Coaching,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Fine Arts in Communication Design,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Communication Design,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to Chico State, first-time, first-year applicants must meet the following eligibility requirements:
+1. Be a high school graduate or equivalent;
+2. Complete the 15-unit comprehensive ""a-g"" pattern of college preparatory courses;
+3. Earn a qualifying ""a-g"" grade point average (GPA)
+
+GPA Requirements:
+California residents and graduates of California high schools will be eligible for admission if they have a 2.50 or greater GPA. California residents and graduates of California high schools with a GPA between 2.00 and 2.49 may be evaluated for admission based upon supplemental factors.
+
+Non-California residents may be eligible for admission to the University if they have a 3.00 or greater GPA.",Not Required,True,False,False,False,False,,,program,Bachelor of Science in Communication Sciences and Disorders,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a freshman, you must be a high school graduate, have completed the 15-unit comprehensive ""A-G"" pattern of college prep courses, and have a qualifying ""A-G"" GPA. Transfer students must meet the minimum California State University eligibility requirements which include having at least 60 transferable semester (or 90 quarter) units and a minimum 2.0 GPA.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Communication Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Communication Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Comparative Religion,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to CSU, Chico as a first-year student, you must be a high school graduate or have the legal equivalent of a high school diploma, complete the 15-unit ""a-g"" comprehensive pattern of college preparatory courses, and earn a qualifying ""a-g"" grade point average (GPA). The ""a-g"" courses must be completed with a grade of C- or better.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Computer Animation and Game Development,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"Advising is mandatory for all majors and minors in this department.
+
+A grade of C- or higher is required in all coursework.",Not Required,True,False,True,False,False,,,program,Minor in Computer Animation,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"All applicants must meet the minimum California State University (CSU) requirements for admission. To be considered for admission to Chico State, a first-time freshman applicant must:
+1. Have graduated from high school or will graduate before the term of enrollment.
+2. Complete the 15-unit comprehensive ""a-g"" pattern of college preparatory courses.
+3. Earn a qualifying ""a-g"" grade point average (GPA).",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Computer Engineering,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Computer Engineering,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Science in Computer Information Systems,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to CSU, Chico, first-time freshman applicants must meet the following requirements:
+1. Be a high school graduate or have the legal equivalent.
+2. Complete the 15-unit college preparatory ""a-g"" course pattern with a grade of C- or better.
+3. Earn a qualifying ""a-g"" GPA. California residents and graduates of California high schools must have a GPA of 2.50 or greater. Non-residents of California must have a GPA of 3.00 or greater.
+
+As Computer Science is an impacted major, admission is competitive. In addition to the standard CSU eligibility requirements, Chico State uses a multi-factor admission model for impacted majors which considers the applicant's high school GPA and up to five additional factors, including first-generation college student status, local admission area, high school's socioeconomic status, qualifying household income, and participation in a qualifying educational program.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Computer Science,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Computer Science,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Science in Concrete Industry Management,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to Chico State, first-year students must meet the following minimum requirements:
+1. Be a high school graduate or have a legal equivalent.
+2. Complete the 15-unit college preparatory ""a-g"" subject requirements with a grade of C- or better by the end of spring of senior year.
+3. Have a qualifying ""a-g"" grade point average (GPA). California residents and graduates of California high schools will be eligible for admission if they have a 2.50 or greater GPA. Non-California residents may be eligible for admission to the CSU if they have a 3.00 or greater GPA.
+
+The California State University (CSU) has permanently discontinued the use of ACT/SAT examinations in determining admission eligibility.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Construction Management,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Creative Writing,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to Chico State as a first-year student, you must: have graduated from high school or will graduate from high school prior to the term you are applying for, or have the legal equivalent of a high school diploma. You also need to: Complete the 15-unit comprehensive ""a-g"" pattern of college preparatory courses. Earn a qualifying ""a-g"" grade point average (GPA).",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Criminal Justice,https://catalog.csuchico.edu/,,
+Not Required,Not Required,The minor in criminal justice is a 21-unit program. Please consult a criminal justice advisor to develop your minor course plan.,Not Required,True,False,False,False,False,,,program,Minor in Criminal Justice,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Cybersecurity,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Dance,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to Chico State as a first-year student, you must be a high school graduate (or equivalent), complete the 15-unit comprehensive 'a-g' pattern of college preparatory courses, and earn a qualifying 'a-g' grade point average (GPA). The admission process involves a student-centered, holistic review that considers 'a-g' courses, grades, extracurricular activities, and work experience.",Not Required,True,False,True,False,False,,,program,Bachelor of Arts in Economics,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"Completion of the following courses, or their approved transfer equivalents, is required of all candidates for this minor.",Not Required,True,False,False,False,False,,,program,Minor in Economics,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Electrical Construction,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Electrical/Electronic Engineering,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to CSU, Chico as a first-time freshman, you must: Be a high school graduate or equivalent; Complete the 15-unit comprehensive ""a-g"" pattern of college prep courses; Earn a qualifying ""a-g"" grade point average (GPA).",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in English,https://catalog.csuchico.edu/,,
+Not Required,Not Required,All courses taken to fulfill the minor must be passed with a grade of C or higher.,Not Required,True,False,False,False,False,,,program,Minor in English,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be admitted to the minor, you must be a student in good standing with a GPA of 2.0 or better. Business administration majors may not minor in entrepreneurship and small business management.",Not Required,True,False,False,False,False,,,program,Minor in Entrepreneurship and Small Business Management,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-time freshman, you must:
+1. Be a high school graduate or have a GED/HSED or pass the California High School Proficiency Exam.
+2. Complete the 15-unit ""a-g"" comprehensive pattern of college preparatory courses.
+3. Earn a qualifying ""a-g"" grade point average (GPA).
+
+California residents must have a 2.50 or greater ""a-g"" GPA. Non-residents of California must have a 3.00 or greater ""a-g"" GPA.
+California residents with an ""a-g"" GPA between 2.00-2.49 and non-residents with an ""a-g"" GPA between 2.50-2.99 will be considered for admission based on a multi-factor review.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Environmental Science,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The following courses, or their approved transfer equivalents, are required of all candidates for this minor.",Not Required,True,False,True,False,False,,,program,Minor in Environmental Studies,https://catalog.csuchico.edu/,,
+Not Required,Not Required,The minor requires 18 units. All coursework used to satisfy the requirements of the minor must be completed with a minimum grade of C-.,Not Required,True,False,False,False,False,,,program,"Minor in Equity, Ethics, and Policy GE",https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Ethics,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in European Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Exercise Physiology,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Family Relations,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The minor in finance is a six-course program for non-business majors. Business majors are not eligible for the minor in finance. A grade of C or higher is required in each course applied to the minor. BSIS 111 or passing the computer literacy requirement is prerequisite to the minor. The minor requires 18 units, consisting of FINA 307, FINA 308, and nine units of upper-division finance electives selected from an approved list.",Not Required,True,False,False,False,False,,,program,Minor in Finance,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Food Science,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Foodservice Administration,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in French,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Gender and Sexuality GE,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State, first-time freshmen must meet the following minimum requirements:
+1. Be a high school graduate or have a legal equivalent.
+2. Complete the 15-unit college preparatory 'a-g' course pattern with a grade of C- or better.
+3. Earn a qualifying 'a-g' grade point average (GPA).",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Geography,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Geography,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Geology,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Geology,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Geospatial Literacy,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Arts in German,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in German,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Gerontology,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Global Studies GE,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Health and Wellness GE,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to Chico State as a first-time freshman, you must be a high school graduate or equivalent; complete the 15-unit comprehensive 'a-g' pattern of college preparatory courses; and earn a qualifying 'a-g' grade point average (GPA). First-time, first-year applicants will be considered for admission based on a multi-factor admission model using the following: High school 'a-g' GPA, Self-reported 'a-g' courses, up to eight semesters of 'a-g' math, two semesters of 'a-g' lab science, and two semesters of 'a-g' foreign language.",Not Required,True,False,False,False,False,,,program,Bachelor of Science in Health Services Administration,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Health Services Administration,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Heavy Construction,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Arts in History,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in History,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,At least 18 units are required for the minor. A minimum of nine units must be upper-division. You may count a maximum of six units from any one discipline (designated by a course prefix) toward the minor.,Not Required,True,False,False,False,False,,,program,Minor in Humanities,https://catalog.csuchico.edu/,,
+,,,,True,False,False,False,False,,,program,"Minor in Innovation, Design, and the Arts GE",https://catalog.csuchico.edu/,,
+Not Required,Not Required,The minor in interior design requires the following 24 units. Consult with the interior design advisor for specifics.,Not Required,True,False,False,False,False,,,program,Minor in Interior Design,https://catalog.csuchico.edu/,,
+Not Required,Not Required,The minor in international business is open to all students except those majoring in business administration with the option in global business management.,Not Required,True,False,False,False,False,,,program,Minor in International Business,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in International Relations,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Arts in Intersectional Chicanx/Latinx Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Intersectional Chicanx/Latinx Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Italian,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Japanese,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission as a freshman, you must be a high school graduate (or equivalent) and have completed the 15-unit comprehensive ""a-g"" pattern of college preparatory courses. For fall 2024 admission, you must have earned a grade of ""C-"" or better in each of the ""a-g"" courses.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Journalism,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Journalism,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State, first-time freshman applicants must be a high school graduate or equivalent, complete the 15-unit comprehensive 'a-g' pattern of college preparatory courses, and earn a qualifying 'a-g' grade point average (GPA).",Not Required,True,False,True,False,False,,,program,Bachelor of Arts in Kinesiology,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Arts in Latin American Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Latin American Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Linguistics,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,The minor in management information systems (MIS) is available to any non-MIS major. A minimum of nine units must be upper-division residence units.,Not Required,True,False,True,False,False,,,program,Minor in Management Information Systems,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Management,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Managing Diversity in Organizations,https://catalog.csuchico.edu/,,
+,,,,True,False,False,False,False,,,program,Minor in Managing for Sustainability,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Marketing,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission as a first-year student, applicants must have graduated from high school (or have the legal equivalent) and have completed the 15-unit comprehensive ""A-G"" pattern of college preparatory courses. A 2.50 or greater ""A-G"" GPA is required for California residents or graduates of a California high school. California residents or graduates of a California high school with an ""A-G"" GPA between 2.00 and 2.49 will be evaluated based on supplemental factors.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Mathematics,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be admitted to the minor, a student must have a Chico State GPA of at least 2.75, and a grade of C or higher in MATH 120 (or its equivalent).",Not Required,True,False,True,False,False,,,program,Minor in Mathematics Education,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Mathematics,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission as a first-time freshman, you must meet the following minimum requirements: 1. Be a high school graduate or have the legal equivalent of a high school diploma. 2. Complete the 15-unit comprehensive ""a-g"" pattern of college preparatory courses. 3. Earn a qualifying ""a-g"" grade point average (GPA).",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Mechanical Engineering,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-year student, applicants must be a high school graduate or have the legal equivalent, complete the 15-unit comprehensive 'a-g' pattern of college preparatory courses, and earn a qualifying 'a-g' grade point average (GPA). Applications are submitted online through Cal State Apply, and official high school and any college transcripts are required. Note that the California State University (CSU) system has temporarily suspended the use of ACT/SAT examinations in determining admission eligibility.",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Mechatronic Engineering,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-time freshman, you must:
+1. Graduate from high school or have the legal equivalent of a high school diploma.
+2. Complete the 15-unit ""a-g"" course requirements with a grade of C- or better.
+3. Earn a qualifying ""a-g"" GPA.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Media Arts,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Medieval and Renaissance Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Microbiology,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Middle Eastern Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Modern Jewish and Israel Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The minor requires 21 units. At least 12 units must be upper-division coursework, and at least six of the upper-division units must be taken in residence.
+
+Students must select courses from three different disciplines to fulfill the requirements for this minor.
+
+Students must receive a grade of C or higher in all courses counted toward the minor.",Not Required,True,False,False,False,False,,,program,Minor in Multicultural Studies,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Arts in Music,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"Admission to CSU, Chico is competitive and considers a variety of factors in admission decisions. Based on the university's first-year student review process, CSU, Chico has suspended the use of ACT/SAT examinations in determining admission eligibility for all CSU undergraduate applicants and is 'test-blind'. The review process uses a Multi-Factor Admission Score which includes High School GPA (calculated from 'a-g' courses taken during 10th-12th grade), self-reported high school coursework, and supplemental factors such as first-generation status, household income, and coursework in excess of 'a-g' requirements.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Music Industry and Technology,https://catalog.csuchico.edu/,,
+Not Required,Not Required,A placement exam is required to determine the appropriate music theory and aural skills courses. An audition is required to determine the appropriate level of applied study.,Not Required,True,False,False,False,False,,,program,Minor in Music,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Fine Arts in Musical Theatre,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to Chico State, first-year students must meet the following requirements: Be a high school graduate or have a legal equivalent. Complete the 15-unit comprehensive ""A-G"" pattern of college prep courses. Earn a qualifying ""A-G"" grade point average (GPA).",Not Required,True,False,True,False,False,,,program,Bachelor of Science in Natural Sciences,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Nursing,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Science in Nutrition and Food Sciences,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The following courses, or their approved transfer equivalents, are required of all candidates for this minor. A minimum of nine units must be upper-division.
+
+Required Core Courses: 9 units including NFSC 120, NFSC 340, and KINE 335.
+
+Electives: 9 units selected from BIOL 211, CHEM 107 or CHEM 108, KINE 303, KINE 341, NFSC 303, NFSC 310, NFSC 315, NFSC 320, NFSC 345, NFSC 440, NFSC 445, or PSYC 357.",Not Required,True,False,True,False,False,,,program,Minor in Nutrition for Human Performance,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The minor in nutrition is available for any student not majoring in nutrition and dietetics or food and nutrition communication. This minor is especially useful for students in health-related fields and will meet the prerequisites for many health-related professional programs, such as nursing, medicine, dentistry, physical therapy, and physician assistant. A minimum of 12 units of the minor must be upper-division. Advising is mandatory for all minors in this department.",Not Required,True,False,True,False,False,,,program,Minor in Nutrition,https://catalog.csuchico.edu/,,
+Not Required,Not Required,A 2.0 grade point average is required in all coursework taken to complete the minor. Prerequisites for courses in the minor must be met.,Not Required,True,False,False,False,False,,,program,Minor in Operations and Supply Chain Management,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Philosophy and Law,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission to Chico State, first-time student applicants must meet the following requirements:
+1. Have graduated from high school or will graduate from high school prior to the term of enrollment.
+2. Have completed the 15-unit comprehensive ""a-g"" pattern of college preparatory courses.
+3. Have a 2.5 or greater ""a-g"" GPA for California residents or California graduates.
+4. Have a 3.0 or greater ""a-g"" GPA for non-California residents.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Philosophy,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Philosophy,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Photographic Studies,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Physical Education,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Bachelor of Science in Physics,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Physics,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The minor in planning and development requires a minimum of 18 units of coursework. This includes PSSC 270 (3.0 units) and 15.0 units selected from the following: ANTH 333, ANTH 335, ECON 320, ECON 435, ERTH 303, GEOG 305, GEOG 350, GEOG 441, GEOG 442, GEOG 450, GEOG 452, PSSC 305, PSSC 314, PSSC 340, PSSC 342, PSSC 444, PSSC 447, PSSC 470, PSSC 472, SOCI 370.",Not Required,True,False,False,False,False,,,program,Minor in Planning and Development,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Bachelor of Science in Plant and Soil Science,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"First-time freshman applicants are considered for admission based on the completion of the high school 'a-g' subject requirements, their grade point average, and graduation status. The entire California State University (CSU) system no longer uses ACT or SAT examinations in determining admission eligibility for any CSU campus.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Political Science,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Political Science,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Project Management,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Bachelor of Arts in Psychology,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The minor in psychology requires 22 units of coursework. This includes the required core course PSYC 101 General Psychology and 19 units of electives, with at least 10 of those units being upper-division. At least 12 units of the minor must be upper-division coursework taken in residence. A grade of C or higher is required in all courses taken to fulfill the minor.",Not Required,True,False,False,False,False,,,program,Minor in Psychology,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission as a first-time freshman, you must be a high school graduate (or be on track to graduate), have completed the 15-unit ""a-g"" college-prep course pattern with a grade of C- or better, and have a 2.50 or greater ""a-g"" GPA (for California residents or graduates of a California high school) or a 3.00 or greater ""a-g"" GPA (for non-California residents). California State University (CSU) has permanently suspended the use of ACT/SAT examinations in determining admission eligibility for all CSU campuses.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Public Administration,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Public Administration,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State, first-time freshmen applicants must meet the following requirements:
+1. Be a high school graduate or have the legal equivalent of a high school diploma.
+2. Complete the 15-unit comprehensive 'a-g' pattern of college preparatory courses.
+3. Earn a qualifying 'a-g' grade point average (GPA).",Not Required,True,False,False,False,False,,,program,Bachelor of Science in Public Health,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Public Health,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Queer and Trans Studies,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The minor in race, ethnicity, and sovereignty requires 18 units. At least 9 units must be upper-division.
+
+You must take all courses for a letter grade, except for those offered only for credit/no credit.",Not Required,True,False,False,False,False,,,program,"Minor in Race, Ethnicity, and Sovereignty GE",https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State, first-year students need to meet the following criteria:
+
+Be a high school graduate or have a GED/HiSET.
+Complete the 15-unit A-G course pattern with a grade of C- or better. The 15 units of the ""a-g"" college prep sequence are the absolute minimum required for CSU eligibility. Students should aim to take more than the minimum!
+Earn a qualifying A-G GPA.",Not Required,True,False,False,False,False,,,program,"Bachelor of Science in Recreation, Hospitality, and Parks Management",https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,"Minor in Recreation, Hospitality, and Parks Management",https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,The Minor in Secondary Language Arts is a 21-unit program designed for students who are not English majors but who plan to seek a Single Subject Credential in English. A grade of C or higher is required for each course in the minor. Students must consult with a department advisor to plan the best course of study.,Not Required,True,False,False,False,False,,,program,Minor in Secondary Language Arts,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Social Media Production and Analysis,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The minor in social work offers a general background for students interested in careers in the human services, or for those who want to broaden their understanding of the field of social work. Coursework for the minor is intended to expand a student's knowledge of social problems, social services, social policy, and social work interventions. The social work minor may be taken by students in any major.
+
+Required Courses
+SWRK 170 Introduction to Social Work (3)
+SWRK 305 Social Welfare Policy and Services I (3)
+SWRK 330 Introduction to Social Work Practice (3)
+
+Elective Courses
+Select nine units from the following:
+SWRK 202 Diversity and Social Justice (3)
+SWRK 300 Human Behavior and the Social Environment I (3)
+SWRK 320 Issues in Child and Family Welfare Services (3)
+SWRK 335 Interviewing and Interventions in Social Work Practice (3)
+SWRK 430 Social Work Practice with Groups (3)
+SWRK 439 Crisis Intervention (3)
+SWRK 483 Social Work with Older Adults (3)
+SWRK 484 Social Work Practice in Health Care (3)",Not Required,True,False,False,False,False,,,program,Minor in Social Work,https://catalog.csuchico.edu/,,
+Not Required,Required,"Admission to the social work major is a selective process. Students seeking admission to the social work major must first be admitted to the University as social work pre-majors. Social work pre-majors apply for admission to the major during the spring semester of their sophomore year, after completion of the social work pre-major curriculum. The School of Social Work distributes applications during November each year. To be considered for admission to the social work major, a student must have completed the following with a grade of C or better: SWRK 170 Introduction to Social Work (a required GE, Area D course); SWRK 201 Social Work and Social Welfare; SWRK 202 Communication in Social Work Practice; ENGL 130W or I (or an equivalent 'W' course). You must also have a cumulative GPA of at least 2.5 and complete a personal statement. Personal statements are reviewed by faculty and applicants are invited for an interview. Final admission decisions are based on the student's personal statement, interview, GPA, and demonstrated commitment to the values and ethics of the social work profession.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Social Work,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The minor in sociology consists of a minimum of 18 units of coursework, nine of which must be upper-division. You must receive a grade of C- or higher in all courses required for the minor.
+
+Course Requirements for the Minor:
+Required Lower-Division Course (3 units):
+SOCI 100 Introduction to Sociology
+
+Elective Lower-Division Courses (6 units):
+Select two of the following:
+SOCI 200 Social Problems
+SOCI 230 Race and Ethnicity
+SOCI 240 Introduction to Gender and Sexuality Studies
+
+Elective Upper-Division Courses (9 units):
+Select any three upper-division sociology courses. At least one upper-division SOCI course must be taken in residence.",Not Required,True,False,False,False,False,,,program,Minor in Sociology,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-time freshman, you must meet the following minimum requirements:
+
+Be a high school graduate or have a GED/Hised.
+Complete the 15-unit comprehensive ""A-G"" pattern of college prep courses.
+Have a 2.5 or greater ""A-G"" GPA if you're a California resident or California high school graduate.
+Have a 3.0 or greater ""A-G"" GPA if you are not a California resident or California high school graduate.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Spanish,https://catalog.csuchico.edu/,,
+,,,,,,,,,,,error,Minor in Spanish,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Minor in Special Education,https://catalog.csuchico.edu/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Sport Performance,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Sports Media,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,True,False,False,,,program,Minor in Statistics,https://catalog.csuchico.edu/,,
+,,,,True,False,False,False,False,,,program,Minor in Sustainability and Resilience GE,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"To be considered for admission to Chico State as a first-year student, you must be a high school graduate (or have a Certificate of General Education Development or California High School Proficiency Certificate) and have completed the 15-unit comprehensive ""a-g"" pattern of college prep courses with a grade of C- or better.",Not Required,True,False,False,False,False,,,program,Bachelor of Arts in Theatre Arts,https://catalog.csuchico.edu/,,
+,,The minor in theatre arts requires a minimum of 22 units of theatre arts coursework. At least 12 of these units must be upper-division.,,True,False,False,False,False,,,program,Minor in Theatre Arts,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Tourism,https://catalog.csuchico.edu/,,
+Not Required,Not Required,"The minor in video game design requires the following 19-21 units. To be admitted to the program, a student must have a Chico State grade point average of at least 2.0.",Not Required,True,False,True,False,False,,,program,Minor in Video Game Design,https://catalog.csuchico.edu/,,
+Not Required,Not Required,,Not Required,True,False,False,False,False,,,program,Minor in Women's Studies,https://catalog.csuchico.edu/,,
