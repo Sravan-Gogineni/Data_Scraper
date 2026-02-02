@@ -59,7 +59,7 @@ class GeminiModelWrapper:
                 raise e
 
 # Initialize the model wrapper
-model = GeminiModelWrapper(client, "gemini-2.5-flash")
+model = GeminiModelWrapper(client, os.getenv("MODEL"))
 
 # Logic moved to process_institution_extraction
 

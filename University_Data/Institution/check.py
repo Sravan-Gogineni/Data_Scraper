@@ -18,7 +18,7 @@ load_dotenv()
 
 # Initialize the model using the wrapper from Institution.py
 # ensuring we use a search-capable model
-model = GeminiModelWrapper(client, "gemini-2.5-flash") 
+model = GeminiModelWrapper(client, os.getenv("MODEL")) 
 
 def resolve_redirect(url):
     try:

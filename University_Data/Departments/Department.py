@@ -20,7 +20,7 @@ def generate_text_safe(prompt):
         )
         
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=os.getenv("MODEL"),
             contents=prompt,
             config=types.GenerateContentConfig(
                 tools=[google_search_tool],

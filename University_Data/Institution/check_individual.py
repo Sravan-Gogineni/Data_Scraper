@@ -67,7 +67,7 @@ class GeminiModelWrapper:
 
 # Initialize API Client
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-model_wrapper = GeminiModelWrapper(client, "gemini-2.5-pro")
+model_wrapper = GeminiModelWrapper(client, os.getenv("MODEL"))
 
 def run_scraper(university_name):
     print(f"\n[Searching for {university_name}...]")
