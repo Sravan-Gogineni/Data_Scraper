@@ -1,0 +1,40 @@
+[
+    {
+        "Website_url": "https://northeastern.edu",
+        "DepartmentName": "Undergraduate Admissions",
+        "Email": "admissions@northeastern.edu",
+        "PhoneNumber": "617.373.2200",
+        "PhoneType": null,
+        "AdmissionUrl": "https://northeastern.edu",
+        "BuildingName": null,
+        "Street1": null,
+        "Street2": null,
+        "City": null,
+        "State": null,
+        "StateName": null,
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": null,
+        "AirportPickup": null
+    },
+    {
+        "Website_url": "https://northeastern.edu",
+        "DepartmentName": "International Undergraduate Admissions",
+        "Email": "admissions@northeastern.edu",
+        "PhoneNumber": null,
+        "PhoneType": null,
+        "AdmissionUrl": "https://northeastern.edu",
+        "BuildingName": null,
+        "Street1": null,
+        "Street2": null,
+        "City": null,
+        "State": null,
+        "StateName": null,
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": null,
+        "AirportPickup": null
+    }
+]

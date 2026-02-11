@@ -1,0 +1,890 @@
+Program name,Program Page url,Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsRecommendationSystemOpted,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,error
+M.S. in Artificial Intelligence Engineering - Biomedical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Artificial Intelligence Engineering - Biomedical Engineering - Research,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Biomedical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Biomedical Engineering - Applied Study,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Biomedical Engineering - Research,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,The following materials are required to be submitted as part of the application for all BME M.S. degree programs: Online application form; Statement of Purpose; Transcripts of all undergraduate and graduate coursework; Three letters of recommendation; Resume; Official TOEFL or IELTS scores (for international applicants whose native language is not English). The GRE is NOT required. There is an application fee.,,True,False,,True,False,False,,,program,
+M.S. in Computational Biomedical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"Students applying to the M.S.-CBE program should have an undergraduate degree in an engineering or a quantitative science discipline (e.g., math, physics, computational biology, or computer science). Successful applicants are expected to have a minimum QPA of 3.0. The application requires a statement of purpose, a resume, three letters of recommendation, and transcripts from all universities attended. The GRE test is optional for all M.S. applicants. International applicants are required to take the TOEFL or IELTS test, and minimum scores are specified on the BME departmental graduate program website.",,True,True,True,True,False,False,,,program,
+M.S. in Computational Biomedical Engineering - Applied Study,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"A complete application includes: Online application form; Statement of purpose; Resume/CV; Three letters of recommendation; Transcripts from all universities attended; TOEFL/IELTS/Duolingo score (if applicable); Application fee; Video essay. A three-page statement of purpose is requested that describes your motivation for pursuing the BME M.S. degree, relevant past experiences, and future career goals. Explain how your skills and background make you a good fit for our program. Provide a resume or CV highlighting your relevant skills and experiences. The GRE is not required and will not be accepted for the BME M.S. programs. A three-minute video essay is also required, where you should briefly introduce yourself, elaborate on your motivation for pursuing an M.S. degree in BME, and how this degree will help you achieve your career goals.",,True,False,True,True,False,False,,,program,
+M.S. in Computational Biomedical Engineering - Research,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Ph.D. in Biomedical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"Applicants for admission to graduate study in biomedical engineering are expected to have a bachelor's degree in an engineering discipline or a physical or biological science. Successful applicants will have strong undergraduate academic records and demonstrated potential for creative research. Completed applications, including the application form and fee, transcripts of all university-level academic work, three letters of recommendation, and a statement of purpose are required. International applicants whose native language is not English are also required to submit a TOEFL or IELTS score. While not required, submission of the Graduate Record Examination (GRE) is highly recommended. For additional details regarding graduate admission, please refer to the department website.",,True,True,False,True,False,False,,,program,
+M.S. in Artificial Intelligence Engineering - Chemical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"Applicants for the M.S. in AIE-ChemE program are expected to have a bachelor’s degree in chemical engineering or a related engineering/science discipline from an accredited institution. A complete application includes the online application form, a statement of purpose, a current resume, three letters of recommendation, and unofficial transcripts. The GRE test is not required for admission to this program. TOEFL/IELTS/Duolingo scores are required for all international applicants unless they have completed a university-level degree in the U.S. or another English-speaking country.",,True,False,True,True,False,False,,,program,
+M. of Chemical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"Applications require the following: statement of purpose, resume, three letters of recommendation, and transcripts of all undergraduate and graduate coursework. The GRE is not required, and submitted scores will not be considered in the admissions process.",Not Required,True,False,False,True,False,False,,,program,
+M.S. in Chemical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"Applications are submitted online. A complete application includes the application form, a statement of purpose, curriculum vitae, three letters of recommendation, official transcripts, and official TOEFL/IELTS scores (if applicable). Please refer to the department website for additional information.",Not Required,True,False,False,True,False,False,,,program,
+M.S. in Chemical Engineering - Applied Study,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Ph.D. in Chemical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Advanced Infrastructure Systems,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Artificial Intelligence Engineering - Civil and Environmental Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Civil Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"A complete application includes the online application form, application fee, statement of purpose, resume, three letters of recommendation, unofficial transcripts, and GRE scores (optional for Fall 2024 admissions).",,True,True,False,True,False,False,,,program,
+M.S. in Civil and Computer Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Civil and Environmental Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"Applicants for admission to graduate study in civil and environmental engineering must hold a bachelor's degree in engineering, or a related field, from an accredited college or university. They must submit the online application, a statement of purpose, three letters of recommendation, and a current resume or curriculum vitae. For international applicants whose native language is not English, a TOEFL score is required. GRE scores are not required for applicants to the Civil and Environmental Engineering M.S. and Ph.D. programs.",,True,False,True,True,False,False,,,program,
+M.S. in Civil and Environmental Engineering - Applied Study,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+M.S. in Civil and Environmental Engineering - Research,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"All applicants must submit an online application, which includes a statement of purpose, a résumé, three letters of recommendation, unofficial transcripts, and unofficial GRE and TOEFL/IELTS scores (if applicable).",Not Required,False,True,True,True,False,False,,,program,
+Ph.D. in Civil and Environmental Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"To apply for admission to one of CEE's graduate programs, you must submit the following items: Completed online application form and application fee, Statement of Purpose, Resume or curriculum vitae, Transcripts, Three letters of recommendation, TOEFL/IELTS/Duolingo scores (if applicable).",,True,False,,True,False,False,,,program,
+M.S. in Artificial Intelligence Engineering - Electrical and Computer Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"The following items are required to apply for graduate admission to the ECE department: Online application form; Statement of purpose; Resume; Three letters of recommendation; Unofficial transcripts from each university you have attended, regardless of whether you received a degree; Unofficial GRE scores (if applicable); Unofficial TOEFL/IELTS/Duolingo scores (if applicable).",Not Required,False,True,True,True,False,False,,,program,
+M.S. in Electrical and Computer Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Ph.D. in Electrical and Computer Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"The following materials are required: A completed online application form; A statement of purpose; A current resume; Three letters of recommendation (Recommenders must submit their letters online); Official transcripts from each university you have attended, whether or not you received a degree; Official TOEFL or IELTS scores (if applicable); Official GRE scores (optional for Fall 2025 applications); A nonrefundable application fee of $75 (USD).",Not Required,False,True,True,True,False,False,,,program,
+M.S. in Engineering and Public Policy,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Ph.D. in Engineering and Public Policy,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"A complete application for the PhD in Engineering and Public Policy consists of the following: Online Application Form, Application Fee, Unofficial Transcripts, Statement of Purpose, Resume/CV, Three Letters of Recommendation, GRE General Test (Optional), Optional Writing Sample, and for international applicants, English proficiency exam scores (TOEFL, IELTS, or Duolingo).",Optional,True,True,,True,False,False,,,program,
+M.S. in Information and Communication Technology,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"The application checklist includes an online application form, application fee, statement of purpose & essays, a résumé/CV, three letters of recommendation, transcripts, and official score reports for GRE/GMAT and TOEFL/IELTS/Duolingo tests.",Not Required,False,True,False,True,False,False,,,program,
+M.S. in Information Networking,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,Required,Required,"A complete application includes the following: Online Application, Resume, Statement of Purpose, Three Letters of Recommendation, Official Transcripts, GRE Scores (optional for Fall 2024 admissions), TOEFL/IELTS/Duolingo Scores, and a Video Interview.",Not Required,True,True,False,True,False,False,,,program,
+Ph.D. in Information Networking,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Artificial Intelligence Engineering - Materials Science and Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Materials Science and Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Materials Science and Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Artificial Intelligence Engineering - Mechanical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Mechanical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Mechanical Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+"M.S. in Artificial Intelligence Engineering - Energy Science, Technology & Policy",http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+"M.S. in Artificial Intelligence Engineering - Energy Science, Technology & Policy - Applied Study",http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+"M.S. in Energy Science, Technology and Policy",http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+"M.S. in Energy Science, Technology and Policy - Advanced Study",http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+"M.S. in Energy Science, Technology and Policy - Applied Study",http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+"M.S. in Energy Science, Technology and Policy - Applied Advanced Study",http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Artificial Intelligence Engineering - Engineering & Technology Innovation Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Engineering and Technology Innovation Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Architecture,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Architecture,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Building Performance and Diagnostics,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Computational Design,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Sustainable Design,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Architecture,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Building Performance and Diagnostics,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Computational Design,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Fine Arts,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Fine Arts,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Design,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Design,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Fine Arts in Drama,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Drama,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Music,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Music,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Artificial Intelligence Engineering - CARNEGIE MELLON INSTITUTE FOR STRATEGY AND TECHNOLOGY,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Neural Computation and Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Arts in Professional Writing,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Arts in Rhetoric,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Rhetoric,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in History,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Arts in Global Communication and Applied Translation,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Arts in Second Language Acquisition,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Second Language Acquisition,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Philosophy,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Psychology,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Social and Decision Sciences,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Statistics and Data Science,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Arts Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Entertainment Industry Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Science in Health Care Policy and Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Science in Information Security,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Science in Information Systems,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Science in Information Technology,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Medical Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Public Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Science in Public Policy and Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Public Policy and Management,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Biological Sciences,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Chemistry,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Mathematical Sciences,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Physics,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Computer Science,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Computer Science,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Computational Biology,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Computational Biology,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Human-Computer Interaction,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Human-Computer Interaction,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Artificial Intelligence and Innovation,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M. of Computational Data Science,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Intelligent Information Systems,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Intelligent Information Systems - Advanced Study,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Language Technologies,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Language and Information Technologies,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Machine Learning,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Machine Learning,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Robotics,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Robotics,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M. of Software Engineering in Embedded Systems,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M. of Software Engineering in Scalable Systems,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M. of Software Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Software Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Privacy Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Privacy Engineering - Applied Study,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Privacy Technology and Policy,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+M.S. in Societal Computing,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Societal Computing,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Software Engineering,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Master of Business Administration,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+Ph.D. in Business Administration,http://coursecatalog.web.cmu.edu/degreesoffered/graduate-degrees/,,,,,,,,,,,,,error,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"

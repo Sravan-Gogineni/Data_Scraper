@@ -1,0 +1,21 @@
+[
+    {
+        "Website_url": "https://admission.asu.edu/contact",
+        "DepartmentName": "Admission Services",
+        "Email": null,
+        "PhoneNumber": "480-965-7788",
+        "PhoneType": "Landline",
+        "AdmissionUrl": "https://admission.asu.edu/",
+        "BuildingName": null,
+        "Street1": null,
+        "Street2": null,
+        "City": null,
+        "State": "AZ",
+        "StateName": "Arizona",
+        "Country": "USA",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": null,
+        "AirportPickup": null
+    }
+]

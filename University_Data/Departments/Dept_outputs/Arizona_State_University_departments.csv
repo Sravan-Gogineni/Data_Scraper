@@ -1,0 +1,2 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Admission Services,,,,,,,,,USA,US,United States,,480-965-7788,Landline,AZ,,,,Arizona,,False,https://admission.asu.edu/,,,False,False,Arizona State University

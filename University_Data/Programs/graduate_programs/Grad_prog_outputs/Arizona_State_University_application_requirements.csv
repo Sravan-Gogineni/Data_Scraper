@@ -1,0 +1,833 @@
+Program name,Program Page url,Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsRecommendationSystemOpted,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,error
+"Accountancy and Data Analytics, Master",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Acting, Master of Fine Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Addiction Psychology, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in psychology, counseling, social work or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. resume
+4. statement of purpose
+5. two letters of recommendation
+6. proof of English proficiency",Not Required,True,False,False,True,False,False,,,program,
+"Advanced Analytics in Higher Education, Graduate Certificate",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Aerospace Engineering, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Aerospace Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"American Indian Studies (Cultural Resource Revitalization and Sust), Master of Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,Required,"All applicants must meet the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in American Indian studies or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. a graduate admission application and application fee
+2. official transcripts
+3. a statement of purpose
+4. a writing sample
+5. three letters of recommendation
+6. proof of English proficiency",Required,True,False,True,False,False,False,,,program,
+"American Indian Studies (Indigenous Rights and Social Justice), Master of Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,Required,An applicant must have a bachelor's degree from a regionally accredited institution. Applicants must have a minimum of a 3.00 cumulative GPA (scale is 4.00 = A) in the last 60 hours of their first bachelor's degree program.,Required,True,False,True,False,False,False,,,program,
+"American Indian Studies (Tribal Leadership and Governance), Master of Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must meet the minimum admission requirements of the Graduate College. A student must have earned a bachelor's or master's degree in American Indian studies or a related field from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program.",Required,True,False,True,False,False,False,,,program,
+"American Indian Studies (Visual and Oral Culture), Master of Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in American Indian studies or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+Applicants are required to submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. three letters of recommendation
+4. a statement of purpose
+5. a resume or curriculum vitae
+6. a writing sample
+7. proof of English proficiency",Required,True,False,False,False,False,False,,,program,
+"Anthropology, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree, in any field, from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. proof of English proficiency",Not Required,True,False,True,False,False,False,,,program,
+"Anthropology, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program. All applicants must submit: a graduate admission application and application fee, official transcripts, three letters of recommendation, and proof of English proficiency. Additional required documents to be uploaded to the online application include a personal statement, a writing sample (not to exceed 35 pages), and a curriculum vitae or resume.",Required,True,False,True,True,False,False,,,program,
+"Applied Behavior Analysis, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Applied Leadership and Management, Master",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Architectural Studies, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Architecture, Master of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Art, Master of Fine Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Herberger Institute for Design and the Arts.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in studio art or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. resume
+6. portfolio",Not Required,True,False,True,False,False,False,,,program,
+"Art Education, Master of Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Herberger Institute for Design and the Arts.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in art, art education or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. resume or curriculum vitae
+4. statement of purpose
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,,True,False,False,,,program,
+"Artificial Intelligence in Business, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Not Required,"Applicants must fulfill the requirements of both the Graduate College and the W. P. Carey School of Business.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. current resume
+4. proof of English proficiency
+
+If the applicant's native language is not English, the English proficiency requirement must be met. ASU does not accept the Duolingo test. The W. P. Carey School of Business does not accept the IELTS indicator test.
+
+Additional Application Information
+An applicant whose native language is not English must provide proof of English proficiency regardless of their current residency. Scores must be from within the past two years. View the options for acceptable proof of English proficiency.
+
+The W. P. Carey School of Business does not offer conditional admission for English proficiency. Students must meet the English proficiency requirement to be considered for admission.
+
+The letters of recommendation are not required.
+
+The GMAT/GRE test is not required.",Not Required,True,False,False,True,False,False,,,program,
+"Asian Languages and Civilizations - Japanese, Master of Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must meet the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in Japanese or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. a curriculum vitae
+4. a personal statement
+5. a writing sample (in English)
+6. three letters of recommendation
+7. proof of English proficiency
+
+Graduate Record Examinations (GRE) are not required.
+
+Applicants should demonstrate an advanced level of proficiency in modern Japanese. This proficiency can be demonstrated by a score of N1 on the Japanese Language Proficiency Test or through some other form of evaluation, such as an oral proficiency interview conducted by program faculty. Admission may be granted to students with lower-level proficiency if they are otherwise highly qualified, but they will be required to take additional language courses beyond the minimum degree requirements.",Required,True,False,True,False,False,False,,,program,
+"Audiology, AuD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must meet the requirements of both the Graduate College and the College of Health Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in communication disorders or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. an online application
+2. official transcripts
+3. three letters of recommendation
+4. a personal statement
+5. a resume or curriculum vitae
+6. proof of English proficiency",Not Required,True,False,,False,False,False,,,program,
+"Behavioral Health (Clinical), Doctor of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the College of Health Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in a behavioral or health discipline such as counseling, nursing, physician assistant studies, psychology or social work, from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. three letters of recommendation
+4. a curriculum vitae or resume
+5. a personal statement
+6. proof of English proficiency
+
+Applicants whose native language is not English (regardless of current residency) must provide proof of English proficiency. Additional details can be located on the graduate admission services website for English proficiency: https://admission.asu.edu/international/graduate/english-proficiency. Applicants with a degree from an institution in a country other than the U.S. will need to pay for their transcripts to be evaluated. Additional information about transcript evaluations can be found on the Graduate College website: https://admission.asu.edu/international/graduate/transcript-evaluation.",Not Required,True,False,False,False,False,False,,,program,
+"Biochemistry, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in chemistry, biochemistry or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Biological Data Science, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Biomedical Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Biomedical Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Biomedical Informatics, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must meet the requirements of both the Graduate College and the College of Health Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution in a related field such as biology, engineering, computer science, mathematics, statistics, a basic science or a health-related profession.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. three letters of recommendation
+4. personal statement
+5. resume or curriculum vitae
+6. proof of English proficiency",Not Required,True,False,False,True,False,False,,,program,
+"Biomedical Informatics, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree, in a related field, from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.25 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.25 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. personal statement
+4. curriculum vitae or resume
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Business Administration, MBA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the W. P. Carey School of Business.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. professional resume
+4. two essays
+5. two letters of recommendation
+6. proof of English proficiency
+
+Applicants may be required to submit GMAT or GRE scores. Waivers are available to highly qualified applicants. See the school website for details.",Not Required,True,True,True,True,False,False,,,program,
+"Business Analytics, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the W. P. Carey School of Business.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in a related field from a regionally accredited institution.
+
+Applicants must have a minimum of a 3.00 cumulative GPA (scale is 4.00 = ""A"") in the last 60 hours of a student's first bachelor's degree program.
+
+All applicants must submit an application and be admitted to the Graduate College. All applicants must meet the Graduate College's English language proficiency requirement.",Not Required,True,False,True,True,False,False,,,program,
+"Chemical Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have an earned bachelor's degree in chemical engineering or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. resume
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Chemical Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Chemistry, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Chicana and Chicano Studies, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must meet the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in American studies, Chicana/o studies, English, ethnic studies, history, Spanish, women's studies or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Required,True,False,True,False,False,False,,,program,
+"Child and Family Leadership, Graduate Certificate",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must have a minimum of a bachelor's degree from a regionally accredited U.S. institution, or the equivalent of a U.S. bachelor's degree from an international institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program.",Not Required,True,False,False,False,False,False,,,program,
+"Civil, Environmental and Sustainable Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Clinical Exercise Physiology, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the College of Health Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in exercise science or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. three letters of recommendation
+4. resume or curriculum vitae
+5. statement of purpose
+6. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Communication, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. proof of English proficiency
+6. resume or curriculum vitae
+7. writing sample",Required,True,False,,False,False,False,,,program,
+"Communication, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in communication or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. writing sample
+5. three letters of recommendation
+6. résumé or curriculum vitae
+7. proof of English proficiency",Required,True,False,False,False,False,False,,,program,
+"Community Resources and Development, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,Applicants must fulfill the requirements of both the Graduate College and the Watts College of Public Service and Community Solutions.,Required,True,False,True,False,False,False,,,program,
+"Community Resources and Development - Parks and Recreation Management, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. a graduate application and application fee
+2. official transcripts
+3. three letters of recommendation
+4. a professional resume
+5. a statement of purpose
+6. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Computer Engineering - Computer Systems, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Not Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in computer engineering, computer science, electrical engineering or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. two letters of recommendation
+5. proof of English proficiency",Not Required,True,False,,True,False,False,,,program,
+"Computer Engineering - Electrical Engineering, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"An applicant must have earned a bachelor's degree in electrical engineering or a related area from a regionally accredited institution, with a minimum GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of a student's first bachelor's degree program, or a master's degree in electrical engineering or a related area from a regionally accredited institution with a minimum GPA of 3.00 (scale is 4.00 = ""A""). All applicants must submit: an online application, official transcripts, a personal statement, a resume or curriculum vitae, three letters of recommendation and proof of English proficiency. GRE scores are not required.",Not Required,True,False,,True,False,False,,,program,
+"Computer Science, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Computer Science, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Construction Management and Technology, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Not Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in construction, engineering, architecture, business or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,True,True,False,False,,,program,
+"Counseling, Master of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,True,False,False,False,,,program,
+"Creative Writing, Master of Fine Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Criminology and Criminal Justice, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,Required,"Applicants must fulfill the requirements of both the Graduate College and the Watts College of Public Service and Community Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in criminology and criminal justice, or a related field, from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. a statement of purpose
+4. three letters of recommendation
+5. proof of English proficiency",,True,False,True,False,False,False,,,program,
+"Criminology and Criminal Justice, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Curriculum and Instruction, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in education or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Required,True,False,True,False,False,False,,,program,
+"Cybersecurity, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in a related field such as computer science, computer systems engineering, software engineering, computer engineering or electrical engineering, from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. resume or curriculum vitae
+4. personal statement
+5. proof of English proficiency
+
+Letters of recommendation are not required.",Not Required,True,False,,True,False,False,,,program,
+"Data Science, Analytics and Engineering (Computational Models and Data), Master of Arts",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Not Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in a related field from a regionally accredited institution. Related fields include, but are not limited to, engineering, mathematics, statistics, computer science, and data science and analytics.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+Applicants are required to submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. personal statement
+4. proof of English proficiency
+
+Additional Application Information
+An applicant whose native language is not English must provide proof of English proficiency regardless of their current residency.
+
+The GRE is not required.",Not Required,True,False,False,False,False,False,,,program,
+"Design, Master of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Digital Culture, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must submit an application and all required application materials by the program's application deadline. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,False,True,False,False,,,program,
+"Early Childhood Education, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in early childhood education, special education, child development, elementary education or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. resume
+4. personal statement
+5. two letters of recommendation
+6. proof of English proficiency",Not Required,True,False,True,False,False,False,,,program,
+"Economics, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Education, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Education Policy, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College.,Required,True,False,True,True,False,False,,,program,
+"Educational Leadership (Principalship), EdD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College. Applicants are eligible to apply to the program if they have earned a master's degree in any field from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Required,True,False,True,False,False,False,,,program,
+"Educational Policy and Evaluation, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Electrical Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must submit:
+
+an online Graduate College application, which includes all required materials
+official transcripts
+three letters of recommendation
+a resume or curriculum vitae
+a statement of purpose
+proof of English proficiency
+
+An applicant whose native language is not English must provide proof of English proficiency regardless of their current residency.
+
+The GRE is not required for fall 2024 and spring 2025 admission.
+
+Statement of Purpose: The statement of purpose should be a one- to two-page essay explaining the applicant's educational background, research interests, career goals and reasons for interest in this program.
+
+Letters of Recommendation: Applicants must provide three letters of recommendation from individuals in a position to appraise the applicant's potential for graduate study. Preferably, letters of recommendation should come from faculty members at the applicant's previous institution.
+
+Resume: Applicants must submit a resume or curriculum vitae that summarizes their education, awards, publications and work experience.",Not Required,True,False,True,True,False,False,,,program,
+"Electrical Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Elementary Education, MEd",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program. All applicants must submit: 1. graduate admission application and application fee 2. official transcripts 3. resume 4. statement of purpose 5. three letters of recommendation 6. proof of English proficiency",Not Required,True,False,True,False,False,False,,,program,
+"Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"English, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in English or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. writing sample
+6. curriculum vitae or resume
+7. proof of English proficiency",Required,True,False,True,False,False,False,,,program,
+"English, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in English or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. writing sample
+5. three letters of recommendation
+6. resume or curriculum vitae
+7. proof of English proficiency",Required,True,False,False,False,False,False,,,program,
+"Environmental and Resource Management, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in engineering or a related field, such as biology, chemistry, geology, physics or mathematics from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program.",Not Required,True,False,True,True,False,False,,,program,
+"Environmental Engineering, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must submit an application and application fee, official transcripts, a resume, a statement of purpose, and three letters of recommendation. Applicants must have a bachelor's degree in engineering or a related field from a regionally accredited institution and a minimum of a 3.00 cumulative GPA (scale is 4.00 = ""A"") in the last 60 hours of a student's first bachelor's degree program.",Not Required,True,False,True,True,False,False,,,program,
+"Environmental Life Sciences, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Evolutionary Biology, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,All applicants must meet the requirements of both the Graduate College and The College of Liberal Arts and Sciences.,Not Required,True,False,True,True,False,False,,,program,
+"Film and Media Studies, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Finance, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Gender Studies, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. three letters of recommendation
+4. statement of purpose
+5. writing sample
+6. resume or curriculum vitae
+7. proof of English proficiency",Required,True,False,True,False,False,False,,,program,
+"Geography, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Geography, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Geological Sciences, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"An applicant must have earned a bachelor's or master's degree in geology, earth sciences, geochemistry, geological engineering, or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,True,True,False,False,,,program,
+"Geological Sciences, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must meet all requirements of the Graduate College as well as the admission requirements of the School of Earth and Space Exploration listed below. Applicants are required to have adequate preparation in the fields of geology, chemistry, physics and mathematics. As a minimum, this includes one year of calculus and two of the following sciences: geology, chemistry, biology and physics.",Not Required,True,False,False,True,False,False,,,program,
+"Global Health, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the College of Liberal Arts and Sciences. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program. All applicants must submit: 1. graduate admission application and application fee 2. official transcripts 3. curriculum vitae or resume 4. personal statement 5. three letters of recommendation 6. proof of English proficiency",Not Required,True,False,True,False,False,False,,,program,
+"Global Management, Master of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Graphic Design, Master of Science in Design",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The Design School. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in visual communication design, graphic design or a related field from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program. All applicants must submit: 1. graduate admission application and application fee 2. official transcripts 3. portfolio 4. statement of purpose 5. three letters of recommendation 6. proof of English proficiency. Applicants must submit an online portfolio of 15 to 20 images of their creative work. The portfolio should demonstrate a high level of design expertise. The statement of purpose should be 500 to 1,000 words and describe the applicant's educational and professional background and their specific areas of interest for graduate-level study.",Not Required,True,False,,True,False,False,,,program,
+"Health Care Delivery, Doctor of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Edson College of Nursing and Health Innovation.
+
+Applicants are eligible to apply to the program if they have earned a master's or master of science degree in a health-related discipline (including but not limited to public health, nursing, medicine, health administration, health informatics, pharmacy and other allied health disciplines) from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.50 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.50 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,False,True,False,False,,,program,
+"Higher and Postsecondary Education, MEd",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"History, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"History, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"In addition to the requirements of the Graduate College, applicants must submit all of the following to the School of Historical, Philosophical and Religious Studies:
+
+Graduate Admission Services application.
+Transcripts.
+Graduate Record Examinations (GRE): The GRE is not required for admission to the history PhD program.
+Letters of recommendation: Three letters of recommendation are required, preferably from faculty members who know you well. Letters should speak to your academic qualifications and potential for success in graduate school.
+Writing sample: A writing sample is required. It can be a paper written for a course, a chapter of an honors or master's thesis or a scholarly article. The writing sample should be no more than 35 pages, excluding bibliography, and should show your ability to conduct research and present your findings and analysis in a clear and compelling way.
+Statement of purpose: A statement of purpose is required. It should be approximately 500-750 words and describe your academic background and interests, research goals, professional aspirations and the reasons why you are applying to the ASU history program. It should identify one or two faculty members with whom you would like to work.
+Curriculum vitae or resume: A curriculum vitae or resume is required. It should include your academic and professional history.
+Proficiency in English.
+
+All applicants must submit an application and all supporting materials by the program's application deadline. Incomplete applications will not be considered.",Required,True,False,True,False,False,False,,,program,
+"Human Systems Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Human Systems Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Industrial Design, Master of Science in Design",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Herberger Institute for Design and the Arts.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in industrial design or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. a graduate application and application fee
+2. official transcripts
+3. a portfolio
+4. a curriculum vitae or resume
+5. a one- to two-page statement of purpose that describes the applicant's research interests, professional goals and reasons for wanting to join the program
+6. three letters of recommendation
+7. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Industrial Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in engineering, mathematics, statistics, computer science, business or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,True,True,False,False,,,program,
+"Industrial Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must meet the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in industrial engineering or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. resume or curriculum vitae
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,,True,False,False,,,program,
+"Information Technology, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must submit an ASU Graduate Admission Services application. An applicant whose native language is not English must provide proof of English proficiency regardless of current residency. Admission to the information technology MS program requires an undergraduate degree in a computing discipline, information technology, engineering or a closely related field from a regionally accredited institution, with a cumulative GPA of 3.00 (scale is 4.00 = ""A"") or higher in the last 60 hours of a bachelor's degree program.",Not Required,True,False,False,True,False,False,,,program,
+"Innovation and Venture Development, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in engineering, science, design, business or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+Applicants are required to submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. resume
+4. statement of purpose
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Integrated School-Based Mental and Behavioral Health, Graduate Certificate",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Interior Architecture, Master of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Journalism and Mass Communication, MMC",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Walter Cronkite School of Journalism and Mass Communication.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution.
+
+Applicants must have a minimum of a 3.00 cumulative GPA (scale is 4.00 = ""A"") in the last 60 hours of a student's first bachelor's degree program.
+
+Applicants must submit the following:
+*graduate admission application and application fee
+*official transcripts
+*statement of purpose
+*three letters of recommendation
+*a resume
+*a writing sample
+*proof of English proficiency",Required,True,False,,False,False,False,,,program,
+"Justice Studies, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program. Applicants must submit the following: graduate admission application and application fee; official transcripts; curriculum vitae; personal statement of up to three pages, double spaced, discussing why the applicant wants to pursue a PhD in justice studies at Arizona State University; three letters of recommendation from faculty or others qualified to evaluate the applicant's potential for graduate study; a writing sample of no more than 30 pages that demonstrates the applicant's writing and analytical skills",Required,True,False,False,False,False,False,,,program,
+"Landscape Architecture, Master of",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must meet the minimum requirements of the Graduate College.
+
+A portfolio is required of all applicants, regardless of background. All students must demonstrate a certain level of proficiency with computer software, including the Adobe Creative Suite, AutoCAD and 3-D modeling software such as Rhino. The admissions committee may require some students to take a summer workshop or a class to address any deficiencies.
+
+Applicants must submit the following: an online application, official transcripts, a statement of purpose, a resume, three letters of recommendation and a portfolio.
+
+There are two MLA program options. Track 1 is a three-year program for students without an undergraduate degree in landscape architecture, architecture or design. Track 2 is a two-year advanced program for students with an undergraduate degree in landscape architecture, architecture or design.
+
+An undergraduate GPA of at least 3.00 (on a 4.00 scale) in the last 60 hours of the first bachelor's degree is required.",Not Required,True,False,True,True,False,False,,,program,
+"Legal Studies, MLS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Sandra Day O'Connor College of Law. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program. All applicants must submit: graduate admission application and application fee; official transcripts; personal statement; resume or curriculum vitae; two letters of recommendation; proof of English proficiency.",Not Required,True,False,,False,False,False,,,program,
+"Linguistics and Applied Linguistics, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Linguistics and Applied Linguistics, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. curriculum vitae
+4. personal statement
+5. three letters of recommendation
+6. writing sample
+7. proof of English proficiency",Required,True,False,True,False,False,False,,,program,
+"Management, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the W. P. Carey School of Business.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in a nonbusiness field from a regionally accredited institution. Applicants with a bachelor's or master's degree in business are not eligible for admission to the Master of Science in management program.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. resume or curriculum vitae
+4. one-page statement of purpose
+5. proof of English proficiency",Not Required,True,False,False,True,False,False,,,program,
+"Marketing, Master of Science",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Mass Communication, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Materials Science and Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Materials Science and Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in materials science and engineering, chemical engineering, chemistry, physics, mechanical engineering, electrical engineering, bioengineering or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. proof of English proficiency",Not Required,True,False,False,True,False,False,,,program,
+"Mathematics, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"An applicant must have a bachelor's degree in mathematics from a college or university of recognized standing.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. resume or curriculum vitae
+6. proof of English proficiency
+
+GRE scores are not required.",Not Required,True,False,,True,False,False,,,program,
+"Mathematics, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Mechanical Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Not Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in mechanical engineering, aerospace engineering or a closely related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. two letters of recommendation
+5. proof of English proficiency
+
+Additional application requirements for applicants who attended a university outside of the U.S. are available at https://admission.asu.edu/international/graduate/doctorate-masters.
+
+GRE scores are not required.",Not Required,True,False,True,True,False,False,,,program,
+"Mechanical Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Microbiology, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Music, DMA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Herberger Institute for Design and the Arts.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in music from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,True,False,False,False,,,program,
+"Music, MM",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Music Education, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"A master's degree in music education or a related music field from a regionally accredited institution is required.
+
+Applicants also must have a minimum of three years of successful, full-time teaching experience in elementary, middle school or high school.
+
+All applicants must submit a scholarly writing sample of 10 to 20 pages (e.g., a master's thesis, a term paper or a published article) that demonstrates their potential to conduct research and write at a doctoral level. A one-page abstract should precede the writing sample. Applicants are strongly encouraged to submit a research-based paper that includes a literature review and a research design (e.g., a quantitative, qualitative, historical or philosophical study).
+
+All applicants must submit a video (five to 10 minutes) that demonstrates their current teaching effectiveness. The video may be submitted via a link to an online hosting site (e.g., YouTube or Vimeo). Applicants should make sure the link is not private. The video must be of the applicant's teaching in a group setting (e.g., general music, ensemble rehearsal). A one-page description of the lesson's context, objectives and assessment must precede the video link.
+
+Applicants must have a cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of a student's first bachelor's degree program, or applicants must have a cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit a resume or curriculum vitae.
+
+Applicants are required to submit a statement of purpose outlining their educational and professional goals. It should include the applicant's primary research interests and identify at least two ASU music education faculty members with whom they have a shared research interest and with whom they would like to work.",Required,True,False,True,False,False,False,,,program,
+"Neuroscience, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Nursing, DNP",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,Applicants must fulfill the requirements of both the Graduate College and the Edson College of Nursing and Health Innovation.,Required,True,False,False,True,False,False,,,program,
+"Nursing, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"A bachelor's or master's degree in nursing from a program accredited by the Accreditation Commission for Education in Nursing (ACEN) or the Commission on Collegiate Nursing Education (CCNE). Applicants with a bachelor's degree must have a minimum cumulative GPA of 3.40 (scale is 4.00 = ""A"") in the last 60 hours of a student's first bachelor's degree program. Applicants with a master's degree must have a minimum cumulative GPA of 3.40 (scale is 4.00 = ""A"") in an applicable master's degree program. An active, unencumbered registered nurse license in the applicant's state or country of residence.",Required,True,False,True,True,False,False,,,program,
+"Nutrition, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the College of Health Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution. Applicants must meet the Didactic Program in Dietetics requirements by providing a DPD verification statement or a declaration of intent to complete a DPD program.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. resume
+4. statement of purpose
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Philosophy, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Physics, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Political Science, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"An applicant must have earned a bachelor's or master's degree in political science, public administration or a related field from a regionally accredited institution.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. a resume or curriculum vitae
+6. a writing sample
+7. proof of English proficiency",Required,True,True,True,False,False,False,,,program,
+"Political Science, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and The College of Liberal Arts and Sciences.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in political science or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. writing sample
+6. proof of English proficiency
+7. resume or curriculum vitae",Required,True,False,True,True,False,False,,,program,
+"Psychology, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Public Administration, MPA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Watts College of Public Service and Community Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",,True,False,True,False,False,False,,,program,
+"Public Policy, MPP",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Public Policy, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"An applicant must have earned a bachelor's or master's degree from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. three letters of recommendation
+4. curriculum vitae
+5. statement of purpose
+6. writing sample
+7. proof of English proficiency",Required,True,False,True,False,False,False,,,program,
+"Religious Studies, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Not Required,Required,"All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. a writing sample
+6. proof of English proficiency",Required,True,False,False,False,False,False,,,program,
+"Robotics and Autonomous Systems, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution in a related field such as mechanical engineering, aerospace engineering, electrical engineering, computer science, computer engineering, computer systems engineering or industrial engineering.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. resume
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,True,True,False,False,,,program,
+"Secondary Education, MEd",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Social and Cultural Pedagogy, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Social Work, MSW",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must meet the requirements of both the Graduate College and the Watts College of Public Service and Community Solutions.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+Required documents:
+Graduate College application and application fee
+official transcripts
+statement of purpose
+three letters of recommendation
+resume or curriculum vitae
+proof of English proficiency",Not Required,True,False,True,False,False,False,,,program,
+"Sociology, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Software Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Ira A. Fulton Schools of Engineering.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree, in a closely related discipline, from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. a resume
+4. a personal statement
+5. two letters of recommendation
+6. proof of English proficiency",Not Required,True,False,False,True,False,False,,,program,
+"Special Education, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in special education, education or a related field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. graduate admission application and application fee
+2. official transcripts
+3. statement of purpose
+4. three letters of recommendation
+5. resume or curriculum vitae
+6. proof of English proficiency",Not Required,True,False,True,False,False,False,,,program,
+"Speech and Hearing Science, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Sports Law and Business, MSLB",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Sandra Day O'Connor College of Law.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree from a regionally accredited institution.
+
+Minimum of a 3.00 cumulative GPA (scale is 4.00 = ""A"") in the last 60 hours of a student's first bachelor's degree program, or a minimum of a 3.00 cumulative GPA (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+1. Graduate College application and application fee
+2. official transcripts
+3. personal statement
+4. resume
+5. two letters of recommendation
+6. proof of English proficiency (if applicable)",Not Required,True,False,True,False,False,False,,,program,
+"Statistics, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Sustainability, MA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"All applicants must meet the requirements of both the Graduate College and the College of Global Futures. Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program. All applicants must submit: 1. graduate admission application and application fee 2. official transcripts 3. statement of purpose 4. three letters of recommendation 5. resume or curriculum vitae 6. proof of English proficiency",Not Required,True,False,,True,False,False,,,program,
+"Sustainability, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Sustainability, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the College of Global Futures.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+All applicants must submit:
+
+1. graduate admission application and application fee
+2. official transcripts
+3. resume or curriculum vitae
+4. statement of purpose
+5. three letters of recommendation
+6. proof of English proficiency",Not Required,True,False,,True,False,False,,,program,
+"Sustainable Engineering, MS",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Systems Engineering, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Teaching, MEd",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Mary Lou Fulton Teachers College.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in any field from a regionally accredited institution.
+
+Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.",Not Required,True,False,,False,False,False,,,program,
+"Teaching English to Speakers of Other Languages, MTESOL",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Theatre, MFA",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,Required,Required,"Applicants must fulfill the requirements of both the Graduate College and the Herberger Institute for Design and the Arts.
+
+Applicants are eligible to apply to the program if they have earned a bachelor's or master's degree in theatre or a related field from a regionally accredited institution. Applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in the last 60 hours of their first bachelor's degree program, or applicants must have a minimum cumulative GPA of 3.00 (scale is 4.00 = ""A"") in an applicable master's degree program.
+
+Required application materials:
+
+*   graduate admission application and application fee
+*   official transcripts
+*   statement of purpose
+*   three letters of recommendation
+*   proof of English proficiency
+*   resume or curriculum vitae
+*   a portfolio and an interview with the faculty
+
+Applicants must submit contact information for three recommenders. The recommenders will be sent an email with a link to upload their letter of recommendation.",Not Required,True,False,True,False,False,False,,,program,
+"Urban and Environmental Planning, MUEP",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Urban Planning, PhD",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+"Visual Communication Design, Master of Science in Design",https://degrees.apps.asu.edu/masters-phd?init=false&nopassive=true,,,,,,,,,,,,,error,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."

@@ -1,0 +1,1817 @@
+Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,Program name,Program Page url,IsRecommendationSystemOpted,error
+Not Required,Not Required,"Application requirements for this undergraduate program are managed centrally by the college. For the College of Arts & Sciences, first-year applicants must submit the Common Application, a School Report, a Counselor Recommendation, two Teacher Evaluations, a Midyear Report, official transcripts, and the Cornell University Questions and Writing Supplement. An interview is not required or offered.",Not Required,True,False,False,False,False,,,program,Africana Studies (BA),https://catalog.cornell.edu/programs/,,
+Not Required,Required,"To apply as a first-year applicant, you will need to submit the following: Common Application (CA), School Report, Counselor Recommendation, two Teacher Evaluations, Midyear Report, Official Transcript, and the Cornell Questions and Writing Supplement (CA).",Not Required,True,False,True,False,False,,,program,Agricultural Sciences (BS),https://catalog.cornell.edu/programs/,,
+Not Required,Not Required,"First-year applicants to the College of Arts & Sciences must submit the Common Application, Cornell University Questions and Writing Supplement, School Report, Counselor Recommendation, Two Teacher Evaluations, Midyear Report, and Official transcript(s).",Not Required,True,False,False,False,False,,,program,American Studies (BA),https://catalog.cornell.edu/programs/,,
+Not Required,Required,"To apply as a first-year applicant, you will need to submit: Common Application; Cornell University Questions and Writing Supplement (CALS), which includes a program-specific essay; Official secondary/high school transcript(s); Counselor recommendation; Two teacher evaluations; and Midyear Report. Cornell has a test-optional policy for SAT/ACT scores. Recommended high school coursework includes 4 units of English, 4 units of mathematics (including calculus), 3 units of science (biology, chemistry, and physics recommended), and 3 years of one foreign language.",Not Required,True,False,True,False,False,,,program,Animal Science (BS),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Anthropology (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Applied Economics and Management (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Archaeology (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"All first-year applicants must submit the Common Application (CA), Cornell Questions and Writing Supplement, School Report, Counselor Recommendation, two Teacher Evaluations, Midyear Report, and an official transcript. For the Bachelor of Architecture (B.Arch.) program, applicants are also required to submit a portfolio and complete an interview. The portfolio should consist of 15-20 images showcasing freehand drawings and work in other media. Required high school coursework includes: 4 units of English, 3 units of mathematics (including pre-calculus), 3 units of science (including physics), and 3 units of a foreign language. One unit of physics and four units of math (including calculus) are recommended.",Not Required,True,False,True,False,False,,,program,Architecture (B.Arch.),https://catalog.cornell.edu/programs/,,
+Not Required,Not Required,"Required application materials for first-year applicants include the Common Application (CA), School Report, Counselor Recommendation, two Teacher Evaluations, Midyear Report, Cornell Questions and Writing Supplement (CA), an $80 application fee or fee waiver, and official transcript(s).",Not Required,True,False,False,False,False,,,program,Asian Studies (BA),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Astronomy (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Atmospheric Science (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Biological Engineering (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"As this is an undergraduate program, applicants must submit the Common Application, Cornell University Questions and Writing Supplement, a School Report, Counselor Recommendation, two Teacher Evaluations, a Midyear Report, an official high school transcript, and an $80 application fee or fee waiver.
+
+Since the Biological Sciences (BA) major is offered through two different colleges, applicants must meet the high school coursework requirements for the college they are applying to:
+
+1. College of Arts & Sciences: 4 units of English, 4 units of mathematics (including calculus), 3 units of science, and 3 units of one foreign language.
+
+2. College of Agriculture and Life Sciences (CALS): 4 units of English, 4 units of Mathematics, and 3 units of Science (Biology, Chemistry, and Physics are recommended). One year of biology and one year of chemistry are required.",Not Required,True,False,True,False,False,,,program,Biological Sciences (BA),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Biological Sciences (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Biology & Society (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Biology & Society (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Biomedical Engineering (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Biometry and Statistics (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Chemical Engineering (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"Required first-year application materials include: the Common Application (CA), Cornell University Questions and Writing Supplement (CA), School Report, Counselor Recommendation, two Teacher Evaluations, Midyear Report, and official transcript(s). Strong high school preparation for the College of Arts & Sciences curriculum includes: 4 units of English, 4 units of mathematics (including calculus), 3 units of science, and 3 units of a single foreign language.",Not Required,True,False,True,False,False,,,program,Chemistry and Chemical Biology (BA),https://catalog.cornell.edu/programs/,,
+Not Required,Not Required,"To apply as a first-year applicant, you are required to submit the Common Application (CA), School Report, Counselor Recommendation, two Teacher Evaluations, Midyear Report (when available), Cornell Questions and Writing Supplement (CA), an $80 application fee or fee waiver, and official secondary/high school transcript(s). English Language Proficiency Test scores are required for international applicants who do not meet specific criteria.",Not Required,True,False,False,False,False,,,program,China and Asia-Pacific Studies (BA),https://catalog.cornell.edu/programs/,,
+Not Required,Required,"To apply as a first-year student, you must submit the Common Application (CA), a School Report, Counselor Recommendation, two Teacher Evaluations, a Midyear Report, the Cornell University Questions and Writing Supplement (CA), an official transcript from your high school, and an $80 application fee or fee waiver. Standardized test scores (SAT/ACT) are optional.",Not Required,True,False,True,False,False,,,program,Civil Engineering (BS),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Classics (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Cognitive Science (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"The application consists of:
+1. The College Scholar Application form (downloadable as a Word doc).
+2. A detailed essay of about 1000 words. The essay should include:
+    - The genesis and articulation of your proposed program of study
+    - An explanation of how your program is both rigorous and coherent
+    - A discussion of your long-term goals and how this program will help you attain them
+3. A proposed course of study for the remainder of your time at Cornell.
+4. A copy of your official Cornell transcript (a PDF from Student Center is fine).
+5. A letter of recommendation from your faculty advisor.
+6. A second letter of recommendation from a faculty member who has taught you in a class or supervised your research at Cornell.
+7. Optional: a résumé.",Not Required,True,False,False,False,False,,,program,College Scholar (BA),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Communication (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Comparative Literature (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Computer Science (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Computer Science (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"First-year applicants must submit: the Common Application (CA), a School Report, Counselor Recommendation, two Teacher Evaluations, an official transcript, and the Cornell Questions and Writing Supplement (CA). For admission to the College of Human Ecology, recommended high school coursework includes: 4 units of English, 4 units of mathematics (including calculus), and 3 units of science (biology, chemistry, and physics are recommended). Applicants to the Design and Environmental Analysis major are required to complete the DEA Design Challenge as part of their application.",Not Required,True,False,True,False,False,,,program,Design and Environmental Analysis (BS),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Earth and Atmospheric Sciences (BA),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"General requirements for first-year applicants include the Common Application, School Report, Counselor Recommendation, two Teacher Evaluations, Midyear Report, official transcript, and the Cornell Questions and Writing Supplement. An application fee or fee waiver is also required.",Not Required,True,False,True,False,False,,,program,Earth and Atmospheric Sciences (BS),https://catalog.cornell.edu/programs/,,
+Not Required,Required,"First-year applicants to the College of Arts & Sciences must submit the Common Application, a School Report, Counselor Recommendation, two Teacher Evaluations, a Midyear Report, an official transcript, and the Cornell University Questions and Writing Supplement. An $80 application fee or fee waiver is also required. Standardized test scores (SAT/ACT) are optional.",Not Required,True,False,True,False,False,,,program,Economics (BA),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Electrical and Computer Engineering (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"All first-year applicants are required to submit the Common Application and the Cornell Writing Supplement. The Cornell Engineering essay, which is part of the supplement, asks applicants to describe their interest in engineering. Additional required documents include a School Report, Counselor Recommendation, two Teacher Evaluations (one from a math teacher and one from a science teacher), a Midyear Report, and an official transcript. Required high school coursework for the College of Engineering includes: 1 unit of calculus, 1 unit of physics, and 1 unit of chemistry. It is recommended that applicants have one unit of computer science.",Not Required,True,True,True,False,False,,,program,Engineering Physics (BS),https://catalog.cornell.edu/programs/,,
+Not Required,Required,"To apply as a first-year applicant, you will need to submit the following: Common Application (CA), Cornell University Questions and Writing Supplement (CA), School Report, Counselor Recommendation, Two Teacher Evaluations, Midyear Report, Official transcript(s), English Language Proficiency Test scores (if applicable), $80 application fee or fee waiver.",Not Required,True,False,False,False,False,,,program,English (BA),https://catalog.cornell.edu/programs/,,
+Not Required,Required,"CALS requires the following high school coursework: 4 units of math (including calculus), 4 units of English, 3 units of science (biology, chemistry and physics are recommended). A high school diploma or GED is also required.",Not Required,True,False,True,False,False,,,program,Entomology (BS),https://catalog.cornell.edu/programs/,,
+Not Required,Not Required,"All first-year applicants must submit the Common Application, a School Report, Counselor Recommendation, two Teacher Evaluations, a Midyear Report, official transcript, the Cornell Questions and Writing Supplement, and an application fee or fee waiver.",Not Required,True,True,False,False,False,,,program,Environment and Sustainability (BA),https://catalog.cornell.edu/programs/,,
+,,,,,,,,,,,error,Environment and Sustainability (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Environmental Engineering (BS),https://catalog.cornell.edu/programs/,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,"Feminist, Gender, & Sexuality Studies (BA)",https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Fiber Science & Apparel Design (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Fine Arts (BFA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Food Science (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,French (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,German Studies (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Global & Public Health Sciences (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Government (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,History (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,History of Architecture (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Hotel Administration (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Human Biology, Health, and Society (BS)",https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Human Development (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Industrial and Labor Relations (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Information Science (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Information Science (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Information Science, Systems, and Technology (BS)",https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Interdisciplinary Studies (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Italian (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Landscape Architecture (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Linguistics (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Materials Science and Engineering (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mathematics (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mechanical Engineering (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Music (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Near Eastern Studies (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Nutritional Sciences (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Operations Research and Engineering (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Performing and Media Arts (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Philosophy (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Physics (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Plant Sciences (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Policy Analysis and Management (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Psychology (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Religious Studies (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Science & Technology Studies (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Sociology (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Spanish (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Statistical Science (BA),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Urban and Regional Studies (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Viticulture and Enology (BS),https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Actuarial Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Aerospace Engineering Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Africana Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,American Indian and Indigenous Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,American Sign Language (ASL)/Deaf Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,American Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Animal Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Anthropology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Applied Economics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Applied Exercise Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Applied Mathematics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Arabic Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Archaeology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Architecture Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Artificial Intelligence Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Asian American Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Astrobiology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Astronomy Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Atmospheric Sciences Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Biological Engineering Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Biological Sciences Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Biomedical Engineering Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Biometry and Statistics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Business Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Business Minor for Engineers,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Caribbean Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,China and Asia-Pacific Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Civil Infrastructure Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Classical Civilization Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Classics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Climate Change Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Cognitive Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Communication Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Community Food Systems Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Comparative Literature Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Computer Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Creative Writing Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Crime, Prisons, Education, and Justice Minor",https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Crop Management Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Dance Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Data Science in Astronomy Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Data Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Demography Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Design and Environmental Analysis Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Design Innovation and Strategy Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Dyson Business Minor for Life Sciences,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Earth and Atmospheric Sciences Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,East Asian Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Education Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Electrical and Computer Engineering Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Engineering Communications Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Engineering Entrepreneurship Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Engineering Management Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,English Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Entomology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Entrepreneurship Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Environment & Sustainability Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Environmental Engineering Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,European Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Fashion Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Feminist, Gender, & Sexuality Studies Minor",https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Fiber Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Film Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Fine Arts Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Food and Agricultural Business Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Food Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,French Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Fungal Biology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Game Design Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,German Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Gerontology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Global Asia Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Global Health Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Great Books Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Healthy Futures Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Hebrew Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,History Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,History of Art Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Horticulture Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Human Development Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Inequality Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Infectious Disease Biology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Information Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,International Development Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,International Relations Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,International Trade and Development Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Italian Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Jewish Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Landscape Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Latin American Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Latina/o Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Law & Society Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Lesbian, Gay, Bisexual, & Transgender Studies Minor",https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Linguistics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Materials Science and Engineering Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mathematics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mechanical Engineering Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Media Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Medieval Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Microbiology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Migration Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Minority, Indigenous, and Third World Studies Minor",https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Moral Psychology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Music Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Near Eastern Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Nutritional Sciences Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Operations Research and Management Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Performing and Media Arts Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Philosophy Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Physics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Plant Breeding Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Plant Pathology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Plant Sciences Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Policy Analysis and Management Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Portuguese and Brazilian Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Public Policy Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Real Estate Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Religious Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Robotics Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Romance Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Russian Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Sanskrit Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Science & Technology Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Science Communication and Public Engagement Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Sociology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,South Asian Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Southeast Asian Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Spanish Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Statistical Science Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Sustainable Energy Systems Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Theatre Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Urban and Regional Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Viking Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Visual Studies Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Viticulture and Enology Minor,https://catalog.cornell.edu/programs/,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"

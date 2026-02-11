@@ -1,0 +1,1464 @@
+Resume,StatementOfPurpose,Requirements,WritingSample,IsAnalyticalNotRequired,IsAnalyticalOptional,IsStemProgram,IsACTRequired,IsSATRequired,MinimumACTScore,MinimumSATScore,extraction_level,Program name,Program Page url,IsRecommendationSystemOpted,error
+Not Required,Not Required,"Prospective students apply for Preferred Admission to the Ross School of Business while applying as a first-year to the University of Michigan. Applicants must select the College of Literature, Science, and the Arts (LSA), the College of Engineering (CoE), or the School of Kinesiology as their home school on the Common Application and then indicate their interest in Ross on the U-M Member Questions page. The application requires the standard U-M materials (Common App, high school transcript, School Report, teacher recommendation, application fee) plus the Ross Admissions Portfolio, which includes a business case discussion based on a chosen current event and an artifact showcasing teamwork and communication skills.",Required,True,False,False,False,False,,,program,"Accounting, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,"Actuarial Mathematics, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"First-year applicants to the College of Engineering must submit either the Common Application or the Coalition Application, which includes University of Michigan-specific essays. Additional required materials include a high school transcript, a School Report, and one teacher recommendation. An application fee of $75 or a fee waiver is also required. Submission of SAT or ACT scores is optional.",Not Required,True,True,True,False,False,,,program,Aerospace Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"To apply for first-year admission, applicants must submit The Common Application or Coalition Application, including the University of Michigan Questions. Additional requirements include a high school transcript, a School Report (or Counselor Recommendation), one teacher recommendation, and a $75 application fee or fee waiver. English proficiency test scores are required for non-native English speakers. Submission of SAT or ACT scores is optional.",Not Required,True,False,False,False,False,,,program,Afroamerican and African Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,American Culture,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"An Academic Statement of Purpose is required. A Personal Statement is required. Three letters of recommendation are required. A curriculum vitae (CV) or resume is required. A writing sample is required (a piece of scholarly writing, e.g., a term paper, an honor’s or master’s thesis chapter, or a published article of no more than 15-30 double-spaced pages). The GRE General Test is not required.",Required,True,False,False,False,False,,,program,Anthropology,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Applied and Engineering Physics,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,True,False,False,False,False,,,program,Applied Arts,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Applied Exercise Science,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission, first-year applicants will need to submit the following: Common Application or Coalition Application, High school transcript, School Report, One teacher evaluation, and English proficiency scores if applicable. The University of Michigan will be test-optional for the 2024-2025 application cycle, so applicants can choose whether to submit ACT/SAT scores.",Not Required,True,False,True,False,False,,,program,Applied Fitness and Conditioning,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"The University of Michigan is an undergraduate college, and students do not apply to specific majors. All undergraduate admissions are handled by the University of Michigan Office of Undergraduate Admissions. Applicants must submit the Common Application or Coalition Application, University of Michigan Questions, a high school transcript, a School Report, and one teacher evaluation. Standardized test scores (SAT/ACT) are optional.",Not Required,True,False,True,False,False,,,program,"Applied Statistics, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"To apply as a first-year applicant, the following must be submitted: The Common Application or Coalition Application, Powered by Scoir; University of Michigan Questions (essays); High school transcript(s); School Report; One teacher evaluation. Submission of SAT or ACT scores is optional. Non-native English speakers may need to provide English Proficiency Test Scores.",Not Required,True,False,False,False,False,,,program,Arab and Muslim American Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"To apply for first-year admission to the University of Michigan, which houses the Arabic Studies, AB program, you must submit the following: Common Application or Coalition Application, U-M Questions (essays), high school transcript, School Report or Counselor Recommendation, one Teacher Evaluation, and English proficiency scores if English is not your first language. Submission of SAT or ACT scores is optional.",Not Required,True,False,False,False,False,,,program,"Arabic Studies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Archaeology and History,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Architectural Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"All first-year and transfer applicants to the B.S. in Architecture degree program are required to submit a portfolio of creative work. In addition to the portfolio, general application requirements include the completed Common Application or Coalition Application, University of Michigan Questions, a high school transcript, a School Report, and one teacher recommendation.",Not Required,True,False,True,False,False,,,program,Architecture,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"All applicants must submit the Common Application, University of Michigan Questions, and the Stamps School of Art & Design Portfolio. In addition, you must submit all required academic credentials (transcripts, test scores if you choose to submit, etc.) to the U-M Office of Undergraduate Admissions.",Not Required,True,False,False,False,False,,,program,Art and Design,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Art History,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"Prospective students apply to the University of Michigan's College of Literature, Science, and the Arts (LSA), not directly to the major. The general application requirements include: The Common Application or Coalition Application, University of Michigan Questions (essays), high school transcript, School Report, and one teacher recommendation. Standardized test scores (SAT/ACT) are optional.",Not Required,True,True,False,False,False,,,program,Arts and Ideas in the Humanities,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Required,"A complete first-year application includes: the Common Application, University of Michigan Questions (essays), a high school transcript, a School Report, and one teacher recommendation. Standardized test scores (SAT/ACT) are optional for the 2025 application cycle. English proficiency test scores are required for non-native English speakers.",Not Required,True,False,False,False,False,,,program,Asian Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Astronomy and Astrophysics,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Required,Required,"Bachelor’s degree in engineering or a related field, such as physics or chemistry, from an accredited institution. Grade point average (GPA) of 3.0 or higher (on a 4.0 scale) in undergraduate studies.",Not Required,True,True,True,False,False,,,program,Automotive Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"To be considered for admission, you must be a graduate of an accredited high school or have earned a GED. U-M will expect you to have completed the following years of coursework by the time you graduate from high school: four years of English; three years of biological and physical sciences, including a lab science (four years are recommended); three years of mathematics (four years are recommended); three years of social science (four years are recommended); and two years of a world language (four years are recommended).",Not Required,True,False,True,False,False,,,program,"Behavioral and Biological Science, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Biochemistry,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"All first-year applicants must submit the Common Application or the Coalition Application, which includes the University of Michigan Questions. Additional required documents include a high school transcript, a School Report, one teacher evaluation, and English proficiency scores for non-native speakers of English. SAT or ACT scores are optional and can be submitted if the applicant wishes for them to be considered.",Not Required,True,False,True,False,False,,,program,"Biochemistry, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Required,"As this is an undergraduate program, applicants apply to the College of Engineering for their first year, not directly to the Bioengineering program. To be considered for admission, all first-year applicants must submit the following items: Common Application or Coalition Application, University of Michigan Questions (essays), High school transcript, School Report, One teacher recommendation, SAT or ACT score (test-optional), and TOEFL, IELTS, or MET score for non-native speakers of English.",Not Required,True,False,True,False,False,,,program,"Bioengineering, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"Prospective students apply to the College of Literature, Science, and the Arts (LSA) and declare a major after they have enrolled. To apply, you will need to submit: A completed Common Application or Coalition Application, including U-M Questions; High School Transcript; School Report; One Teacher Evaluation; SAT or ACT score, if you would like it considered; and an English Proficiency Test Score (for non-native speakers of English).",Not Required,True,False,True,False,False,,,program,"Biological Sciences, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Biology,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,"Biology, Health, and Society",https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"As students apply to a specific U-M school or college, the application requirements for the Biomedical Engineering program, which is in the College of Engineering, are the same as the general first-year application requirements. Applicants are required to submit:
+- The Common Application
+- University of Michigan Questions
+- $75 application fee or fee waiver request
+- High school transcript
+- School Report (must be submitted by a school official)
+- One teacher evaluation (core academic teacher)
+- SAT or ACT score, if you wish them to be considered. U-M is test optional.
+- Official test scores for English proficiency, if applicable.
+
+For the College of Engineering, it is also required to have completed four years of math, and it is strongly recommended to have completed four years of chemistry and physics.",Not Required,True,True,True,False,False,,,program,Biomedical Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Biomolecular Science,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,Biophysics,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,"Biopsychology, Cognition, and Neuroscience",https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,"Birth to Kindergarten Education, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To apply for Preferred Admission to the Ross BBA Program, you must apply to the University of Michigan using the Common Application and select a major within one of the U-M undergraduate admitting schools/colleges (preferably LSA or the College of Engineering). Within the application, you must also submit the Ross School of Business section, which is called the Ross Admissions Portfolio. This portfolio consists of two parts: a business case discussion and a short essay about an artifact. General application materials for the University of Michigan include a high school transcript, a school report, and one teacher evaluation.",Not Required,True,False,False,False,False,,,program,Business Administration,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"Prospective students apply for preferred admission to the Ross School of Business BBA program through the University of Michigan's Office of Undergraduate Admissions using the Common Application or Coalition Application. General requirements include the application, University of Michigan Questions (essays), a high school transcript, a School Report, and one teacher evaluation. In addition, Ross BBA applicants must complete the Ross Admissions Portfolio, which consists of a business case discussion and a short essay, submitted via the U-M application portal.",Not Required,True,False,True,False,False,,,program,"Business Analytics, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"All first-year applicants must submit: The Common Application or Coalition Application, Powered by Scoir; University of Michigan Questions; High school transcript; School Report (must be submitted by your high school counselor); One Teacher Evaluation (academic teacher); SAT or ACT score, if you choose to submit one; TOEFL, IELTS, or MET score if English is not your first language.",Not Required,True,True,False,False,False,,,program,"Business Studies, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"The following items are required from all first-year applicants: The Common Application or Coalition Application; University of Michigan Questions; High school transcript; School Report; One teacher evaluation; SAT or ACT score, if available and you wish them to be considered; TOEFL, IELTS, MET, etc. (for non-native speakers of English); Official college transcripts (if applicable).",Not Required,True,True,True,False,False,,,program,Cellular and Molecular Biomedical Science,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Chemical Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Required,"All first-year applicants are required to submit the following: The Common Application or Coalition Application, University of Michigan Questions (essays), an official high school transcript, a School Report, and one teacher recommendation. Standardized test scores (SAT or ACT) are optional and will only be considered if the applicant chooses to submit them. Students whose native language is not English must also submit proof of English proficiency.",Not Required,True,False,True,False,False,,,program,Chemistry,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,"Chemistry (A.C.S. Certified), BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"To be considered for admission, you must submit the following: Common Application, U-M Questions, High school transcript, School Report, Teacher recommendation, SAT or ACT score (if available and you wish them to be considered), and an English proficiency test score for non-native English speakers. The university conducts an individualized, holistic review of each student, looking for academically strong students who are leaders and risk-takers, and who will contribute to the diversity of the campus. Key factors considered include: High school GPA, rigor of the academic curriculum, standardized test scores (optional), essays, and evidence of leadership, service, and work experience.",Not Required,True,False,False,False,False,,,program,"Children & Families, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"To apply for undergraduate admission at the University of Michigan, which is necessary before declaring a major in Chinese Language and Culture, applicants must submit the following: The Common Application or Coalition Application, including the University of Michigan Questions; High school transcript; School Report; One Teacher Evaluation from a core academic teacher; and English proficiency test scores if English is not your first language. Submission of ACT or SAT scores is optional.",Not Required,True,False,False,False,False,,,program,Chinese Language and Culture,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"All first-year applicants must submit: The Common Application or Coalition Application, including University of Michigan questions; High school transcript; School Report (or Counselor Recommendation); One teacher recommendation; English proficiency test scores (if required). For the 2024-25 application cycle, U-M will be test-optional. You may submit an SAT or ACT score if you wish, and the essay/writing sections for those tests are not required.",Not Required,True,True,True,False,False,,,program,Civil Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Required,"Applicants may use the Common Application or the Coalition Application. Requirements include the completed application, University of Michigan supplemental essays, an application fee or fee waiver, high school transcript, a School Report or Counselor Recommendation, and one teacher evaluation. Submission of ACT or SAT scores is optional.",Not Required,True,False,False,False,False,,,program,Classical Archaeology,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"To be considered for admission, all applicants must submit The Common Application or Coalition Application, University of Michigan Questions, a high school transcript, a School Report, and one teacher evaluation. Submission of SAT or ACT scores is optional. Applicants whose native language is not English must also provide an English proficiency test score.",Not Required,True,False,False,False,False,,,program,Classical Civilization,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Classical Languages and Literatures,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"The University of Michigan accepts the Common Application and the Coalition Application, Powered by Scoir. Required application materials include: the application itself, U-M questions and essays, high school transcript, school report, one teacher evaluation, and English proficiency test scores if English is not your native language. SAT or ACT scores are optional for the 2024-2025 application cycle.",Not Required,True,True,True,False,False,,,program,Climate and Meteorology,https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Required,"To apply for this undergraduate program, you must submit either the Common Application or the Coalition Application. The application must include the University of Michigan Questions, a high school transcript, a School Report, one teacher recommendation, and the application fee or a fee waiver request. Submission of ACT or SAT scores is optional. Non-native English speakers must also provide proof of English proficiency.",Not Required,True,False,True,False,False,,,program,Cognitive Science,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Communication and Media,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+Not Required,Not Required,"All first-year applicants must submit: The Common Application or Coalition Application, an official high school transcript, a School Report, one teacher recommendation, and SAT or ACT scores if you choose to have them considered under the test flexible policy. English proficiency test scores are required for non-native speakers of English.",Not Required,True,False,False,False,False,,,program,"Communication, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,
+Not Required,Not Required,"The University of Michigan uses the Common Application and the Coalition Application. We do not have a preference for either application and treat all applicants equally regardless of which application they choose to submit. We require the following items from all first-year applicants: Common Application or Coalition Application, High school transcript, School Report, One teacher recommendation, SAT or ACT score (if available and you wish them to be considered), TOEFL, IELTS, or MET score if English is not your first language.",Not Required,True,False,True,False,False,,,program,Community and Global Public Health,https://admissions.umich.edu/academics-majors/majors-degrees,,
+,,,,,,,,,,,error,Comparative Literature,https://admissions.umich.edu/academics-majors/majors-degrees,,"Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 12."
+,,,,,,,,,,,error,"Computer and Information Science, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Computer Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Computer Engineering, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Computer Science,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Computer Science, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Creative Writing and Literature,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Criminology and Criminal Justice, AB",https://lsa.umich.edu/lsa/academics/majors-minors/sociology-major.html,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Cybersecurity and Information Assurance, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Dance,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Data Science,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Data Science, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Dental Hygiene,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Drama,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Earth and Environmental Sciences,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Ecology, Evolution, and Biodiversity",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Economics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Economics, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Economics and Computation, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Education, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Electrical Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Electrical Engineering, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Elementary Education,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Elementary Education, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Engineering Physics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,English,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"English, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Entrepreneurship,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Environment,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Environmental Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Environmental Science, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Film, Television, and Media",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Finance, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,French,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"French Studies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"General Business, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,General Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,German,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Global Environment and Health,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Greek Language and Literature (Ancient),https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Health and Fitness,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Health and Human Services, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Hispanic Studies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,History,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"History, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,History of Art,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Human Centered Engineering Design, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Human Resource Management, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Industrial and Operations Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Industrial and Systems Engineering, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Information Systems Management, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Instructional Design and Learning Technologies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Integrative Studies, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Interdisciplinary Chemical Sciences,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Interdisciplinary Physics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,International Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"International Studies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Italian,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Jazz and Contemporary Improvisation,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Journalism and Media Production, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Judaic Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Korean Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Landscape Architecture,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Latin American and Caribbean Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Latin Language and Literature,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Latina/o Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Linguistics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Management,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Manufacturing Engineering, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Marketing, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Materials Science and Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mathematical Sciences,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mathematics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Mathematics, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mechanical Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Mechanical Engineering, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Mechatronics and Robotics Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Medieval and Early Modern Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Microbiology,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Microbiology, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Middle East Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Middle East Studies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Molecular, Cellular, and Developmental Biology",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Movement Science,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Music,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Music Education,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Music Performance,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Music Theory,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Music, Theatre & Dance",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Musical Arts,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Musical Theatre,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Naval Architecture and Marine Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Neuroscience,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Nuclear Engineering and Radiological Sciences,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Nursing,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Nutritional Sciences,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Organizational Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Performing Arts Technology,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Pharmaceutical Sciences,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Philosophy,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Philosophy, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Philosophy, Politics, and Economics",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Physics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Physics, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Piano,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Plant Biology,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Polish,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Political Science,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Political Science, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Professional Writing and Rhetoric, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Psychology,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Psychology, AB, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Public Health Sciences,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Public Policy,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Pure Mathematics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Research Administration, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Robotics Engineering, BSE",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Romance Languages and Literatures,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Russian,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Russian Studies,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Screen Arts and Cultures,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Secondary Education, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Sexuality, Women's and Gender Studies",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Small Business Management, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Social Theory and Practice,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Sociology,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Sociology, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Software Engineering, BS",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Sound Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Space Sciences and Engineering,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Spanish,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Sport Management,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Sports Management, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Statistics,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Supply Chain Management, BBA",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Theatre Arts,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Theatre Design and Production,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Urban and Regional Studies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Urban Technology,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,Voice,https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"
+,,,,,,,,,,,error,"Women's and Gender Studies, AB",https://admissions.umich.edu/academics-majors/majors-degrees,,"429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0 [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_requests_per_model_per_day""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel""
+}
+]"

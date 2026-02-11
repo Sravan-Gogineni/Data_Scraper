@@ -1,0 +1,310 @@
+[
+    {
+        "Concentration name": null,
+        "description": "Applied mathematics is the branch of mathematics that concerns itself with the application of mathematical knowledge to other domains. Such applications include numerical analysis, mathematics of engineering, linear programming, optimization and operations research, continuous modeling, discrete mathematics, financial mathematics and insurance, and statistics. The major is popular among students who are interested in a career in finance, business and management, but as you can see from this list, applied mathematicians can go on to work in many different and exciting fields.",
+        "program website url": "https://www.apam.columbia.edu/",
+        "Accreditation status": "The B.S. degree in Applied Mathematics is accredited by the Engineering Accreditation Commission of ABET, http://www.abet.org.",
+        "Level": "BS",
+        "Program name": "Bachelor of Science in Applied Mathematics",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": "Medical Physics Concentration",
+        "description": "Applied physics is the branch of physics that is intended for a particular technological or practical use. Applied physicists use physics or conduct physics research with the aim of developing new technologies or solving an engineering problem. This major draws from the broad intellectual traditions of both the liberal arts college and the research university. The curriculum is distinguished by its flexibility and breadth, which allows students to gain an understanding of many subject areas or pursue a specialization in depth.",
+        "program website url": "https://www.apam.columbia.edu/undergraduate-programs-majors-and-minors-0",
+        "Accreditation status": null,
+        "Program name": "Bachelor of Science in Applied Physics",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": "biomechanics, cell and tissue engineering, biomedical imaging",
+        "description": "The Bachelor of Science degree program in biomedical engineering is designed to be completed in eight terms. The program provides a broad foundation in biomedical engineering, including a common core of courses that leaves students prepared for careers in biomedical engineering, graduate school or medical school. Students work closely with a faculty adviser to select courses that define a specific track in an area of interest, including biomechanics, cell and tissue engineering or biomedical imaging. Research for credit with the faculty of the biomedical engineering department is highly encouraged.",
+        "program website url": "https://www.bme.columbia.edu/",
+        "Accreditation status": "The undergraduate program in biomedical engineering is accredited by the Engineering Accreditation Commission of ABET, http://www.abet.org.",
+        "Program name": "Bachelor of Science in Biomedical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Chemical engineers build a bridge between science and manufacturing, applying principles of chemistry, physics, mathematics, biology and engineering to the process of turning raw materials or chemicals into more useful and valuable products. Chemical engineers are involved in all aspects of chemical production, from the research and design of a process to the construction and operation of a full-scale manufacturing plant. Today, chemical engineers use their expertise to create a wide variety of materials, from environmentally safe detergents and life-saving pharmaceuticals to innovative new textiles and materials for the aerospace industry.",
+        "program website url": "https://www.cheme.columbia.edu/",
+        "Accreditation status": "The undergraduate program in chemical engineering is accredited by the Engineering Accreditation Commission of ABET, http://www.abet.org.",
+        "Level": "BS",
+        "Program name": "Bachelor of Science in Chemical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": [
+            "Structural Engineering",
+            "Geotechnical Engineering",
+            "Construction Engineering",
+            "Environmental and Water Resources Engineering",
+            "General Civil Engineering"
+        ],
+        "description": "Civil engineering uses the principles of engineering, soil science, and physics for the design, construction, and maintenance of structures like buildings, dams, bridges, and roads. As a civil engineer, you will solve a variety of problems while serving the community and its needs. Civil engineers build and maintain the physical world all around us, often on a massive scale. At Columbia, civil engineering students will learn the fundamentals of the field while also learning to innovate, as they look towards the future of structures, of water resources, of our environment, and of our world. Students are able to specialize within specific areas of the field or to pursue a more general civil engineering education. Many students will participate in research during their time at Columbia, with the department providing special opportunities and support for undergraduate researchers. As one of the oldest and most distinguished civil engineering programs in the country, Columbia civil engineers continue to change our world for the better.",
+        "program website url": "https://www.civil.columbia.edu/",
+        "Accreditation status": "The undergraduate program in Civil Engineering is accredited by the Engineering Accreditation Commission of ABET, https://www.abet.org.",
+        "Level": "Bachelor of Science",
+        "Program name": "Bachelor of Science in Civil Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": "Computer systems, VLSI & computer architecture, Embedded systems, Communications and networking, Intelligent systems, Systems biology, Smart electric energy",
+        "description": "Computer engineering is the synergistic combination of computer science and electrical engineering. Computer engineers design and build the special-purpose computer systems that we use every day, from the microprocessors that run our phones to the massive computer networks that power the internet. Computer engineering is a broad discipline that encompasses a variety of topics, including computer architecture, digital logic, computer networks, robotics and embedded systems. Students learn about the fundamental principles of computing, including data structures, algorithms and operating systems, as well as the basics of electronics and circuit design.",
+        "program website url": "https://www.ee.columbia.edu/computer-engineering-0",
+        "Accreditation status": "The undergraduate program in Computer Engineering is accredited by the Engineering Accreditation Commission of ABET, http://www.abet.org.",
+        "Level": "Bachelor of Science",
+        "Program name": "Bachelor of Science in Computer Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Computer Science at Columbia is an interdisciplinary program that applies principles of both engineering and applied science. Students in this major gain an understanding of the design of computer software, hardware and theory, and go on to careers in programming, software engineering, systems analysis and information technology.",
+        "program website url": "https://www.cs.columbia.edu/education/undergraduate/",
+        "Accreditation status": "The B.S. program in computer science is accredited by the Computing Accreditation Commission of ABET.",
+        "Level": "BS",
+        "Program name": "Bachelor of Science in Computer Science",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": [
+            "water resources and climate risks",
+            "sustainable energy and materials",
+            "environmental and health engineering"
+        ],
+        "description": "Earth and environmental engineers are leaders in developing solutions to the grand challenges facing humanity: climate change, access to clean water and sanitation, clean energy, sustainable resource development and resilient urban environments. Students gain in-depth knowledge in one of three tracks: water resources and climate risks, sustainable energy and materials, or environmental and health engineering. With its unique emphasis on the integration of fundamentals in natural and engineering sciences and its strong focus on hands-on and project-based learning, the earth and environmental engineering curriculum provides a solid foundation for careers in industry, government and consulting, as well as for graduate school. Graduates are prepared to address the increasingly complex and large-scale environmental challenges facing our society.",
+        "program website url": "https://www.engineering.columbia.edu/majors/earth-environmental-engineering",
+        "Accreditation status": "The undergraduate program in earth and environmental engineering is accredited by the Engineering Accreditation Commission of ABET, https://www.abet.org.",
+        "Program name": "Bachelor of Science in Earth and Environmental Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Electrical engineering is a broad field, encompassing a wide spectrum of technologies such as circuit design, electromagnetics, computer hardware, control systems and signal processing, as well as the physical sciences. At Columbia, the undergraduate curriculum for electrical engineering majors is a flexible program designed to provide a strong foundation in the fundamentals while allowing students to specialize in one or more areas of their choice. The electrical engineering major is available to students in both Columbia College and Columbia Engineering.",
+        "program website url": "https://www.ee.columbia.edu/",
+        "Accreditation status": "The undergraduate program in electrical engineering is accredited by the Engineering Accreditation Commission of ABET, https://www.abet.org.",
+        "Level": "Bachelor of Science",
+        "Program name": "Bachelor of Science in Electrical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": [
+            "consulting analytics",
+            "financial analytics",
+            "operations and analytics"
+        ],
+        "description": "Engineering management systems majors choose from one of three concentrations: consulting analytics, financial analytics or operations and analytics. Coursework focuses on management theory, operations research, statistics and computer science, teaching students to think critically and solve the complex problems that face modern businesses. Students in this major take advanced courses in economics, operations research and enterprise information systems, in addition to Columbia’s traditional core of engineering coursework. Outside of the classroom, many engineering management systems majors choose to participate in research with faculty in operations research or industrial engineering.",
+        "program website url": "https://www.ieor.columbia.edu/",
+        "Accreditation status": null,
+        "Level": "Bachelor of Science",
+        "Program name": "Bachelor of Science in Engineering Management Systems",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Engineering mechanics is the study of the behavior of physical systems subjected to forces and motions. With roots in physics and mathematics, engineering mechanics is the basis of all mechanical sciences, including mechanical, civil and aerospace engineering. A degree in engineering mechanics offers strong preparation for graduate study in any engineering discipline, and is well-suited to those who are interested in careers involving research and development or applied mathematics. Students in this major gain hands-on experience by completing a two-semester capstone design project.",
+        "program website url": "https://www.civil.columbia.edu/undergraduate-programs/engineering-mechanics",
+        "Accreditation status": "The undergraduate Program in Engineering Mechanics is accredited by the Engineering Accreditation Commission of ABET, http://www.abet.org.",
+        "Level": "BS",
+        "Program name": "Bachelor of Science in Engineering Mechanics",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Department of Industrial Engineering and Operations Research (IEOR) at Columbia Engineering offers an undergraduate major in Financial Engineering, which is concerned with the design and analysis of financial services and products from an engineering viewpoint. The focus is on the study of financial markets and instruments using the tools of engineering, such as mathematical modeling and analysis, stochastic processes, optimization, and simulation. The major provides strong training in the underlying quantitative disciplines while being flexible enough to allow students to pursue other interests.",
+        "program website url": "https://www.ieor.columbia.edu/undergraduate-programs/financial-engineering",
+        "Accreditation status": null,
+        "Program name": "Bachelor of Science in Financial Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Industrial engineering is the “people-person's” engineering. Often called the “efficiency experts,” industrial engineers design, build and improve production and service systems. Industrial engineers figure out how to do things better. They engineer processes and systems that improve quality and productivity. Students learn to use the tools of data science, optimization and machine learning to improve decision-making in a wide variety of application areas, including supply chains, logistics, revenue management, financial services and health care.",
+        "program website url": "https://www.ieor.columbia.edu/",
+        "Accreditation status": "Accredited by the Engineering Accreditation Commission of ABET",
+        "Program name": "Bachelor of Science in Industrial Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Materials science and engineering is a multidisciplinary field that is devoted to the design, discovery and characterization of new materials. You will take courses in materials processing and performance; thermodynamics, kinetics and phase transformations; materials science laboratory; quantum mechanics of materials; mechanical behavior of materials; materials for energy and sustainability; soft materials; biomaterials; nanomaterials and more. Research opportunities are available in topics such as synthesis of new materials, understanding the behavior of materials at the nanoscale and in development of new biomaterials and medical devices.",
+        "program website url": "https://www.apam.columbia.edu/materials-science-and-engineering",
+        "Accreditation status": null,
+        "Program name": "Bachelor of Science in Materials Science and Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": "Sustainable Energy, Biomechanics and Medical Devices, Robotics and Control, Micro/Nanoscale Engineering, Advanced Computational Engineering",
+        "description": "Mechanical engineering is one of the broadest and most versatile of the engineering professions. Students in mechanical engineering at Columbia are well grounded in a scientific, mathematical and technical background that spans all of the engineering disciplines. Mechanical engineering offers a wide choice of subjects for specialization, including robotics, biomechanics, environmental control, manufacturing and automation, among others. The curriculum offers students breadth across the discipline and the opportunity to specialize in their areas of interest through a rich set of technical electives.",
+        "program website url": "https://www.me.columbia.edu/",
+        "Accreditation status": "The undergraduate program in mechanical engineering is accredited by the Engineering Accreditation Commission of ABET, https://www.abet.org.",
+        "Program name": "Bachelor of Science in Mechanical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": "Engineering Management Systems, Financial Engineering, and Consulting & Analytics",
+        "description": "Operations Research (OR) is the discipline of applying advanced analytical methods to help make better decisions. Sometimes called “management science” or “the science of better,” OR gives students the skills to model and understand complex systems and then to use those models to improve system performance. Common OR techniques include optimization, probability, statistics and stochastic systems, which are used to help organizations in all sectors achieve their goals, from managing supply chains and revenue to scheduling and designing new systems.",
+        "program website url": "https://www.ieor.columbia.edu/undergraduate-programs",
+        "Accreditation status": null,
+        "Program name": "Bachelor of Science in Operations Research",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The undergraduate Minor in Aerospace Engineering offers a formal recognition of the commitment of a student to a career in the aerospace industry. The program is designed to provide students with a basic foundation in aerospace engineering, as well as to develop their knowledge and skills in this field. Students who complete the minor will have an understanding of the fundamental principles of aerodynamics, propulsion, and flight mechanics, and will be prepared for a career in the aerospace industry.",
+        "program website url": "https://www.me.columbia.edu/undergraduate-programs/minor-aerospace-engineering",
+        "Accreditation status": null,
+        "Program name": "Minor in Aerospace Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The minor in applied mathematics provides students with a strong foundation in the subject and its applications to diverse fields. Students who complete the minor take courses in calculus, linear algebra, ordinary and partial differential equations, and probability, as well as two electives in fields like numerical analysis, mathematical modeling, and operations research. The minor is an excellent option for students of all majors who are interested in building quantitative skills and expanding their knowledge of this critical subject.",
+        "program website url": "https://www.apam.columbia.edu/minor-applied-mathematics",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Applied Mathematics",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Minor in Applied Physics offers a unique, cross-disciplinary approach that emphasizes the fundamental principles of physics as a broad foundation for a wide range of career opportunities. Drawing on the expertise of faculty in fields such as applied physics, applied mathematics, materials science, mechanical engineering, electrical engineering, and earth and environmental engineering, the curriculum covers classical mechanics, electricity and magnetism, quantum mechanics, thermal physics, and more. A total of five lecture courses and one laboratory course are required.",
+        "program website url": "https://apam.columbia.edu/undergraduate-minors",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Applied Physics",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Minor in Artificial Intelligence (AI) will provide undergraduate students with a focused and deep understanding of AI. It gives students the opportunity to learn about the principles of AI, to be able to design and implement AI systems, and to have a good understanding of the ethical and societal implications of AI. The AI Minor is for students who are interested in AI and its applications, but who do not want to pursue a full major in computer science. The AI minor is jointly offered by the Computer Science Department in The Fu Foundation School of Engineering and Applied Science (SEAS) and the Arts and Sciences (A&S), and is available to all undergraduate students in SEAS and A&S.",
+        "program website url": "https://www.cs.columbia.edu/education/minor/ai/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Artificial Intelligence",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Minor in Biomedical Engineering is open to all undergraduate students in Columbia College, the School of General Studies, and the School of Engineering and Applied Science. The minor provides a foundation in biomedical engineering for those students who wish to pursue a career or graduate-level training in biomedical engineering, medicine, or other health-related fields. The minor consists of five courses for students who complete the chemistry and biology requirements for medical school and six courses for students who have not. The coursework includes a fundamental core of two biomedical engineering courses and three to four technical elective courses chosen by the student based on their particular interests. To complete the minor, students must file a Minor in BME Application Form with the department.",
+        "program website url": "https://www.bme.columbia.edu/undergraduate-programs/minor-biomedical-engineering",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Biomedical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The minor in chemical engineering is designed to allow students to gain a quantitative understanding of chemical engineering principles. This includes material and energy balances, thermodynamics, transport phenomena, kinetics and reactor design, and process dynamics and control. The minor also includes laboratory experience in unit operations and process control.",
+        "program website url": "https://www.cheme.columbia.edu/minor-chemical-engineering",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Chemical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Civil engineering deals with the planning, design, construction and maintenance of the fixed structures and public works that are fundamental to our society. Civil engineers are responsible for the infrastructure that supports our modern quality of life, including buildings, bridges, water supply and treatment systems, transportation networks and more. Students in civil engineering at Columbia learn how to apply fundamental scientific principles to the analysis and design of engineering systems. Areas of specialization include structural engineering (behavior and design of structures), geotechnical engineering (behavior of earth materials), environmental and water resources engineering (management of air and water quality) and construction engineering and management. Columbia students are able to learn both from faculty active in research and from leading practicing engineers in New York City who serve as adjunct faculty.",
+        "program website url": "https://www.civil.columbia.edu/",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Civil Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The minor in computer science is for students who want a strong background in computer science, but who do not have the time to pursue the computer science major. Like the major, the minor prepares students for a variety of careers in software development, computational science and engineering, and information technology. It can also be excellent preparation for graduate school in computer science or a related discipline.",
+        "program website url": "http://bulletin.columbia.edu/columbia-engineering/departments-instruction/computer-science/#minortext",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Computer Science",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Humankind faces a variety of grand challenges in the 21st century related to climate, energy, water and the environment. The minor in earth and environmental engineering is designed for students who want to develop a substantive understanding of these challenges from a quantitative, engineering-oriented perspective. Topics include hydrology, environmental science and engineering, climate physics and modeling, energy resources and technologies, and solid earth and geo-engineering.",
+        "program website url": "https://www.engineering.columbia.edu/departments/earth-environmental-engineering",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Earth and Environmental Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The minor in electrical engineering provides an opportunity for students with an interest in electrical engineering to develop a basic understanding of the core areas of the discipline. Electrical engineering is a broad discipline that encompasses a wide variety of activities. The principal areas in the undergraduate curriculum are circuits, electronics, signals and systems, communications, and digital systems.",
+        "program website url": "https://www.ee.columbia.edu/undergraduate-programs",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Electrical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Engineering Mechanics is the study of the physical action of forces and the resulting effects on bodies. The Engineering Mechanics program prepares students to become future leaders in technology for a variety of industries that include aerospace, automotive, electronics, energy and manufacturing. In this program, you’ll learn the foundations of statics, dynamics and mechanics of solids, but you’ll also be able to specialize your curriculum to your specific interests, including biomechanics, advanced manufacturing, and energy.",
+        "program website url": "https://www.engineering.columbia.edu/undergraduate-minors/engineering-mechanics",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Engineering Mechanics",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Minor in Entrepreneurship and Innovation is designed for students who are interested in a rigorous and relevant credential to understand the theory and practice of innovation and entrepreneurship in various settings including new ventures, established firms and social organizations. The minor provides students with the fundamental knowledge and skills to develop and manage new products, new services, new ventures and organizational innovations. It also emphasizes the importance of ethics and social responsibility in entrepreneurship.",
+        "program website url": "https://bulletin.columbia.edu/columbia-engineering/minors/#entrepreneurshipandinnovationtext",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Entrepreneurship and Innovation",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Industrial Engineering is concerned with the design, improvement and installation of integrated systems of people, materials, information, equipment and energy. Industrial engineering draws upon specialized knowledge and skill in the mathematical, physical and social sciences together with the principles and methods of engineering analysis and design to specify, predict and evaluate the results to be obtained from such systems.",
+        "program website url": "https://www.ieor.columbia.edu/undergraduate-programs",
+        "Accreditation status": null,
+        "Program name": "Minor in Industrial Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Involving the study of solids at the atomic and molecular levels, materials science and engineering is a field that sits at the intersection of chemistry, physics and all of the engineering disciplines. Students in the materials science minor will be given an introduction to the structure, properties and processing of materials.",
+        "program website url": "http://bulletin.columbia.edu/columbia-engineering/minors/materials-science-engineering/",
+        "Accreditation status": null,
+        "Program name": "Minor in Materials Science",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "The Department of Mechanical Engineering offers a minor designed to give students a fundamental understanding of the discipline for graduate school, industry or to complement their major area of study. Mechanical engineers combine fundamental principles of physics, mathematics and materials science to design, create and test a breathtaking array of mechanical, thermal and fluid devices that define modern life, from power plants to the tiny accelerometers in a smartphone. The curriculum focuses on three main stems: mechanical systems, thermo-fluids and energy, and materials. Required courses: E3000, MECE E3100, MECE E3311, MECE E3408, MECE E3521 and MECE E3999, which gives students the opportunity to learn essential shop and manufacturing skills in our Makerspace. Students may customize their minor with electives that may include courses on robotics, biomechanics, power generation, advanced materials, micro- and nanoscale systems, and sustainable energy.",
+        "program website url": "https://www.me.columbia.edu/",
+        "Accreditation status": null,
+        "Program name": "Minor in Mechanical Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Mining is the extraction of valuable minerals or other geological materials from the Earth, from an ore body, lode, vein, seam, reef or placer deposit. These deposits form a mineralized package that is of economic interest to the miner. Ores recovered by mining include metals, coal, oil shale, gemstones, limestone, chalk, dimension stone, rock salt, potash, gravel and clay. Mining in a wider sense includes extraction of any non-renewable resource such as petroleum, natural gas or even water. Modern mining processes involve prospecting for ore bodies, analysis of the profit potential of a proposed mine, extraction of the desired materials and final reclamation of the land after the mine is closed. The minor in mining engineering provides a student with a fundamental understanding of these main pillars of the mining industry.",
+        "program website url": "https://eee.columbia.edu/minor-mining-engineering",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Mining Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Operations research is an applied science that is concerned with quantitative decision problems, generally involving the allocation and control of limited resources. Such problems arise, for example, in the operations of industrial firms, financial institutions, health care organizations, transportation systems, and government. The operations research analyst develops and uses mathematical and statistical models to help solve these decision problems. Like engineers, they are problem-solvers. Their work is a combination of mathematics, statistics, computer science, economics, and engineering. The minor in operations research is available to all undergraduate students in Columbia College, the School of Engineering and Applied Science, the School of General Studies, and Barnard College.",
+        "program website url": "https://www.ieor.columbia.edu/undergraduate/operations-research-minor",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Operations Research",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    },
+    {
+        "Concentration name": null,
+        "description": "Sustainable Engineering is the integration of social, environmental and economic considerations into product, process and energy system design. The Minor in Sustainable Engineering focuses on the scientific and engineering aspects of providing energy and products to a growing global population in a sustainable manner.",
+        "program website url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors",
+        "Accreditation status": null,
+        "Level": "Minor",
+        "Program name": "Minor in Sustainable Engineering",
+        "Program Page url": "https://undergrad.admissions.columbia.edu/academics/engineering/majors"
+    }
+]
