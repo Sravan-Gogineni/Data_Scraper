@@ -14,8 +14,12 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-# Configure the client (using google-genai SDK 1.57.0)
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+# Configure the client for Vertex AI
+client = genai.Client(
+    vertexai=True,
+    project=os.getenv("GCP_PROJECT"),
+    location='us-central1'
+)
 
 
 

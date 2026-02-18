@@ -8,8 +8,12 @@ import re
 
 load_dotenv()
 
-# Configure the client (using google-genai SDK)
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+# Configure the client for Vertex AI
+client = genai.Client(
+    vertexai=True,
+    project=os.getenv("GCP_PROJECT"),
+    location='us-central1'
+)
 
 # Define tools and model globally
 def generate_text_safe(prompt):

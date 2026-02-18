@@ -1,5 +1,6 @@
 import pandas as pd
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import os
 from dotenv import load_dotenv
 import json
@@ -8,11 +9,14 @@ import time
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Configure the client for Vertex AI
+client = genai.Client(
+    vertexai=True,
+    project=os.getenv("GCP_PROJECT"),
+    location='us-central1'
+)
 
-tools = [genai.protos.Tool(google_search=genai.protos.Tool.GoogleSearch())]
-model = os.getenv("MODEL")
-model = genai.GenerativeModel(model, tools=tools)
+model_name = os.getenv("MODEL")
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -78,8 +82,13 @@ def process_single_program(row, university_name):
     )
     
     try:
-        print(f"[DEBUG] Generating content for program: {program_name} using model {model.model_name}")
-        response = model.generate_content(prompt)
+        print(f"[DEBUG] Generating content for program: {program_name} using model {model_name}")
+        google_search_tool = types.Tool(google_search=types.GoogleSearch())
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(tools=[google_search_tool])
+        )
         print(f"[DEBUG] Received response for program: {program_name}")
         response_text = response.text
         parsed_data = parse_json_from_response(response_text)

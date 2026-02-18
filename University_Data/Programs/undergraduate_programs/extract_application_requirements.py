@@ -1,5 +1,6 @@
 import pandas as pd
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import os
 from dotenv import load_dotenv
 import json
@@ -8,11 +9,14 @@ import time
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Configure the client for Vertex AI
+client = genai.Client(
+    vertexai=True,
+    project=os.getenv("GCP_PROJECT"),
+    location='us-central1'
+)
 
-tools = [genai.protos.Tool(google_search=genai.protos.Tool.GoogleSearch())]
-model = os.getenv("MODEL")
-model = genai.GenerativeModel(model, tools=tools)
+model_name = os.getenv("MODEL")
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -55,13 +59,22 @@ def extract_application_requirements(program_name, program_url, institute_url):
     application_requirements_page_url = None
     prompt = """ Find the website url of the application requirements page for the program '{program_name}' from the official {university_name} website. Return the url if found, otherwise return null. """
     prompt_institute_level = """ Find the Application Requirements page url for the {university_name} website. Return the url if found, otherwise return null. """
-    response = model.generate_content(prompt)
+    google_search_tool = types.Tool(google_search=types.GoogleSearch())
+    response = client.models.generate_content(
+        model=model_name,
+        contents=prompt,
+        config=types.GenerateContentConfig(tools=[google_search_tool])
+    )
     response_text = response.text
     parsed_data = parse_json_from_response(response_text)
     if parsed_data and isinstance(parsed_data, dict):
         application_requirements_page_url = parsed_data.get('application_requirements_page_url')
     else:
-        response = model.generate_content(prompt_institute_level)
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt_institute_level,
+            config=types.GenerateContentConfig(tools=[google_search_tool])
+        )
         response_text = response.text
         parsed_data = parse_json_from_response(response_text)
         if parsed_data and isinstance(parsed_data, dict):
@@ -103,7 +116,12 @@ def extract_application_requirements(program_name, program_url, institute_url):
     )
     
     try:
-        response = model.generate_content(prompt_program)
+        google_search_tool = types.Tool(google_search=types.GoogleSearch())
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt_program,
+            config=types.GenerateContentConfig(tools=[google_search_tool])
+        )
         response_text = response.text
         parsed_data = parse_json_from_response(response_text)
         
@@ -151,7 +169,12 @@ def extract_application_requirements(program_name, program_url, institute_url):
     )
     
     try:
-        response = model.generate_content(prompt_institute)
+        google_search_tool = types.Tool(google_search=types.GoogleSearch())
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt_institute,
+            config=types.GenerateContentConfig(tools=[google_search_tool])
+        )
         response_text = response.text
         parsed_data = parse_json_from_response(response_text)
         
@@ -181,13 +204,6 @@ def run(university_name_input):
 
     yield f'{{"status": "progress", "message": "Initializing application requirements extraction for {university_name}..."}}'
     
-    # Quick fetch of website url for context
-    try:
-        website_url_prompt = f"What is the official university website for {university_name}?"
-        institute_url = model.generate_content(website_url_prompt).text.replace("**", "").replace("```", "").strip()
-    except:
-        institute_url = f"https://www.google.com/search?q={university_name}"
-
     # Check if CSV file exists
     if not os.path.exists(csv_path):
         yield f'{{"status": "complete", "message": "CSV file not found: {csv_path}. Skipping Step.", "files": {{}}}}'
@@ -205,6 +221,15 @@ def run(university_name_input):
     if missing_columns:
         yield f'{{"status": "error", "message": "Missing columns: {", ".join(missing_columns)}"}}'
         return
+
+    # Quick fetch of website url for context
+    try:
+        from urllib.parse import urlparse
+        first_url = program_data.iloc[0]['Program Page url']
+        domain = urlparse(first_url).netloc
+        institute_url = f"https://{domain}"
+    except:
+        institute_url = f"https://www.google.com/search?q={university_name}"
 
     # Load existing data
     application_data = []

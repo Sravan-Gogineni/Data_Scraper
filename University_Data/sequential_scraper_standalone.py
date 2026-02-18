@@ -44,8 +44,12 @@ load_dotenv()
 # ============================================================================
 # GEMINI API SETUP
 # ============================================================================
-
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+# Configure the client for Vertex AI
+client = genai.Client(
+    vertexai=True,
+    project=os.getenv("GCP_PROJECT"),
+    location='us-central1'
+)
 
 class GeminiModelWrapper:
     """Wrapper for Gemini API with retry logic and exponential backoff"""

@@ -1,5 +1,6 @@
 import pandas as pd
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import os
 from dotenv import load_dotenv
 import json
@@ -8,11 +9,14 @@ import time
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Configure the client for Vertex AI
+client = genai.Client(
+    vertexai=True,
+    project=os.getenv("GCP_PROJECT"),
+    location='us-central1'
+)
 
-tools = [genai.protos.Tool(google_search=genai.protos.Tool.GoogleSearch())]
-model = os.getenv("MODEL")
-model = genai.GenerativeModel(model, tools=tools)
+model_name = os.getenv("MODEL")
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -120,7 +124,12 @@ def extract_test_scores(program_name, program_url, institute_url):
     )
     
     try:
-        response = model.generate_content(prompt_program)
+        google_search_tool = types.Tool(google_search=types.GoogleSearch())
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt_program,
+            config=types.GenerateContentConfig(tools=[google_search_tool])
+        )
         response_text = response.text
         parsed_data = parse_json_from_response(response_text)
         
@@ -186,7 +195,12 @@ def extract_test_scores(program_name, program_url, institute_url):
     )
     
     try:
-        response = model.generate_content(prompt_institute)
+        google_search_tool = types.Tool(google_search=types.GoogleSearch())
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt_institute,
+            config=types.GenerateContentConfig(tools=[google_search_tool])
+        )
         response_text = response.text
         parsed_data = parse_json_from_response(response_text)
         

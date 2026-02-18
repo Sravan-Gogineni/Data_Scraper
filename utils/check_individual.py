@@ -65,8 +65,12 @@ class GeminiModelWrapper:
             logger.error(f"Error during API call: {e}")
             return f"Error: {str(e)}", []
 
-# Initialize API Client
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+# Initialize API Client with Vertex AI
+client = genai.Client(
+    vertexai=True,
+    project=os.getenv("GCP_PROJECT"),
+    location='us-central1'
+)
 model_wrapper = GeminiModelWrapper(client, os.getenv("MODEL"))
 
 def run_scraper(university_name):
