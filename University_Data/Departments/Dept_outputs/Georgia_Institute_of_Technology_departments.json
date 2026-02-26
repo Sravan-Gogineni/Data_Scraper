@@ -1,0 +1,40 @@
+[
+    {
+        "Website_url": "https://admission.gatech.edu/contact-us",
+        "DepartmentName": "Office of Undergraduate Admission",
+        "Email": "admission@gatech.edu",
+        "PhoneNumber": "404.894.4154",
+        "PhoneType": null,
+        "AdmissionUrl": "https://admission.gatech.edu/",
+        "BuildingName": null,
+        "Street1": "219 Uncle Heinie Way",
+        "Street2": null,
+        "City": "Atlanta",
+        "State": "GA",
+        "StateName": "Georgia",
+        "Country": "USA",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "30332-0320",
+        "AirportPickup": null
+    },
+    {
+        "Website_url": "https://grad.gatech.edu/contact-us",
+        "DepartmentName": "Office of Graduate Education",
+        "Email": "grad.ask@grad.gatech.edu",
+        "PhoneNumber": "404.894.1610",
+        "PhoneType": null,
+        "AdmissionUrl": "https://grad.gatech.edu/admissions",
+        "BuildingName": "Savant Building",
+        "Street1": "631 Cherry St., NW",
+        "Street2": "Room 301",
+        "City": "Atlanta",
+        "State": "GA",
+        "StateName": "Georgia",
+        "Country": "USA",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "30332-0321",
+        "AirportPickup": null
+    }
+]
