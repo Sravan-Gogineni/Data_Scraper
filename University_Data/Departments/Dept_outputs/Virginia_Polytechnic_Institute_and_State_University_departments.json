@@ -1,0 +1,21 @@
+[
+    {
+        "Website_url": "https://international.vt.edu/about/about-cranwell.html",
+        "DepartmentName": "Cranwell International Center",
+        "Email": "international@vt.edu",
+        "PhoneNumber": "540-231-6527",
+        "PhoneType": null,
+        "AdmissionUrl": "https://international.vt.edu/",
+        "BuildingName": "Harper Hall",
+        "Street1": "240 West Campus Drive",
+        "Street2": null,
+        "City": "Blacksburg",
+        "State": "VA",
+        "StateName": "Virginia",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "24061",
+        "AirportPickup": null
+    }
+]

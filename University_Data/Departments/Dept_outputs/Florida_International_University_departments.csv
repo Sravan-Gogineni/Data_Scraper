@@ -1,0 +1,4 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Admissions,,,,,,,,Miami,USA,US,United States,,,,FL,P.O. Box 659003,,33265-9003,Florida,,False,https://admissions.fiu.edu/,,,False,False,Florida International University
+FIU Graduate Admissions,,,,,,,,Miami,USA,US,United States,,305-348-7000,Landline,FL,11200 S.W. 8th Street,,33199,Florida,,False,https://admissions.fiu.edu/how-to-apply/graduate-applicant/index.html,BT 201,,False,False,Florida International University
+International Admissions,,,,,,,,,USA,US,United States,,305-348-7000,Landline,,,,,,,False,https://internationaladmissions.fiu.edu/,SASC 400,,False,False,Florida International University

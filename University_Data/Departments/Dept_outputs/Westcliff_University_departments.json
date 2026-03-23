@@ -1,0 +1,21 @@
+[
+    {
+        "Website_url": "https://www.westcliff.edu/admissions/",
+        "DepartmentName": "Admissions Department",
+        "Email": "admissions@westcliff.edu",
+        "PhoneNumber": "1-949-825-5999",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.westcliff.edu/apply/",
+        "BuildingName": null,
+        "Street1": "17877 Von Karman Ave",
+        "Street2": "4th Floor",
+        "City": "Irvine",
+        "State": "CA",
+        "StateName": "California",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "92614",
+        "AirportPickup": null
+    }
+]

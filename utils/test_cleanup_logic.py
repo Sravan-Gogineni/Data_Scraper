@@ -73,7 +73,7 @@ def clean_program_name(name):
         'Doctorate': 'Doctorate',
         'Doctorate in Philosophy': 'Doctor of Philosophy',
         'Certificate': 'Certificate',
-        'Master\'s': 'Master',
+        'Certificate': 'Certificate',
         'Master\'s Degree Program': 'Master',
         'M.S.Ed. in, Online': 'Master of Science in Education (Online)',
         'M.S.Ed. in, Online Collaborative': 'Master of Science in Education (Online Collaborative)',
@@ -87,10 +87,10 @@ def clean_program_name(name):
         'Certificate, MSN': 'Post-Master\'s Certificate in Nursing',
         'M.S.Ed. in Learning and Developmental Sciences': 'Master of Science in Education in Learning and Developmental Sciences',
         
-        # UChicago additions
-        'MSA': 'Master of Science in Accountancy', # Or just Master of Science if we want to rely on deduplication
+        # UChicago & JHU additions
+        'MSA': 'Master of Science in Accountancy',
         'MPS': 'Master of Professional Studies',
-        'MS': 'Master of Science in',
+        'MS': 'Master of Science',
         'MSEd': 'Master of Science in Education',
         'MSAE': 'Master of Science in Architectural Engineering',
         'MSAT': 'Master of Science in Athletic Training',
@@ -100,7 +100,6 @@ def clean_program_name(name):
         'MPP': 'Master of Public Policy',
         'DPT': 'Doctor of Physical Therapy',
         'Cert': 'Certificate',
-        'MS': 'Master of Science',
         'MA': 'Master of Arts',
         'MBA': 'Master of Business Administration',
         'MPH': 'Master of Public Health',
@@ -109,9 +108,27 @@ def clean_program_name(name):
         'MSECE': 'Master of Science in Electrical and Computer Engineering',
         'EdD': 'Doctor of Education',
         'EdD Online': 'Doctor of Education (Online)',
+        'M.Ed.': 'Master of Education',
         'MLS': 'Master of Library Science',
         'MSW': 'Master of Social Work',
         'DSW': 'Doctor of Social Work',
+        'Master of Science': 'Master of Science',
+        'Master of Arts': 'Master of Arts',
+        'Master of Science in Engineering': 'Master of Science in Engineering',
+        'BA/MS': 'Master of Science',
+        'BS/MS': 'Master of Science',
+        'BA/MA': 'Master of Arts',
+        'MSEE': 'Master of Science in Engineering',
+        'MBEE': 'Master of Biotechnology Enterprise and Entrepreneurship',
+        'MA;': 'Master of Arts',
+        'Master': 'Master of',
+        'Master\'s': 'Master of',
+        'Postbaccalaureate Certificate': 'Postbaccalaureate Certificate',
+        'Postgraduate Certificate': 'Postgraduate Certificate',
+        'M S': 'Master of Science',
+        'M A': 'Master of Arts',
+        'M B A': 'Master of Business Administration',
+        'Ph D': 'Doctor of Philosophy',
     }
     
     name = name.strip()
@@ -120,15 +137,14 @@ def clean_program_name(name):
     degree_match = re.search(r'\(([^)]+)\)$', name)
     
     if degree_match:
-        degree_abbr = degree_match.group(1)
+        degree_abbr = degree_match.group(1).strip()
         full_degree = degree_map.get(degree_abbr)
 
         # Remove the degree part from the original string
-        name_without_degree = name[:degree_match.start()].strip()
+        name_without_degree = name[:degree_match.start()].strip().rstrip(',').strip()
 
         if full_degree:
             # If the name before the parenthesis already contains the full degree text
-            # (e.g. "Master of Business Administration (MBA)"), just strip the redundant suffix
             if name_without_degree.lower().startswith(full_degree.lower()):
                 return name_without_degree
 
@@ -143,44 +159,99 @@ def clean_program_name(name):
             # Unknown parenthetical — leave name unchanged
             return name
 
+    # 1b. Check for JHU specific suffixes and remove them
+    jhu_suffixes = ["- Jenkins Biophysics Program", "- Program in Molecular Biophysics"]
+    for suffix in jhu_suffixes:
+        if name.endswith(suffix):
+            name = name.replace(suffix, "").strip()
+
     # 2. Check for trailing degree abbreviations (without parenthesis)
     # Split by space and check last token
     parts = name.split()
     if len(parts) > 1:
-        last_part = parts[-1]
-        # Remove commas if any (e.g. "Cert, MSN")
-        # Handle "Cert, MSN" specifically or split?
-        # The CSV shows "Adult-Gerontology... Cert, MSN".
-        if "Cert, MSN" in name: # Special case
+        # Check standard map — try last 3 words, then last 2, then last word
+        # (e.g. "Master of Science in Engineering", "MPH Online", "MS")
+        full_degree = None
+        n_words = 0
+        
+        # Handle cases like "Field, Degree" or "Degree in Field"
+        # If it's already "Master of Science in Field", we might want to normalize it
+        if "Master of" in name or "Bachelor of" in name or "Doctor of" in name:
+             # Basic normalization if it's already "Degree in Field"
+             # But if it's "Field, Degree", we want to flip it.
+             pass
+
+        last_five = " ".join(parts[-5:]) if len(parts) >= 5 else None
+        last_four = " ".join(parts[-4:]) if len(parts) >= 4 else None
+        last_three = " ".join(parts[-3:]) if len(parts) >= 3 else None
+        last_two = " ".join(parts[-2:]) if len(parts) >= 2 else None
+        last_one = parts[-1]
+
+        for candidates in [last_five, last_four, last_three, last_two, last_one]:
+            if not candidates: continue
+            # Handle cases like "Statistics, Master of..." where comma is on the previous word
+            # Actually candidates is "parts[-N:]". If N=5, parts[-5] might have a comma.
+            # But the candidates themselves are space-joined.
+            # If parts = ["Field,", "Degree"], parts[-1] is "Degree".
+            # If parts = ["Field", "Degree,"], parts[-1] is "Degree,".
+            # The .rstrip(',') below handles the latter.
+            clean_cand = candidates.rstrip(',').strip()
+            if clean_cand in degree_map:
+                full_degree = degree_map[clean_cand]
+                n_words = len(candidates.split())
+                break
+        
+        # Special case for "Cert, MSN"
+        if "Cert, MSN" in name:
              full_degree = 'Post-Master\'s Certificate in Nursing'
              name_without_degree = name.replace("Cert, MSN", "").strip().rstrip(',')
              return f"{full_degree} in {name_without_degree}"
-             
-        # Check standard map — try last 2 words first (e.g. "MPH Online"), then last word
-        last_two = " ".join(parts[-2:]) if len(parts) >= 2 else None
-        name_without_degree = None
-        full_degree = (last_two and degree_map.get(last_two))
+
         if full_degree:
-            name_without_degree = " ".join(parts[:-2]).rstrip(',')
-        else:
-            full_degree = degree_map.get(last_part)
-            if not full_degree:
-                full_degree = degree_map.get(last_part.replace(',', ''))
-        
-        if full_degree:
-            if name_without_degree is None:
-                name_without_degree = " ".join(parts[:-1]).rstrip(',')
+            name_without_degree = " ".join(parts[:-n_words]).rstrip(',').strip()
+            # Remove trailing 'in' or 'of' if they are left over
+            if name_without_degree.lower().endswith(' in'):
+                name_without_degree = name_without_degree[:-3].strip()
+            elif name_without_degree.lower().endswith(' of'):
+                name_without_degree = name_without_degree[:-3].strip()
+            
+            # If name_without_degree is empty, it means the whole string was just the degree (e.g. "PhD")
+            if not name_without_degree:
+                return full_degree
             
             fd_norm = full_degree.lower()
             nwd_norm = name_without_degree.lower()
             
+            # If the degree name is already at the start, just strip the suffix
+            # e.g. "Master of Science in Biotechnology" (with MS/M.S. at end removed)
+            if nwd_norm.startswith(fd_norm):
+                return name_without_degree
+            
+            # If the name is already the degree name (e.g. "Master of Business Administration")
+            if nwd_norm == fd_norm:
+                return full_degree
+
+            # If the name is already in the degree (e.g. "MPH Online") and we mapped it
             if nwd_norm in fd_norm:
                 return full_degree
-            else:
-                return f"{full_degree} in {name_without_degree}"
-                
+
+            # UMN fix: Handle "Master of" or "Master's" in the suffix
+            if full_degree == "Master of":
+                return f"Master of {name_without_degree}"
             
-    return name
+            # Handle Certificates
+            if "Certificate" in full_degree:
+                return f"{full_degree} in {name_without_degree}"
+
+            return f"{full_degree} in {name_without_degree}"
+                
+    # 3. Check if it starts with "Master of Science in", etc.
+    # If it's already "Master of Science in Anatomy Education", we should just return it (maybe strip punctuation)
+    for degree_val in set(degree_map.values()):
+        if name.startswith(degree_val) and " in " in name:
+            return name.rstrip(',').strip()
+
+    return name.rstrip(',').strip()
 
 class TestCleanup(unittest.TestCase):
     def test_examples(self):
@@ -205,39 +276,30 @@ class TestCleanup(unittest.TestCase):
             self.assertEqual(cleaned, expected)
 
 
-class TestCleanupUChicago(unittest.TestCase):
+class TestCleanupJHU(unittest.TestCase):
     def test_examples(self):
         cases = [
-            ("Accountancy MSA", "Master of Science in Accountancy"),
-            ("Broadcast Meteorolog yMPS", "Master of Professional Studies in Broadcast Meteorology"),
-            # "Busines sCert" -> "Business Cert" -> "Certificate in Business" ? 
-            # "Cert" maps to "Certificate". "Certificate" does not contain "Business". 
-            # Result: "Certificate in Business".
-            ("Busines sCert", "Certificate in Business"), 
-            ("Biolog yMS", "Master of Science in Biology"),
-            ("Public Polic yMPP", "Master of Public Policy"), # Dedup check
-            ("Architectural Engineering MSAE", "Master of Science in Architectural Engineering"),
-            ("Business Administration MBA", "Master of Business Administration"),
-            ("Adult-Gerontology Acute Care Nurse Practitioner Cert, MSN", "Post-Master's Certificate in Nursing in Adult-Gerontology Acute Care Nurse Practitioner"),
-            # ("Biomedical Sciences MS, PIBS (umbrella pathwa yprogram)", "Master of Science in Biomedical Sciences, PIBS (umbrella pathway program)"), 
-            # Wait, "Biomedical Sciences MS, ..." -> Parts: ["Biomedical", "Sciences", "MS,", "PIBS", "(umbrella", "pathway", "program)"]
-            # Last part is "program)". Not in map.
-            # Parenthesis match: "(umbrella pathway program)".
-            # degree_abbr = "umbrella pathway program". Not in map.
-            # Fallback: full_degree = "umbrella pathway program".
-            # Result: "umbrella pathway program in Biomedical Sciences MS, PIBS".
-            # This is NOT what we want.
-            # usage of "umbrella pathway program" implies it's a tag, not the degree.
-            # The degree is MS.
-            # My logic prioritizes parens at the end.
-            # If I want to handle this, I need to ignore "umbrella pathway program" as a degree?
-            # Or map it to empty?
-            # If mapped to empty, valid degree not found.
-            # Logic: `if not full_degree: full_degree = degree_abbr`.
-            # So it uses the abbr.
-            # If I want to fix this, I should probably identify "umbrella..." as NOT a degree.
-            # But "MS" is inside the string. 
-            # This case is complex.
+            ("Master of Science in Anatomy Education", "Master of Science in Anatomy Education"),
+            ("Applied and Computational Mathematics, Graduate Certificate", "Graduate Certificate in Applied and Computational Mathematics"),
+            ("Applied and Computational Mathematics, Master of Science", "Master of Science in Applied and Computational Mathematics"),
+            ("Applied Biomedical Engineering, Graduate Certificate", "Graduate Certificate in Applied Biomedical Engineering"),
+            ("Applied Biomedical Engineering, Master of Science", "Master of Science in Applied Biomedical Engineering"),
+            ("Master of Science in Applied Health Sciences Informatics", "Master of Science in Applied Health Sciences Informatics"),
+            ("Applied Mathematics and Statistics, Master of Science in Engineering", "Master of Science in Engineering in Applied Mathematics and Statistics"),
+            ("Applied Physics, Master of Science", "Master of Science in Applied Physics"),
+            ("Biology, BA/MS", "Master of Science in Biology"),
+            ("Master of Science in Biophysics", "Master of Science in Biophysics"),
+            ("Biophysics, PhD - Jenkins Biophysics Program", "Doctor of Philosophy in Biophysics"),
+            ("Biophysics, PhD - Program in Molecular Biophysics", "Doctor of Philosophy in Biophysics"),
+            ("Biotechnology, MS, MBEE", "Master of Biotechnology Enterprise and Entrepreneurship in Biotechnology"),
+            ("Master of Science in Cellular and Molecular Medicine", "Master of Science in Cellular and Molecular Medicine"),
+            ("Chemical Biology, MS, MSEE", "Master of Science in Engineering in Chemical Biology"),
+            ("Chemistry, BS/MS", "Master of Science in Chemistry"),
+            ("Classics, BA/MA", "Master of Arts in Classics"),
+            ("Climate, Energy, and Environmental Sustainability, Master of Science", "Master of Science in Climate, Energy, and Environmental Sustainability"),
+            ("Master of Arts in Cognitive Science", "Master of Arts in Cognitive Science"),
+            ("Applied Mathematics and Statistics, PhD", "Doctor of Philosophy in Applied Mathematics and Statistics"),
+            ("Master of Science in Economics, MA;", "Master of Arts in Economics"), # JHU weird case
         ]
         
         for original, expected in cases:

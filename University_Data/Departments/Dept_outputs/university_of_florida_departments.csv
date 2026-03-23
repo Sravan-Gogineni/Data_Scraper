@@ -1,0 +1,9 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Admissions,,,,,,,,Gainesville,USA,US,United States,,352-392-1365,,FL,PO Box 114000,,32611-4000,Florida,,False,https://admissions.ufl.edu/,Criser Hall,,False,False,university of florida
+Transfer Admissions,,,,,,,,Gainesville,USA,US,United States,transfer@admissions.ufl.edu,,,FL,PO Box 114000,,32611-4000,Florida,,False,https://admissions.ufl.edu/apply/transfer/,Criser Hall,,False,False,university of florida
+Freshman Admissions,,,,,,,,Gainesville,USA,US,United States,freshman@ufl.edu,352-392-1365,,FL,PO Box 114000,,32611-4000,Florida,,False,https://admissions.ufl.edu/apply/freshman/,Criser Hall,,False,False,university of florida
+Graduate Admissions,,,,,,,,Gainesville,USA,US,United States,,,,FL,,,,Florida,,False,https://admissions.ufl.edu/apply/graduate/,,,False,False,university of florida
+International Admissions,,,,,,,,Gainesville,USA,US,United States,,,,FL,,,,Florida,,False,https://admissions.ufl.edu/apply/international/,,,False,False,university of florida
+Professional Program Admissions,,,,,,,,Gainesville,USA,US,United States,,,,FL,,,,Florida,,False,https://admissions.ufl.edu/apply/professional/,,,False,False,university of florida
+College of Medicine Admissions,,,,,,,,Gainesville,USA,US,United States,med-admissions@ufl.edu,352-273-7990,,FL,PO Box 100216,Room 142,32610,Florida,,False,https://medadmissions.med.ufl.edu/,Harrell Medical Education Building,,False,False,university of florida
+Levin College of Law Admissions,,,,,,,,Gainesville,USA,US,United States,admissions@law.ufl.edu,,,FL,,,,Florida,,False,https://www.law.ufl.edu/admissions/applying-to-uf-law/jd-admissions,,,False,False,university of florida

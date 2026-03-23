@@ -13,7 +13,7 @@ load_dotenv()
 client = genai.Client(
     vertexai=True,
     project=os.getenv("GCP_PROJECT"),
-    location='us-central1'
+    location='us-east4'
 )
 
 model_name = os.getenv("MODEL")
