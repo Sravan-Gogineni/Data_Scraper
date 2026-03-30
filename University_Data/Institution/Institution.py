@@ -20,6 +20,42 @@ client = genai.Client(
 
 Model = os.getenv("MODEL")
 
+import time
+import random
+import logging
+logger = logging.getLogger(__name__)
+
+class GeminiModelWrapper:
+    """Wrapper for Gemini API with retry logic and exponential backoff.
+    Re-exported here so Programs sub-scripts can do:
+        from Institution import GeminiModelWrapper, client
+    """
+    def __init__(self, client, model_name):
+        self.client = client
+        self.model_name = model_name
+
+    def generate_content(self, prompt, max_retries=5, base_delay=2):
+        from google.genai import types as _types
+        google_search_tool = _types.Tool(google_search=_types.GoogleSearch())
+        for attempt in range(max_retries):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt,
+                    config=_types.GenerateContentConfig(tools=[google_search_tool])
+                )
+                return response
+            except Exception as e:
+                error_str = str(e)
+                if "503" in error_str or "429" in error_str or "Too Many Requests" in error_str or "Overloaded" in error_str:
+                    if attempt < max_retries - 1:
+                        sleep_time = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                        logger.warning(f"Attempt {attempt + 1} failed: {e}. Retrying in {sleep_time:.2f}s...")
+                        time.sleep(sleep_time)
+                        continue
+                logger.error(f"Failed after {attempt + 1} attempts: {e}")
+                raise e
+
 class UniversityDetails(BaseModel):
     CollegeName: str = Field(description="The exact official name of the university.")
     Phone: str = Field(description="The primary contact phone number for the university. MUST be formatted exactly as (XXX) XXX-XXXX. Return empty string if not found.")

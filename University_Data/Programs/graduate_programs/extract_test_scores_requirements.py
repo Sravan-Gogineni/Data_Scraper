@@ -80,7 +80,7 @@ def extract_test_scores(program_name, program_url, institute_url):
         f"Program URL: {program_url}\n\n"
         f"Extract the following fields ONLY if they are present on the official {university_name} website for THIS SPECIFIC PROGRAM:\n\n"
         f"1. GreOrGmat: Whether GRE or GMAT is required, optional, or not required. Return 'GRE', 'GMAT', 'Either', 'Optional', 'Not Required', or null.\n"
-        f"2. EnglishScore: Does international students need to submit English proficiency test scores? If yes then return REQUIRED else NOT REQUIRED or OPTIONAL.the field should only return one of these values.\n"
+        f"2. EnglishScore: Does international students need to submit English proficiency test scores? If yes then return Required else Not Required or Optional.the field should only return one of these values.\n"
         f"3. IsDuoLingoRequired: MANDATORY BOOLEAN. Does duolingo score is accepted as an English proficiency test. If accepted then return TRUE else FALSE.\n"
         f"4. IsELSRequired: MANDATORY BOOLEAN. Is ELS (English Language Studies) score is accepted as an English proficiency test. If accepted then return TRUE else FALSE.\n"
         f"5. IsGMATOrGreRequired: MANDATORY BOOLEAN. Is either GMAT or GRE scores required to apply for this program? Return TRUE if yes, FALSE if no/optional.\n"

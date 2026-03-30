@@ -29,7 +29,12 @@ from Department import process_department_extraction
 try:
     from Programs import process_programs_extraction
 except ImportError as e:
-    print(f"Error importing Programs script: {e}")
+    _programs_import_error = str(e)
+    print(f"Error importing Programs script: {_programs_import_error}")
+    def process_programs_extraction(university_name, step, **kwargs):
+        """Stub used when the Programs module is unavailable."""
+        import json as _j
+        yield _j.dumps({"status": "error", "message": f"Programs extraction module could not be loaded: {_programs_import_error}"})
 
 FRONTEND_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../frontend")
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path="")
