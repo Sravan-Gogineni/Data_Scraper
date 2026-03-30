@@ -1,1487 +1,703 @@
-import pandas as pd
-import time
-import random
 from google import genai
-from google.genai import types
+from google.genai.types import GenerateContentConfig, GoogleSearch, Tool
 import os
-from dotenv import load_dotenv
 import json
+import requests
+import re
+from urllib.parse import urlparse
+from dotenv import load_dotenv
+from pydantic import BaseModel, Field
 import csv
-import logging
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-
+import pandas as pd
 load_dotenv()
 
-# Configure the client for Vertex AI
+# CHANGE THIS LINE FOR VERTEX AI
 client = genai.Client(
-    vertexai=True,
-    project=os.getenv("GCP_PROJECT"),
-    location='us-east4'
+    vertexai=True, 
+    project=os.getenv("GCP_PROJECT"), 
+    location=os.getenv("GCP_REGION")
 )
 
+Model = os.getenv("MODEL")
+
+class UniversityDetails(BaseModel):
+    CollegeName: str = Field(description="The exact official name of the university.")
+    Phone: str = Field(description="The primary contact phone number for the university. MUST be formatted exactly as (XXX) XXX-XXXX. Return empty string if not found.")
+    Email: str = Field(description="The undergraduate admissions departments email. Return empty string if not found.")
+    SecondaryEmail: str = Field(description="A secondary contact email address for the university. Return empty string if not found.")
+    Street1: str = Field(description="The primary street address (e.g., '123 Main St') or (300 boston post). Return empty string if not found.")
+    Street2: str = Field(description="Secondary address information such as suite or building. Return empty string if not found.")
+    County: str = Field(description="The county where the university is located. Return empty string if not found.")
+    City: str = Field(description="The city where the university is located. Return empty string if not found.")
+    State: str = Field(description="The state where the university is located. Return empty string if not found.")
+    Country: str = Field(description="The country where the university is located. Return empty string if not found.")
+    ZipCode: str = Field(description="The zip or postal code. Return empty string if not found.")
+
+class UniversityUrls(BaseModel):
+    WebsiteUrl: str = Field(description="The official website URL of the university. Return empty string if not found.")
+    AdmissionOfficeUrl: str = Field(description="The undergraduate admissions office URL of the university. Return empty string if not found.")
+    VirtualTourUrl: str = Field(description="The virtual tour URL of the university this can be a youvisit link or any other virtual tour link of the university. Return empty string if not found.")
+    Facebook: str = Field(description="The official Facebook URL of the university. Return empty string if not found.")
+    Instagram: str = Field(description="The official Instagram URL of the university. Return empty string if not found.")
+    Twitter: str = Field(description="The official Twitter URL of the university. Return empty string if not found.")
+    Youtube: str = Field(description="The official Youtube URL of the university. Return empty string if not found.")
+    Tiktok: str = Field(description="The official Tiktok URL of the university. Return empty string if not found.")
+    FinancialAidUrl: str = Field(description="The official Financial Aid URL of the university. Return empty string if not found.")
+    LinkedIn: str = Field(description="The official LinkedIn URL of the university. Return empty string if not found.")
+
+class ApplicationRequirements(BaseModel):
+    ApplicationFees: str = Field(description="The application fee amount in USD. Report ONLY the flat fee amount(s) (e.g., '$50' or 'Domestic: $50, International: $100'). Do NOT mention fee waivers, waiver eligibility, Early Decision, Early Action, or any conditions under which the fee may be waived. Return empty string if not found.")
+    TestPolicy: str = Field(description="The general test policy (e.g., 'Test-Optional', 'Required', 'Not Required'). Return empty string if not found.")
+    Recommendations: int = Field(description="The minimum number of recommendations required to submit the application some programs may require more than others in that case return the maximum number of recommendations required. Return empty string if not found.")
+    PersonalEssay: str = Field(description="Determine if a personal statement, statement of purpose, or narrative essay about the applicant is required. Return 'Required' or 'Not Required'. Return an empty string if the information is missing.")
+    WritingSample: str = Field(description="Determine if a pre-existing academic paper, research sample, or professional publication is required. Do NOT mark 'Required' if only a personal essay is asked for. Return 'Required' or 'Not Required'. Return an empty string if not found.")
+    AdditionalDeadlines: str = Field(description="Any additional or early action/decision deadlines mentioned. Return empty string if not found.")
+    IsMultipleApplicationsAllowed: bool = Field(description="Are students allowed to submit multiple applications simultaneously? Return True, False, or empty string.")
+
+class StandardizedTests(BaseModel):
+    IsACTRequired: bool = Field(description="Does any program require ACT scores? Return True, False, or empty string.")
+    IsSATRequired: bool = Field(description="Does any program require SAT scores? Return True, False, or empty string.")
+    IsGMATOrGreRequired: bool = Field(description="Does any program require GMAT or GRE scores? Return True, False, or empty string.")
+    IsGMATRequired: bool = Field(description="Does any program require GMAT scores? If maximum number of programs does not require GMAT scores Return False, else True.")
+    IsGRERequired: bool = Field(description="Does any program require GRE scores? If maximum number of programs does not require GRE scores Return False, else True.")
+    IsLSATRequired: bool = Field(description="Does any program require LSAT scores? Return True, False, or empty string.")
+    IsMATRequired: bool = Field(description="Does any program require MAT scores? If maximum number of programs does not require MAT scores Ret urn False, else True.")
+    IsMCATRequired: bool = Field(description="Does any program require MCAT scores? If maximum number of programs does not require MCAT scores Return False, else True.")
+    IsPTERequired: bool = Field(description="Does any program require PTE scores? If maximum number of programs does not require PTE scores Return False, else True.")
+
+class EnglishTests(BaseModel):
+    IsDuoLingoRequired: bool = Field(description="Search the university's international student admissions page. Return True ONLY if the Duolingo English Test (DET) is explicitly listed as an accepted English proficiency test. Return False if it is not mentioned or explicitly rejected.")
+    IsELSRequired: bool = Field(description="Search the university's international student admissions page. Return True ONLY if ELS Language Centers or ELS English program completion is explicitly listed as an accepted alternative to English proficiency tests. Return False otherwise.")
+    IsIELTSRequired: bool = Field(description="Search the university's international student admissions page. Return True ONLY if IELTS (Academic) is explicitly listed as an accepted English proficiency test. Return False if it is not mentioned.")
+    IsTOEFLIBRequired: bool = Field(description="Search the university's international student admissions page. Return True ONLY if TOEFL iBT is explicitly listed as an accepted English proficiency test. Return False if not mentioned.")
+    IsEnglishNotRequired: bool = Field(description="Return True ONLY if the university's international admissions page explicitly and categorically states that NO English proficiency test is required for ALL international applicants — not just for students from certain countries or English-medium institutions. A partial country-based or degree-based exemption does NOT qualify. If the university lists ANY English test (TOEFL, IELTS, Duolingo, etc.) as a requirement or even an option, return False. When in doubt, return False.")
+    IsEnglishOptional: bool = Field(description="Return True ONLY if the university has a formal English proficiency test-waiver or test-optional policy. This is different from a country-based exemption. Return False otherwise.")
+    IsAnalyticalNotRequired: bool = Field(description="Return True ONLY if the university explicitly states that the GRE Analytical Writing section or a similar analytical/writing component is NOT required for admission. Return False by default unless explicitly stated.")
+    IsAnalyticalOptional: bool = Field(description="Return True ONLY if the university explicitly states that the GRE Analytical Writing section or a similar writing component is optional (students may choose to submit it or not). Return False otherwise.")
+
+class UniversityMetadata(BaseModel):
+    Introduction: str = Field(description="A brief paragraph of introduction about the university.")
+    TypeofInstitution: str = Field(description="Type of institution (e.g., 'Public', 'Private').")
+    InstitutionType: str = Field(description="Type classification  only `Public, Private, etc.`.")
+    TermFormat: str = Field(description="The academic term format (e.g., 'Semester', 'Quarter', 'Trimester').")
+    TotalProgramsAvailable: int = Field(description="Total number of  programs available. include all undergraduate and graduate programs.")
+
+class RankingAndCampus(BaseModel):
+    CollegeSetting: str = Field(description="The setting of the college (e.g., 'Urban', 'Suburban', 'Rural').")
+    NumberOfCampuses: int = Field(description="Total number of campuses. Return as integer (e.g. 1).")
+    QsWorldRanking: str = Field(description="The current QS World University Ranking. Return just the number or range.")
+    UsRanking: str = Field(description="The current US News & World Report National Ranking. Should be from current year or latest not from previous years. find from official website of usnews.com")
+    CountriesRepresented: int = Field(description="Number of countries represented by the student body. like from how many countries students are studying in this university.")
+
+class StudentDemographics(BaseModel):
+    TotalStudents: int = Field(description="Total number of all students.")
+    TotalStudentsEnrolled: int = Field(description="Total actively enrolled students.")
+    TotalInternationalStudents: int = Field(description="Total number of international students.")
+    TotalFacultyAvailable: int = Field(description="Total number of faculty members working in the university only teaching partime or fulltime faculty not other employees.")
+    Student_Faculty: str = Field(description="The student-to-faculty ratio (e.g., '15:1').")
+
+class TuitionAndScholarships(BaseModel):
+    UGAvgTuition: int = Field(description="Average undergraduate tuition per year. Return as a plain integer (e.g., 45000). No dollar signs, commas, or text.")
+    TuitionFees: str = Field(description="The tuition fees for the university for both UG and Grad. if the university public then include in-state and out-of-state tuition fees. else include the tuition fees for both UG and Grad. Ex(Undergraduate tution fee: $10000/in-state, $20000/out-of-state per year, Graduate tution fee: $20000 per year) incase of private university just include the tuition fees for both UG and Grad. example: Undergraduate tution fee: $10000 per year, Graduate tution fee: $20000 per year" )
+    UGScholarshipHigh: int = Field(description="Highest undergraduate merit scholarship offered as listed on the official university website. Return as a plain integer only (e.g., 20000). No dollar signs, commas, ranges, or text. Return 0 if not found.")
+    UGScholarshipLow: int = Field(description="Lowest undergraduate merit scholarship offered as listed on the official university website. Return as a plain integer only (e.g., 5000). No dollar signs, commas, ranges, or text. Return 0 if not found.")
+    GradAvgTuition: int = Field(description="Average graduate tuition per year. Return as a plain integer (e.g., 30000). No dollar signs, commas, or text.")
+    GradScholarshipHigh: int = Field(description="Highest graduate scholarship or stipend offered as listed on the official university website. Return as a plain integer only (e.g., 25000). No dollar signs, commas, ranges, or text. Return 0 if not found.")
+    GradScholarshipLow: int = Field(description="Lowest graduate scholarship offered as listed on the official university website. Return as a plain integer only (e.g., 5000). No dollar signs, commas, ranges, or text. Return 0 if not found.")
+
+class SpecificEnrollment(BaseModel):
+    TotalUndergradMajors: int = Field(description="Total bachelor's degree majors offered.")
+    UGTotalStudents: int = Field(description="Total undergraduate students enrolled.")
+    UGInternationalStudents: int = Field(description="Total international undergraduate students enrolled.")
+    TotalGraduatePrograms: int = Field(description="Total master's/doctoral programs offered.")
+    GradTotalStudents: int = Field(description="Total graduate students enrolled.")
+    GradInternationalStudents: int = Field(description="Total international graduate students enrolled.")
+
+def _extract_json_from_text(text: str) -> dict:
+    """Helper to safely extract JSON from LLM responses containing markdown."""
+    text = text.strip()
+    try:
+        if "```json" in text:
+            text = text.split("```json")[1].split("```")[0].strip()
+        elif "```" in text:
+            text = text.split("```")[1].strip()
+            if text.startswith("json"):
+                text = text[4:].strip()
+        return json.loads(text)
+    except Exception:
+        return {}
+
+def _strip_citations(result: dict) -> dict:
+    """
+    Strips Gemini Google Search grounding citation markers (e.g. [1], [72, 73, 74])
+    from all string values in an extracted result dict.
+    These appear when the model cites its search sources inline.
+    """
+    citation_pattern = re.compile(r'\s*\[\d+(?:,\s*\d+)*\]')
+    return {
+        k: citation_pattern.sub("", v).strip() if isinstance(v, str) else v
+        for k, v in result.items()
+    }
 
 
-# Wrapper for compatibility with existing code structure
-class GeminiModelWrapper:
-    def __init__(self, client, model_name):
-        self.client = client
-        self.model_name = model_name
-
-    def generate_content(self, prompt, max_retries=5, base_delay=2):
-        # Configure the search tool for every call to ensure live data
-        google_search_tool = types.Tool(
-            google_search=types.GoogleSearch()
+def _get_ground_truth(university_name: str) -> tuple[str, str]:
+    """Helper to perform Step 1: Getting official name and URL via Google Search."""
+    grounding_prompt = f"Find the official, exact name and the main official website URL for the university commonly known as '{university_name}'. Return ONLY a JSON string with keys 'exact_name' and 'url'."
+    
+    grounding_config = GenerateContentConfig(
+        tools=[Tool(google_search=GoogleSearch())]
+    )
+    
+    try:
+        response = client.models.generate_content(
+            model=Model, 
+            contents=grounding_prompt, 
+            config=grounding_config
         )
+        ground_truth = _extract_json_from_text(response.text)
+        exact_name = ground_truth.get("exact_name", university_name)
+        url = ground_truth.get("url", "")
+    except Exception:
+        exact_name = university_name
+        url = ""
+        
+    return exact_name, url
 
-        for attempt in range(max_retries):
+def _format_phone(phone: str) -> str:
+    """Helper to enforce (XXX) XXX-XXXX format just in case the LLM fails."""
+    if not phone:
+        return ""
+    digits = re.sub(r'\D', '', phone)
+    if len(digits) == 10:
+        return f"({digits[:3]}) {digits[3:6]}-{digits[6:]}"
+    elif len(digits) == 11 and digits.startswith('1'):
+        return f"({digits[1:4]}) {digits[4:7]}-{digits[7:]}"
+    return phone
+
+def _verify_urls(result: dict, schema_keys: list) -> dict:
+    """Helper to verify and drop dead URLs by hitting them with a HEAD request."""
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    for key in schema_keys:
+        if key != "CollegeName" and result.get(key):
+            test_url = str(result[key])
+            if not test_url.startswith("http"):
+                continue
             try:
-                response = self.client.models.generate_content(
-                    model=self.model_name,
-                    contents=prompt,
-                    config=types.GenerateContentConfig(
-                        tools=[google_search_tool]
-                    )
-                )
-                return response
-            except Exception as e:
-                # Check for 503 (Unavailable) or 429 (Resource Exhausted)
-                # The google-genai SDK exceptions might vary, so we check broadly for now
-                # and refine if needed. Common codes are 503 and 429.
-                error_str = str(e)
-                if "503" in error_str or "429" in error_str or "Too Many Requests" in error_str or "Overloaded" in error_str:
-                    if attempt < max_retries - 1:
-                        # Exponential backoff with jitter
-                        sleep_time = base_delay * (2 ** attempt) + random.uniform(0, 1)
-                        logger.warning(f"Attempt {attempt + 1} failed with error: {e}. Retrying in {sleep_time:.2f} seconds...")
-                        time.sleep(sleep_time)
-                        continue
-                
-                # If it's not a retryable error or we've run out of retries, raise it
-                logger.error(f"Failed to generate content after {attempt + 1} attempts: {e}")
-                raise e
+                # Use HEAD request first as it is faster
+                response = requests.head(test_url, headers=headers, allow_redirects=True, timeout=5)
+                # Only remove if explicitly Not Found or Gone. 
+                # (403 or 401 means the page exists but is blocking our script)
+                if response.status_code in [404, 410]:
+                    # Fallback to GET just in case HEAD is improperly implemented by the server
+                    response = requests.get(test_url, headers=headers, allow_redirects=True, timeout=5)
+                    if response.status_code in [404, 410]:
+                        print(f"Removing dead URL for {key}: {test_url} (HTTP {response.status_code})")
+                        result[key] = ""
+            except requests.RequestException as e:
+                # DNS failure or connection timeout usually means a hallucinated/invalid domain
+                print(f"Failed to connect to URL for {key}: {test_url} - {str(e)}")
+                result[key] = ""
+    return result
 
-# Initialize the model wrapper
-model = GeminiModelWrapper(client, os.getenv("MODEL"))
-
-# Logic moved to process_institution_extraction
-
-def generate_text_safe(prompt):
-    try:
-        response = model.generate_content(prompt)
+def get_university_details(university_name: str) -> dict:
+    """
+    Fetches grounded university details in a structured format by performing
+    a two-step grounded extraction using the Gemini API and Google Search tool.
+    """
+    exact_name, url = _get_ground_truth(university_name)
         
-        # 1. Handle Safety/Empty blocks before accessing .text
-        if not response.candidates or not response.candidates[0].content.parts:
-            logger.warning("Model blocked the response or returned empty.")
-            return "null"
+    # Step 2: Extraction based on Ground Truth
+    schema_json = UniversityDetails.model_json_schema()
+    schema_keys = list(UniversityDetails.model_fields.keys())
+    
+    extraction_prompt = (
+        f"You are a strict data extractor. Use the following ground truths:\n"
+        f"- Exact Name: {exact_name}\n"
+        f"- Official URL: {url}\n\n"
+        f"Using primarily these ground truths and the official website, extract exactly "
+        f"the required fields for this university.\n"
+        f"CRITICAL INSTRUCTION: Explicitly use the Google Search tool to find the specific 'UNDERGRADUATE ADMISSIONS' email address. Do not skip this step. Dive deep to find the specific email, not just a general one.\n\n"
+        f"Do not hallucinate. Use empty strings for any information that genuinely cannot be found.\n\n"
+        f"You MUST return ONLY a valid JSON object matching EXACTLY this JSON schema:\n"
+        f"{json.dumps(schema_json, indent=2)}\n\n"
+        f"PAY CLOSE ATTENTION to the 'description' field of each property in the schema, as it tells you specifically what information to extract (e.g. undergraduate admissions email vs secondary email).\n"
+        f"Do not include any additional keys or markdown wrappers."
+    )
+    
+    extraction_config = GenerateContentConfig(
+        tools=[Tool(google_search=GoogleSearch())],
+        temperature=0.1
+    )
+    
+    try:
+        extraction_response = client.models.generate_content(
+            model=Model,
+            contents=extraction_prompt,
+            config=extraction_config
+        )
+        result = _extract_json_from_text(extraction_response.text)
+        if "properties" in result and isinstance(result["properties"], dict):
+            result = result["properties"]
+    except Exception:
+        result = {}
+        
+    # Ensure schema keys are present
+    for k in schema_keys:
+        if k not in result:
+            result[k] = ""
+    if not result.get("CollegeName"):
+        result["CollegeName"] = exact_name
+        
+    # Programmatic Fallback Formatter for Phone
+    if result.get("Phone"):
+        result["Phone"] = _format_phone(result["Phone"])
+        
+    return result
+
+def _fetch_homepage_links(url: str) -> str:
+    """Helper to fetch exact links from the homepage to eliminate hallucination"""
+    homepage_links = []
+    if url:
+        try:
+            req_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+            resp = requests.get(url, headers=req_headers, timeout=8)
+            # Find absolute links
+            all_hrefs = set(re.findall(r'href=[\'"](https?://[^\'" >]+)[\'"]', resp.text))
+            # Find relative links that relate to admissions/tours
+            rel_hrefs = set(re.findall(r'href=[\'"](/[^"\' >]*?(?:admission|visit|tour)[^"\' >]*?)[\'"]', resp.text, re.IGNORECASE))
             
-        text = response.text
-        
-        # 2. Clean up specific artifacts while preserving structure
-        # We keep it simple but ensure we don't return an empty string if we can help it
-        clean_text = text.replace("```json", "").replace("```", "").strip()
-        
-        return clean_text if clean_text else "null"
+            for rel in rel_hrefs:
+                all_hrefs.add(url.rstrip('/') + rel)
+                
+            # Filter for social media and relevant internal links
+            social_domains = ['facebook.com', 'instagram.com', 'twitter.com', 'youtube.com', 'tiktok.com', 'youvisit.com']
+            for u in all_hrefs:
+                u_lower = u.lower()
+                if any(domain in u_lower for domain in social_domains) or 'admission' in u_lower or 'tour' in u_lower or 'visit' in u_lower:
+                    homepage_links.append(u)
+        except Exception as e:
+            print(f"Warning: Could not fetch homepage links for {url}: {e}")
 
+    return "\n".join(homepage_links[:50]) # cap at 50 to avoid prompt inflation
+
+def get_university_urls(university_name: str) -> dict:
+    """
+    Fetches grounded university URLs in a structured format bypassing Gemini AI hallucinations
+    for URLs by strictly matching against homepage HTML anchors where possible.
+    """
+    exact_name, url = _get_ground_truth(university_name)
+    links_context = _fetch_homepage_links(url)
+    
+    # Step 2: Extraction based on Ground Truth
+    schema_json = UniversityUrls.model_json_schema()
+    schema_keys = list(UniversityUrls.model_fields.keys())
+    
+    extraction_prompt = (
+        f"You are a strict data extractor. Use the following ground truths:\n"
+        f"- Exact Name: {exact_name}\n"
+        f"- Official URL: {url}\n\n"
+        f"I have already scraped the official homepage ({url}) and found these relevant links:\n"
+        f"--- HOMEPAGE LINKS ---\n"
+        f"{links_context}\n"
+        f"----------------------\n\n"
+        f"Using these EXACT homepage links, extract the required fields for this university.\n"
+        f"CRITICAL RULES TO AVOID HALLUCINATION:\n"
+        f"1. YOU MUST PRIORITIZE the 'HOMEPAGE LINKS' provided above. Do not guess handles.\n"
+        f"2. For Social Media Links, extract the exact link from the 'HOMEPAGE LINKS' list that corresponds to their official account.\n"
+        f"3. For internal pages (VirtualTourUrl, AdmissionOfficeUrl), use the links from the list. If it's missing, you may use Google Search, but do not hallucinate.\n"
+        f"4. If a valid, verified link cannot be found in the list or via searching, you MUST return an empty string.\n\n"
+        f"You MUST return ONLY a valid JSON object matching EXACTLY this JSON schema:\n"
+        f"{json.dumps(schema_json, indent=2)}\n\n"
+        f"PAY CLOSE ATTENTION to the 'description' field of each property in the schema.\n"
+        f"Do not include any additional keys or markdown wrappers."
+    )
+    
+    extraction_config = GenerateContentConfig(
+        tools=[Tool(google_search=GoogleSearch())],
+        temperature=0.1
+    )
+    
+    try:
+        extraction_response = client.models.generate_content(
+            model=Model,
+            contents=extraction_prompt,
+            config=extraction_config
+        )
+        result = _extract_json_from_text(extraction_response.text)
+        if "properties" in result and isinstance(result["properties"], dict):
+            result = result["properties"]
+    except Exception:
+        result = {}
+        
+    # Ensure schema keys are present
+    for k in schema_keys:
+        if k not in result:
+            result[k] = ""
+    if not result.get("CollegeName"):
+        result["CollegeName"] = exact_name
+        
+    return _verify_urls(result, schema_keys)
+
+
+# Model-specific configs: what page to pre-discover and what to tell the model
+MODEL_EXTRACTION_CONFIG: dict[str, dict] = {
+    "ApplicationRequirements": {
+        "target_page_hint": "undergraduate admissions application requirements page",
+        "search_query_suffix": "undergraduate admissions application requirements",
+        "context_label": "UNDERGRADUATE ADMISSIONS PAGE",
+        "extra_instructions": (
+            "Focus exclusively on the undergraduate admissions requirements page. "
+            "Do NOT use graduate requirements. If a requirement has different values for domestic vs international, return the domestic value."
+        ),
+    },
+    "StandardizedTests": {
+        "target_page_hint": "admissions standardized testing policy page",
+        "search_query_suffix": "standardized testing requirements ACT SAT admissions",
+        "context_label": "STANDARDIZED TESTING POLICY PAGE",
+        "extra_instructions": (
+            "Search the admissions and testing policy pages. Return True if ANY program at the university requires that test, otherwise False. "
+            "Do not guess — only return True if the test is explicitly named."
+        ),
+    },
+    "EnglishTests": {
+        "target_page_hint": "international student admissions English proficiency requirements page",
+        "search_query_suffix": "international students English proficiency requirements TOEFL IELTS",
+        "context_label": "INTERNATIONAL ADMISSIONS / ENGLISH PROFICIENCY PAGE",
+        "extra_instructions": (
+            "Use ONLY the international student admissions page. "
+            "Return True for a test (IsDuoLingoRequired, IsIELTSRequired, IsTOEFLIBRequired, IsELSRequired) ONLY if it is explicitly listed as an accepted proof of English proficiency. "
+            "CRITICAL — IsEnglishNotRequired: Return True ONLY if the university explicitly and categorically states that NO English proficiency test is required for ALL international applicants. "
+            "If the page lists even ONE test as an option or requirement, IsEnglishNotRequired MUST be False. "
+            "A statement like 'students from English-speaking countries are exempt' does NOT make IsEnglishNotRequired True — that is a partial exemption, not a blanket waiver. "
+            "Default IsEnglishNotRequired to False unless there is unmistakable evidence of a complete, universal waiver. "
+            "IsEnglishOptional is True ONLY if there is a formal test-optional waiver policy that any international student can apply for."
+        ),
+    },
+    "UniversityMetadata": {
+        "target_page_hint": "university about page or fact sheet",
+        "search_query_suffix": "about overview fact sheet institution type term format programs",
+        "context_label": "ABOUT / FAST FACTS PAGE",
+        "extra_instructions": (
+            "Search the university's 'About Us', 'Fast Facts', or 'Institutional Profile' page. "
+            "For Introduction, write a factual 2-sentence summary based only on what is stated on the page."
+        ),
+    },
+    "RankingAndCampus": {
+        "target_page_hint": "university rankings and campus facts page",
+        "search_query_suffix": "QS World Ranking US News ranking campus setting number of campuses",
+        "context_label": "RANKINGS / CAMPUS INFO PAGE",
+        "extra_instructions": (
+            "Check US News & World Report and QS World Rankings for verified ranking numbers. "
+            "For CollegeSetting, use the official Carnegie Classification (Urban, Suburban, Rural). "
+            "For CountriesRepresented, look on the university's fast-facts or diversity page."
+        ),
+    },
+    "StudentDemographics": {
+        "target_page_hint": "university enrollment statistics and fact sheet page",
+        "search_query_suffix": "total enrollment students faculty ratio international students statistics",
+        "context_label": "ENROLLMENT / FAST FACTS PAGE",
+        "extra_instructions": (
+            "Use the university's official enrollment or fast-facts page first. "
+            "If not found, use IPEDS or CommonDataSet as a secondary source. "
+            "Return raw integer values — do not include commas or text."
+        ),
+    },
+    "TuitionAndScholarships": {
+        "target_page_hint": "official tuition fees and financial aid scholarships page",
+        "search_query_suffix": "tuition fees cost of attendance financial aid scholarships undergraduate graduate",
+        "context_label": "TUITION & FINANCIAL AID PAGE",
+        "extra_instructions": (
+            "Navigate directly to the official Bursar or Financial Aid page. "
+            "For public universities, report both in-state and out-of-state tuition separately. "
+            "For scholarships, ONLY report amounts explicitly listed on the official page — do not estimate or hallucinate ranges. "
+            "If a scholarship range is listed, put the high end in High and low end in Low."
+        ),
+    },
+    "SpecificEnrollment": {
+        "target_page_hint": "university graduate and undergraduate enrollment breakdown page",
+        "search_query_suffix": "undergraduate graduate enrollment international students majors programs offered",
+        "context_label": "ENROLLMENT BREAKDOWN PAGE",
+        "extra_instructions": (
+            "Use the university's official enrollment or CommonDataSet CDS C section for UG/Grad breakdowns. "
+            "TotalUndergradMajors = number of bachelor's degree programs. "
+            "TotalGraduatePrograms = number of master's + doctoral programs. "
+            "Do not conflate total programs with total majors."
+        ),
+    },
+}
+
+def _find_target_url(exact_name: str, official_url: str, search_query_suffix: str) -> str:
+    """Uses Google Search to find a specific sub-page (e.g. tuition page) of the university's website."""
+    search_prompt = (
+        f"Find the exact URL for {exact_name}'s {search_query_suffix}. "
+        f"The university's official domain is {official_url}. "
+        f"Return ONLY a JSON string with a single key 'target_url' containing the best matching URL. "
+        f"If no specific page is found, return the base URL: {official_url}"
+    )
+    config = GenerateContentConfig(tools=[Tool(google_search=GoogleSearch())])
+    try:
+        resp = client.models.generate_content(model=Model, contents=search_prompt, config=config)
+        data = _extract_json_from_text(resp.text)
+        return data.get("target_url", official_url) or official_url
+    except Exception:
+        return official_url
+
+def _extract_model_data(model_class, exact_name: str, url: str) -> dict:
+    """
+    Model-aware extraction: first discovers the most relevant sub-page for this model,
+    then runs a targeted extraction prompt using that page as the primary source.
+    """
+    schema_keys = list(model_class.model_fields.keys())
+    model_name = model_class.__name__
+    
+    # Get model-specific config or fall back to a generic one
+    config_entry = MODEL_EXTRACTION_CONFIG.get(model_name, {
+        "search_query_suffix": "official information",
+        "context_label": "OFFICIAL PAGE",
+        "extra_instructions": "Use the official university website as the primary source.",
+    })
+    
+    # Step 1: Discover the best target URL for this specific model
+    target_url = _find_target_url(exact_name, url, config_entry["search_query_suffix"])
+    context_label = config_entry["context_label"]
+    extra_instructions = config_entry["extra_instructions"]
+    
+    # Build a clean field → description guide instead of the raw JSON schema
+    # (passing raw schema_json confuses the model into returning schema dicts as values)
+    field_guide = {
+        k: v.description
+        for k, v in model_class.model_fields.items()
+    }
+    empty_template = {k: "" for k in schema_keys}
+    
+    extraction_prompt = (
+        f"You are a strict data extractor for {exact_name}.\n"
+        f"Ground truth:\n"
+        f"  - Official Website: {url}\n"
+        f"  - Most Relevant Page ({context_label}): {target_url}\n\n"
+        f"EXTRACTION STRATEGY (follow in order):\n"
+        f"1. START by reading the '{context_label}' at: {target_url}\n"
+        f"2. Extract data from that page first. It is your PRIMARY source.\n"
+        f"3. If a field is missing from that page, search within the official domain ({url}) next.\n"
+        f"4. As a last resort, check trusted external sources (US News, CollegeBoard, CommonDataSet).\n"
+        f"5. Do NOT guess or hallucinate. Return an empty string for any field genuinely not found.\n\n"
+        f"SPECIFIC INSTRUCTIONS FOR THIS MODEL:\n"
+        f"{extra_instructions}\n\n"
+        f"FIELD GUIDE — what each key means:\n"
+        f"{json.dumps(field_guide, indent=2)}\n\n"
+        f"Return ONLY a valid JSON object with EXACTLY these keys filled with real extracted values:\n"
+        f"{json.dumps(empty_template, indent=2)}\n\n"
+        f"Replace each empty string with the actual value. Do not include markdown wrappers or extra keys."
+    )
+    
+    api_config = GenerateContentConfig(tools=[Tool(google_search=GoogleSearch())], temperature=0.1)
+    try:
+        resp = client.models.generate_content(model=Model, contents=extraction_prompt, config=api_config)
+        result = _extract_json_from_text(resp.text)
+        if "properties" in result and isinstance(result["properties"], dict):
+            result = result["properties"]
     except Exception as e:
-        # 3. Log the specific error to help with debugging the Scraper
-        logger.error(f"Error generating content: {e}")
-        return "null"
-
-def extract_clean_value(response_text):
-    if not response_text:
-        return None
-    
-    # 1. Basic Cleanup
-    text = response_text.replace("**", "").replace("```", "").strip()
-    
-    # 2. Split by common separators (Evidence, URLs, etc.)
-    separators = ["\nEvidence:", "\nURL:", "\nSource:", "\nSnippet:", "\nQuote:"]
-    for sep in separators:
-        # Using a case-insensitive search
-        idx = text.lower().find(sep.lower())
-        if idx != -1:
-            text = text[:idx].strip()
-            break
-
-    # 3. Get the first line
-    text = text.split('\n')[0].strip()
-
-    # 4. HANDLE KEY-VALUE PAIRS (NEW)
-    # If the first line is "Allowed: True" or "Status: Required", 
-    # we want to strip the "Allowed:" or "Status:" part.
-    if ":" in text:
-        parts = text.split(":", 1) # Split only on the first colon
-        text = parts[1].strip()
-
-    # 5. Handle "null"
-    if text.lower() == "null" or not text:
-        return None
+        print(f"Error extracting {model_name}: {e}")
+        result = {}
         
-    # 6. Fix incomplete URLs
-    if text.startswith("//"):
-        text = "https:" + text
-    elif text.startswith("www."):
-        text = "https://" + text
-        
-    return text
-
-################################ Helper Functions to get the URLs ####################################################################################
-    #get the academic calender url 
-def get_academic_calender_url(website_url, university_name):
-    prompt = (
-        f"What is the academic calender URL for the university {university_name} on the website {website_url}. "
-        f"Search query: site:{website_url} academic calender "
-        "Return only the academic calender URL, no other text. "
-        "No fabrication or guessing, just the academic calender URL. "
-        "Only if the academic calender URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the academic calender URL is explicitly stated."
-    )
-    academic_calender_url = generate_text_safe(prompt)
-    academic_calender_url = extract_clean_value(academic_calender_url)
-    return academic_calender_url
-
-def get_cost_of_attendance_url(website_url, university_name):
-    prompt = (
-        f"What is the cost of attendance URL for the university {university_name} on the website {website_url}. "
-        f"Search query: site:{website_url} cost of attendance "
-        "Return only the cost of attendance URL, no other text. "
-        "No fabrication or guessing, just the cost of attendance URL. "
-        "Only if the cost of attendance URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the cost of attendance URL is explicitly stated."
-    )
-    cost_of_attendance_url = generate_text_safe(prompt)
-    cost_of_attendance_url = extract_clean_value(cost_of_attendance_url)
-    return cost_of_attendance_url
-
-def get_tuition_fee_url(website_url, university_name):
-    prompt = (
-        f"Find the tuition fee URL for the university {university_name} on the website {website_url}. "
-        f"Search query: site:{website_url} tuition fees cost of attendance "
-        "Return only the tuition fee URL, no other text. "
-        "No fabrication or guessing, just the tuition fee URL. "
-        "Only if the tuition fee URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the tuition fee URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_international_students_requirements_url(website_url, university_name):
-    prompt = (
-        f" What is the international students application requirements page url for the university {university_name} on the website {website_url}. "
-        f"Search query: site:{website_url} international students application requirements "
-        "Return only the international students application requirements page url, no other text. "
-        "No fabrication or guessing, just the international students application requirements page url. "
-        "Only if the international students application requirements page url is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the international students application requirements page url is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-############################################################################################################################################################
-
-
-############################################################################################################################################################
-                                                 # Functions to extract the data from the website #
-############################################################################################################################################################
-def get_womens_college(website_url, university_name):
-    prompt = (
-        f"Is the university {university_name}, {website_url} a women's college? "
-        "Return only 'yes' or 'no', no other text. "
-        "No fabrication or guessing, just yes or no. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_cost_of_living_min(website_url, university_name):
-    prompt = (
-        f"What is the minimum cost of living for students at the university {university_name} ,{website_url}? "
-        "Return only the minimum cost of living amount, no other text. "
-        "No fabrication or guessing, just the minimum cost of living. "
-        "Only if the minimum cost of living is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the minimum cost of living is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_cost_of_living_max(website_url, university_name):
-    prompt = (
-        f"What is the maximum cost of living for students at the university {university_name}, {website_url}? "
-        "Return only the maximum cost of living amount, no other text. "
-        "No fabrication or guessing, just the maximum cost of living. "
-        "Only if the maximum cost of living is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the maximum cost of living is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_orientation_available(website_url, university_name):
-    prompt = (
-        f"Is orientation available for students at the university {university_name}, {website_url}? "
-        "Return only 'yes' or 'no', no other text. "
-        "No fabrication or guessing, just yes or no. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_college_tour_after_admissions(website_url, university_name):
-    prompt = (
-        f"Does the university {university_name}, {website_url} offer in-person college tours after admissions? "
-        "Return only 'yes' or 'no', no other text. "
-        "No fabrication or guessing, just yes or no. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_university_name(website_url, university_name):
-    prompt = (
-        f"What is the name of the university {university_name} for the website {website_url}? "
-        "Return only the name of the university, no other text. "
-        "No fabrication or guessing, just the name of the university. "
-        "Only if the name of the university is explicitly stated in the website, "
-        "otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where "
-        "the name of the university is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_college_setting(website_url, university_name):
-    prompt = (
-        f"What is the college setting for the university {university_name}, {website_url}? "
-        "Search query: site:{website_url} college setting "
-        "Example: urban, suburban, rural, etc. "
-        "Return only the college setting, no other text. "
-        "No fabrication or guessing, just the college setting. "
-        "Only if the college setting is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the college setting is explicitly stated."
-    )
-
-    return generate_text_safe(prompt)
-
-def get_type_of_institution(website_url, university_name):
-    prompt = (
-        f"What is the type of institution for the university {university_name}, {website_url}? "
-        "Return only the type of institution, no other text. "
-        "No fabrication or guessing, just the type of institution. "
-        "Only if the type of institution is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the type of institution is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_student_faculty(website_url, university_name):
-    prompt = (
-        f"What is the student faculty ratio for the university {university_name}? "
-        "Return only the student faculty ration, no other text. "
-        "Example: 15:1, 16:1, etc. "
-        "No extra text or explanation, just the student faculty ratio. "
-        "No fabrication or guessing, just the student faculty ratio. "
-        "Only if the student faculty ratio is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the student faculty ratio is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_number_of_campuses(website_url, university_name):
-    prompt = (
-        f"What is the number of campuses for the university {university_name}, {website_url}? "
-        "Return only the number of campuses, no other text. "
-        "No fabrication or guessing, just the number of campuses. "
-        "Only if the number of campuses is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the number of campuses is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_total_faculty_available(website_url, university_name):
-    prompt = (
-        f"What is the total number of faculty available for the university {university_name}, {website_url}? "
-        "Return only the total number of faculty available, no other text. "
-        "No fabrication or guessing, just the total number of faculty available. "
-        "Only if the total number of faculty available is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of faculty available is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_total_programs_available(website_url, university_name):
-    prompt = (
-        f"What is the total number of programs available for the university {university_name}, {website_url}? "
-        "Return only the total number of programs available, no other text. "
-        "No fabrication or guessing, just the total number of programs available. "
-        "Only if the total number of programs available is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of programs available is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_total_students_enrolled(website_url, university_name):
-    prompt = (
-        f"What is the total number of students enrolled in the university {university_name}, {website_url} till date? "
-        "Return only the total number of students enrolled, no other text. "
-        "No fabrication or guessing, just the total number of students enrolled. "
-        "Only if the total number of students enrolled is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of students enrolled is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_total_graduate_programs(website_url, university_name):
-    prompt = (
-        f"What is the total number of graduate programs offered by the university {university_name}, {website_url}? "
-        "Return only the total number of graduate programs, no other text. "
-        "No fabrication or guessing, just the total number of graduate programs. "
-        "Only if the total number of graduate programs is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of graduate programs is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_total_international_students(website_url, university_name):
-    prompt = (
-        f"What is the total number of international students currently enrolled in the university {university_name}, {website_url}? "
-        "Return only the total number of international students, no other text. "
-        "No fabrication or guessing, just the total number of international students. "
-        "Only if the total number of international students is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of international students is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_total_students(website_url, university_name):
-    prompt = (
-        f"What is the total number of students enrolled in the university {university_name}, {website_url}? "
-        "Return only the total number of students, no other text. "
-        "No fabrication or guessing, just the total number of students. "
-        "Only if the total number of students is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of students is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_total_undergrad_majors(website_url, university_name):
-    prompt = (
-        f"What is the total number of undergrad majors offered by the university {university_name}, {website_url}? "
-        "Return only the total number of undergrad majors, no other text. "
-        "No fabrication or guessing, just the total number of undergrad majors. "
-        "Only if the total number of undergrad majors is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of undergrad majors is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_countries_represented(website_url, university_name):
-    prompt = (
-        f"How many countries students are represented by the university {university_name}, {website_url}? "
-        "Return only the countries count, no other text. "
-        "No fabrication or guessing, just the countries represented. "
-        "Only if the countries represented is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the countries represented is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_street(website_url, university_name):
-    prompt = (
-        f"What is the street address for the university {university_name}, {website_url}? "
-        "Return only just the street address, no other text. do not return extra address like city, state, country etc."
-        "No fabrication or guessing, just the address. "
-        "Only if the address is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the address is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-
-
-def get_county(website_url, university_name):
-    prompt = (
-        f"What county is the university {university_name}, {website_url} located in? "
-        "Return only the county name, no other text. "
-        "No fabrication or guessing, just the county name. "
-        "Only if the county is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the county is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-
-def get_city(website_url, university_name):
-    prompt = (
-        f"What city is the university {university_name}, {website_url} located in? "
-        "Return only the city name, no other text. "
-        "No fabrication or guessing, just the city name. "
-        "Only if the city is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the city is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-
-def get_state(website_url, university_name):
-    prompt = (
-        f"What state is the university {university_name}, {website_url} located in? "
-        "Return only the state name, no other text. "
-        "No fabrication or guessing, just the state name. "
-        "Only if the state is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the state is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_country(website_url, university_name):
-    prompt = (
-        f"What country is the university {university_name}, {website_url} located in? "
-        "Return only the country name, no other text. "
-        "No fabrication or guessing, just the country name. "
-        "Only if the country is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the country is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_zip_code(website_url, university_name):
-    prompt = (
-        f"What is the zip code for the university {university_name}, {website_url}? "
-        "Return only the zip code, no other text. "
-        "No fabrication or guessing, just the zip code. "
-        "Only if the zip code is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the zip code is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_application_requirements(website_url, university_name):
-    prompt = (
-        f"What are the application requirements for the university {university_name}, {website_url}? "
-        "Return only the application requirements, no other text. "
-        "No fabrication or guessing, just the application requirements. "
-        "Only if the application requirements is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the application requirements is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_contact_information(website_url, university_name):
-    prompt = (
-        f"What is the contact information for the university {university_name}, {website_url}? "
-        "Return only the contact information, no other text. "
-        "No fabrication or guessing, just the contact information. "
-        "Only if the contact information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the contact information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-
-"""
-def get_grad_tuition(website_url, university_name, graduate_tuition_fee_urls=None, common_tuition_fee_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = graduate_tuition_fee_urls if graduate_tuition_fee_urls else (common_tuition_fee_urls if common_tuition_fee_urls else website_url)
-    prompt = (
-        f"What is the average graduate tuition for the university {university_name} at {url_to_use}? "
-        "Return only the graduate tuition, no other text. "
-        "No fabrication or guessing, just the graduate tuition. "
-        "Only if the graduate tuition is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the graduate tuition is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-"""
-
-def get_grad_international_students(website_url, university_name):
-    prompt = (
-        f"What is the number of graduate international students for the university {university_name}, {website_url}? "
-        "Return only the number of graduate international students, no other text. "
-        "No fabrication or guessing, just the number of graduate international students. "
-        "Only if the number of graduate international students is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the number of graduate international students is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_grad_scholarship_high(website_url, university_name, graduate_financial_aid_urls=None, common_financial_aid_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = graduate_financial_aid_urls if graduate_financial_aid_urls else (common_financial_aid_urls if common_financial_aid_urls else website_url)
-    prompt = (
-        f"What is the highest graduate scholarship for the university {university_name} at {url_to_use}? "
-        "Return only the highest graduate scholarship, no other text. "
-        "No fabrication or guessing, just the highest graduate scholarship. "
-        "Only if the highest graduate scholarship is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the highest graduate scholarship is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-#logopath is retrieved from Azure blob storage as it will be uploaded from the UI
-"""
-def get_logo_path(website_url, university_name):
-    prompt = (
-        f"What is the logo path or URL for the university {university_name}, {website_url}? "
-        "Return only the logo path or URL, no other text. "
-        "No fabrication or guessing, just the logo path. "
-        "Only if the logo path is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the logo path is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-"""
-
-def get_phone(website_url, university_name):
-    prompt = (
-        f"What is the main phone number for the university {university_name}, {website_url}? "
-        "Return only the phone number, no other text. "
-        "No fabrication or guessing, just the phone number. "
-        "Only if the phone number is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the phone number is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_email(website_url, university_name):
-    prompt = (
-        f"What is the main contact email address for the university {university_name}, {website_url}? "
-        " If there is no main contact email address, find the admissions email address."
-        "Return only the email address, no other text. "
-        "No fabrication or guessing, just the email address. "
-        "Only if the email address is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the email address is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_secondary_email(website_url, university_name):
-    prompt = (
-        f"What is the secondary email address for the university {university_name}, {website_url}? "
-        "Return only the secondary email address, no other text. "
-        "No fabrication or guessing, just the secondary email address. "
-        "Only if the secondary email address is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the secondary email address is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_website_url(website_url, university_name):
-    prompt = (
-        f"What is the official website URL for the university {university_name}, {website_url}? "
-        "Return only the website URL, no other text. "
-        "No fabrication or guessing, just the website URL. "
-        "Only if the website URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the website URL is explicitly stated."
-        "the return response should be http or https URL"
-    )
-    return generate_text_safe(prompt)
-
-def get_admission_office_url(website_url, university_name):
-    prompt = (
-        f"What is the admission office URL for the university {university_name}, {website_url}? "
-        "Return only the admission office URL, no other text. "
-        "No fabrication or guessing, just the admission office URL. "
-        "Only if the admission office URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the admission office URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_virtual_tour_url(website_url, university_name):
-    prompt = (
-        f"What is the virtual tour URL for the university {university_name}? "
-        "Identify the url that is routed to the virtual tour page of {university_name} and not to the home page of the website"
-        "Return only the virtual tour URL, no other text. "
-        "if the direct url to the virtual tour page is not found then return the url of the page where the virtual tour is mentioned"
-        "No fabrication or guessing, just the virtual tour URL. "
-        "Only if the virtual tour URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the virtual tour URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_financial_aid_url(website_url, university_name):
-    prompt = (
-        f"What is the financial aid URL for the university {university_name}, {website_url}? "
-        "Return only the financial aid URL, no other text. "
-        "No fabrication or guessing, just the financial aid URL. "
-        "Only if the financial aid URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the financial aid URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_application_fees(website_url, university_name):
-    prompt = (
-        f"Find the application fee for both domestic and international applicants for the university {university_name}, {website_url}? "
-        "Return a line of text with the application fee for both domestic and international applicants, no other text. " 
-        "Do not return the text like 'The application fee for graduate programs is not explicitly stated for domestic applicants on the university's website'. In this case just return what you find so far in the website. If you don't find something then don't explicitly mention in the return response."
-        "No fabrication or guessing, just the application fee for both domestic and international applicants."
-        "Example of the return response: 'The application fee for both domestic and international applicants is $amount. (or) The application fee for domestic applicants is $amount and for international applicants is $amount. '"
-        "Only if the application fees are explicitly stated in the website, otherwise return null. "
-        "Do not return [Cite] in the return response."
-        "Only refer the {website_url} or the {university_name}.edu or it's sub domains or it's pages to find the application fees."
-        "Do not refer any other third party websites to find the application fees."
-        "Also provide the evidence for your answer with correct URL or page where the application fees are explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_test_policy(website_url, university_name):
-    prompt = (
-        f"Is {university_name} a test optional university? {website_url}? "
-        "If ACT/SAT  scores submission is optional for the university, return 'Test Optional'. "
-        "If ACT/SAT  scores submission is required for the university, return 'Test Required'. "
-        "Return only the test policy, no other text. "
-        "No fabrication or guessing, just a short line of text not a long paragraph. "
-        "Do not return [Cite] in the return response."
-        "The answers should be either 'Test Optional' or 'Test Required'"
-        "Only return the test policy if it is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the test policy is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-"""
-def get_courses_and_grades(website_url, university_name):
-    prompt = (
-        f"What are the courses and grades requirements for the university {university_name}, {website_url}? "
-        "Return only the courses and grades requirements, no other text. "
-        "No fabrication or guessing, just the courses and grades requirements. "
-        "Only return the courses and grades requirements if they are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the courses and grades requirements are explicitly stated."
-    )
-    return generate_text_safe(prompt)
-"""
-
-def get_recommendations(website_url, university_name):
-    url_to_use = get_international_students_requirements_url(website_url, university_name)
-    prompt = (
-        f"How many letter of recommendations are required to apply for both undergraduate and graduate programs for the university {university_name}, {url_to_use}? "
-        "Return only the count of letter of recommendations required, no other text. "
-        "Go through the application requirements  using the {url_to_use} to find the count of letter of recommendations required. "
-        "If the count is different for undergraduate and graduate programs, just return the count of letter of recommendations required for graduate programs. "
-        "No fabrication or guessing, just the count of letter of recommendations required. "
-        "Do not return [Cite] in the return response."
-        "Example: 2, 3, 4, etc. "
-        "Only return the count of letter of recommendations required if they are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the count of letter of recommendations required are explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_personal_essay(website_url, university_name):
-    prompt = (
-        f"Investigate the undergraduate admissions requirements for {university_name} at {website_url}. "
-        "I am looking specifically for 'Personal Essays' or 'Personal Statements'.\n\n"
-        "Return only  Required or Not Required or null. "
-        "No fabrication or guessing, just the personal essay requirements. "
-        "Only if the personal essay requirements are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the personal essay requirements are explicitly stated."
-        "Critical: Except Required or Not Required or null, do not return any other text."
-       
-    )
-    return generate_text_safe(prompt)
-
-def get_writing_sample(website_url, university_name):
-    prompt = (
-        f"Does applying to the university {university_name}, {website_url} require a writing sample to submit as part of the application? "
-        "If yes, return Required. if not, return Not Required. no extra text "
-        "No fabrication or guessing, just the writing sample requirements. "
-        "Only if the writing sample requirements are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the writing sample requirements are explicitly stated."
-        "Critical: Except Required or Not Required or null, do not return any other text."
-    )
-    return generate_text_safe(prompt)
-
-"""
-def get_additional_information(website_url, university_name):
-    prompt = (
-        f"Is there any additional information required to apply to the university {university_name}, {website_url}? "
-        "If yes, return a short line of text about the additional information requirements. if not, return null. no extra text "
-        "No fabrication or guessing, just the additional information requirements. "
-        "Only if the additional information requirements are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the additional information requirements are explicitly stated."
-    )
-    return generate_text_safe(prompt)
-"""
-def get_additional_deadlines(website_url, university_name):
-    prompt = (
-        f"Context: Researching {university_name} using {website_url}.\n"
-        "Task: Identify specific non-application deadlines (scholarships, financial aid, housing, etc.).\n\n"
-        "Constraint 1: Use ONLY information explicitly stated on the provided website. Do not use external knowledge.\n"
-        "Constraint 2: If no specific dates are found, return exactly the word 'null' and nothing else.\n"
-        "Constraint 3: Do not provide introductory text, explanations, or conversational fillers.\n\n"
-        "Format your response exactly as follows:\n"
-        "[Additional Deadlines] [Deadline Name]: [Date], [Deadline Name]: [Date]\n"
-        "[Source URL] [Direct link to the page containing these dates]\n\n"
-        "If no dates found, return: null"
-    )
-    return generate_text_safe(prompt)
-
-def get_is_multiple_applications_allowed(website_url, university_name):
-    requirements_url = get_international_students_requirements_url(website_url, university_name)
-    
-    prompt = (
-        f"Context: {university_name} application policy ({website_url}, {requirements_url}).\n\n"
-        "Task: Determine if an applicant can apply to more than one program for the same term.\n\n"
-        "Return ONLY a valid JSON object. Do not include any other text, markdown formatting, or explanations.\n"
-        "If the information is not explicitly found, return the JSON with null values.\n\n"
-        "JSON Schema:\n"
-        "{\n"
-        "  \"allowed\": boolean or null,\n"
-        "  \"restrictions\": \"string or null\",\n"
-        "  \"evidence_url\": \"string or null\",\n"
-        "  \"quote\": \"string or null\"\n"
-        "}\n\n"
-        "Constraint: The 'allowed' field must be true, false, or null based on the evidence."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_act_required(website_url, university_name):
-    prompt = (
-        f"Is ACT scorerequired for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_analytical_not_required(website_url, university_name):
-    prompt = (
-        f"Is analytical writing not required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_analytical_optional(website_url, university_name):
-    prompt = (
-        f"Is analytical writing optional for the university {university_name}, {website_url}? "
-        "Check through the website or its pages to find the answer. "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_duolingo_required(website_url, university_name):
-    prompt = (
-        f"Is Duolingo required for the university {university_name}, {website_url}? "
-        "Check through the website or its pages to find the answer. "
-        "Does international students need to take Duolingo?"
-        "If the website explicitly states that the university does not require Duolingo, return 'False'. "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_els_required(website_url, university_name):
-    prompt = (
-        f"Is ELS required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_english_not_required(website_url, university_name):
-    prompt = (
-        f"Is English proficiency not required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_english_optional(website_url, university_name):
-    prompt = (
-        f"Is English proficiency test optional for the university {university_name}, {website_url}? "
-        "if the website explicitly states the international student does not need to take English proficiency test, return 'True'. "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_gmat_or_gre_required(website_url, university_name):
-    prompt = (
-        f"Is GMAT or GRE required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_gmat_required(website_url, university_name):
-    prompt = (
-        f"Is GMAT required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_gre_required(website_url, university_name):
-    prompt = (
-        f"Is GRE score required for the university {university_name}, {website_url} to apply for any program for the international students? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_ielts_required(website_url, university_name):
-    prompt = (
-        f"Is IELTS score required for the university {university_name}, {website_url} to apply for any program for the international students? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_lsat_required(website_url, university_name):
-    prompt = (
-        f"Is LSAT scores are required to apply for the law school programs at the university {university_name}, {website_url}? "
-        "If LSAT is mandatory then return 'True' otherwise return 'False'. "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_mat_required(website_url, university_name):
-    prompt = (
-        f"Context: Investigating graduate admission requirements for {university_name} using {website_url}.\n\n"
-        "Task: Check if the Miller Analogies Test (MAT) is still listed as a requirement for any program.\n"
-        "Note: The MAT was retired in late 2023. Look for whether the school explicitly accepts old scores or has replaced the requirement.\n\n"
-        "Return ONLY a valid JSON object with the following keys:\n"
-        "{\n"
-        "  \"Allowed\": boolean or null,\n"
-        "  \"status\": \"string (e.g., 'Required', 'Optional', 'Retired/No longer accepted', or 'null')\",\n"
-        "  \"evidence_url\": \"string (The exact URL where this is mentioned)\",\n"
-        "  \"quote\": \"string (The specific text from the site)\"\n"
-        "}\n\n"
-        "Constraint: If the information is missing or the site only mentions GRE/GMAT, set is_required to false and status to 'null'. Do not guess."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_mcat_required(website_url, university_name):
-    prompt = (
-        f"Is MCAT required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_pte_required(website_url, university_name):
-    prompt = (
-        f"Is PTE required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_sat_required(website_url, university_name):
-    prompt = (
-        f"Is SAT required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_is_toefl_ib_required(website_url, university_name):
-    prompt = (
-        f"Is TOEFL iBT required for the university {university_name}, {website_url}? "
-        "Return only 'True' or 'False', no other text. "
-        "No fabrication or guessing, just True or False. "
-        "Only if this information is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where this information is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_tuition_fees(website_url, university_name):
-    # Use common URL if provided, else use website_url
-
-    tuition_fee_url = get_tuition_fee_url(website_url, university_name)
-    prompt = (
-        f"Look for the tuition fees for the university {university_name} at {tuition_fee_url}. "
-        "Please find the tuition fee for semester or year according to the website for the for both the undergraduate and graduate programs. "
-        "The answer should be like this: 'Undergraduate (Full-Time): ~$7,438 per year (Resident), ~$19,318 (Non-Resident/Supplemental Tuition).Graduate (Full-Time): ~$8,872 per year (Resident), ~$18,952 (Non-Resident/Supplemental Tuition).' "
-        "Return exactly how the above format is. "
-        "Find for both the Graduate and Undergraduate tuition fees. "
-        "No fabrication or guessing, just the answer you find in the website. or it's pages. "
-        "Only if the tuition fees are explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the tuition fees are explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_facebook(website_url, university_name):
-    prompt = (
-        f"What is the Facebook URL for the university {university_name}, {website_url}? "
-        "Return only the Facebook URL, no other text. "
-        "No fabrication or guessing, just the Facebook URL. "
-        "Only if the Facebook URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the Facebook URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_instagram(website_url, university_name):
-    prompt = (
-        f"What is the Instagram URL for the university {university_name}, {website_url}? "
-        "Return only the Instagram URL, no other text. "
-        "No fabrication or guessing, just the Instagram URL. "
-        "Only if the Instagram URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the Instagram URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_twitter(website_url, university_name):
-    prompt = (
-        f"What is the Twitter URL for the university {university_name}, {website_url}? "
-        "Return only the Twitter URL, no other text. "
-        "No fabrication or guessing, just the Twitter URL. "
-        "Only if the Twitter URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the Twitter URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_youtube(website_url, university_name):
-    prompt = (
-        f"What is the YouTube URL for the university {university_name}, {website_url}? "
-        "Return only the YouTube URL, no other text. "
-        "No fabrication or guessing, just the YouTube URL. "
-        "Only if the YouTube URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the YouTube URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_tiktok(website_url, university_name):
-    prompt = (
-        f"What is the TikTok URL for the university {university_name}, {website_url}? "
-        "Return only the TikTok URL, no other text. "
-        "No fabrication or guessing, just the TikTok URL. "
-        "Only if the TikTok URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the TikTok URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_linkedin(website_url, university_name):
-    prompt = (
-        f"What is the LinkedIn URL for the university {university_name}, {website_url}? "
-        "Return only the LinkedIn URL, no other text. "
-        "No fabrication or guessing, just the LinkedIn URL. "
-        "Only if the LinkedIn URL is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the LinkedIn URL is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_grad_avg_tuition(website_url, university_name, graduate_tuition_fee_urls=None, common_tuition_fee_urls=None):
-    # Establish a hierarchy of URLs to check
-    coa_url = get_cost_of_attendance_url(website_url, university_name)
-    url_to_use = coa_url or graduate_tuition_fee_urls or common_tuition_fee_urls or website_url
-    
-    prompt = (
-        f"Identify the average annual graduate tuition for {university_name} using this source: {url_to_use}. "
-        "\n\nInstructions:"
-        "\n1. Look for 'Base Graduate Tuition', 'Standard Graduate Rate', or 'Master's/PhD Tuition'."
-        "\n2. If different rates exist, prioritize the 'Out-of-State' or 'Non-Resident' annual rate for a full-time student."
-        "\n3. If only a 'per credit hour' rate is found, multiply it by 18 (the standard annual full-time load) and provide that total."
-        "\n4. Do NOT include 'Cost of Attendance' (which includes housing/food). Return ONLY the tuition portion."
-        "\n\nStrict Output Format:"
-        "\nLine 1: Return ONLY the numerical value with currency symbol (e.g., $15,400). If not found, return 'null'."
-        "\nLine 2: Evidence: <URL to the specific tuition table> or the text snippet where the value is found"
-        "\n\nConstraint: No guessing. If the page lists 10 different rates for 10 different programs and no 'base' rate, then  find the average of all the rates and provide that total."
-        "\n\n Follow the same instructions as above and provide the answer in the same format.")
-    return generate_text_safe(prompt)
-
-def get_grad_scholarship_low(website_url, university_name, graduate_financial_aid_urls=None, common_financial_aid_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = graduate_financial_aid_urls if graduate_financial_aid_urls else (common_financial_aid_urls if common_financial_aid_urls else website_url)
-    prompt = (
-        f"What is the lowest graduate scholarship for the university {university_name} at {url_to_use}? "
-        "Return only the lowest graduate scholarship, no other text. "
-        "No fabrication or guessing, just the lowest graduate scholarship. "
-        "Only if the lowest graduate scholarship is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the lowest graduate scholarship is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_grad_total_students(website_url, university_name):
-    prompt = (
-        f"What is the total number of graduate students at the university {university_name}, {website_url}? "
-        "Return only the total number of graduate students, no other text. "
-        "No fabrication or guessing, just the total number of graduate students. "
-        "Only if the total number of graduate students is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of graduate students is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_ug_avg_tuition(website_url, university_name, undergraduate_tuition_fee_urls=None, common_tuition_fee_urls=None):
-    # Establish a hierarchy of URLs to check
-    coa_url = get_cost_of_attendance_url(website_url, university_name)
-    url_to_use = coa_url or undergraduate_tuition_fee_urls or common_tuition_fee_urls or website_url
-    prompt = (  
-        f"Identify the average annual undergraduate tuition for {university_name} using this source: {url_to_use}. "
-        "\n\nInstructions:"
-        "\n1. Look for 'Base Undergraduate Tuition', 'Standard Undergraduate Rate', or 'Bachelor's Tuition'."
-        "\n2. If different rates exist, prioritize the 'Out-of-State' or 'Non-Resident' annual rate for a full-time student."
-        "\n3. If only a 'per credit hour' rate is found, multiply it by 30 (the standard annual full-time load) and provide that total."
-        "\n4. Do NOT include 'Cost of Attendance' (which includes housing/food). Return ONLY the tuition portion."
-        "\n\nStrict Output Format:"
-        "\nLine 1: Return ONLY the numerical value with currency symbol (e.g., $15,400). If not found, return 'null'."
-        "\nLine 2: Evidence: <URL to the specific tuition table> or the text snippet where the value is found"
-        "\n\nConstraint: No guessing. If the page lists 10 different rates for 10 different programs and no 'base' rate, then  find the average of all the rates and provide that total."
-        "\n\n Follow the same instructions as above and provide the answer in the same format."
-    )
-
-    return generate_text_safe(prompt)
-
-def get_ug_international_students(website_url, university_name):
-    prompt = (
-        f"What is the number of undergraduate international students for the university {university_name}, {website_url}? "
-        "Return only the number of undergraduate international students, no other text. "
-        "No fabrication or guessing, just the number of undergraduate international students. "
-        "Only if the number of undergraduate international students is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the number of undergraduate international students is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_ug_scholarship_high(website_url, university_name, undergraduate_financial_aid_urls=None, common_financial_aid_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = undergraduate_financial_aid_urls if undergraduate_financial_aid_urls else (common_financial_aid_urls if common_financial_aid_urls else website_url)
-    prompt = (
-        f"What is the highest undergraduate scholarship for the university {university_name} at {url_to_use}? "
-        "Return only the highest undergraduate scholarship, no other text. "
-        "The value can be in percentage or amount. "
-        "No fabrication or guessing, just the highest undergraduate scholarship. "
-        "Only if the highest undergraduate scholarship is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the highest undergraduate scholarship is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_ug_scholarship_low(website_url, university_name, undergraduate_financial_aid_urls=None, common_financial_aid_urls=None):
-    # Use specific URL if provided, else use common URL, else use website_url
-    url_to_use = undergraduate_financial_aid_urls if undergraduate_financial_aid_urls else (common_financial_aid_urls if common_financial_aid_urls else website_url)
-    prompt = (
-        f"What is the lowest scholarship that can be awarded to undergraduate students at the university {university_name} at {url_to_use}? "
-        "The value can be in percentage or amount. "
-        "Return only the lowest undergraduate scholarship, no other text. "
-        "No fabrication or guessing, just the lowest undergraduate scholarship. "
-        "Only if the lowest undergraduate scholarship is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the lowest undergraduate scholarship is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_ug_total_students(website_url, university_name):
-    prompt = (
-        f"What is the total number of undergraduate students at the university {university_name}, {website_url}? "
-        "Return only the total number of undergraduate students, no other text. "
-        "No fabrication or guessing, just the total number of undergraduate students. "
-        "Only if the total number of undergraduate students is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the total number of undergraduate students is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def get_term_format(website_url, university_name):
-    academic_calender_url = get_academic_calender_url(website_url, university_name)
-    print(f"Academic Calendar URL: {academic_calender_url}")
-    # Use the specific calendar URL if found, otherwise fall back to the main site
-    search_context = academic_calender_url if academic_calender_url else website_url
-
-    prompt = (
-        f"Identify the academic calendar system (term format) for {university_name} using this source: {search_context}. "
-        "Look for whether the school operates on a Semester, Quarter, or Trimester system. "
-        "\n\nStrict Output Instructions:"
-        "\n1. Return ONLY the single word: 'Semester', 'Quarter', 'Trimester', or 'null'."
-        "\n2. Do not include sentences, introductory text, or explanations."
-        "\n3. After the single word, on a new line, provide the URL used as 'Evidence: <URL>'."
-        "\n\nSearch guidance: Focus on terms like 'Academic Calendar', 'Credit Hours', or 'Term System'."
-    )
-    return generate_text_safe(prompt)
-
-def get_introduction(website_url, university_name):
-    prompt = (
-        f"Find 2-3 paragraphs of introduction for {university_name} at {website_url}? "
-        "The introduction should be about the university, its history, mission, vision, and values. "
-        "Return only the introduction, no other text. "
-        "No fabrication or guessing, just the introduction. "
-        "Only if the introduction is explicitly stated in the website, otherwise return null. "
-        "Also provide the evidence for your answer with correct URL or page where the introduction is explicitly stated."
-    )
-    return generate_text_safe(prompt)
-
-def process_institution_extraction(
-    university_name, 
-    undergraduate_tuition_fee_urls=None, 
-    graduate_tuition_fee_urls=None, 
-    undergraduate_financial_aid_urls=None, 
-    graduate_financial_aid_urls=None,
-    common_financial_aid_urls=None,
-    common_tuition_fee_urls=None
-):
-    print(f"Processing {university_name}...")
-    yield '{"status": "progress", "message": "Initializing extraction..."}'
-    
-    # 1. Get Website URL
-    yield f'{{"status": "progress", "message": "Finding official website for {university_name}..."}}'
-    prompt = f"What is the official university website for {university_name}?"
-    website_url = generate_text_safe(prompt)
-    print(f"Found Website URL: {website_url}")
-    # 2. Get Tuition Fee URL
-    yield f'{{"status": "progress", "message": "Finding tuition fee URL for {university_name}..."}}'
-    # Use AI to find the tuition fee URLs
-    ai_found_tuition_url = get_tuition_fee_url(website_url, university_name)
-    
-    print(f"Found Tuition Fee URL: {ai_found_tuition_url}")
-
-    # New fields at the top
-    yield '{"status": "progress", "message": "Extracting general information..."}'
-    new_fields_data = {
-        "womens_college": get_womens_college(website_url, university_name),
-        "cost_of_living_min": get_cost_of_living_min(website_url, university_name),
-        "cost_of_living_max": get_cost_of_living_max(website_url, university_name),
-        "orientation_available": get_orientation_available(website_url, university_name),
-        "college_tour_after_admissions": get_college_tour_after_admissions(website_url, university_name),
-        "term_format": get_term_format(website_url, university_name),
-        "introduction": get_introduction(website_url, university_name),
-    }
-
-    yield '{"status": "progress", "message": "Extracting application requirements..."}'
-    application_data = {
-        "application_requirements": get_application_requirements(website_url, university_name),
-        "application_fees": get_application_fees(website_url, university_name),
-        "test_policy": get_test_policy(website_url, university_name),
-        "courses_and_grades": None,
-        "recommendations": get_recommendations(website_url, university_name),
-        "personal_essay": get_personal_essay(website_url, university_name),
-        "writing_sample": get_writing_sample(website_url, university_name),
-        "additional_information": None,
-        "additional_deadlines": get_additional_deadlines(website_url, university_name),
-        "tuition_fees": get_tuition_fees(website_url, university_name),
-    }
-    yield '{{ "status": "progress", "tuition_fees": "{tuition_fees}" }}'.format(tuition_fees=application_data["tuition_fees"])
-
-
-    yield '{"status": "progress", "message": "Extracting university metrics..."}'
-    university_data = {
-        "university_name": get_university_name(website_url, university_name),
-        "college_setting": get_college_setting(website_url, university_name),
-        "type_of_institution": get_type_of_institution(website_url, university_name),
-        "student_faculty": get_student_faculty(website_url, university_name),
-        "number_of_campuses": get_number_of_campuses(website_url, university_name),
-        "total_faculty_available": get_total_faculty_available(website_url, university_name),
-        "total_programs_available": get_total_programs_available(website_url, university_name),
-        "total_students_enrolled": get_total_students_enrolled(website_url, university_name),
-        "total_graduate_programs": get_total_graduate_programs(website_url, university_name),
-        "total_international_students": get_total_international_students(website_url, university_name),
-        "total_students": get_total_students(website_url, university_name),
-        "total_undergrad_majors": get_total_undergrad_majors(website_url, university_name),
-        "countries_represented": get_countries_represented(website_url, university_name),
-    }
-
-    yield '{"status": "progress", "message": "Extracting address details..."}'
-    address_data = {
-        "street1": get_street(website_url, university_name),
-        "street2": None,  # This would need a separate function if needed
-        "county": get_county(website_url, university_name),
-        "city": get_city(website_url, university_name),
-        "state": get_state(website_url, university_name),
-        "country": get_country(website_url, university_name),
-        "zip_code": get_zip_code(website_url, university_name),
-    }
-
-    
-    yield '{"status": "progress", "message": "Extracting contact information..."}'
-    contact_data = {
-        "contact_information": get_contact_information(website_url, university_name),
-        "logo_path": None,
-        "phone": get_phone(website_url, university_name),
-        "email": get_email(website_url, university_name),
-        "secondary_email": get_secondary_email(website_url, university_name),
-        "website_url": get_website_url(website_url, university_name),
-        "admission_office_url": get_admission_office_url(website_url, university_name),
-        "virtual_tour_url": get_virtual_tour_url(website_url, university_name),
-        "financial_aid_url": get_financial_aid_url(website_url, university_name),
-    }
-
-    yield '{"status": "progress", "message": "Extracting social media links..."}'
-    social_media_data = {
-        "facebook": get_facebook(website_url, university_name),
-        "instagram": get_instagram(website_url, university_name),
-        "twitter": get_twitter(website_url, university_name),
-        "youtube": get_youtube(website_url, university_name),
-        "tiktok": get_tiktok(website_url, university_name),
-        "linkedin": get_linkedin(website_url, university_name),
-    }
-
-    yield '{"status": "progress", "message": "Extracting student statistics..."}'
-    student_statistics_data = {
-        "grad_avg_tuition": get_grad_avg_tuition(website_url, university_name, ai_found_tuition_url, common_tuition_fee_urls),
-        "grad_international_students": get_grad_international_students(website_url, university_name),
-        "grad_scholarship_high": get_grad_scholarship_high(website_url, university_name, graduate_financial_aid_urls, common_financial_aid_urls),
-        "grad_scholarship_low": get_grad_scholarship_low(website_url, university_name, graduate_financial_aid_urls, common_financial_aid_urls),
-        "grad_total_students": get_grad_total_students(website_url, university_name),
-        "ug_avg_tuition": get_ug_avg_tuition(website_url, university_name, ai_found_tuition_url, common_tuition_fee_urls),
-        "ug_international_students": get_ug_international_students(website_url, university_name),
-        "ug_scholarship_high": get_ug_scholarship_high(website_url, university_name, undergraduate_financial_aid_urls, common_financial_aid_urls),
-        "ug_scholarship_low": get_ug_scholarship_low(website_url, university_name, undergraduate_financial_aid_urls, common_financial_aid_urls),
-        "ug_total_students": get_ug_total_students(website_url, university_name),
-    }
-
-    yield '{"status": "progress", "message": "Finalizing data..."}'
-    raw_multiple = get_is_multiple_applications_allowed(website_url, university_name)
-    raw_mat = get_is_mat_required(website_url, university_name)
-    
-    # Handle multiple applications parsing with error handling
-    try:
-        clean_multiple = raw_multiple.strip('`').replace('json', '').strip()
-        if clean_multiple:
-            data_multiple = json.loads(clean_multiple)
-            value = str(data_multiple.get("allowed", "None"))
-        else:
-            value = "None"
-    except (json.JSONDecodeError, AttributeError, Exception) as e:
-        print(f"Error parsing multiple applications data: {e}")
-        value = "None"
-
-
-    # Handle MAT requirement parsing with error handling
-    try:
-        clean_mat = raw_mat.strip('`').replace('json', '').strip()
-        if clean_mat:
-            data_mat = json.loads(clean_mat)
-            mat_value = str(data_mat.get("Allowed", "None")) if data_mat else "None"
-        else:
-            mat_value = "None"
-    except (json.JSONDecodeError, AttributeError, Exception) as e:
-        print(f"Error parsing MAT requirement data: {e}")
-        mat_value = "None"
-    boolean_fields_data = {
-        "is_additional_information_available": "FALSE", 
-        "is_multiple_applications_allowed": value,
-        "is_act_required": get_is_act_required(website_url, university_name),
-        "is_analytical_not_required": get_is_analytical_not_required(website_url, university_name),
-        "is_analytical_optional": get_is_analytical_optional(website_url, university_name),
-        "is_duolingo_required": get_is_duolingo_required(website_url, university_name),
-        "is_els_required": get_is_els_required(website_url, university_name),
-        "is_english_not_required": get_is_english_not_required(website_url, university_name),
-        "is_english_optional": get_is_english_optional(website_url, university_name),
-        "is_gmat_or_gre_required": get_is_gmat_or_gre_required(website_url, university_name),
-        "is_gmat_required": get_is_gmat_required(website_url, university_name),
-        "is_gre_required": get_is_gre_required(website_url, university_name),
-        "is_ielts_required": get_is_ielts_required(website_url, university_name),
-        "is_lsat_required": str(get_is_lsat_required(website_url, university_name)),
-        "is_mat_required": mat_value,
-        "is_mcat_required": get_is_mcat_required(website_url, university_name),
-        "is_pte_required": get_is_pte_required(website_url, university_name),
-        "is_sat_required": get_is_sat_required(website_url, university_name),
-        "is_toefl_ib_required": get_is_toefl_ib_required(website_url, university_name),
-        "is_import_verified": "FALSE",
-        "is_imported": None,
-        "is_enrolled": "FALSE",
-    }
-
-    #combine the data into one dict
-    all_data = {
-        "new_fields_data": new_fields_data,
-        "university_data": university_data,
-        "address_data": address_data,
-        "application_data": application_data,
-        "contact_data": contact_data,
-        "social_media_data": social_media_data,
-        "student_statistics_data": student_statistics_data,
-        "boolean_fields_data": boolean_fields_data,
-    }
-
-    # Merge all dictionaries into one flat dictionary (without nesting) for CSV/Excel
-    merged_data = {}
-    merged_data.update(new_fields_data)
-    merged_data.update(university_data)
-    merged_data.update(address_data)
-    merged_data.update(application_data)
-    merged_data.update(contact_data)
-    merged_data.update(social_media_data)
-    merged_data.update(student_statistics_data)
-    merged_data.update(boolean_fields_data)
-
-    # Clean the values (remove evidence, URLs, etc.)
-    def clean_data_values(data_dict):
-        """
-        Cleans values in a dictionary using extract_clean_value.
-        Returns a dict with cleaned values (no evidence, URLs, or extra text).
-        """
-        cleaned = {}
-        for k, v in data_dict.items():
-            if isinstance(v, str):
-                cleaned[k] = extract_clean_value(v)
+    for k in schema_keys:
+        if k not in result:
+            result[k] = ""
+
+    # Coerce int-typed fields: strip any text/symbols the LLM may have returned, convert 0 to empty string
+    for k, field in model_class.model_fields.items():
+        if field.annotation is int:
+            if isinstance(result.get(k), str):
+                digits = re.sub(r'[^\d]', '', result[k])
+                val = int(digits) if digits else 0
             else:
-                cleaned[k] = v
-        return cleaned
+                val = result.get(k)
+            # If the value is 0, keep it blank as requested
+            result[k] = "" if val == 0 else val
+            
+        # Coerce bool-typed fields: default to False if missing or not an explicit True
+        elif field.annotation is bool:
+            val = result.get(k)
+            if isinstance(val, str):
+                result[k] = val.strip().lower() == "true"
+            elif isinstance(val, bool):
+                result[k] = val
+            else:
+                result[k] = False
+                
+        # Clean up string fields: remove trailing periods
+        elif field.annotation is str:
+            val = result.get(k)
+            if isinstance(val, str):
+                # Remove trailing periods
+                result[k] = val.rstrip('.')
 
-    flat_data = clean_data_values(merged_data)
+    # Strip waiver/conditional text from ApplicationFees (e.g. "but may be waived for...")
+    if "ApplicationFees" in result and isinstance(result["ApplicationFees"], str):
+        fee = result["ApplicationFees"]
+        # Cut off at common conjunctions that introduce waiver conditions
+        fee = re.split(r',?\s*\b(but|however|though|unless|except|although)\b', fee, flags=re.IGNORECASE)[0]
+        # Also remove any remaining waiver-related trailing phrases
+        fee = re.sub(r'\s*(may be waived|fee waiv\w*|waiv\w+).*', '', fee, flags=re.IGNORECASE)
+        result["ApplicationFees"] = fee.strip().rstrip(',;.')
 
-    # Define new fields that should be at the end
-    new_fields_list = list(new_fields_data.keys())
+    return _strip_citations(result)
 
-    # Create ordered column list: university_name first, then others (excluding new fields), then new fields at end
-    ordered_columns = []
-    if 'university_name' in flat_data:
-        ordered_columns.append('university_name')
 
-    # Add all other columns except university_name and new fields
-    for key in flat_data.keys():
-        if key != 'university_name' and key not in new_fields_list:
-            ordered_columns.append(key)
-
-    # Add new fields at the end
-    for key in new_fields_list:
-        if key in flat_data:
-            ordered_columns.append(key)
-
-    # Sanitize university name for filename (replace spaces with underscores, remove special characters)
-    safe_university_name = university_name.replace(" ", "_").replace("/", "_").replace("\\", "_")
-
-    def rename_columns(df, flat_data):
-        """
-        Rename columns to match final required column names and ensure all required columns are present.
-        Missing columns will be added as empty.
-        """
-        # Mapping from current column names to final column names
-        column_mapping = {
-            'university_name': 'CollegeName',
-            'college_setting': 'CollegeSetting',
-            'type_of_institution': 'InstitutionType',
-            'student_faculty': 'Student_Faculty',
-            'number_of_campuses': 'NumberOfCampuses',
-            'total_faculty_available': 'TotalFacultyAvailable',
-            'total_programs_available': 'TotalProgramsAvailable',
-            'total_students_enrolled': 'TotalStudentsEnrolled',
-            'total_graduate_programs': 'TotalGraduatePrograms',
-            'total_international_students': 'TotalInternationalStudents',
-            'total_students': 'TotalStudents',
-            'total_undergrad_majors': 'TotalUndergradMajors',
-            'countries_represented': 'CountriesRepresented',
-            'street1': 'Street1',
-            'street2': 'Street2',
-            'county': 'County',
-            'city': 'City',
-            'state': 'State',
-            'country': 'Country',
-            'zip_code': 'ZipCode',
-            'application_fees': 'ApplicationFees',
-            'test_policy': 'TestPolicy',
-            'courses_and_grades': 'CoursesAndGrades',
-            'recommendations': 'Recommendations',
-            'personal_essay': 'PersonalEssay',
-            'writing_sample': 'WritingSample',
-            'additional_information': 'AdditionalInformation',
-            'additional_deadlines': 'AdditionalDeadlines',
-            'tuition_fees': 'TuitionFees',
-            'logo_path': 'LogoPath',
-            'phone': 'Phone',
-            'email': 'Email',
-            'secondary_email': 'SecondaryEmail',
-            'website_url': 'WebsiteUrl',
-            'admission_office_url': 'AdmissionOfficeUrl',
-            'virtual_tour_url': 'VirtualTourUrl',
-            'financial_aid_url': 'FinancialAidUrl',
-            'facebook': 'Facebook',
-            'instagram': 'Instagram',
-            'twitter': 'Twitter',
-            'youtube': 'Youtube',
-            'tiktok': 'Tiktok',
-            'linkedin': 'LinkedIn',
-            'introduction': 'Introduction',
-            'grad_avg_tuition': 'GradAvgTuition',
-            'grad_international_students': 'GradInternationalStudents',
-            'grad_scholarship_high': 'GradScholarshipHigh',
-            'grad_scholarship_low': 'GradScholarshipLow',
-            'grad_total_students': 'GradTotalStudents',
-            'ug_avg_tuition': 'UGAvgTuition',
-            'ug_international_students': 'UGInternationalStudents',
-            'ug_scholarship_high': 'UGScholarshipHigh',
-            'ug_scholarship_low': 'UGScholarshipLow',
-            'ug_total_students': 'UGTotalStudents',
-            'is_additional_information_available': 'IsAdditionalInformationAvailable',
-            'is_multiple_applications_allowed': 'IsMultipleApplicationsAllowed',
-            'is_act_required': 'IsACTRequired',
-            'is_analytical_not_required': 'IsAnalyticalNotRequired',
-            'is_analytical_optional': 'IsAnalyticalOptional',
-            'is_duolingo_required': 'IsDuoLingoRequired',
-            'is_els_required': 'IsELSRequired',
-            'is_english_not_required': 'IsEnglishNotRequired',
-            'is_english_optional': 'IsEnglishOptional',
-            'is_gmat_or_gre_required': 'IsGMATOrGreRequired',
-            'is_gmat_required': 'IsGMATRequired',
-            'is_gre_required': 'IsGRERequired',
-            'is_ielts_required': 'IsIELTSRequired',
-            'is_lsat_required': 'IsLSATRequired',
-            'is_mat_required': 'IsMATRequired',
-            'is_mcat_required': 'IsMCATRequired',
-            'is_pte_required': 'IsPTERequired',
-            'is_sat_required': 'IsSATRequired',
-            'is_toefl_ib_required': 'IsTOEFLIBRequired',
-            'is_import_verified': 'IsImportVerified',
-            'is_imported': 'IsImported',
-            'is_enrolled': 'IsEnrolled',
-            'term_format': 'TermFormat',
-        }
+def get_university_comprehensive_data(university_name: str) -> dict:
+    """
+    Fetches ALL fields for a university by breaking down the extraction into 8 focused
+    Pydantic schemas to ensure LLM accuracy and prevent hallucination.
+    """
+    exact_name, url = _get_ground_truth(university_name)
+    
+    # We define the sequence of LLM extraction models
+    models_to_extract = [
+        ApplicationRequirements, 
+        StandardizedTests, 
+        EnglishTests, 
+        UniversityMetadata, 
+        RankingAndCampus, 
+        StudentDemographics, 
+        TuitionAndScholarships, 
+        SpecificEnrollment
+    ]
+    
+    unified_result = {"CollegeName": exact_name}
+    
+    # Iterate through each mini-model and strictly extract its 6-8 fields
+    # Due to LLM speed limits, this will execute queries sequentially
+    for model in models_to_extract:
+        print(f"[1/2] Finding target URL for {model.__name__}...")
+        model_data = _extract_model_data(model, exact_name, url)
+        print(f"[2/2] Extracted {model.__name__} ✓")
+        unified_result.update(model_data)
         
-        # All required final column names
-        final_columns = [
-            'CollegeName', 'CollegeCode', 'LogoPath', 'Phone', 'Email', 'SecondaryEmail',
-            'Street1', 'Street2', 'County', 'City', 'State', 'Country', 'ZipCode', 'WebsiteUrl',
-            'AdmissionOfficeUrl', 'VirtualTourUrl', 'Facebook', 'Instagram', 'Twitter', 'Youtube',
-            'Tiktok', 'ApplicationFees', 'TestPolicy', 'CoursesAndGrades', 'Recommendations',
-            'PersonalEssay', 'WritingSample', 'FinancialAidUrl', 'AdditionalInformation',
-            'AdditionalDeadlines', 'IsAdditionalInformationAvailable', 'Status',
-            'IsMultipleApplicationsAllowed', 'MaximumApplicationsAllowed', 'CreatedBy',
-            'CreatedDate', 'LiveDate', 'TuitionFees', 'UpdatedBy', 'UpdatedDate', 'CountryCode',
-            'LinkedIn', 'IsACTRequired', 'IsAnalyticalNotRequired', 'IsAnalyticalOptional',
-            'IsDuoLingoRequired', 'IsELSRequired', 'IsEnglishNotRequired', 'IsEnglishOptional',
-            'IsGMATOrGreRequired', 'IsGMATRequired', 'IsGRERequired', 'IsIELTSRequired',
-            'IsLSATRequired', 'IsMATRequired', 'IsMCATRequired', 'IsPTERequired', 'IsSATRequired',
-            'IsTOEFLIBRequired', 'QsWorldRanking', 'UsRanking', 'BatchId', 'IsImportVerified',
-            'IsImported', 'BannerImagePath', 'CollegeHtmlAdditionalInfo', 'Introduction',
-            'NumberOfCampuses', 'TotalFacultyAvailable', 'TotalProgramsAvailable',
-            'TotalStudentsEnrolled', 'CollegeSetting', 'TypeofInstitution', 'CountriesRepresented',
-            'GradAvgTuition', 'GradInternationalStudents', 'GradScholarshipHigh',
-            'GradScholarshipLow', 'GradTotalStudents', 'Student_Faculty', 'TotalGraduatePrograms',
-            'TotalInternationalStudents', 'TotalStudents', 'TotalUndergradMajors', 'UGAvgTuition',
-            'UGInternationalStudents', 'UGScholarshipHigh', 'UGScholarshipLow', 'UGTotalStudents',
-            'InstitutionType', 'IsEnrolled','TermFormat', 'OGAEnrolledProgramLevels'
-        ]
-        
-        # Rename existing columns
-        df_renamed = df.rename(columns=column_mapping)
-        
-        # Add missing columns with empty values
-        for col in final_columns:
-            if col not in df_renamed.columns:
-                df_renamed[col] = ''
-        
-        # Reorder columns to match final_columns order
-        df_renamed = df_renamed[final_columns]
-        
-        return df_renamed
+    unified_result["IsImported"] = "True"
+    return unified_result
 
-    # Create output directory if it doesn't exist
-    # Use absolute path based on the script location to ensure consistency
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(script_dir, "Inst_outputs")
+# make all the extracted data into a csv file   
+def save_to_csv(data: dict, filename: str):
+    # The exact columns and order requested by the user
+    final_columns = [
+        "CollegeName", "CollegeCode", "LogoPath", "Phone", "Email", "SecondaryEmail", 
+        "Street1", "Street2", "County", "City", "State", "Country", "ZipCode", 
+        "WebsiteUrl", "AdmissionOfficeUrl", "VirtualTourUrl", "Facebook", "Instagram", 
+        "Twitter", "Youtube", "Tiktok", "ApplicationFees", "TestPolicy", 
+        "CoursesAndGrades", "Recommendations", "PersonalEssay", "WritingSample", 
+        "FinancialAidUrl", "AdditionalInformation", "AdditionalDeadlines", 
+        "IsAdditionalInformationAvailable", "Status", "IsMultipleApplicationsAllowed", 
+        "MaximumApplicationsAllowed", "CreatedBy", "CreatedDate", "LiveDate", "TuitionFees", 
+        "UpdatedBy", "UpdatedDate", "CountryCode", "LinkedIn", "IsACTRequired", 
+        "IsAnalyticalNotRequired", "IsAnalyticalOptional", "IsDuoLingoRequired", 
+        "IsELSRequired", "IsEnglishNotRequired", "IsEnglishOptional", "IsGMATOrGreRequired", 
+        "IsGMATRequired", "IsGRERequired", "IsIELTSRequired", "IsLSATRequired", 
+        "IsMATRequired", "IsMCATRequired", "IsPTERequired", "IsSATRequired", 
+        "IsTOEFLIBRequired", "QsWorldRanking", "UsRanking", "BatchId", "IsImportVerified", 
+        "IsImported", "BannerImagePath", "CollegeHtmlAdditionalInfo", "Introduction", 
+        "NumberOfCampuses", "TotalFacultyAvailable", "TotalProgramsAvailable", 
+        "TotalStudentsEnrolled", "CollegeSetting", "TypeofInstitution", "CountriesRepresented", 
+        "GradAvgTuition", "GradInternationalStudents", "GradScholarshipHigh", 
+        "GradScholarshipLow", "GradTotalStudents", "Student_Faculty", "TotalGraduatePrograms", 
+        "TotalInternationalStudents", "TotalStudents", "TotalUndergradMajors", "UGAvgTuition", 
+        "UGInternationalStudents", "UGScholarshipHigh", "UGScholarshipLow", "UGTotalStudents", 
+        "InstitutionType", "IsEnrolled", "TermFormat", "OGAEnrolledProgramLevels"
+    ]
+    
+    # Ensure all required columns exist with at least a blank value
+    for col in final_columns:
+        if col not in data:
+            data[col] = ""
+            
+    df = pd.DataFrame([data])
+    
+    # Reorder columns and drop any extra ones not in the final_columns list
+    df = df[final_columns]
+    
+    #filename is university name+institution.csv
+    sanitized = data["CollegeName"].replace(" ", "_").replace("/", "_").replace("\\", "_")
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Inst_outputs")
     os.makedirs(output_dir, exist_ok=True)
+    filepath = os.path.join(output_dir, f"{sanitized}_Institution.csv")
+    df.to_csv(filepath, index=False)
+    print(f"Data saved to {filepath}")
+    return filepath
 
-    # Create DataFrame from flat_data
-    df = pd.DataFrame([flat_data])
 
-    # Rename columns and ensure all required columns are present
-    df_final = rename_columns(df, flat_data)
+def process_institution_extraction(university_name: str, **kwargs):
+    """
+    Generator function that runs the institution extraction and yields
+    SSE-compatible JSON progress and completion messages.
+    This is the entry point called by the Flask backend (app.py).
+    All extra kwargs are accepted but ignored to match the backend's call signature.
+    """
+    import json as _json
 
-    # Write to CSV
-    csv_filename = os.path.join(output_dir, f"{safe_university_name}_Institution.csv")
-    df_final.to_csv(csv_filename, index=False, encoding='utf-8')
+    models_to_extract = [
+        ApplicationRequirements,
+        StandardizedTests,
+        EnglishTests,
+        UniversityMetadata,
+        RankingAndCampus,
+        StudentDemographics,
+        TuitionAndScholarships,
+        SpecificEnrollment,
+    ]
 
-    # Write to Excel
-    excel_filename = os.path.join(output_dir, f"{safe_university_name}_Institution.xlsx")
     try:
-        df_final.to_excel(excel_filename, index=False, engine='openpyxl')
-    except ImportError:
-        print(f"Warning: openpyxl is not installed. Install it with: pip install openpyxl")
-        print(f"Excel file {excel_filename} not created, but CSV is available.")
+        yield _json.dumps({"status": "progress", "message": f"Finding official name and URL for '{university_name}'..."})
+        exact_name, url = _get_ground_truth(university_name)
+        yield _json.dumps({"status": "progress", "message": f"Ground truth resolved: {exact_name}"})
+
+        unified_result = {"CollegeName": exact_name}
+
+        for model in models_to_extract:
+            yield _json.dumps({"status": "progress", "message": f"Extracting {model.__name__}..."})
+            model_data = _extract_model_data(model, exact_name, url)
+            unified_result.update(model_data)
+            yield _json.dumps({"status": "progress", "message": f"{model.__name__} extracted ✓"})
+
+        unified_result["IsImported"] = "True"
+
+        # Also extract contact + URL details
+        yield _json.dumps({"status": "progress", "message": "Extracting contact details..."})
+        contact_data = get_university_details(exact_name)
+        for k, v in contact_data.items():
+            if k != "CollegeName":
+                unified_result.setdefault(k, v)
+
+        yield _json.dumps({"status": "progress", "message": "Extracting URLs..."})
+        url_data = get_university_urls(exact_name)
+        for k, v in url_data.items():
+            if k != "CollegeName":
+                unified_result.setdefault(k, v)
+
+        yield _json.dumps({"status": "progress", "message": "Saving CSV..."})
+        filepath = save_to_csv(unified_result, exact_name)
+
+        yield _json.dumps({
+            "status": "complete",
+            "message": f"Institution data for '{exact_name}' extracted successfully.",
+            "files": {"inst_csv": filepath}
+        })
+
     except Exception as e:
-        print(f"Error saving to Excel: {e}")
-        print(f"Excel file {excel_filename} not created, but CSV is available.")
+        import traceback
+        traceback.print_exc()
+        yield _json.dumps({"status": "error", "message": str(e)})
 
 
-    # for the json, I want to save the data as a json file with all the fields like values, evidence, urls, etc.
-    json_filename = os.path.join(output_dir, f"{safe_university_name}_Institution.json")
-    with open(json_filename, 'w', encoding='utf-8') as f:
-        json.dump(all_data, f, ensure_ascii=False, indent=4)
+if __name__ == "__main__":
+    university_name = "University of New Haven"
+    data = get_university_comprehensive_data(university_name)
 
-    print(f"Saved cleaned {university_name} data to {csv_filename}, {excel_filename}, and {json_filename}.")
-    yield f'{{"status": "complete", "files": {{"csv": "{csv_filename}", "excel": "{excel_filename}", "json": "{json_filename}"}}}}'
+    # Also extract contact details (Phone, Email, Address) and URLs (social media, admissions, etc.)
+    contact_data = get_university_details(university_name)
+    url_data = get_university_urls(university_name)
+    for k, v in {**contact_data, **url_data}.items():
+        if k != "CollegeName":
+            data.setdefault(k, v)
+
+    save_to_csv(data, university_name)

@@ -1,0 +1,40 @@
+[
+    {
+        "Website_url": "https://www.admissions.iastate.edu/contact/",
+        "DepartmentName": "Office of Admissions",
+        "Email": "admissions@iastate.edu",
+        "PhoneNumber": "515-294-5836",
+        "PhoneType": "Landline",
+        "AdmissionUrl": "https://www.admissions.iastate.edu/",
+        "BuildingName": "Enrollment Services Center",
+        "Street1": "2433 Union Drive",
+        "Street2": "100 Enrollment Services Center",
+        "City": "Ames",
+        "State": "IA",
+        "StateName": "Iowa",
+        "Country": "USA",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "50011",
+        "AirportPickup": "yes"
+    },
+    {
+        "Website_url": "https://www.grad-college.iastate.edu/contact/",
+        "DepartmentName": "Graduate College",
+        "Email": "grad_college@iastate.edu",
+        "PhoneNumber": "515-294-4531",
+        "PhoneType": "Landline",
+        "AdmissionUrl": "https://www.admissions.iastate.edu/graduate",
+        "BuildingName": "Pearson Hall",
+        "Street1": "505 Morrill Rd",
+        "Street2": "1137 Pearson Hall",
+        "City": "Ames",
+        "State": "IA",
+        "StateName": "Iowa",
+        "Country": "USA",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "50011",
+        "AirportPickup": "yes"
+    }
+]
