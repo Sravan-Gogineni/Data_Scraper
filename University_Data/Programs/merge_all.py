@@ -257,8 +257,8 @@ def run(university_name=None):
 
     final_df['ProgramName'] = final_df['ProgramName'].apply(standardize_program_name)
 
-    yield f'{{"status": "progress", "message": "Assigning program categories via Gemini..."}}'
-    final_df['ProgramCategory'] = final_df['ProgramName'].apply(get_program_category)
+    # NOTE: ProgramCategory is now assigned during individual program extraction
+    # and preserved through the merge_and_standardize scripts.
 
     ###############
     final_df.to_csv(output_csv_path, index=False, encoding='utf-8')

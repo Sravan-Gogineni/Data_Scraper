@@ -3,11 +3,12 @@ from google.genai.types import GenerateContentConfig, GoogleSearch, Tool
 import os
 import json
 import requests
+import time
+import random
+import logging
 import re
-from urllib.parse import urlparse
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-import csv
 import pandas as pd
 load_dotenv()
 
@@ -20,9 +21,7 @@ client = genai.Client(
 
 Model = os.getenv("MODEL")
 
-import time
-import random
-import logging
+
 logger = logging.getLogger(__name__)
 
 class GeminiModelWrapper:
@@ -686,6 +685,20 @@ def process_institution_extraction(university_name: str, **kwargs):
         yield _json.dumps({"status": "progress", "message": f"Finding official name and URL for '{university_name}'..."})
         exact_name, url = _get_ground_truth(university_name)
         yield _json.dumps({"status": "progress", "message": f"Ground truth resolved: {exact_name}"})
+
+        # --- SKIP IF EXISTS CHECK ---
+        sanitized = exact_name.replace(" ", "_").replace("/", "_").replace("\\", "_")
+        output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Inst_outputs")
+        filepath = os.path.join(output_dir, f"{sanitized}_Institution.csv")
+        
+        if os.path.exists(filepath) and os.path.getsize(filepath) > 0:
+            yield _json.dumps({
+                "status": "complete", 
+                "message": f"Institution data for '{exact_name}' already exists. Skipping extraction.",
+                "files": {"inst_csv": filepath}
+            })
+            return
+        # ----------------------------
 
         unified_result = {"CollegeName": exact_name}
 

@@ -1,0 +1,40 @@
+[
+    {
+        "Website_url": "https://admission.rice.edu/",
+        "DepartmentName": "Office of Admission",
+        "Email": "admission@rice.edu",
+        "PhoneNumber": "1-713-348-RICE (7423)",
+        "PhoneType": null,
+        "AdmissionUrl": "https://admission.rice.edu/",
+        "BuildingName": "Lovett Hall",
+        "Street1": "6100 Main Street",
+        "Street2": "Room 109",
+        "City": "Houston",
+        "State": "TX",
+        "StateName": "Texas",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "77251-1892",
+        "AirportPickup": null
+    },
+    {
+        "Website_url": "https://graduate.rice.edu/",
+        "DepartmentName": "Graduate and Postdoctoral Studies",
+        "Email": "graduate@rice.edu",
+        "PhoneNumber": "713-348-4002",
+        "PhoneType": null,
+        "AdmissionUrl": "https://graduate.rice.edu/admissions",
+        "BuildingName": "Sewall Hall",
+        "Street1": "P.O. Box 1892",
+        "Street2": "Suite 370",
+        "City": "Houston",
+        "State": "TX",
+        "StateName": "Texas",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "77251-1892",
+        "AirportPickup": null
+    }
+]

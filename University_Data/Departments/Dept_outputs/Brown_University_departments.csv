@@ -1,0 +1,4 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+The Warren Alpert Medical School Office of Admissions,,,,,,,,Providence,USA,US,United States,MedSchool_Admissions@brown.edu,401-863-2149,,RI,Box G-M,,02912-9706,Rhode Island,,False,https://admission.med.brown.edu/,,,False,False,Brown University
+Program in Liberal Medical Education (PLME),,,,,,,,Providence,USA,US,United States,,(401) 863-2378,,RI,Box 1876,,02912-9706,Rhode Island,,False,https://plme.med.brown.edu/,,,False,False,Brown University
+School of Public Health Admissions,,,,,,,,,USA,US,United States,sph.inquiries@umich.edu,,,,,,,,,False,,,,False,False,Brown University

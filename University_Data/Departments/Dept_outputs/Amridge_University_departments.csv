@@ -1,0 +1,2 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Admissions,,,,,,,,Montgomery,USA,US,United States,admissions@amridgeuniversity.edu,888.790.8080 Ext. 1,,AL,1200 Taylor Road,,36117,Alabama,,False,https://www.amridgeuniversity.edu/admissions/,,,False,False,Amridge University

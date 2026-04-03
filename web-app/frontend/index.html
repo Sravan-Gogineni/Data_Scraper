@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Data Extractor</title>
+    <title>UniScraper - High-Precision University Data Extractor</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -28,18 +28,16 @@
                 <h1>UniScraper</h1>
             </div>
             <nav class="main-nav">
-                <a href="/" class="nav-link active">Institution</a>
-                <a href="/department.html" class="nav-link">Departments</a>
-                <a href="/programs.html" class="nav-link">Programs</a>
-                <a href="/all_extraction.html" class="nav-link">All Extraction</a>
+                <a href="index.html" class="nav-link active">All Extraction</a>
+                <a href="map_departments.html" class="nav-link">Map Departments</a>
             </nav>
         </header>
 
         <main>
             <div class="glass-card">
                 <div class="section-title">
-                    <h2>Configuration</h2>
-                    <p>Enter university details to begin extraction.</p>
+                    <h2>Full University Extraction</h2>
+                    <p>Extract all university data sequentially: Institution → Departments → Programs</p>
                 </div>
 
                 <div class="form-group main-input">
@@ -48,43 +46,10 @@
                         autocomplete="off">
                 </div>
 
-                <div class="divider"></div>
-
-                <div class="url-config-section">
-                    <h3>URL Configuration (Optional)</h3>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="commonAidUrl">Common Financial Aid URL</label>
-                            <input type="url" id="commonAidUrl" placeholder="https://...">
-                        </div>
-                    </div>
-
-                    <div class="sub-section-title">Undergraduate</div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="ugAidUrl">Financial Aid URL</label>
-                            <input type="url" id="ugAidUrl" placeholder="https://...">
-                        </div>
-                    </div>
-
-                    <div class="sub-section-title">Graduate</div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="gradAidUrl">Financial Aid URL</label>
-                            <input type="url" id="gradAidUrl" placeholder="https://...">
-                        </div>
-                    </div>
-                </div>
-
                 <div class="actions">
-                    <button id="extractBtn" class="primary-btn">
-                        <span class="btn-text">Extract Data</span>
-                        <div class="btn-loader hidden"></div>
-                    </button>
-                    <button id="fullExtractBtn" class="primary-btn"
-                        style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); margin-left: 1rem;">
-                        <span class="btn-text">Full Extraction</span>
+                    <button id="extractBtn" class="primary-btn"
+                        style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <span class="btn-text">Start Full Extraction</span>
                         <div class="btn-loader hidden"></div>
                     </button>
                 </div>
@@ -120,7 +85,7 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="all_extraction.js"></script>
 </body>
 
 </html>

@@ -99,6 +99,7 @@ COLUMN_MAPPING = {
     # Extra Fields
     'Concentration name': 'Concentration',
     'description': 'Description',
+    'ProgramCategory': 'ProgramCategory',
     'Accreditation status': 'Accredidation'
 }
 
@@ -142,36 +143,27 @@ def run(university_name=None):
     yield f'{{"status": "progress", "message": "Loaded {len(df_base)} programs from base CSV"}}'
     
     # 2. Load and Prepare Merge Data
-    financial_data = load_json_data(financial_json_path)
-    test_scores_data = load_json_data(test_scores_json_path)
-    app_req_data = load_json_data(app_req_json_path)
-    extra_fields_data = load_json_data(extra_fields_json_path)
-    
-    # Convert to DataFrames
-    df_fin = pd.DataFrame(financial_data) if financial_data else pd.DataFrame()
-    df_test = pd.DataFrame(test_scores_data) if test_scores_data else pd.DataFrame()
-    df_app = pd.DataFrame(app_req_data) if app_req_data else pd.DataFrame()
-    df_extra = pd.DataFrame(extra_fields_data) if extra_fields_data else pd.DataFrame()
-    
-    # Merge Key
+    master_json_path = os.path.join(output_dir, f'{sanitized_name}_master_data.json')
     merge_key = 'Program name'
-    
-    # Ensure merge key exists in all DFs before merging
-    dfs_to_merge = [df_fin, df_test, df_app, df_extra]
     final_df = df_base.copy()
-    
-    for i, df in enumerate(dfs_to_merge):
-        if not df.empty and merge_key in df.columns:
-            # Drop duplicates in join tables if any
-            df = df.drop_duplicates(subset=[merge_key])
-            # Drop Program Page url from merge tables to avoid suffixes, keep it from base
-            if 'Program Page url' in df.columns:
-                df = df.drop(columns=['Program Page url'])
+
+    if os.path.exists(master_json_path):
+        yield f'{{"status": "progress", "message": "Merging fields from master_data.json..."}}'
+        master_data = load_json_data(master_json_path)
+        df_master = pd.DataFrame(master_data) if master_data else pd.DataFrame()
+        
+        if not df_master.empty and merge_key in df_master.columns:
+            # Drop duplicates and duplicate URL column if present
+            df_master = df_master.drop_duplicates(subset=[merge_key])
+            if 'Program Page url' in df_master.columns:
+                df_master = df_master.drop(columns=['Program Page url'])
             
-            final_df = pd.merge(final_df, df, on=merge_key, how='left')
-            yield f'{{"status": "progress", "message": "Merged dataset {i+1}..."}}'
+            final_df = pd.merge(final_df, df_master, on=merge_key, how='left')
+            yield f'{{"status": "progress", "message": "Merged master dataset successfully."}}'
         else:
-            yield f'{{"status": "progress", "message": "Skipping dataset {i+1} (empty or missing key)"}}'
+            yield f'{{"status": "warning", "message": "Master data is empty or missing key."}}'
+    else:
+        yield f'{{"status": "warning", "message": "No master data found at {os.path.basename(master_json_path)}. Final CSV will be incomplete."}}'
 
     # 3. Rename Columns
     # Rename columns that exist in the mapping

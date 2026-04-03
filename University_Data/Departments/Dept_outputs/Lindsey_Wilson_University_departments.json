@@ -1,0 +1,21 @@
+[
+    {
+        "Website_url": "https://www.lindsey.edu/admissions/contact-admissions",
+        "DepartmentName": "Admissions Office",
+        "Email": "admissions@lindsey.edu",
+        "PhoneNumber": "800-264-0138",
+        "PhoneType": null,
+        "AdmissionUrl": "https://www.lindsey.edu/admissions/how-to-apply",
+        "BuildingName": "R.B. Fenley Building",
+        "Street1": "210 Lindsey Wilson Street",
+        "Street2": null,
+        "City": "Columbia",
+        "State": "KY",
+        "StateName": "Kentucky",
+        "Country": "US",
+        "CountryCode": "US",
+        "CountryName": "United States",
+        "ZipCode": "42728",
+        "AirportPickup": null
+    }
+]

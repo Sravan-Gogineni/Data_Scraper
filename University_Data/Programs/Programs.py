@@ -13,9 +13,6 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # Import Graduate Scripts
 from graduate_programs import extract_programs_list as grad_step1
 from graduate_programs import program_extra_fields as grad_step2
-from graduate_programs import extract_test_scores_requirements as grad_step3
-from graduate_programs import extract_application_requirements as grad_step4
-from graduate_programs import extract_program_details_financial as grad_step5
 from graduate_programs import merge_and_standardize as grad_merge
 
 # Import Undergraduate Scripts
@@ -25,21 +22,6 @@ try:
     from undergraduate_programs import program_extra_fields as undergrad_step2
 except ImportError:
     undergrad_step2 = None
-
-try:
-    from undergraduate_programs import extract_test_scores_requirements as undergrad_step3
-except ImportError:
-    undergrad_step3 = None
-
-try:
-    from undergraduate_programs import extract_application_requirements as undergrad_step4
-except ImportError:
-    undergrad_step4 = None
-
-try:
-    from undergraduate_programs import extract_program_details_financial as undergrad_step5
-except ImportError:
-    undergrad_step5 = None
 
 from undergraduate_programs import merge_and_standardize as undergrad_merge
 
@@ -53,13 +35,13 @@ def process_programs_extraction(university_name, step):
     """
     
     # Map steps to modules
-    # Each step list contains [grad_module, undergrad_module]
+    # Step 2 is now the Consolidated Master Extraction for both UG and Grad
     steps_map = {
         1: [grad_step1, undergrad_step1],
         2: [grad_step2, undergrad_step2],
-        3: [grad_step3, undergrad_step3],
-        4: [grad_step4, undergrad_step4],
-        5: [grad_step5, undergrad_step5],
+        3: [None, None], # Consolidated into step 2
+        4: [None, None], # Consolidated into step 2
+        5: [None, None], # Consolidated into step 2
         6: [grad_merge, undergrad_merge]  # This is the standardize step
     }
 
@@ -78,18 +60,12 @@ def process_programs_extraction(university_name, step):
             yield f'{{"status": "error", "message": "Error in Final Merge: {str(e)}"}}'
         return
 
-    if step == 8: # Special step for Concurrent Execution (Steps 2, 3, 4, 5)
-        yield f'{{"status": "progress", "message": "Starting Concurrent Extraction for Steps 2, 3, 4, 5..."}}'
+    if step == 8: # Concurrent Execution (Now only runs Step 2 for speed)
+        yield f'{{"status": "progress", "message": "Starting Consolidated Master Extraction (Step 2)..."}}'
         
         modules_to_run = [
-            (grad_step2, "[Grad] Step 2"),
-            (grad_step3, "[Grad] Step 3"),
-            (grad_step4, "[Grad] Step 4"),
-            (grad_step5, "[Grad] Step 5"),
-            (undergrad_step2, "[Undergrad] Step 2"),
-            (undergrad_step3, "[Undergrad] Step 3"),
-            (undergrad_step4, "[Undergrad] Step 4"),
-            (undergrad_step5, "[Undergrad] Step 5")
+            (grad_step2, "[Grad] Master Extraction"),
+            (undergrad_step2, "[Undergrad] Master Extraction")
         ]
         
         msg_queue = queue.Queue()

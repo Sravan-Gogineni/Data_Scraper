@@ -28,6 +28,7 @@ from Department import process_department_extraction
 
 try:
     from Programs import process_programs_extraction
+    from department_mapper import process_department_mapping
 except ImportError as e:
     _programs_import_error = str(e)
     print(f"Error importing Programs script: {_programs_import_error}")
@@ -370,6 +371,62 @@ def extract_all_data():
             import traceback
             traceback.print_exc()
             yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
+@app.route("/api/map_departments", methods=["POST"])
+def map_departments():
+    # Check if files are uploaded
+    if 'programs_file' in request.files and 'departments_file' in request.files:
+        programs_file = request.files['programs_file']
+        departments_file = request.files['departments_file']
+        university_name = request.form.get("university_name", "Uploaded")
+        
+        # Save files temporarily
+        upload_dir = os.path.join(os.path.dirname(__file__), "temp_uploads")
+        os.makedirs(upload_dir, exist_ok=True)
+        
+        from werkzeug.utils import secure_filename
+        prog_path = os.path.join(upload_dir, secure_filename(programs_file.filename))
+        dept_path = os.path.join(upload_dir, secure_filename(departments_file.filename))
+        
+        programs_file.save(prog_path)
+        departments_file.save(dept_path)
+        
+        args = (university_name, prog_path, dept_path)
+    else:
+        # Fallback to university name if no files (original behavior)
+        data = request.json or {}
+        university_name = data.get("university_name")
+        if not university_name:
+             return jsonify({"error": "Either file uploads or University name is required"}), 400
+        args = (university_name,)
+
+    def generate():
+        try:
+            # Run department mapping with either university name or explicit files
+            generator = process_department_mapping(*args)
+            
+            for update in generator:
+                try:
+                    update_obj = json.loads(update)
+                    if update_obj.get("status") == "complete":
+                        # Modify result_files to return relative filenames for download
+                        download_links = {}
+                        for key, path in update_obj["files"].items():
+                            filename = os.path.basename(path)
+                            download_links[key] = f"/api/download/{filename}"
+                        update_obj["files"] = download_links
+                        yield f"data: {json.dumps(update_obj)}\n\n"
+                    else:
+                         yield f"data: {update}\n\n"
+                except json.JSONDecodeError:
+                     yield f"data: {json.dumps({'status': 'progress', 'message': update})}\n\n"
+                     
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            yield f"data: {json.dumps({'status': 'error', 'message': str(e)})}\n\n"
 
     return Response(stream_with_context(generate()), mimetype='text/event-stream')
 

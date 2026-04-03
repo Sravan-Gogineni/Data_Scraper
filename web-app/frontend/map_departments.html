@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Departments - UniScraper</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="logo-icon">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <h1>UniScraper</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">All Extraction</a>
+                <a href="map_departments.html" class="nav-link active">Map Departments</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="glass-card">
+                <div class="section-title">
+                    <h2>Map Programs to Departments</h2>
+                    <p>Upload your programs and departments files to associate them using AI.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="programsFile">Programs CSV File <span class="required">*</span></label>
+                        <input type="file" id="programsFile" accept=".csv" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="departmentsFile">Departments CSV File <span class="required">*</span></label>
+                        <input type="file" id="departmentsFile" accept=".csv" required>
+                    </div>
+                </div>
+
+                <div class="form-group main-input" style="margin-top: 1rem;">
+                    <label for="universityName">University Name (for prompt context)</label>
+                    <input type="text" id="universityName" placeholder="e.g. Stanford University"
+                        autocomplete="off">
+                </div>
+
+                <div class="actions">
+                    <button id="mapBtn" class="primary-btn">
+                        <span class="btn-text">Start Mapping</span>
+                        <div class="btn-loader hidden"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="statusArea" class="status-area hidden">
+                <div class="glass-card status-card">
+                    <div class="status-header">
+                        <div class="status-title">
+                            <div class="status-dot"></div>
+                            <h3>Mapping Status</h3>
+                        </div>
+                        <span id="statusBadge" class="badge">Initializing</span>
+                    </div>
+
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div id="logs" class="logs-content">
+                            <div class="log-line system">> System ready.</div>
+                        </div>
+                    </div>
+
+                    <div id="results" class="results-container hidden">
+                        <h4>Mapping Complete</h4>
+                        <div id="fileList" class="file-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="map_departments.js"></script>
+</body>
+
+</html>
