@@ -1,6 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Undergraduate Admissions,,,,,,,,Cleveland,US,US,United States,admissions@csuohio.edu,216-687-5411,,OH,2398 Euclid Ave,,44115,Ohio,,False,,"Welcome Center, Euclid Commons 100",,False,False,Cleveland state university
-Graduate Admissions,,,,,,,,Cleveland,US,US,United States,graduate.admissions@csuohio.edu,216-687-5599,,OH,2121 Euclid Avenue,,44115-2214,Ohio,,False,,BH 116,,False,False,Cleveland state university
-Law Admissions,,,,,,,,,,,,admissions@law.csuohio.edu,216-687-2304,,,,,,,,False,,,,False,False,Cleveland state university
-International Graduate Admissions,,,,,,,,Cleveland,US,US,United States,allin1@csuohio.edu,,,OH,2121 Euclid Ave,UN 443,44115,Ohio,,False,https://www.csuohio.edu/international-admissions/graduate-students,,,False,False,Cleveland state university
-Transfer Admissions,,,,,,,,Cleveland,US,US,United States,admissions@csuohio.edu,216-687-5411,,OH,2398 Euclid Avenue,,44115,Ohio,,False,,"Welcome Center, Euclid Commons 100",,False,False,Cleveland state university

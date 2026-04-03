@@ -1,4 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Undergraduate Admission,,,,,,,,Pittsburgh,USA,US,United States,admission@andrew.cmu.edu,412.268.2082,,PA,5000 Forbes Avenue,,15213,Pennsylvania,,False,https://www.cmu.edu/admission/apply,Warner Hall,,False,False,Carnegie Mellon University
-Graduate Admission,,,,,,,,,USA,US,United States,,,,,,,,,,False,https://www.cmu.edu/student-admission/,,,False,False,Carnegie Mellon University
-International Admissions,,,,,,,,Pittsburgh,USA,US,United States,admission@andrew.cmu.edu,412.268.2082,,PA,5000 Forbes Avenue,,15213,Pennsylvania,,False,https://www.cmu.edu/admission/international-applicants,Warner Hall,,False,False,Carnegie Mellon University

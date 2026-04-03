@@ -1,5 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-University of Utah Admissions,,,,,,,,Salt Lake City,US,US,United States,admissions@utah.edu,801-581-8761,,UT,201 South 1460 East,Room 250 S,84112,Utah,,False,https://admissions.utah.edu/,,,False,False,University of Utah
-Graduate School Admissions,,,,,,,,,,,,,,,,,,,,,False,https://gradschool.utah.edu/admissions/,,,False,False,University of Utah
-International Admissions,,,,,,,,Salt Lake City,US,US,United States,admissions@utah.edu,801-581-8761,,UT,201 South 1460 East,Room 250 S,84112,Utah,,False,https://admissions.utah.edu/international/,,,False,False,University of Utah
-Transfer Admissions,,,,,,,,Salt Lake City,US,US,United States,admissions@utah.edu,801-581-8761,,UT,201 South 1460 East,Room 250 S,84112,Utah,,False,https://admissions.utah.edu/transfer/,,,False,False,University of Utah

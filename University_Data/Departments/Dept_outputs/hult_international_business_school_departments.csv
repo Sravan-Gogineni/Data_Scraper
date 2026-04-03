@@ -1,9 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Graduate Enrollment Department,,,,,,,,Cambridge,USA,US,United States,info.northam@hult.edu,(617) 746-1990,,MA,1 Education Street,,02141,Massachusetts,,False,https://www.hult.edu/mba/admissions/fees/,,,False,False,hult international business school
-Enrollment Office - North America,,,,,,,,Cambridge,USA,US,United States,info.northam@hult.edu,,,MA,1 Education Street,,02141,Massachusetts,,False,https://www.hult.edu/apply/,,,False,False,hult international business school
-Enrollment Office - Europe,,,,,,,,London,UK,GB,United Kingdom,info.europe@hult.edu,,,,Hult International Business School,37-38 John Street,WC1N 2AT,,,False,https://www.hult.edu/apply/,,,False,False,hult international business school
-Enrollment Office - Asia,,,,,,,,Causeway Bay,"Hong Kong SAR, China",HK,Hong Kong,info.asia@hult.edu,,,,1703-08,,,,,False,https://www.hult.edu/apply/,"Times Square, Tower Two",,False,False,hult international business school
-Enrollment Office - Latin America,,,,,,,,Bogotá,Colombia,CO,Colombia,info.latam@hult.edu,,,Cundinamarca,Cra. 9 #78 - 57,,,Cundinamarca,,False,https://www.hult.edu/apply/,Torre EF,,False,False,hult international business school
-Undergraduate Admissions,,,,,,,,,,,,,,,,,,,,,False,https://www.hult.edu/undergraduate/admissions/,,,False,False,hult international business school
-MBA Admissions,,,,,,,,,,,,,,,,,,,,,False,https://www.hult.edu/mba/admissions/,,,False,False,hult international business school
-Master's Admissions,,,,,,,,,,,,,,,,,,,,,False,https://www.hult.edu/masters/admissions/,,,False,False,hult international business school

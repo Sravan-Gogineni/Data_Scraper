@@ -1,4 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admission,,,,,,,,Princeton,USA,US,United States,uaoffice@princeton.edu,609-258-3060,,NJ,330 Alexander Street,3rd Floor,08540,New Jersey,,False,https://admission.princeton.edu/,Helm Building,,False,False,Princeton University
-Graduate School Office of Admission,,,,,,,,Princeton,USA,US,United States,gs@princeton.edu,609-258-3034,,NJ,,,08544,New Jersey,,False,https://gradschool.princeton.edu/admission,Clio Hall,,False,False,Princeton University
-Transfer Admission,,,,,,,,,,,,uatransfer@princeton.edu,,,,,,,,,False,https://admission.princeton.edu/how-apply/transfer-students,,,False,False,Princeton University

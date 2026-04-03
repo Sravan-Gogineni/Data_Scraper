@@ -1,3 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admission,,,,,,,,Houston,US,US,United States,admission@rice.edu,1-713-348-RICE (7423),,TX,6100 Main Street,Room 109,77251-1892,Texas,,False,https://admission.rice.edu/,Lovett Hall,,False,False,RICE University
-Graduate and Postdoctoral Studies,,,,,,,,Houston,US,US,United States,graduate@rice.edu,713-348-4002,,TX,P.O. Box 1892,Suite 370,77251-1892,Texas,,False,https://graduate.rice.edu/admissions,Sewall Hall,,False,False,RICE University
