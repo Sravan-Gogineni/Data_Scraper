@@ -97,12 +97,26 @@ def get_graduate_programs(url, university_name, existing_data=None):
         )
         program_data = _extract_json_from_text(response.text)
         
+        # Blacklist for generic titles that aren't real programs
+        blacklist = [
+            "graduate catalog", "graduate studies", "online programs", 
+            "graduate admissions", "apply now", "contact us", "graduate school",
+            "graduate programs", "academics", "program list", "degrees and programs"
+        ]
+
         if isinstance(program_data, list) and len(program_data) > 0:
-            found_search_count = len(program_data)
-            yield f'{{"status": "progress", "message": "Stage 1 Search found {found_search_count} potential programs. Moving to Stage 2 for exhaustive coverage..."}}'
-            for prog in program_data:
-                if "Program name" in prog and "Program Page url" in prog:
-                    yield prog
+            # Filter the search results
+            filtered_search = []
+            for p in program_data:
+                name = p.get("Program name", "").lower()
+                if any(term == name or name == f"{term}s" for term in blacklist):
+                    continue
+                filtered_search.append(p)
+            
+            found_search_count = len(filtered_search)
+            yield f'{{"status": "progress", "message": "Stage 1 Search found {found_search_count} valid programs."}}'
+            for prog in filtered_search:
+                yield prog
         else:
             yield f'{{"status": "warning", "message": "Stage 1 Search yielded 0 programs. Proceeding to Stage 2 Crawl..."}}'
             
@@ -110,20 +124,23 @@ def get_graduate_programs(url, university_name, existing_data=None):
         yield f'{{"status": "warning", "message": "Stage 1 Search failed: {e}. Proceeding to Stage 2 Crawl..."}}'
 
     # --- STAGE 2: CRAWL FALLBACK (Deterministic) ---
-    # We ALWAYS run Stage 2 now for 'Deep Discovery' unless we already have hundreds from Step 1 (unlikely)
-    yield f'{{"status": "progress", "message": "STAGE 2: Executing Direct Crawl on {url} for exhaustive list..."}}'
+    # We ALWAYS run Stage 2 for 'Deep Discovery' unless we already have a massive list
+    if found_search_count > 80:
+         yield f'{{"status": "progress", "message": "Extensive list found in search. Verification sweep starting..."}}'
+    else:
+         yield f'{{"status": "progress", "message": "STAGE 2: Executing Direct Crawl on {portal_url} for exhaustive coverage..."}}'
     
     # We look for keywords that imply graduate level
     grad_keywords = ['graduate', 'master', 'phd', 'doctor', 'cert', 'degree', 'program', 'curriculum']
     
-    # Run the crawler natively (increased to 15 pages for exhaustive coverage)
-    crawled_links = fetch_links_with_pagination(url, base_domain, filter_keywords=grad_keywords, max_pages=15)
+    # Run the crawler natively from the portal URL (increased to 25 pages for exhaustive coverage)
+    crawled_links = fetch_links_with_pagination(portal_url, base_domain, filter_keywords=grad_keywords, max_pages=25)
     
     if not crawled_links:
-         yield f'{{"status": "warning", "message": "Stage 2 Crawl found 0 programs."}}'
+         yield f'{{"status": "warning", "message": "Stage 2 Crawl found 0 potential links."}}'
          return
 
-    yield f'{{"status": "progress", "message": "Crawled {len(crawled_links)} potential program links. Refining and standardizing..."}}'
+    yield f'{{"status": "progress", "message": "Crawled {len(crawled_links)} potential links. Refining and standardizing names..."}}'
     
     # Batch process the links through Gemini to filter out non-programs and standardize names
     chunk_size = 30
@@ -133,14 +150,14 @@ def get_graduate_programs(url, university_name, existing_data=None):
         
         refine_prompt = (
             f"You are a program list refiner for {university_name}.\n"
-            f"I have crawled the following potential program links from the university website:\n\n"
+            f"I have crawled the following potential program links from the university portal:\n\n"
             f"{links_text}\n\n"
             f"Instructions:\n"
             f"1. Filter this list. Keep ONLY actual graduate-level academic programs (Master's, PhD, Certificates).\n"
-            f"2. REMOVE links that are just 'Apply', 'Contact Us', 'About', 'Faculty', etc.\n"
+            f"2. REMOVE links that are just 'Apply', 'Contact Us', 'About', 'Faculty', or portal headers like 'Graduate School'.\n"
             f"3. STANDARDIZE the names. Convert abbreviations to full names (e.g., 'MS' -> 'Master of Science').\n"
-            f"4. Return ONLY a JSON list of objects: [{{ \"Program name\": \"...\", \"Program Page url\": \"{url}\" }}]\n"
-            f"   IMPORTANT: For the 'Program Page url', ALWAYS use strictly {url} for all programs. NO EXCEPTIONS.\n"
+            f"4. Return ONLY a JSON list of objects: [{{ \"Program name\": \"...\", \"Program Page url\": \"{portal_url}\" }}]\n"
+            f"   IMPORTANT: For the 'Program Page url', ALWAYS use strictly {portal_url} for all programs. NO EXCEPTIONS.\n"
             f"5. If no links in this chunk are programs, return an empty list []."
         )
         
@@ -149,6 +166,10 @@ def get_graduate_programs(url, university_name, existing_data=None):
             refined_data = _extract_json_from_text(refine_resp.text)
             if isinstance(refined_data, list):
                 for prog in refined_data:
+                    # Blacklist check again for AI safety
+                    name = prog.get("Program name", "").lower()
+                    if any(term == name or name == f"{term}s" for term in blacklist):
+                        continue
                     if "Program name" in prog and "Program Page url" in prog:
                         yield prog
         except Exception as e:
@@ -185,7 +206,7 @@ def run(university_name_input):
             yield f'{{"status": "complete", "message": "Found {count} graduate programs (using existing list)", "files": {{"grad_csv": "{csv_path}"}}}}'
             return
         else:
-            yield f'{{"status": "progress", "message": "Existing list found but count is suspiciously low ({count}). Forcing Deep Discovery re-extraction..."}}'
+            yield f'{{"status": "progress", "message": "Existing list found but count is  low ({count}). Forcing Deep Discovery re-extraction..."}}'
 
     prompt = f"What is the official university website for {university_name}?"
     try:

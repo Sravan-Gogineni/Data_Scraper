@@ -58,7 +58,7 @@ Instead of relying on internal LLM knowledge, every extraction is grounded in re
 ### 1. Setup
 Ensure your environment variables are configured in `.env`:
 *   `GCP_PROJECT`: Your Google Cloud Project ID.
-*   `MODEL`: The Gemini model version (e.g., `gemini-1.5-pro-002`).
+*   `MODEL`: The Gemini model version (e.g., `gemini-2.5-pro`).
 
 ### 2. Starting the Ecosystem
 Run the backend server:

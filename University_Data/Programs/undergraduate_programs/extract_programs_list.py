@@ -120,13 +120,13 @@ def get_undergraduate_programs(url, university_name, existing_data=None):
 
     # --- STAGE 2: CRAWL FALLBACK (Deterministic) ---
     # We ALWAYS run Stage 2 now for 'Deep Discovery'
-    yield f'{{"status": "progress", "message": "STAGE 2: Executing Direct Crawl on {url} for exhaustive list..."}}'
+    yield f'{{"status": "progress", "message": "STAGE 2: Executing Direct Crawl on {portal_url} for exhaustive list..."}}'
     
     # We look for keywords that imply undergraduate level
     undergrad_keywords = ['undergraduate', 'bachelor', 'major', 'minor', 'associate', 'degree', 'program', 'curriculum']
     
-    # Run the crawler natively (increased to 15 pages)
-    crawled_links = fetch_links_with_pagination(url, base_domain, filter_keywords=undergrad_keywords, max_pages=15)
+    # Run the crawler natively from the portal URL (increased to 20 pages for deep discovery)
+    crawled_links = fetch_links_with_pagination(portal_url, base_domain, filter_keywords=undergrad_keywords, max_pages=20)
     
     if not crawled_links:
          yield f'{{"status": "warning", "message": "Stage 2 Crawl found 0 programs."}}'
@@ -142,14 +142,14 @@ def get_undergraduate_programs(url, university_name, existing_data=None):
         
         refine_prompt = (
             f"You are a program list refiner for {university_name}.\n"
-            f"I have crawled the following potential program links from the university website:\n\n"
+            f"I have crawled the following potential program links from the university portal:\n\n"
             f"{links_text}\n\n"
             f"Instructions:\n"
             f"1. Filter this list. Keep ONLY actual undergraduate-level academic programs (Bachelor's, Majors, Minors, Associates).\n"
             f"2. REMOVE links that are just 'Apply', 'Contact Us', 'About', 'Faculty', etc.\n"
             f"3. STANDARDIZE the names. Convert abbreviations to full names (e.g., 'BS' -> 'Bachelor of Science').\n"
-            f"4. Return ONLY a JSON list of objects: [{{\"Program name\": \"...\", \"Program Page url\": \"{url}\"}}]\n"
-            f"   IMPORTANT: For the 'Program Page url', ALWAYS use strictly {url} for all programs.\n"
+            f"4. Return ONLY a JSON list of objects: [{{\"Program name\": \"...\", \"Program Page url\": \"{portal_url}\"}}]\n"
+            f"   IMPORTANT: For the 'Program Page url', ALWAYS use strictly {portal_url} for all programs.\n"
             f"5. If no links in this chunk are programs, return an empty list []."
         )
         

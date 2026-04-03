@@ -15,3 +15,7 @@ Grad_prog_outputs/
 Undergrad_prog_outputs/
 /Grad_prog_outputs/
 utils/
+
+#ignore any files with _Final.csv extension
+**_Final.csv
+**_Cleaned.csv
