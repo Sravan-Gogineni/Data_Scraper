@@ -19,3 +19,8 @@ utils/
 #ignore any files with _Final.csv extension
 **_Final.csv
 **_Cleaned.csv
+
+#ignore grad_prog_outputs directory which is inside Programs
+Programs/graduate_programs/Grad_prog_outputs/
+Programs/undergraduate_programs/Undergrad_prog_outputs/
+
