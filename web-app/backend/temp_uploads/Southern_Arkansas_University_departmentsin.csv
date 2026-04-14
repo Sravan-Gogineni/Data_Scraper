@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Admissions,,,,,,,,,US,US,United States,muleriders@saumag.edu,870-235-4040,,AR,100 East University,,71753,Arkansas,,FALSE,https://web.saumag.edu/admissions/apply/,,,FALSE,FALSE,Southern Arkansas University
+School of Graduate Studies,,,,,,,,Magnolia,US,US,United States,gradstudies@saumag.edu,(870) 235-4150,,AR,100 E. University,,71753,Arkansas,,FALSE,https://web.saumag.edu/graduate/admissions/,,,FALSE,FALSE,Southern Arkansas University

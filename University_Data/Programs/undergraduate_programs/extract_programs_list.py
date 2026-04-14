@@ -88,6 +88,7 @@ def get_undergraduate_programs(url, university_name, existing_data=None):
         f"Extract EVERY SINGLE active undergraduate (Bachelor's, Major, Minor, Associate) program name AND its specific official URL for {university_name}.\n\n"
         f"CRITICAL DOMAIN RULE: You MUST use the search operator `site:{base_domain}`. DO NOT return URLs from Wikipedia, U.S. News, Peterson's, or any non-official 3rd party site.\n"
         f"CRITICAL NAME RULE: STANDARDIZE THE NAME. If you see 'Biology, BS', output 'Bachelor of Science in Biology'. If you see 'BA in History', output 'Bachelor of Arts in History'. DO NOT output abbreviations.\n"
+        f"CRITICAL SEPARATION RULE: If a department or combined name represents distinct separate programs (e.g., 'Chemical and Biological Engineering'), SPLIT them into separate entries for 'Chemical Engineering' and 'Biological Engineering' unless it is officially a single combined degree.\n"
         f"CRITICAL URL RULE: Use the EXACT portal URL discovered as the 'Program Page url' for every entry. DO NOT return individual program page URLs.\n"
         f"CRITICAL URL FORMAT: Set 'Program Page url' to exactly {portal_url} for all records. NO EXCEPTIONS.\n"
         f"CRITICAL NO CITATIONS RULE: Strip out any formatting citations like [1], [12], or [2, 4].\n\n"
@@ -148,9 +149,10 @@ def get_undergraduate_programs(url, university_name, existing_data=None):
             f"1. Filter this list. Keep ONLY actual undergraduate-level academic programs (Bachelor's, Majors, Minors, Associates).\n"
             f"2. REMOVE links that are just 'Apply', 'Contact Us', 'About', 'Faculty', etc.\n"
             f"3. STANDARDIZE the names. Convert abbreviations to full names (e.g., 'BS' -> 'Bachelor of Science').\n"
-            f"4. Return ONLY a JSON list of objects: [{{\"Program name\": \"...\", \"Program Page url\": \"{portal_url}\"}}]\n"
+            f"4. SEPARATE COMBINED PROGRAMS. If a link represents distinct programs grouped together (e.g., 'Chemical AND Biological Engineering'), SPLIT them into separate entries if they are distinct majors.\n"
+            f"5. Return ONLY a JSON list of objects: [{{\"Program name\": \"...\", \"Program Page url\": \"{portal_url}\"}}]\n"
             f"   IMPORTANT: For the 'Program Page url', ALWAYS use strictly {portal_url} for all programs.\n"
-            f"5. If no links in this chunk are programs, return an empty list []."
+            f"6. If no links in this chunk are programs, return an empty list []."
         )
         
         try:

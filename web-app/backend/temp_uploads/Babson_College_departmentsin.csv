@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Graduate Admissions,,,,,,,,Babson Park,US,US,United States,gradadmissions@babson.edu,(781) 239-4317,,MA,231 Forest Street,,2457,Massachusetts,,FALSE,,Olin Hall,,FALSE,FALSE,Babson College
+Office of Undergraduate Admission,,,,,,,,Babson Park,US,US,United States,ugradadmission@babson.edu,(781) 239-5522,,MA,231 Forest Street,,2457,Massachusetts,,FALSE,,Lunder Hall,,FALSE,FALSE,Babson College

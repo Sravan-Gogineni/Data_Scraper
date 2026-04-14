@@ -81,7 +81,7 @@ class UniversityUrls(BaseModel):
     LinkedIn: str = Field(description="The official LinkedIn URL of the university. Return empty string if not found.")
 
 class ApplicationRequirements(BaseModel):
-    ApplicationFees: str = Field(description="The application fee amount in USD. Report ONLY the flat fee amount(s) (e.g., '$50' or 'Domestic: $50, International: $100'). Do NOT mention fee waivers, waiver eligibility, Early Decision, Early Action, or any conditions under which the fee may be waived. Return empty string if not found.")
+    ApplicationFees: str = Field(description="The application fee amount in USD specifically for International students. If domestic and international fees differ, report ONLY the international fee (e.g., '$100'). Do NOT mention fee waivers, waiver eligibility, Early Decision, Early Action, or any conditions under which the fee may be waived. Return empty string if not found.")
     TestPolicy: str = Field(description="The general test policy (e.g., 'Test-Optional', 'Required', 'Not Required'). Return empty string if not found.")
     Recommendations: int = Field(description="The minimum number of recommendations required to submit the application some programs may require more than others in that case return the maximum number of recommendations required. Return empty string if not found.")
     PersonalEssay: str = Field(description="Determine if a personal statement, statement of purpose, or narrative essay about the applicant is required. Return 'Required' or 'Not Required'. Return an empty string if the information is missing.")
@@ -384,7 +384,7 @@ MODEL_EXTRACTION_CONFIG: dict[str, dict] = {
         "context_label": "UNDERGRADUATE ADMISSIONS PAGE",
         "extra_instructions": (
             "Focus exclusively on the undergraduate admissions requirements page. "
-            "Do NOT use graduate requirements. If a requirement has different values for domestic vs international, return the domestic value."
+            "Do NOT use graduate requirements. If a requirement has different values for domestic vs international, return the international value."
         ),
     },
     "StandardizedTests": {

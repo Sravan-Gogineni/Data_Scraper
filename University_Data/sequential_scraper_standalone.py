@@ -810,22 +810,54 @@ def process_department_extraction(university_name):
 # ============================================================================
 
 def process_programs_extraction(university_name, step=9):
-    """Process programs extraction - simplified version
+    """Process programs extraction - Robust Version
     
-    NOTE: Full implementation would include all sub-modules from Programs.py
+    This now attempts to use the modular Programs.py for high-quality extraction.
     """
-    yield f'{{"status": "progress", "message": "Starting programs extraction for {university_name}..."}}'
+    yield f'{{"status": "progress", "message": "Starting robust programs extraction for {university_name}..."}}'
     
+    # Try to import modular Programs orchestrator
+    try:
+        # Add the parent directory and Programs directory to sys.path
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        programs_path = os.path.join(current_dir, "Programs")
+        if programs_path not in sys.path:
+            sys.path.append(programs_path)
+            
+        import Programs
+        yield f'{{"status": "progress", "message": "Using modular Programs ecosystem for extraction..."}}'
+        
+        # Step 9 is full automation (extraction + enrichment)
+        # Step 6 is standardized merge
+        # In this standalone script, we'll run 9 then 6 for full results
+        
+        # Run step 9
+        for update in Programs.process_programs_extraction(university_name, 9):
+            yield update
+            
+        # Run step 6
+        for update in Programs.process_programs_extraction(university_name, 6):
+            yield update
+            
+        return
+    except ImportError as e:
+        yield f'{{"status": "warning", "message": "Modular Programs ecosystem not found ({str(e)}). Falling back to basic extraction."}}'
+    except Exception as e:
+        yield f'{{"status": "error", "message": "Error using modular Programs: {str(e)}"}}'
+        # Fallback to simplified if modular fails
+    
+    # --- FALLBACK SIMPLIFIED LOGIC (Improved) ---
     # Get website
     prompt = f"What is the official university website for {university_name}?"
     website_url = generate_text_safe(prompt)
     
-    # Extract graduate programs
-    yield '{"status": "progress", "message": "Extracting graduate programs list..."}'
+    # Extract graduate programs with a better prompt
+    yield '{"status": "progress", "message": "Extracting graduate programs (Basic Fallback)..."}'
     grad_prompt = (
-        f"Find all graduate programs offered by {university_name} at {website_url}. "
-        "Return JSON array with objects containing: ProgramName, DegreeType, Department. "
-        "Use null for missing values."
+        f"Find all graduate programs (Masters, PhD) offered by {university_name}. "
+        f"Search for the main programs listing page on {website_url}. "
+        "Return a JSON array of objects with: ProgramName, DegreeType, Department. "
+        "IMPORTANT: Be exhaustive. Do not summarize."
     )
     
     try:
@@ -837,11 +869,10 @@ def process_programs_extraction(university_name, step=9):
         grad_programs = []
     
     # Extract undergraduate programs
-    yield '{"status": "progress", "message": "Extracting undergraduate programs list..."}'
+    yield '{"status": "progress", "message": "Extracting undergraduate programs (Basic Fallback)..."}'
     undergrad_prompt = (
         f"Find all undergraduate programs offered by {university_name} at {website_url}. "
-        "Return JSON array with objects containing: ProgramName, DegreeType, Department. "
-        "Use null for missing values."
+        "Return JSON array with objects containing: ProgramName, DegreeType, Department."
     )
     
     try:
@@ -857,7 +888,7 @@ def process_programs_extraction(university_name, step=9):
     output_dir = os.path.join(script_dir, "Programs_outputs")
     os.makedirs(output_dir, exist_ok=True)
     
-    safe_name = university_name.replace(" ", "_")
+    safe_name = university_name.replace(" ", "_").replace("/", "_")
     
     # Save graduate programs
     grad_json_path = os.path.join(output_dir, f"{safe_name}_graduate_programs.json")

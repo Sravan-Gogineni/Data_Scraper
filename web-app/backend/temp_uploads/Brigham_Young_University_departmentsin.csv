@@ -1,0 +1,5 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Enrollment Services,,,,,,,,Provo,USA,US,United States,,(801) 422-4104,,UT,1 Campus Dr,3326 WSC,84602,Utah,,FALSE,https://enrollment.byu.edu/admissions,Wilkinson Student Center,,FALSE,FALSE,Brigham Young University
+BYU Marriott Business School Admissions,,,,,,,,Provo,USA,US,United States,mba@byu.edu,(801) 422-3500,,UT,1 Campus Dr,W437 TNRB,84602,Utah,,FALSE,,N. Eldon Tanner Building,,FALSE,FALSE,Brigham Young University
+J. Reuben Clark Law School Admissions,,,,,,,,Provo,USA,US,United States,admissions@law.byu.edu,,,UT,1 Campus Dr,,84602,Utah,,FALSE,https://law.byu.edu/admissions/,J. Reuben Clark Building,,FALSE,FALSE,Brigham Young University
+Graduate Studies,,,,,,,,Provo,USA,US,United States,gseced@byu.edu,,,UT,,,84602,Utah,,FALSE,https://gradstudies.byu.edu/admissions,,,FALSE,FALSE,Brigham Young University

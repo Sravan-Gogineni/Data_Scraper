@@ -60,6 +60,11 @@ def all_extraction():
 def download_file(filename):
     # Check if file is in Institution output or Department output or Programs output
     
+    # Try temp_uploads FIRST (for files modified during "uploaded mapping")
+    temp_uploads_dir = os.path.join(os.path.dirname(__file__), "temp_uploads")
+    if os.path.exists(os.path.join(temp_uploads_dir, filename)):
+         return send_from_directory(temp_uploads_dir, filename, as_attachment=True)
+         
     # Try Institution
     if os.path.exists(os.path.join(INST_OUTPUT_DIR, filename)):
          return send_from_directory(INST_OUTPUT_DIR, filename, as_attachment=True)

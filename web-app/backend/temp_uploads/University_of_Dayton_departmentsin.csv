@@ -1,0 +1,4 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Recruitment and Admission,,,,,,,,Dayton,US,US,United States,admission@udayton.edu,800-837-7433,,OH,300 College Park,,45409,Ohio,,FALSE,https://udayton.edu/apply/undergraduate/index.php,,,FALSE,FALSE,University of Dayton
+School of Law Office of Admissions ,,,,,,,,Dayton,US,US,United States,lawinfo@udayton.edu,937-229-3555,,OH,300 College Park,,45469-2760,Ohio,,FALSE,https://udayton.edu/law/admissions/index.php,,,FALSE,FALSE,University of Dayton
+Graduate Admission,,,,,,,,,,,,goglobalgraduate@udayton.edu,,,,,,,,,FALSE,,,,FALSE,FALSE,University of Dayton

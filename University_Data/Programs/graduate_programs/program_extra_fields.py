@@ -288,6 +288,14 @@ def process_single_program_master(program_name, program_url, university_name, ma
                  )
                  parsed = _extract_json_from_text(resp.text)
                  
+                 # Cross-check description for hallucination signatures
+                 desc = parsed.get('description', '')
+                 if desc:
+                     desc_lower = desc.lower()
+                     hallucination_signatures = ["not offered", "does not offer", "does not exist", "not found", "not an official"]
+                     if any(sig in desc_lower for sig in hallucination_signatures):
+                         return {'Program name': program_name, 'Program Page url': program_url, 'error': f"Hallucinated program: {desc}"}
+                 
                  # Final mapping ensures all keys exist in output for Graduate level
                  result = {
                      'Program name': program_name,
@@ -342,8 +350,13 @@ def process_single_program_master(program_name, program_url, university_name, ma
                      'IsEnglishNotRequired', 'IsEnglishOptional'
                  ]
                  for bf in bool_fields:
-                     if result.get(bf) is None:
+                     val = result.get(bf)
+                     if val is None or val == "":
                          result[bf] = False
+                     elif isinstance(val, str):
+                         result[bf] = val.strip().lower() == "true"
+                     else:
+                         result[bf] = bool(val)
                          
                  return result
              except Exception as e:

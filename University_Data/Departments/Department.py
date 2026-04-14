@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 import json
 import re
+import requests
 
 load_dotenv()
 
@@ -14,6 +15,39 @@ client = genai.Client(
     project=os.getenv("GCP_PROJECT"),
     location='us-east4'
 )
+
+def _format_phone(phone: str) -> str:
+    """Helper to enforce (XXX) XXX-XXXX format just in case the LLM fails."""
+    if not phone:
+        return ""
+    digits = re.sub(r'\D', '', str(phone))
+    if len(digits) == 10:
+        return f"({digits[:3]}) {digits[3:6]}-{digits[6:]}"
+    elif len(digits) == 11 and digits.startswith('1'):
+        return f"({digits[1:4]}) {digits[4:7]}-{digits[7:]}"
+    return phone
+
+def _verify_urls(result: dict, url_keys: list) -> dict:
+    """Helper to verify and drop dead URLs by hitting them with a HEAD request."""
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    for key in url_keys:
+        if result.get(key):
+            test_url = str(result[key])
+            if not test_url.startswith("http"):
+                continue
+            try:
+                response = requests.head(test_url, headers=headers, allow_redirects=True, timeout=5)
+                if response.status_code in [404, 410]:
+                    response = requests.get(test_url, headers=headers, allow_redirects=True, timeout=5)
+                    if response.status_code in [404, 410]:
+                        print(f"Removing dead URL for {key}: {test_url} (HTTP {response.status_code})")
+                        result[key] = ""
+            except requests.RequestException as e:
+                print(f"Failed to connect to URL for {key}: {test_url} - {str(e)}")
+                result[key] = ""
+    return result
 
 # Define tools and model globally
 def generate_text_safe(prompt):
@@ -168,6 +202,13 @@ def process_department_extraction(university_name):
             return
 
         yield f'{{"status": "progress", "message": "Successfully extracted {len(departments_data)} departments"}}'
+        
+        # Apply phone formatting and URL strict verification
+        for dept in departments_data:
+            if dept.get("PhoneNumber"):
+                dept["PhoneNumber"] = _format_phone(dept["PhoneNumber"])
+            # Verify and drop any 404/hallucinated links
+            _verify_urls(dept, ["Website_url", "AdmissionUrl"])
         
         # Create DataFrame
         if departments_data:

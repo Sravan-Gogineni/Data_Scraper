@@ -341,8 +341,13 @@ def process_single_program_master(program_name, program_url, university_name, ma
                      'IsEnglishNotRequired', 'IsEnglishOptional'
                  ]
                  for bf in bool_fields:
-                     if result.get(bf) is None:
+                     val = result.get(bf)
+                     if val is None or val == "":
                          result[bf] = False
+                     elif isinstance(val, str):
+                         result[bf] = val.strip().lower() == "true"
+                     else:
+                         result[bf] = bool(val)
                          
                  return result
              except Exception as e:
