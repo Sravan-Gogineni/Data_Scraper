@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+CCA Admissions,,,,,,,,,US,US,United States,admissions@cca.edu,(415) 610-7004,,CA,145 Hooper Street,,94107,San Francisco,,FALSE,https://www.cca.edu/admissions/apply/,,,FALSE,FALSE,California College of the Arts
+Graduate Admissions,,,,,,,,,US,US,United States,graduateprograms@cca.edu,(415) 548-2271,,CA,145 Hooper Street,,94107,San Francisco,,FALSE,https://www.cca.edu/admissions/graduate/,,,FALSE,FALSE,California College of the Arts

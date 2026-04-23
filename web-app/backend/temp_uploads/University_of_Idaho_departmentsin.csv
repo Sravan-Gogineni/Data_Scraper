@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Admissions,,,,,,,,Moscow,USA,US,United States,admissions@uidaho.edu,(208) 885-6326,,ID,709 Deakin St.,Room 117,83844,Idaho,,FALSE,https://www.uidaho.edu/admissions,Bruce M. Pitman Center,,FALSE,FALSE,University of Idaho
+Office of Graduate Admissions,,,,,,,,Moscow,USA,US,United States,graduateadmissions@uidaho.edu,(208) 885-4001,,ID,820 Idaho Avenue,Room 205,83844-3019,Idaho,,FALSE,,Morrill Hall,,FALSE,FALSE,University of Idaho

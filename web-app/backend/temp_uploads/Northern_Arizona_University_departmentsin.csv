@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+University Admissions,,,,,,,,Flagstaff,USA,US,United States,admissions@nau.edu,(928) 523-9011,,AZ,1900 S Knoles Dr,,86011,Arizona,,FALSE,https://nau.edu/admissions/,,,FALSE,FALSE,Northern Arizona University
+Graduate College,,,,,,,,Flagstaff,USA,US,United States,graduate.college@nau.edu,(928) 523-4348,,AZ,1145 S. Knoles Drive,PO Box 4125,86011,Arizona,,FALSE,,Gammage Building,,FALSE,FALSE,Northern Arizona University

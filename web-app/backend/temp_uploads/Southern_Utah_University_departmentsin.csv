@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Admissions Office,,,,,,,,Cedar City,US,US,United States,admissions@suu.edu,(435) 586-7740,,UT,351 W University Blvd,,84720,Utah,,FALSE,https://www.suu.edu/admissions/,,,FALSE,FALSE,Southern Utah University
+Graduate Admissions,,,,,,,,Cedar City,US,US,United States,goadmissions@suu.edu,(435) 865-8665,,UT,351 W University Blvd,,84720,Utah,,FALSE,https://www.suu.edu/graduatestudies/,,,FALSE,FALSE,Southern Utah University

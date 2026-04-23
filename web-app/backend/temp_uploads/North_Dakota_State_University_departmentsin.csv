@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Admission,,,,,,,,Fargo,US,US,United States,ndsu.admission@ndsu.edu,(701) 231-8643,Landline,ND,1301 Administration Ave,Room 114,58108,North Dakota,,FALSE,https://www.ndsu.edu/admission/,Ceres Hall,,FALSE,FALSE,North Dakota State University
+Graduate School,,,,,,,,Fargo,US,US,United States,,,,ND,,,,North Dakota,,FALSE,,,,FALSE,FALSE,North Dakota State University

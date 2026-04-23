@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Undergraduate Admissions,,,,,,,,Troy,USA,US,United States,admissions@rpi.edu,(518) 276-6216,,NY,2 Eaton Road,,12180,New York,,FALSE,http://admissions.rpi.edu,Fitzroy Admissions Building,,FALSE,FALSE,Rensselaer Polytechnic Institute
+Graduate Admissions,,,,,,,,Troy,USA,US,United States,gradadmissions@rpi.edu,,,,,,,,,FALSE,https://apply.rpi.edu/apply/,,,FALSE,FALSE,Rensselaer Polytechnic Institute

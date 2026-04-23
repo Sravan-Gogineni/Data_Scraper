@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Admissions,,,,,,,,Richmond,US,USA,United States,ugrad@vcu.edu,(804) 828-1222,,VA,1111 W. Broad St.,Suite 1000,23284-2526,Virginia,,FALSE,https://www.vcu.edu/admissions/,Welcome Center,,FALSE,FALSE,Virginia Commonwealth University
+Graduate School,,,,,,,,Richmond,US,USA,United States,gradschool@vcu.edu,(804) 828-6916,,VA,901 W. Franklin St.,,23284,Virginia,,FALSE,,,,FALSE,FALSE,Virginia Commonwealth University

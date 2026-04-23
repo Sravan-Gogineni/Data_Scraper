@@ -435,5 +435,179 @@ def map_departments():
 
     return Response(stream_with_context(generate()), mimetype='text/event-stream')
 
+@app.route("/api/extract/batch", methods=["POST"])
+def extract_batch():
+    """Accept a CSV or XLSX file with a 'university name' column and extract each one sequentially."""
+    if 'batch_file' not in request.files:
+        return jsonify({"error": "No file uploaded. Send a CSV or XLSX with a 'university name' column."}), 400
+
+    batch_file = request.files['batch_file']
+    if not batch_file.filename:
+        return jsonify({"error": "Empty filename"}), 400
+
+    upload_dir = os.path.join(os.path.dirname(__file__), "temp_uploads")
+    os.makedirs(upload_dir, exist_ok=True)
+
+    from werkzeug.utils import secure_filename
+    import pandas as pd
+
+    saved_path = os.path.join(upload_dir, secure_filename(batch_file.filename))
+    batch_file.save(saved_path)
+
+    try:
+        if saved_path.endswith(".xlsx"):
+            df = pd.read_excel(saved_path)
+        else:
+            df = pd.read_csv(saved_path)
+    except Exception as e:
+        return jsonify({"error": f"Could not parse file: {e}"}), 400
+
+    # Find the university name column (case-insensitive)
+    col_map = {c.strip().lower(): c for c in df.columns}
+    uni_col = col_map.get("university name") or col_map.get("university_name")
+    if not uni_col:
+        return jsonify({"error": "File must contain a column named 'university name'"}), 400
+
+    universities = [str(v).strip() for v in df[uni_col].dropna() if str(v).strip()]
+    if not universities:
+        return jsonify({"error": "No university names found in the file"}), 400
+    if len(universities) > 10:
+        universities = universities[:10]
+
+    def generate():
+        total = len(universities)
+        yield f"data: {json.dumps({'status': 'batch_start', 'message': f'Starting batch extraction for {total} universities', 'total': total})}\n\n"
+
+        for idx, university_name in enumerate(universities, start=1):
+            yield f"data: {json.dumps({'status': 'university_start', 'message': f'[{idx}/{total}] Starting: {university_name}', 'index': idx, 'total': total, 'university': university_name})}\n\n"
+
+            all_files = {}
+            try:
+                sanitized_name = university_name.replace(" ", "_").replace("/", "_").replace("\\", "_")
+                inst_csv_path = os.path.join(INST_OUTPUT_DIR, f"{sanitized_name}_Institution.csv")
+                dept_csv_path = os.path.join(DEPT_OUTPUT_DIR, f"{sanitized_name}_departments.csv")
+
+                # Step 1: Institution
+                yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] --- Step 1: Institution Extraction ---'})}\n\n"
+
+                if os.path.exists(inst_csv_path):
+                    yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Institution] CSV already exists - skipping'})}\n\n"
+                    all_files["inst_csv"] = f"/api/download/{os.path.basename(inst_csv_path)}"
+                else:
+                    for update in process_institution_extraction(university_name):
+                        try:
+                            update_obj = json.loads(update)
+                            if update_obj.get("status") == "complete":
+                                yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Institution] Complete'})}\n\n"
+                                for key, path in update_obj.get("files", {}).items():
+                                    all_files[f"inst_{key}"] = f"/api/download/{os.path.basename(path)}"
+                            else:
+                                msg = update_obj.get("message", "")
+                                yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Institution] {msg}'})}\n\n"
+                        except json.JSONDecodeError:
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Institution] {update}'})}\n\n"
+
+                # Step 2: Department (with retry)
+                yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] --- Step 2: Department Extraction ---'})}\n\n"
+
+                departments_found = False
+                retry_count = 0
+                max_retries = 10
+
+                while not departments_found and retry_count < max_retries:
+                    if os.path.exists(dept_csv_path):
+                        yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Department] CSV already exists - skipping'})}\n\n"
+                        departments_found = True
+                        all_files["dept_csv"] = f"/api/download/{os.path.basename(dept_csv_path)}"
+                        break
+                    if retry_count > 0:
+                        yield f"data: {json.dumps({'status': 'warning', 'message': f'[{idx}/{total}] Retry attempt {retry_count} for departments...'})}\n\n"
+                        import time
+                        time.sleep(5)
+
+                    dept_files_found = False
+                    for update in process_department_extraction(university_name):
+                        try:
+                            update_obj = json.loads(update)
+                            if update_obj.get("status") == "complete":
+                                if update_obj.get("files"):
+                                    departments_found = True
+                                    dept_files_found = True
+                                    yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Department] Complete'})}\n\n"
+                                    for key, path in update_obj["files"].items():
+                                        all_files[f"dept_{key}"] = f"/api/download/{os.path.basename(path)}"
+                                else:
+                                    yield f"data: {json.dumps({'status': 'warning', 'message': f'[{idx}/{total}] [Department] No departments found'})}\n\n"
+                            else:
+                                msg = update_obj.get("message", "")
+                                yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Department] {msg}'})}\n\n"
+                        except json.JSONDecodeError:
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Department] {update}'})}\n\n"
+
+                    if not dept_files_found:
+                        retry_count += 1
+                        if retry_count < max_retries:
+                            yield f"data: {json.dumps({'status': 'warning', 'message': f'[{idx}/{total}] No departments found. Retrying... ({retry_count}/{max_retries})'})}\n\n"
+
+                if not departments_found:
+                    yield f"data: {json.dumps({'status': 'warning', 'message': f'[{idx}/{total}] Max retries reached for departments. Proceeding...'})}\n\n"
+
+                # Step 3: Programs
+                yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] --- Step 3: Programs Full Extraction ---'})}\n\n"
+
+                for update in process_programs_extraction(university_name, 9):
+                    try:
+                        update_obj = json.loads(update)
+                        if update_obj.get("status") == "complete":
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Programs] Full automation completed. Starting merge...'})}\n\n"
+                            break
+                        else:
+                            msg = update_obj.get("message", "")
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Programs] {msg}'})}\n\n"
+                    except json.JSONDecodeError:
+                        yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Programs] {update}'})}\n\n"
+
+                programs_final_file = None
+                for update in process_programs_extraction(university_name, 6):
+                    try:
+                        update_obj = json.loads(update)
+                        if update_obj.get("status") == "complete":
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Programs] Merge completed'})}\n\n"
+                            for key, path in update_obj.get("files", {}).items():
+                                if "_Final.csv" in path or "final_csv" in key:
+                                    programs_final_file = path
+                                    break
+                            break
+                        else:
+                            msg = update_obj.get("message", "")
+                            yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Programs] {msg}'})}\n\n"
+                    except json.JSONDecodeError:
+                        yield f"data: {json.dumps({'status': 'progress', 'message': f'[{idx}/{total}] [Programs] {update}'})}\n\n"
+
+                # Collect final files
+                final_files = {}
+                for key, path in all_files.items():
+                    if key.startswith("inst_") and "csv" in key.lower():
+                        final_files["institution_data"] = path
+                        break
+                for key, path in all_files.items():
+                    if key.startswith("dept_") and "csv" in key.lower():
+                        final_files["departments_data"] = path
+                        break
+                if programs_final_file:
+                    final_files["programs_final"] = f"/api/download/{os.path.basename(programs_final_file)}"
+
+                yield f"data: {json.dumps({'status': 'university_complete', 'message': f'[{idx}/{total}] Completed: {university_name}', 'index': idx, 'total': total, 'university': university_name, 'files': final_files})}\n\n"
+
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
+                yield f"data: {json.dumps({'status': 'university_error', 'message': f'[{idx}/{total}] Error for {university_name}: {str(e)}', 'index': idx, 'total': total, 'university': university_name})}\n\n"
+
+        yield f"data: {json.dumps({'status': 'batch_complete', 'message': f'Batch extraction finished for all {total} universities', 'total': total})}\n\n"
+
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
+
 if __name__ == "__main__":
     app.run(debug=False, port=5002)

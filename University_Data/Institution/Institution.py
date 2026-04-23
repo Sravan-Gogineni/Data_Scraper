@@ -613,7 +613,83 @@ def get_university_comprehensive_data(university_name: str) -> dict:
     unified_result["IsImported"] = "True"
     return unified_result
 
-# make all the extracted data into a csv file   
+_US_STATE_ID_MAP = {
+    "united states": 3340,
+    "apo/fpo (aa)": 3341, "apo fpo aa": 3341,
+    "apo/fpo (ae)": 3342, "apo fpo ae": 3342,
+    "alaska": 3343, "ak": 3343,
+    "alabama": 3344, "al": 3344,
+    "apo/fpo (ap)": 3345, "apo fpo ap": 3345,
+    "arkansas": 3346, "ar": 3346,
+    "american samoa": 3347, "as": 3347,
+    "arizona": 3348, "az": 3348,
+    "california": 3349, "ca": 3349,
+    "colorado": 3350, "co": 3350,
+    "connecticut": 3351, "ct": 3351,
+    "district of columbia": 3352, "washington dc": 3352, "washington d.c.": 3352, "dc": 3352,
+    "delaware": 3353, "de": 3353,
+    "florida": 3354, "fl": 3354,
+    "federated states of micronesia": 3355, "fm": 3355,
+    "georgia": 3356, "ga": 3356,
+    "guam": 3357, "gu": 3357,
+    "hawaii": 3358, "hi": 3358,
+    "iowa": 3359, "ia": 3359,
+    "idaho": 3360, "id": 3360,
+    "illinois": 3361, "il": 3361,
+    "indiana": 3362, "in": 3362,
+    "kansas": 3363, "ks": 3363,
+    "kentucky": 3364, "ky": 3364,
+    "louisiana": 3365, "la": 3365,
+    "massachusetts": 3366, "ma": 3366,
+    "maryland": 3367, "md": 3367,
+    "maine": 3368, "me": 3368,
+    "marshall islands": 3369, "mh": 3369,
+    "michigan": 3370, "mi": 3370,
+    "minnesota": 3371, "mn": 3371,
+    "missouri": 3372, "mo": 3372,
+    "mariana islands": 3373, "northern mariana islands": 3373, "mp": 3373,
+    "mississippi": 3374, "ms": 3374,
+    "montana": 3375, "mt": 3375,
+    "north carolina": 3376, "nc": 3376,
+    "north dakota": 3377, "nd": 3377,
+    "nebraska": 3378, "ne": 3378,
+    "new hampshire": 3379, "nh": 3379,
+    "new jersey": 3380, "nj": 3380,
+    "new mexico": 3381, "nm": 3381,
+    "nevada": 3382, "nv": 3382,
+    "new york": 3383, "ny": 3383,
+    "ohio": 3384, "oh": 3384,
+    "oklahoma": 3385, "ok": 3385,
+    "oregon": 3386, "or": 3386,
+    "pennsylvania": 3387, "pa": 3387,
+    "puerto rico": 3388, "pr": 3388,
+    "palau": 3389, "pw": 3389,
+    "rhode island": 3390, "ri": 3390,
+    "south carolina": 3391, "sc": 3391,
+    "south dakota": 3392, "sd": 3392,
+    "tennessee": 3393, "tn": 3393,
+    "texas": 3394, "tx": 3394,
+    "utah": 3395, "ut": 3395,
+    "virginia": 3396, "va": 3396,
+    "virgin islands": 3397, "virgin islands, u.s.": 3397, "us virgin islands": 3397, "vi": 3397,
+    "vermont": 3398, "vt": 3398,
+    "washington": 3399, "wa": 3399,
+    "wisconsin": 3400, "wi": 3400,
+    "west virginia": 3401, "wv": 3401,
+    "wyoming": 3402, "wy": 3402,
+}
+
+
+def _map_state_to_id(state_value: str) -> str:
+    """Return the numeric state ID for a US state name/abbreviation, or the original value if not found."""
+    if not state_value:
+        return state_value
+    key = state_value.strip().lower()
+    mapped = _US_STATE_ID_MAP.get(key)
+    return str(mapped) if mapped is not None else state_value
+
+
+# make all the extracted data into a csv file
 def save_to_csv(data: dict, filename: str):
     # The exact columns and order requested by the user
     final_columns = [
@@ -645,7 +721,12 @@ def save_to_csv(data: dict, filename: str):
     for col in final_columns:
         if col not in data:
             data[col] = ""
-            
+
+    # Map State to numeric ID and normalise Country to "US" for US institutions
+    data["State"] = _map_state_to_id(str(data.get("State", "")))
+    if str(data.get("Country", "")).strip().lower() in ("united states", "united states of america", "usa", "us"):
+        data["Country"] = "US"
+
     df = pd.DataFrame([data])
     
     # Reorder columns and drop any extra ones not in the final_columns list

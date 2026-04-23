@@ -1,0 +1,6 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Office of Admissions,,,,,,,,Lynchburg,US,US,United States,admissions@liberty.edu,(800) 543-5317,,VA,1971 University Blvd,,24515,Virginia,,FALSE,,Hancock Welcome Center,,FALSE,FALSE,Liberty University
+Graduate School Admissions,,,,,,,,Lynchburg,US,US,United States,residentgraduate@liberty.edu,(877) 298-9617,,VA,1971 University Blvd,,24515,Virginia,,FALSE,,,,FALSE,FALSE,Liberty University
+Military Admissions,,,,,,,,Lynchburg,US,US,United States,lumilitary@liberty.edu,(855) 355-4947,,VA,1971 University Blvd,,24515,Virginia,,FALSE,,,,FALSE,FALSE,Liberty University
+School of Law Admissions,,,,,,,,Lynchburg,US,US,United States,lawadmissions@liberty.edu,(434) 592-5300,,VA,1971 University Blvd,,24515,Virginia,,FALSE,,,,FALSE,FALSE,Liberty University
+College of Osteopathic Medicine Admissions,,,,,,,,Lynchburg,US,US,United States,LUCOMadmissions@liberty.edu,(434) 592-6400,,VA,306 Liberty View Lane,,24502,Virginia,,FALSE,,Center for Medical and Health Sciences,,FALSE,FALSE,Liberty University
