@@ -408,7 +408,7 @@ def run(university_name_input):
     if programs_to_process:
          yield f'{{"status": "progress", "message": "Starting parallel master extraction for {len(programs_to_process)} undergraduate programs. Please wait..."}}'
          
-         max_workers = 5
+         max_workers = 1
          completed_count = len(processed_programs)
          
          with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:

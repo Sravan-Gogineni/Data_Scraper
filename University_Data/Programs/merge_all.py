@@ -255,6 +255,16 @@ def run(university_name=None):
     final_df['IsAnalyticalOptional'] = final_df['IsAnalyticalOptional'].fillna(True)
     final_df['IsAnalyticalOptional'] = final_df['IsAnalyticalOptional'].astype(bool)
 
+    for col in [
+        'IsGMATOrGreRequired', 'IsGMATRequired', 'IsGRERequired',
+        'IsDuoLingoRequired', 'IsELSRequired', 'IsIELTSRequired',
+        'IsLSATRequired', 'IsMATRequired', 'IsMCATRequired',
+        'IsPTERequired', 'IsTOEFLIBRequired', 'IsTOEFLPBTRequired',
+        'IsEnglishNotRequired', 'IsEnglishOptional',
+    ]:
+        if col in final_df.columns:
+            final_df[col] = final_df[col].fillna(False).astype(bool)
+
     final_df['ProgramName'] = final_df['ProgramName'].apply(standardize_program_name)
 
     # NOTE: ProgramCategory is now assigned during individual program extraction

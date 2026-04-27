@@ -1,0 +1,2 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Admissions Office,,,,,,,,Phoenix,USA,US,United States,International.Office@gcu.edu,855-428-5673,,AZ,3300 W. Camelback Road,,85017,Arizona,,FALSE,https://explore.gcu.edu/admission-requirements/,,,FALSE,FALSE,Grand Canyon University
