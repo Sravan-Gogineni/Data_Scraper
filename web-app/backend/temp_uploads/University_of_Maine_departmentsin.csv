@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Undergraduate Admissions,,,,,,,,Orono,USA,US,United States,umaineadmissions@maine.edu,(207) 581-1561,,ME,115 Estabrooke Hall,,4469,Maine,,FALSE,https://go.umaine.edu/apply/,Estabrooke Hall,,FALSE,FALSE,University of Maine
+Graduate School,,,,,,,,Orono,USA,US,United States,graduate@maine.edu,(207) 581-3291,,ME,5775 Stodder Hall,Room 42,04469-5775,Maine,,FALSE,https://umaine.edu/graduate/apply/,Stodder Hall,,FALSE,FALSE,University of Maine

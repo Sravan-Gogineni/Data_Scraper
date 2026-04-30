@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Undergraduate Admissions,,,,,,,,Jacksonville,USA,US,United States,admissions@jsu.edu,(256) 782-5268,,AL,700 Pelham Rd N,,36265,Alabama,,FALSE,,Admissions Office,,FALSE,FALSE,Jacksonville State University
+Graduate Admissions,,,,,,,,Jacksonville,USA,US,United States,graduate@jsu.edu,(256) 782-5348,,AL,700 Pelham Road North,320 Angle Hall,36265,Alabama,,FALSE,,Angle Hall,,FALSE,FALSE,Jacksonville State University

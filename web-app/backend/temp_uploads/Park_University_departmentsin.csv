@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Undergraduate Admissions,,,,,,,,Parkville,US,US,United States,parkvilleadmissions@park.edu,(816) 746-2533,,MO,8700 NW River Park Dr,,64152,Missouri,,FALSE,https://www.park.edu/apply/,,,FALSE,FALSE,Park University
+Graduate Admissions,,,,,,,,Parkville,US,US,United States,graduateadmissions@park.edu,(816) 584-6820,,MO,8700 NW River Park Dr,PMB#3,64152,Missouri,,FALSE,https://www.park.edu/admissions/graduate-degree/,,,FALSE,FALSE,Park University

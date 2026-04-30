@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Undergraduate Admissions,,,,,,,,Ruston,US,US,United States,Bulldog@LATech.edu,(318) 257-3036,,,,,,,,FALSE,https://www.latech.edu/admissions/apply/first-time-student.php,,,FALSE,FALSE,Louisiana Tech University
+Graduate School,,,,,,,,Ruston,US,US,United States,gradschool@latech.edu,(318) 257-2924,,LA,1310 W. Railroad Avenue,Room 1203,71272,Louisiana,,FALSE,https://www.latech.edu/admissions/graduate/,Wyly Tower,,FALSE,FALSE,Louisiana Tech University

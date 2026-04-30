@@ -1,0 +1,3 @@
+DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
+Undergraduate Admissions,,,,,,,,Teaneck,USA,US,United States,admissions@fdu.edu,(201) 692-7308,,NJ,1000 River Road,,7666,New Jersey,,FALSE,,,,FALSE,FALSE,Fairleigh Dickinson University
+Graduate Admissions,,,,,,,,Teaneck,USA,US,United States,grad@fdu.edu,(201) 692-2554,,NJ,1000 River Rd,H-DH3-10,7666,New Jersey,,FALSE,https://www.fdu.edu/admissions/graduate/,,,FALSE,FALSE,Fairleigh Dickinson University
