@@ -1,4 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admissions & Recruitment,,,,,,,,Norman,USA,US,United States,admissions@ou.edu,(405) 325-2151,,OK,550 Parrington Oval,,73019,Oklahoma,,FALSE,https://www.ou.edu/admissions/apply,Jacobson Hall,,FALSE,FALSE,The University of Oklahoma
-Graduate Admissions & Recruitment,,,,,,,,Norman,USA,US,United States,gradadm@ou.edu,(405) 325-3811,,OK,731 Elm Avenue,Room 318,,Oklahoma,,FALSE,,Robertson Hall,,FALSE,FALSE,The University of Oklahoma
-Health Sciences Recruitment & Admissions,,,,,,,,,USA,US,United States,discoverhsc@ou.edu,(405) 271-2359,,,,Suite 300,,,,FALSE,,Health Campus Student Union,,FALSE,FALSE,The University of Oklahoma

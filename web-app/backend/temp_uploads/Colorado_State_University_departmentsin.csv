@@ -1,3 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admissions,,,,,,,,Fort Collins,US,US,United States,admissions@colostate.edu,(970) 491-6909,,CO,1062 Campus Delivery,,80523-1062,Colorado,,FALSE,https://admissions.colostate.edu/,,,FALSE,FALSE,Colorado State University
-Graduate School,,,,,,,,Fort Collins,US,US,United States,,,,CO,,,,Colorado,,FALSE,https://graduateschool.colostate.edu/,,,FALSE,FALSE,Colorado State University

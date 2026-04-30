@@ -1,2 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admissions,,,,,,,,Chicago,USA,US,United States,info@tbiil.edu,(312) 658-5100,,IL,29 East Madison St.,Suite LL,60602,Illinois,,FALSE,https://www.tbiil.edu/admissions/,,,FALSE,FALSE,Taylor Business Institute

@@ -1,2 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admissions,,,,,,,,New Castle,USA,US,United States,infocenter@wilmu.edu,(877) 967-5464,,DE,320 N Dupont Highway,,19720,Delaware,,FALSE,https://www.wilmu.edu/admission/applyonline.aspx,,,FALSE,FALSE,Wilmington University

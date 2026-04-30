@@ -1,2 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Admissions,,,,,,,,Fairfield,USA,US,United States,admissions@miu.edu,(641) 472-1110,,IA,1000 North 4th Street,,52557,Iowa,,FALSE,,,,FALSE,FALSE,Maharishi International University

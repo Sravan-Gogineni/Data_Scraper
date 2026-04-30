@@ -1,5 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admissions,,,,,,,,Lawrence,US,US,United States,adm@ku.edu,(785) 864-3911,,KS,1266 Oread Ave,,66045,Kansas,,FALSE,https://admissions.ku.edu/apply,Jayhawk Welcome Center,,FALSE,FALSE,The University of Kansas
-Graduate Admissions,,,,,,,,Lawrence,US,US,United States,graduateadm@ku.edu,(785) 864-3140,,KS,1502 Iowa St,,66045,Kansas,,FALSE,https://graduate.ku.edu/apply,,,FALSE,FALSE,The University of Kansas
-School of Law Admissions Office,,,,,,,,Lawrence,US,US,United States,admitlaw@ku.edu,(785) 864-4378,,KS,1535 W. 15th Street,103,66045,Kansas,,FALSE,https://law.ku.edu/admissions,Green Hall,,FALSE,FALSE,The University of Kansas
-School of Engineering Graduate Admissions,,,,,,,,Lawrence,US,US,United States,kuengrgrad@ku.edu,(785) 864-3881,,KS,1520 W. 15th Street,Room 1,66045-7608,Kansas,,FALSE,,Eaton Hall,,FALSE,FALSE,The University of Kansas

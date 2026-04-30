@@ -1,6 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Undergraduate Admissions,,,,,,,,Medford,USA,US,United States,undergraduate.admissions@tufts.edu,(617) 627-3170,,MA,2 The Green,,2155,Massachusetts,,FALSE,https://admissions.tufts.edu/,Bendetson Hall,,FALSE,FALSE,Tufts University
-School of the Museum of Fine Arts,,,,,,,,,USA,US,United States,smfaadmissions@tufts.edu,(617) 627-0077,,,,,,,,FALSE,https://smfa.tufts.edu/admissions-aid,,,FALSE,FALSE,Tufts University
-Office of Graduate Admissions,,,,,,,,Medford,USA,US,United States,gradadmissions@tufts.edu,(617) 627-3395,,MA,2 The Green,,2155,Massachusetts,,FALSE,https://asegrad.tufts.edu/,Bendetson Hall,,FALSE,FALSE,Tufts University
-The Fletcher School of Law and Diplomacy ,,,,,,,,,USA,US,United States,fletcheradmissions@tufts.edu,,,,,,,,,FALSE,https://fletcher.tufts.edu/admissions,,,FALSE,FALSE,Tufts University
- Cummings School of Veterinary Medicine at Tufts University Admissions Office,,,,,,,,,USA,US,United States,vetadmissions@tufts.edu,,,,,,,,,FALSE,https://vet.tufts.edu/dvm-admissions,,,FALSE,FALSE,Tufts University

@@ -1,7 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Undergraduate Admissions,,,,,,,,Bethlehem,USA,US,United States,admissions@lehigh.edu,(610) 758-3100,,PA,27 Memorial Drive West,,18015-3094,Pennsylvania,,FALSE,,Alumni Memorial Building,,FALSE,FALSE,Lehigh University
-Graduate Admissions - College of Arts and Sciences,,,,,,,,Bethlehem,US,US,United States,incasgrd@lehigh.edu,(610) 758-4280,,,,,,,,FALSE,,,,FALSE,FALSE,Lehigh University
-Graduate Admissions - College of Business,,,,,,,,Bethlehem,US,US,United States,incbgrad@lehigh.edu,(610) 758-4450,,,,,,,,FALSE,,,,FALSE,FALSE,Lehigh University
-Graduate Admissions - College of Education,,,,,,,,Bethlehem,USA,US,United States,coe-admissions@lehigh.edu,(610) 758-3231,,PA,111 Research Drive,B-306,18015,Pennsylvania,,FALSE,,,,FALSE,FALSE,Lehigh University
-Graduate Admissions - College of Health,,,,,,,,Bethlehem,US,US,United States,cohgrad@lehigh.edu,(610) 758-1800,,,,,,,,FALSE,,,,FALSE,FALSE,Lehigh University
-Graduate Admissions - P.C. Rossin College of Engineering & Applied Science,,,,,,,,Bethlehem,US,US,United States,engineering@lehigh.edu,(610) 758-6310,,,,,,,,FALSE,,,,FALSE,FALSE,Lehigh University

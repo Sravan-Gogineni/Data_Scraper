@@ -1,4 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admission,,,,,,,,Chicago,USA,US,United States,admission@roosevelt.edu,(877) 277-5978,,IL,425 S. Wabash Avenue,,60605,Illinois,,FALSE,https://www.roosevelt.edu/admission,,,FALSE,FALSE,Roosevelt University
-Chicago College of Performing Arts,,,,,,,,Chicago,USA,US,United States,ccpaadmissions@roosevelt.edu,(312) 341-6735,,IL,430 S. Michigan Avenue,,60605,Illinois,,FALSE,https://www.roosevelt.edu/admission/ccpa,,,FALSE,FALSE,Roosevelt University
-Graduate Admission,,,,,,,,Chicago,USA,US,United States,gradadmission@roosevelt.edu,(877) 277-5978,,IL,430 S. Michigan Ave,,60605,Illinois,,FALSE,,,,FALSE,FALSE,Roosevelt University

@@ -1,3 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Office of Admissions,,,,,,,,Maryville,US,US,United States,admissions@nwmissouri.edu,(660) 562-1562,,MO,800 University Drive,,64468,Missouri,,FALSE,,Administration Building,,FALSE,FALSE,Northwest Missouri State University
-Graduate Office,,,,,,,,Maryville,US,US,United States,graduate@nwmissouri.edu,(660) 562-1145,,MO,800 University Drive,,64468,Missouri,,FALSE,,Administration Building,,FALSE,FALSE,Northwest Missouri State University

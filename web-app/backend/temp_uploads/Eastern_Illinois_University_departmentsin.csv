@@ -1,3 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Undergraduate Admissions,,,,,,,,Charleston,US,US,United States,admissions@eiu.edu,(217) 581-2223,,IL,600 Lincoln Ave,1230 Old Main,61920,Illinois,,FALSE,https://www.eiu.edu/admissions/,Old Main,,FALSE,FALSE,Eastern Illinois University
-Graduate Admissions,,,,,,,,Charleston,US,US,United States,graduate@eiu.edu,(217) 581-2220,,IL,600 Lincoln Avenue,1201 Blair Hall,61920,Illinois,,FALSE,,Blair Hall,,FALSE,FALSE,Eastern Illinois University

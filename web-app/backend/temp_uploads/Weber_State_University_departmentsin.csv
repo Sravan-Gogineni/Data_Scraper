@@ -1,3 +1,0 @@
-DepartmentName,Description,Status,CollegeId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy,City,Country,CountryCode,CountryName,Email,PhoneNumber,PhoneType,State,Street1,Street2,ZipCode,StateName,MaximumApplicationsPerTerm,IsRecommendationSystemOpted,AdmissionUrl,BuildingName,BatchId,IsImportVerified,IsImported,CollegeName
-Admissions Office,,,,,,,,Ogden,US,US,United States,admissions@weber.edu,(801) 626-6050,,UT,"3885 West Campus Dr., Dept 1137",,84408-1137,Utah,,FALSE,https://www.weber.edu/admissions/apply.html,,,FALSE,FALSE,Weber State University
-Office of Graduate Studies,,,,,,,,Ogden,US,US,United States,alexischristensen1@weber.edu,(801) 626-6204,,UT,3848 Harrison Blvd,,84408,Utah,,FALSE,https://www.weber.edu/graduate-degrees/,,,FALSE,FALSE,Weber State University
