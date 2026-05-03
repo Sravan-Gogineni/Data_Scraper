@@ -28,3 +28,5 @@ Institution/Inst_outputs/
 University_Data/Departments/Dept_outputs/
 web-app/backend/temp_uploads/
 Program_Rankings_extraction/batches/
+credits_extraction/batches/
+credits_extraction/program_qs_rankings_part1_credits.json
