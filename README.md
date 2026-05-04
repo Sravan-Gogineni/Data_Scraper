@@ -58,7 +58,9 @@ Instead of relying on internal LLM knowledge, every extraction is grounded in re
 ### 1. Setup
 Ensure your environment variables are configured in `.env`:
 *   `GCP_PROJECT`: Your Google Cloud Project ID.
-*   `MODEL`: The Gemini model version (e.g., `gemini-2.5-pro`).
+*   `GOOGLE_APPLICATION_CREDENTIALS`: Absolute path to a service account JSON key file when using Vertex AI.
+*   `GOOGLE_API_KEY`: Fallback API key if not using Vertex AI.
+*   `MODEL`: The Gemini model version (e.g., `gemini-2.5-pro`). Higher-tier Gemini models may require a billing-enabled project because free-tier quota can be zero.
 
 ### 2. Starting the Ecosystem
 Run the backend server:

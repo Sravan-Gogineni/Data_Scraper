@@ -80,10 +80,29 @@ class Paths:
 # ── Gemini client ────────────────────────────────────────────────────────────────
 
 def make_client() -> genai.Client:
-    return genai.Client(
-        vertexai=True,
-        project=os.getenv("GCP_PROJECT"),
-        location=os.getenv("GCP_REGION", "us-east4"),
+    # Try Vertex AI first (if GCP credentials are available)
+    if os.getenv("GCP_PROJECT") and os.getenv("GOOGLE_APPLICATION_CREDENTIALS"):
+        region = os.getenv("GCP_REGION")
+        if not region:
+            raise ValueError(
+                "GCP_REGION must be set in .env when using Vertex AI."
+            )
+        return genai.Client(
+            vertexai=True,
+            project=os.getenv("GCP_PROJECT"),
+            location=region,
+        )
+    
+    # Fallback to API key auth
+    api_key = os.getenv("GOOGLE_API_KEY")
+    if api_key:
+        return genai.Client(api_key=api_key)
+    
+    raise ValueError(
+        "No valid Google credentials found. Please set one of:\n"
+        "  1. GOOGLE_APPLICATION_CREDENTIALS + GCP_PROJECT environment variables\n"
+        "  2. GOOGLE_API_KEY environment variable\n"
+        "Create a .env file in the repo root with your credentials."
     )
 
 
@@ -108,6 +127,13 @@ class GeminiModelWrapper:
                 return response.text or ""
             except Exception as e:
                 err = str(e)
+                if "generate_content_free_tier_" in err and "limit: 0" in err:
+                    logger.error(
+                        "Quota exhausted for free tier on Gemini model %s. "
+                        "Enable billing or use a paid quota credential (Vertex AI or paid API key).",
+                        self.model_name,
+                    )
+                    return ""
                 if any(code in err for code in ("503", "429", "Too Many Requests", "Overloaded")):
                     if attempt < max_retries - 1:
                         wait = base_delay * (2 ** attempt) + random.uniform(0, 1)
