@@ -80,27 +80,24 @@ class Paths:
 # ── Gemini client ────────────────────────────────────────────────────────────────
 
 def make_client() -> genai.Client:
-    # Try Vertex AI first (if GCP credentials are available)
-    if os.getenv("GCP_PROJECT") and os.getenv("GOOGLE_APPLICATION_CREDENTIALS"):
-        region = os.getenv("GCP_REGION")
-        if not region:
-            raise ValueError(
-                "GCP_REGION must be set in .env when using Vertex AI."
-            )
+    # Prefer Vertex AI when GCP_PROJECT is configured (uses ADC or GOOGLE_APPLICATION_CREDENTIALS)
+    if os.getenv("GCP_PROJECT"):
+        region = os.getenv("GCP_REGION", "us-central1")
+        logger.info("Using Vertex AI: project=%s region=%s", os.getenv("GCP_PROJECT"), region)
         return genai.Client(
             vertexai=True,
             project=os.getenv("GCP_PROJECT"),
             location=region,
         )
-    
+
     # Fallback to API key auth
     api_key = os.getenv("GOOGLE_API_KEY")
     if api_key:
         return genai.Client(api_key=api_key)
-    
+
     raise ValueError(
         "No valid Google credentials found. Please set one of:\n"
-        "  1. GOOGLE_APPLICATION_CREDENTIALS + GCP_PROJECT environment variables\n"
+        "  1. GCP_PROJECT (+ optional GCP_REGION) — uses Application Default Credentials\n"
         "  2. GOOGLE_API_KEY environment variable\n"
         "Create a .env file in the repo root with your credentials."
     )
